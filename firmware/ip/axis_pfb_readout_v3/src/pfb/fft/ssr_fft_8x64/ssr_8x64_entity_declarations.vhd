@@ -179,9 +179,9 @@ use ieee.math_real.all;
 use ieee.math_complex.all;
 
 package COMPLEX_FIXED_PKG is
-  type BOOLEAN_VECTOR is array(NATURAL range <>) of BOOLEAN;
-  type INTEGER_VECTOR is array(NATURAL range <>) of INTEGER;
-  type REAL_VECTOR is array(NATURAL range <>) of REAL;
+--2008 type BOOLEAN_VECTOR is array(NATURAL range <>) of BOOLEAN;
+--2008 type INTEGER_VECTOR is array(NATURAL range <>) of INTEGER;
+--2008 type REAL_VECTOR is array(NATURAL range <>) of REAL;
 --2008  type UNSIGNED_VECTOR is array(NATURAL range <>) of UNSIGNED;
   type COMPLEX_VECTOR is array(INTEGER range <>) of COMPLEX;
 
@@ -941,7 +941,7 @@ use xil_defaultlib.conv_pkg.all;
 
 -- 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 -----------------------------------------------------------------------------------------------
--- © Copyright 2018 Xilinx, Inc. All rights reserved.
+-- ï¿½ Copyright 2018 Xilinx, Inc. All rights reserved.
 -- This file contains confidential and proprietary information of Xilinx, Inc. and is
 -- protected under U.S. and international copyright and other intellectual property laws.
 -----------------------------------------------------------------------------------------------
@@ -1163,7 +1163,7 @@ use xil_defaultlib.conv_pkg.all;
 
 -- 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 -----------------------------------------------------------------------------------------------
--- © Copyright 2018 Xilinx, Inc. All rights reserved.
+-- ï¿½ Copyright 2018 Xilinx, Inc. All rights reserved.
 -- This file contains confidential and proprietary information of Xilinx, Inc. and is
 -- protected under U.S. and international copyright and other intellectual property laws.
 -----------------------------------------------------------------------------------------------
@@ -1392,7 +1392,7 @@ use xil_defaultlib.conv_pkg.all;
 
 -- 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 -----------------------------------------------------------------------------------------------
--- © Copyright 2018 Xilinx, Inc. All rights reserved.
+-- ï¿½ Copyright 2018 Xilinx, Inc. All rights reserved.
 -- This file contains confidential and proprietary information of Xilinx, Inc. and is
 -- protected under U.S. and international copyright and other intellectual property laws.
 -----------------------------------------------------------------------------------------------
@@ -1728,7 +1728,7 @@ use xil_defaultlib.conv_pkg.all;
 
 -- 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 -----------------------------------------------------------------------------------------------
--- © Copyright 2018 Xilinx, Inc. All rights reserved.
+-- ï¿½ Copyright 2018 Xilinx, Inc. All rights reserved.
 -- This file contains confidential and proprietary information of Xilinx, Inc. and is
 -- protected under U.S. and international copyright and other intellectual property laws.
 -----------------------------------------------------------------------------------------------
@@ -1803,8 +1803,8 @@ entity BFS is
 --       A,B:in SIGNED; -- if SIGNED, A, B and P must be LSB aligned
        A,B:in SFIXED; -- if SFIXED, A, B and P can be any size
        SCALE:in STD_LOGIC;
---       P:out SIGNED); -- O=A±B
-       P:out SFIXED; -- O=A±B
+--       P:out SIGNED); -- O=Aï¿½B
+       P:out SFIXED; -- O=Aï¿½B
        OVR:out STD_LOGIC);
 end BFS;
 
@@ -1905,7 +1905,7 @@ use xil_defaultlib.conv_pkg.all;
 
 -- 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 -----------------------------------------------------------------------------------------------
--- © Copyright 2018 Xilinx, Inc. All rights reserved.
+-- ï¿½ Copyright 2018 Xilinx, Inc. All rights reserved.
 -- This file contains confidential and proprietary information of Xilinx, Inc. and is
 -- protected under U.S. and international copyright and other intellectual property laws.
 -----------------------------------------------------------------------------------------------
@@ -2035,7 +2035,7 @@ use xil_defaultlib.conv_pkg.all;
 
 -- 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 -----------------------------------------------------------------------------------------------
--- © Copyright 2018 Xilinx, Inc. All rights reserved.
+-- ï¿½ Copyright 2018 Xilinx, Inc. All rights reserved.
 -- This file contains confidential and proprietary information of Xilinx, Inc. and is
 -- protected under U.S. and international copyright and other intellectual property laws.
 -----------------------------------------------------------------------------------------------
@@ -2111,8 +2111,8 @@ entity CSA3 is
 --       A,B,C:in SIGNED; -- if SIGNED, A, B, C and P must be LSB aligned
        A,B,C:in SFIXED; -- if SFIXED, A, B, C and P can be any size
        CY1,CY2:in BOOLEAN:=FALSE; -- the number of CYs TRUE must equal the number of negative A and B terms
---       P:out SIGNED); -- O=C±A±B
-       P:out SFIXED); -- O=C±A±B
+--       P:out SIGNED); -- O=Cï¿½Aï¿½B
+       P:out SFIXED); -- O=Cï¿½Aï¿½B
 end CSA3;
 
 architecture FAST of CSA3 is
@@ -2212,7 +2212,7 @@ use xil_defaultlib.conv_pkg.all;
 
 -- 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 --*****************************************************************************
--- © Copyright 2008 - 2018 Xilinx, Inc. All rights reserved.
+-- ï¿½ Copyright 2008 - 2018 Xilinx, Inc. All rights reserved.
 --
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -3142,7 +3142,7 @@ use xil_defaultlib.conv_pkg.all;
 
 -- 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 -----------------------------------------------------------------------------------------------
--- © Copyright 2018 Xilinx, Inc. All rights reserved.
+-- ï¿½ Copyright 2018 Xilinx, Inc. All rights reserved.
 -- This file contains confidential and proprietary information of Xilinx, Inc. and is
 -- protected under U.S. and international copyright and other intellectual property laws.
 -----------------------------------------------------------------------------------------------
@@ -3216,8 +3216,8 @@ entity ADDSUB is
 --       A,B:in SIGNED; -- if SIGNED, A, B and P must be LSB aligned
        A,B:in SFIXED; -- if SFIXED, A, B and P can be any size
        SUB:in BOOLEAN:=FALSE;
---       P:out SIGNED); -- O=A±B
-       P:out SFIXED); -- O=A±B
+--       P:out SIGNED); -- O=Aï¿½B
+       P:out SFIXED); -- O=Aï¿½B
 end ADDSUB;
 
 architecture FAST of ADDSUB is
