@@ -1941,22 +1941,23 @@ Port;FD4A0000;FD4AFFFF;0|FPD;DPDMA;FD4C0000;FD4CFFFF;0|FPD;DDR_XMPU5_CFG;FD05000
 
 
   # Create instance: qick_processor_0, and set properties
-  set qick_processor_0 [ create_bd_cell -type ip -vlnv QICK:QICK:qick_processor:2.0 qick_processor_0 ]
-  set_property -dict [list \
-    CONFIG.ARITH {1} \
-    CONFIG.DEBUG {1} \
-    CONFIG.DIVIDER {1} \
-    CONFIG.DMEM_AW {14} \
-    CONFIG.EXT_FLAG {0} \
-    CONFIG.IN_PORT_QTY {7} \
-    CONFIG.IO_CTRL {1} \
-    CONFIG.OUT_DPORT_DW {8} \
-    CONFIG.OUT_DPORT_QTY {1} \
-    CONFIG.OUT_TRIG_QTY {17} \
-    CONFIG.OUT_WPORT_QTY {5} \
-    CONFIG.PMEM_AW {12} \
-    CONFIG.WMEM_AW {10} \
-  ] $qick_processor_0
+  set qick_processor_0 [ create_bd_cell -type module -reference QickProcessor qick_processor_0 ]
+  # set qick_processor_0 [ create_bd_cell -type ip -vlnv QICK:QICK:qick_processor:2.0 qick_processor_0 ]
+  # set_property -dict [list \
+  #   CONFIG.ARITH {1} \
+  #   CONFIG.DEBUG {1} \
+  #   CONFIG.DIVIDER {1} \
+  #   CONFIG.DMEM_AW {14} \
+  #   CONFIG.EXT_FLAG {0} \
+  #   CONFIG.IN_PORT_QTY {7} \
+  #   CONFIG.IO_CTRL {1} \
+  #   CONFIG.OUT_DPORT_DW {8} \
+  #   CONFIG.OUT_DPORT_QTY {1} \
+  #   CONFIG.OUT_TRIG_QTY {17} \
+  #   CONFIG.OUT_WPORT_QTY {5} \
+  #   CONFIG.PMEM_AW {12} \
+  #   CONFIG.WMEM_AW {10} \
+  # ] $qick_processor_0
 
 
   # Create interface connections

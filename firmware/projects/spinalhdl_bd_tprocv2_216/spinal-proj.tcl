@@ -55,8 +55,20 @@ set files [list \
 ]
 add_files -fileset $obj $files
 
+#############################################################################################################
+# spinalhdl generated files
+
+add_files [glob ${origin_dir}/../../rtl/**/*.v]
+add_files [glob ${origin_dir}/../../rtl/**/*.sv]
+add_files [glob ${origin_dir}/../../rtl/**/*.svh]
+add_files [glob ${origin_dir}/../../rtl/**/*.vhd]
+add_files [glob ${origin_dir}/../../rtl/**/*.xci]
+add_files -fileset constrs_1 [glob ${origin_dir}/../../rtl/**/*.xdc]
+
+#############################################################################################################
+
 # Source Block Design.
-set file "[file normalize "$origin_dir/bd_2023-1.tcl"]"
+set file "[file normalize "$origin_dir/bd-spinal.tcl"]"
 source $file
 
 # Update compile order.
@@ -73,6 +85,7 @@ set files [list \
   [file normalize "${origin_dir}/top/top.srcs/sources_1/bd/d_1/hdl/d_1_wrapper.v" ]\
 ]
 add_files -fileset $obj $files
+set_property -name "top" -value "d_1_wrapper" -objects [current_fileset]
 
 set_property strategy "Flow_PerfOptimized_high" [get_runs synth_1]
 #set_property strategy "Flow_AlternateRoutability" [get_runs synth_1]

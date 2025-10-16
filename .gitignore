@@ -71,3 +71,9 @@ Temporary Items
 
 !/.gitignore
 !/README.md
+
+.bsp
+.metals
+.vscode
+/out
+/projects
