@@ -1,0 +1,2 @@
+- Package every IP in the block design of qick_tprocv2_216_demo to a SpinalHDL Component.
+- connect all modules in SpinalHDL instead of block design.

@@ -77,3 +77,4 @@ Temporary Items
 .vscode
 /out
 /projects
+*.mif

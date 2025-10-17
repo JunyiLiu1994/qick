@@ -386,20 +386,11 @@ proc create_root_design { parentCell } {
 
 
   # Create instance: axis_register_slice_0, and set properties
-  set axis_register_slice_0 [ create_bd_cell -type ip -vlnv QICK:QICK:axis_register_slice_nb:1.0 axis_register_slice_0 ]
-  set_property -dict [list \
-    CONFIG.B {256} \
-    CONFIG.N {6} \
-  ] $axis_register_slice_0
+  set axis_register_slice_0 [ create_bd_cell -type module -reference AxisRegisterSliceNb_0 axis_register_slice_0 ]
 
 
   # Create instance: axis_register_slice_1, and set properties
-  set axis_register_slice_1 [ create_bd_cell -type ip -vlnv QICK:QICK:axis_register_slice_nb:1.0 axis_register_slice_1 ]
-  set_property -dict [list \
-    CONFIG.B {256} \
-    CONFIG.N {6} \
-  ] $axis_register_slice_1
-
+  set axis_register_slice_1 [ create_bd_cell -type module -reference AxisRegisterSliceNb_1 axis_register_slice_1 ]
 
   # Create instance: axis_resampler_2x1_v1_0, and set properties
   set axis_resampler_2x1_v1_0 [ create_bd_cell -type ip -vlnv QICK:QICK:axis_resampler_2x1_v1:1.0 axis_resampler_2x1_v1_0 ]
@@ -514,11 +505,7 @@ proc create_root_design { parentCell } {
 
 
   # Create instance: axis_register_slice_2, and set properties
-  set axis_register_slice_2 [ create_bd_cell -type ip -vlnv QICK:QICK:axis_register_slice_nb:1.0 axis_register_slice_2 ]
-  set_property -dict [list \
-    CONFIG.B {256} \
-    CONFIG.N {6} \
-  ] $axis_register_slice_2
+  set axis_register_slice_2 [ create_bd_cell -type module -reference AxisRegisterSliceNb_2 axis_register_slice_2 ]
 
 
   # Create instance: sg_translator_2, and set properties
