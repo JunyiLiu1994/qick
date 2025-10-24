@@ -11,6 +11,7 @@ case class AxisCdcsyncIO(N: Int, B: Int) extends Bundle {
   val s_axis = Vec.fill(16)(slave port Axi4Stream(Axi4StreamConfig(dataWidth = B / 8)))
   for((a, i) <- s_axis.zipWithIndex) {
     a.payload.data.setName(f"s${i}_axis_tdata")
+    a.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
     a.valid.setName(f"s${i}_axis_tvalid")
     a.ready.setName(f"s${i}_axis_tready")
   }
@@ -19,6 +20,7 @@ case class AxisCdcsyncIO(N: Int, B: Int) extends Bundle {
   val m_axis = Vec.fill(16)(master port Axi4Stream(Axi4StreamConfig(dataWidth = B / 8)))
   for((a, i) <- m_axis.zipWithIndex) {
     a.payload.data.setName(f"m${i}_axis_tdata")
+    a.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 430080000")
     a.valid.setName(f"m${i}_axis_tvalid")
     a.ready.setName(f"m${i}_axis_tready")
   }

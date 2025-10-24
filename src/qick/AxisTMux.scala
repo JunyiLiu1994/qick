@@ -16,7 +16,6 @@ case class AxisTMuxV1IO(N: Int, B: Int) extends Bundle {
   for((a, i) <- m_axis.zipWithIndex) {
     a.payload.data.setName(f"m${i}_axis_tdata")
     a.valid.setName(f"m${i}_axis_tvalid")
-    a.ready.setName(f"m${i}_axis_tready")
   }
 }
 
