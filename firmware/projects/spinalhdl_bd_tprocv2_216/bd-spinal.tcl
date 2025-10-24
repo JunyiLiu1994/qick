@@ -474,12 +474,7 @@ proc create_root_design { parentCell } {
 
 
   # Create instance: axis_tmux_v1_0, and set properties
-  set axis_tmux_v1_0 [ create_bd_cell -type ip -vlnv QICK:QICK:axis_tmux_v1:1.0 axis_tmux_v1_0 ]
-  set_property -dict [list \
-    CONFIG.B {168} \
-    CONFIG.N {4} \
-  ] $axis_tmux_v1_0
-
+  set axis_tmux_v1_0 [ create_bd_cell -type module -reference AxisTMuxV1 axis_tmux_v1_0 ]
 
   # Create instance: axis_sg_mixmux8_v1_0, and set properties
   set axis_sg_mixmux8_v1_0 [ create_bd_cell -type ip -vlnv QICK:QICK:axis_sg_mixmux8_v1:1.0 axis_sg_mixmux8_v1_0 ]
