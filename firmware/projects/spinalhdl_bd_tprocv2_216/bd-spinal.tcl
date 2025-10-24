@@ -487,12 +487,7 @@ proc create_root_design { parentCell } {
 
 
   # Create instance: axis_cdcsync_v1_1, and set properties
-  set axis_cdcsync_v1_1 [ create_bd_cell -type ip -vlnv QICK:QICK:axis_cdcsync_v1:1.0 axis_cdcsync_v1_1 ]
-  set_property -dict [list \
-    CONFIG.B {168} \
-    CONFIG.N {3} \
-  ] $axis_cdcsync_v1_1
-
+  set axis_cdcsync_v1_1 [ create_bd_cell -type module -reference AxisCdcsync axis_cdcsync_v1_1 ]
 
   # Create instance: axis_signal_gen_v6_1, and set properties
   set axis_signal_gen_v6_1 [ create_bd_cell -type ip -vlnv QICK:QICK:axis_signal_gen_v6:1.0 axis_signal_gen_v6_1 ]
