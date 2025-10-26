@@ -30,7 +30,6 @@ case class QickSgTranslatorIo() extends Bundle {
   m_readout_axis.ready.setName("m_readout_axis_tready")
 }
 
-
 case class sg_translator(
   OUT_TYPE: Int = 0
 ) extends BlackBox {
@@ -38,3 +37,24 @@ case class sg_translator(
   val io = QickSgTranslatorIo()
   noIoPrefix()
 }
+
+case class QickSgTranslator(OUT_TYPE : Int = 0) extends Component {
+  val io = QickSgTranslatorIo()
+  val sgTranslator = sg_translator(OUT_TYPE)
+  noIoPrefix()
+  io <> sgTranslator.io
+}
+
+object QickSgTranslator extends App {
+  for(i <- 0 until 4) {
+    SpinalConfig(
+      mode=Verilog,
+      targetDirectory=s"./firmware/rtl/QickSgTranslator"
+    ).generate{
+      val dut = QickSgTranslator(i)
+      dut.setDefinitionName(f"QickSgTranslator_${i}")
+    }
+  }
+}
+
+
