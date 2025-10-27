@@ -5,10 +5,10 @@ import spinal.lib._
 import spinal.lib.bus.amba4.axis._
 import spinal.lib.bus.amba4.axilite._
 
-case class AxisSgMixMux8IO(N_DDS: Int) extends Bundle {
-  val s_axi_aresetn = in Bool()
+case class AxisSignalGenV6IO(N: Int) extends Bundle {
   val s_axi_aclk = in Bool()
-  val s_axi_lite = slave port AxiLite4(AxiLite4Config(dataWidth = 32, addressWidth = 8))
+  val s_axi_aresetn = in Bool()
+  val s_axi_lite = slave port AxiLite4(AxiLite4Config(dataWidth = 32, addressWidth = 6))
   //s_axi_lite.aw.addr.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 99999985")
   s_axi_lite.aw.addr.setName("s_axi_awaddr")
   s_axi_lite.aw.prot.setName("s_axi_awprot")
@@ -29,37 +29,46 @@ case class AxisSgMixMux8IO(N_DDS: Int) extends Bundle {
   s_axi_lite.r.resp.setName("s_axi_rresp")
   s_axi_lite.r.valid.setName("s_axi_rvalid")
   s_axi_lite.r.ready.setName("s_axi_rready")
+  val s0_axis_aclk = in Bool()
+  val s0_axis_aresetn = in Bool()
+  val s0_axis = slave port Axi4Stream(Axi4StreamConfig(dataWidth = 32 / 8))
+  s0_axis.payload.data.setName("s0_axis_tdata")
+  s0_axis.valid.setName("s0_axis_tvalid")
+  s0_axis.ready.setName("s0_axis_tready")
   val aresetn = in Bool()
   val aclk = in Bool()
-  val s_axis = slave port Axi4Stream(Axi4StreamConfig(dataWidth = 40 / 8))
-  s_axis.payload.data.setName("s_axis_tdata")
-  s_axis.valid.setName("s_axis_tvalid")
-  s_axis.ready.setName("s_axis_tready")
-  val m_axis = slave port Axi4Stream(Axi4StreamConfig(dataWidth = N_DDS * 32 / 8))
+  val s1_axis = slave port Axi4Stream(Axi4StreamConfig(dataWidth = 160 / 8))
+  s1_axis.payload.data.setName("s1_axis_tdata")
+  s1_axis.valid.setName("s1_axis_tvalid")
+  s1_axis.ready.setName("s1_axis_tready")
+  val N_DDS = 16
+  val m_axis = slave port Axi4Stream(Axi4StreamConfig(dataWidth = 16 * N_DDS / 8))
   m_axis.payload.data.setName("m_axis_tdata")
   m_axis.valid.setName("m_axis_tvalid")
   m_axis.ready.setName("m_axis_tready")
 }
 
-case class axis_sg_mixmux8_v1(N_DDS: Int = 2) extends BlackBox {
-  addGeneric("N_DDS", N_DDS)
-  val io = AxisSgMixMux8IO(N_DDS)
+case class axis_signal_gen_v6(N : Int) extends BlackBox {
+  addGeneric("N", N)
+  val io = AxisSignalGenV6IO(N)
   noIoPrefix()
 }
 
-case class AxisSgMixMux8(N_DDS: Int = 2) extends Component {
-  val io = AxisSgMixMux8IO(N_DDS)
-  val axisSgMixMux8 = axis_sg_mixmux8_v1(N_DDS)
+case class AxisSignalGenV6(N : Int) extends Component {
+  val io = AxisSignalGenV6IO(N)
+  val axisSignalGenV6 = axis_signal_gen_v6(N)
   noIoPrefix()
-  io <> axisSgMixMux8.io
+  io <> axisSignalGenV6.io
 }
 
-object AxisSgMixMux8 extends App {
-  SpinalConfig(
-    mode=Verilog,
-    targetDirectory=s"./firmware/rtl/AxisSgMixMux8"
-  ).generate{
-    val dut = AxisSgMixMux8(4)
-    dut.setDefinitionName("AxisSgMixMux8")
+object AxisSignalGenV6 extends App {
+  for(n <- List(9, 10)) {
+    SpinalConfig(
+      mode=Verilog,
+      targetDirectory=s"./firmware/rtl/AxisSignalGenV6"
+    ).generate{
+      val dut = AxisSignalGenV6(n)
+      dut.setDefinitionName(f"AxisSignalGenV6_${n}")
+    }
   }
 }

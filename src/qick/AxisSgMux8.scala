@@ -6,8 +6,8 @@ import spinal.lib.bus.amba4.axis._
 import spinal.lib.bus.amba4.axilite._
 
 case class AxisSgMux8IO(N_DDS: Int) extends Bundle {
-  val s_axis_aresetn = in Bool()
-  val s_axis_aclk = in Bool()
+  val s_axi_aresetn = in Bool()
+  val s_axi_aclk = in Bool()
   val s_axi_lite = slave port AxiLite4(AxiLite4Config(dataWidth = 32, addressWidth = 8))
   //s_axi_lite.aw.addr.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 99999985")
   s_axi_lite.aw.addr.setName("s_axi_awaddr")
