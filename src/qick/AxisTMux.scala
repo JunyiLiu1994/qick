@@ -12,11 +12,10 @@ case class AxisTMuxV1IO(N: Int, B: Int) extends Bundle {
   s_axis.payload.data.setName("s_axis_tdata")
   s_axis.valid.setName("s_axis_tvalid")
   s_axis.ready.setName("s_axis_tready")
-  val m_axis = Vec.fill(8)(master port Axi4Stream(Axi4StreamConfig(dataWidth = B / 8)))
+  val m_axis = Vec.fill(8)(out port Flow(Bits(B bits)))
   for((a, i) <- m_axis.zipWithIndex) {
-    a.payload.data.setName(f"m${i}_axis_tdata")
+    a.payload.setName(f"m${i}_axis_tdata")
     a.valid.setName(f"m${i}_axis_tvalid")
-    a.ready.setName(f"m${i}_axis_tready")
   }
 }
 
