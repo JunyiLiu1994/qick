@@ -1,12 +1,12 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : AxisSgMux8
-// Git hash  : 21217673e59452dbbd16dc45a298934deed6fbb0
+// Git hash  : 0d21e5f8beee3da53d130d359b588cda5e1610ac
 
 `timescale 1ns/1ps
 
 module AxisSgMux8 (
   input  wire          s_axi_aresetn,
-  input  wire          s_axi_aclk,
+  input  wire          s_axi_aclk_i,
   input  wire          s_axi_awvalid,
   output wire          s_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [7:0]    s_axi_awaddr,
@@ -26,14 +26,14 @@ module AxisSgMux8 (
   input  wire          s_axi_rready,
   output wire [31:0]   s_axi_rdata,
   output wire [1:0]    s_axi_rresp,
-  input  wire          aclk,
+  input  wire          aclk_i,
   input  wire          aresetn,
   input  wire          s_axis_tvalid,
   output wire          s_axis_tready,
-  input  wire [31:0]   s_axis_tdata,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [31:0]   s_axis_tdata,
   output wire          m_axis_tvalid,
   input  wire          m_axis_tready,
-  output wire [255:0]  m_axis_tdata
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  m_axis_tdata
 );
 
   wire                axisSgMux8_s_axi_awready;
@@ -52,7 +52,7 @@ module AxisSgMux8 (
     .N_DDS (16)
   ) axisSgMux8 (
     .s_axi_aresetn (s_axi_aresetn                 ), //i
-    .s_axi_aclk    (s_axi_aclk                    ), //i
+    .s_axi_aclk    (s_axi_aclk_i                  ), //i
     .s_axi_awvalid (s_axi_awvalid                 ), //i
     .s_axi_awready (axisSgMux8_s_axi_awready      ), //o
     .s_axi_awaddr  (s_axi_awaddr[7:0]             ), //i
@@ -72,7 +72,7 @@ module AxisSgMux8 (
     .s_axi_rready  (s_axi_rready                  ), //i
     .s_axi_rdata   (axisSgMux8_s_axi_rdata[31:0]  ), //o
     .s_axi_rresp   (axisSgMux8_s_axi_rresp[1:0]   ), //o
-    .aclk          (aclk                          ), //i
+    .aclk          (aclk_i                        ), //i
     .aresetn       (aresetn                       ), //i
     .s_axis_tvalid (s_axis_tvalid                 ), //i
     .s_axis_tready (axisSgMux8_s_axis_tready      ), //o

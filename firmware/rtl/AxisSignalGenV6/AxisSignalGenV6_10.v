@@ -1,19 +1,19 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : AxisSignalGenV6_10
-// Git hash  : 21217673e59452dbbd16dc45a298934deed6fbb0
+// Git hash  : 0d21e5f8beee3da53d130d359b588cda5e1610ac
 
 `timescale 1ns/1ps
 
 module AxisSignalGenV6_10 (
-  input  wire          s_axi_aclk,
+  input  wire          s_axi_aclk_i,
   input  wire          s_axi_aresetn,
   input  wire          s_axi_awvalid,
   output wire          s_axi_awready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985, CLK_DOMAIN d_1_zynq_ultra_ps_e_0_0_pl_clk0" *) input  wire [5:0]    s_axi_awaddr,
+  input  wire [5:0]    s_axi_awaddr,
   input  wire [2:0]    s_axi_awprot,
   input  wire          s_axi_wvalid,
   output wire          s_axi_wready,
-  input  wire [31:0]   s_axi_wdata,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [31:0]   s_axi_wdata,
   input  wire [3:0]    s_axi_wstrb,
   output wire          s_axi_bvalid,
   input  wire          s_axi_bready,
@@ -26,19 +26,19 @@ module AxisSignalGenV6_10 (
   input  wire          s_axi_rready,
   output wire [31:0]   s_axi_rdata,
   output wire [1:0]    s_axi_rresp,
-  input  wire          s0_axis_aclk,
+  input  wire          s0_axis_aclk_i,
   input  wire          s0_axis_aresetn,
   input  wire          s0_axis_tvalid,
   output wire          s0_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985, CLK_DOMAIN d_1_zynq_ultra_ps_e_0_0_pl_clk0" *) input  wire [31:0]   s0_axis_tdata,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [31:0]   s0_axis_tdata,
   input  wire          aresetn,
-  input  wire          aclk,
+  input  wire          aclk_i,
   input  wire          s1_axis_tvalid,
   output wire          s1_axis_tready,
-  input  wire [159:0]  s1_axis_tdata,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [159:0]  s1_axis_tdata,
   output wire          m_axis_tvalid,
   input  wire          m_axis_tready,
-  output wire [255:0]  m_axis_tdata
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  m_axis_tdata
 );
 
   wire                axisSignalGenV6_s_axi_awready;
@@ -57,7 +57,7 @@ module AxisSignalGenV6_10 (
   axis_signal_gen_v6 #(
     .N (10)
   ) axisSignalGenV6 (
-    .s_axi_aclk      (s_axi_aclk                         ), //i
+    .s_axi_aclk      (s_axi_aclk_i                       ), //i
     .s_axi_aresetn   (s_axi_aresetn                      ), //i
     .s_axi_awvalid   (s_axi_awvalid                      ), //i
     .s_axi_awready   (axisSignalGenV6_s_axi_awready      ), //o
@@ -78,13 +78,13 @@ module AxisSignalGenV6_10 (
     .s_axi_rready    (s_axi_rready                       ), //i
     .s_axi_rdata     (axisSignalGenV6_s_axi_rdata[31:0]  ), //o
     .s_axi_rresp     (axisSignalGenV6_s_axi_rresp[1:0]   ), //o
-    .s0_axis_aclk    (s0_axis_aclk                       ), //i
+    .s0_axis_aclk    (s0_axis_aclk_i                     ), //i
     .s0_axis_aresetn (s0_axis_aresetn                    ), //i
     .s0_axis_tvalid  (s0_axis_tvalid                     ), //i
     .s0_axis_tready  (axisSignalGenV6_s0_axis_tready     ), //o
     .s0_axis_tdata   (s0_axis_tdata[31:0]                ), //i
     .aresetn         (aresetn                            ), //i
-    .aclk            (aclk                               ), //i
+    .aclk            (aclk_i                             ), //i
     .s1_axis_tvalid  (s1_axis_tvalid                     ), //i
     .s1_axis_tready  (axisSignalGenV6_s1_axis_tready     ), //o
     .s1_axis_tdata   (s1_axis_tdata[159:0]               ), //i

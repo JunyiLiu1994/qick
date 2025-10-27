@@ -33,10 +33,12 @@ case class AxisSgMixMux8IO(N_DDS: Int) extends Bundle {
   val aclk = in Bool()
   val s_axis = slave port Axi4Stream(Axi4StreamConfig(dataWidth = 40 / 8))
   s_axis.payload.data.setName("s_axis_tdata")
+  s_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 430080000")
   s_axis.valid.setName("s_axis_tvalid")
   s_axis.ready.setName("s_axis_tready")
   val m_axis = master port Axi4Stream(Axi4StreamConfig(dataWidth = N_DDS * 32 / 8))
   m_axis.payload.data.setName("m_axis_tdata")
+  m_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 430080000")
   m_axis.valid.setName("m_axis_tvalid")
   m_axis.ready.setName("m_axis_tready")
 }
@@ -52,6 +54,8 @@ case class AxisSgMixMux8(N_DDS: Int = 2) extends Component {
   val axisSgMixMux8 = axis_sg_mixmux8_v1(N_DDS)
   noIoPrefix()
   io <> axisSgMixMux8.io
+  io.s_axi_aclk.setName("s_axi_aclk_i")
+  io.aclk.setName("aclk_i")
 }
 
 object AxisSgMixMux8 extends App {
