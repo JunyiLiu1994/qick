@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : AxisSgMux8
-// Git hash  : 8b74fce470b13f9d87ea253b1881485a10865684
+// Git hash  : 21217673e59452dbbd16dc45a298934deed6fbb0
 
 `timescale 1ns/1ps
 
@@ -9,7 +9,7 @@ module AxisSgMux8 (
   input  wire          s_axi_aclk,
   input  wire          s_axi_awvalid,
   output wire          s_axi_awready,
-  input  wire [7:0]    s_axi_awaddr,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [7:0]    s_axi_awaddr,
   input  wire [2:0]    s_axi_awprot,
   input  wire          s_axi_wvalid,
   output wire          s_axi_wready,

@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : AxisSignalGenV6_9
-// Git hash  : 8b74fce470b13f9d87ea253b1881485a10865684
+// Git hash  : 21217673e59452dbbd16dc45a298934deed6fbb0
 
 `timescale 1ns/1ps
 
@@ -9,7 +9,7 @@ module AxisSignalGenV6_9 (
   input  wire          s_axi_aresetn,
   input  wire          s_axi_awvalid,
   output wire          s_axi_awready,
-  input  wire [5:0]    s_axi_awaddr,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985, CLK_DOMAIN d_1_zynq_ultra_ps_e_0_0_pl_clk0" *) input  wire [5:0]    s_axi_awaddr,
   input  wire [2:0]    s_axi_awprot,
   input  wire          s_axi_wvalid,
   output wire          s_axi_wready,
@@ -30,15 +30,15 @@ module AxisSignalGenV6_9 (
   input  wire          s0_axis_aresetn,
   input  wire          s0_axis_tvalid,
   output wire          s0_axis_tready,
-  input  wire [31:0]   s0_axis_tdata,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985, CLK_DOMAIN d_1_zynq_ultra_ps_e_0_0_pl_clk0" *) input  wire [31:0]   s0_axis_tdata,
   input  wire          aresetn,
   input  wire          aclk,
   input  wire          s1_axis_tvalid,
   output wire          s1_axis_tready,
   input  wire [159:0]  s1_axis_tdata,
-  input  wire          m_axis_tvalid,
-  output wire          m_axis_tready,
-  input  wire [255:0]  m_axis_tdata
+  output wire          m_axis_tvalid,
+  input  wire          m_axis_tready,
+  output wire [255:0]  m_axis_tdata
 );
 
   wire                axisSignalGenV6_s_axi_awready;
@@ -51,45 +51,46 @@ module AxisSignalGenV6_9 (
   wire       [1:0]    axisSignalGenV6_s_axi_rresp;
   wire                axisSignalGenV6_s0_axis_tready;
   wire                axisSignalGenV6_s1_axis_tready;
-  wire                axisSignalGenV6_m_axis_tready;
+  wire                axisSignalGenV6_m_axis_tvalid;
+  wire       [255:0]  axisSignalGenV6_m_axis_tdata;
 
   axis_signal_gen_v6 #(
     .N (9)
   ) axisSignalGenV6 (
-    .s_axi_aclk      (s_axi_aclk                       ), //i
-    .s_axi_aresetn   (s_axi_aresetn                    ), //i
-    .s_axi_awvalid   (s_axi_awvalid                    ), //i
-    .s_axi_awready   (axisSignalGenV6_s_axi_awready    ), //o
-    .s_axi_awaddr    (s_axi_awaddr[5:0]                ), //i
-    .s_axi_awprot    (s_axi_awprot[2:0]                ), //i
-    .s_axi_wvalid    (s_axi_wvalid                     ), //i
-    .s_axi_wready    (axisSignalGenV6_s_axi_wready     ), //o
-    .s_axi_wdata     (s_axi_wdata[31:0]                ), //i
-    .s_axi_wstrb     (s_axi_wstrb[3:0]                 ), //i
-    .s_axi_bvalid    (axisSignalGenV6_s_axi_bvalid     ), //o
-    .s_axi_bready    (s_axi_bready                     ), //i
-    .s_axi_bresp     (axisSignalGenV6_s_axi_bresp[1:0] ), //o
-    .s_axi_arvalid   (s_axi_arvalid                    ), //i
-    .s_axi_arready   (axisSignalGenV6_s_axi_arready    ), //o
-    .s_axi_araddr    (s_axi_araddr[5:0]                ), //i
-    .s_axi_arprot    (s_axi_arprot[2:0]                ), //i
-    .s_axi_rvalid    (axisSignalGenV6_s_axi_rvalid     ), //o
-    .s_axi_rready    (s_axi_rready                     ), //i
-    .s_axi_rdata     (axisSignalGenV6_s_axi_rdata[31:0]), //o
-    .s_axi_rresp     (axisSignalGenV6_s_axi_rresp[1:0] ), //o
-    .s0_axis_aclk    (s0_axis_aclk                     ), //i
-    .s0_axis_aresetn (s0_axis_aresetn                  ), //i
-    .s0_axis_tvalid  (s0_axis_tvalid                   ), //i
-    .s0_axis_tready  (axisSignalGenV6_s0_axis_tready   ), //o
-    .s0_axis_tdata   (s0_axis_tdata[31:0]              ), //i
-    .aresetn         (aresetn                          ), //i
-    .aclk            (aclk                             ), //i
-    .s1_axis_tvalid  (s1_axis_tvalid                   ), //i
-    .s1_axis_tready  (axisSignalGenV6_s1_axis_tready   ), //o
-    .s1_axis_tdata   (s1_axis_tdata[159:0]             ), //i
-    .m_axis_tvalid   (m_axis_tvalid                    ), //i
-    .m_axis_tready   (axisSignalGenV6_m_axis_tready    ), //o
-    .m_axis_tdata    (m_axis_tdata[255:0]              )  //i
+    .s_axi_aclk      (s_axi_aclk                         ), //i
+    .s_axi_aresetn   (s_axi_aresetn                      ), //i
+    .s_axi_awvalid   (s_axi_awvalid                      ), //i
+    .s_axi_awready   (axisSignalGenV6_s_axi_awready      ), //o
+    .s_axi_awaddr    (s_axi_awaddr[5:0]                  ), //i
+    .s_axi_awprot    (s_axi_awprot[2:0]                  ), //i
+    .s_axi_wvalid    (s_axi_wvalid                       ), //i
+    .s_axi_wready    (axisSignalGenV6_s_axi_wready       ), //o
+    .s_axi_wdata     (s_axi_wdata[31:0]                  ), //i
+    .s_axi_wstrb     (s_axi_wstrb[3:0]                   ), //i
+    .s_axi_bvalid    (axisSignalGenV6_s_axi_bvalid       ), //o
+    .s_axi_bready    (s_axi_bready                       ), //i
+    .s_axi_bresp     (axisSignalGenV6_s_axi_bresp[1:0]   ), //o
+    .s_axi_arvalid   (s_axi_arvalid                      ), //i
+    .s_axi_arready   (axisSignalGenV6_s_axi_arready      ), //o
+    .s_axi_araddr    (s_axi_araddr[5:0]                  ), //i
+    .s_axi_arprot    (s_axi_arprot[2:0]                  ), //i
+    .s_axi_rvalid    (axisSignalGenV6_s_axi_rvalid       ), //o
+    .s_axi_rready    (s_axi_rready                       ), //i
+    .s_axi_rdata     (axisSignalGenV6_s_axi_rdata[31:0]  ), //o
+    .s_axi_rresp     (axisSignalGenV6_s_axi_rresp[1:0]   ), //o
+    .s0_axis_aclk    (s0_axis_aclk                       ), //i
+    .s0_axis_aresetn (s0_axis_aresetn                    ), //i
+    .s0_axis_tvalid  (s0_axis_tvalid                     ), //i
+    .s0_axis_tready  (axisSignalGenV6_s0_axis_tready     ), //o
+    .s0_axis_tdata   (s0_axis_tdata[31:0]                ), //i
+    .aresetn         (aresetn                            ), //i
+    .aclk            (aclk                               ), //i
+    .s1_axis_tvalid  (s1_axis_tvalid                     ), //i
+    .s1_axis_tready  (axisSignalGenV6_s1_axis_tready     ), //o
+    .s1_axis_tdata   (s1_axis_tdata[159:0]               ), //i
+    .m_axis_tvalid   (axisSignalGenV6_m_axis_tvalid      ), //o
+    .m_axis_tready   (m_axis_tready                      ), //i
+    .m_axis_tdata    (axisSignalGenV6_m_axis_tdata[255:0])  //o
   );
   assign s_axi_awready = axisSignalGenV6_s_axi_awready;
   assign s_axi_wready = axisSignalGenV6_s_axi_wready;
@@ -101,6 +102,7 @@ module AxisSignalGenV6_9 (
   assign s_axi_rresp = axisSignalGenV6_s_axi_rresp;
   assign s0_axis_tready = axisSignalGenV6_s0_axis_tready;
   assign s1_axis_tready = axisSignalGenV6_s1_axis_tready;
-  assign m_axis_tready = axisSignalGenV6_m_axis_tready;
+  assign m_axis_tvalid = axisSignalGenV6_m_axis_tvalid;
+  assign m_axis_tdata = axisSignalGenV6_m_axis_tdata;
 
 endmodule

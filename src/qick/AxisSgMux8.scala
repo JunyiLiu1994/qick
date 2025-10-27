@@ -9,7 +9,7 @@ case class AxisSgMux8IO(N_DDS: Int) extends Bundle {
   val s_axi_aresetn = in Bool()
   val s_axi_aclk = in Bool()
   val s_axi_lite = slave port AxiLite4(AxiLite4Config(dataWidth = 32, addressWidth = 8))
-  //s_axi_lite.aw.addr.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 99999985")
+  s_axi_lite.aw.addr.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 99999985")
   s_axi_lite.aw.addr.setName("s_axi_awaddr")
   s_axi_lite.aw.prot.setName("s_axi_awprot")
   s_axi_lite.aw.valid.setName("s_axi_awvalid")
