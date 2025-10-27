@@ -87,7 +87,7 @@ genvar i;
 		/***********************/
 		// DDS.
 		// Latency: 10.
-		dds_compiler_0 dds_i 
+		dds_compiler_axis_sg_mixmux8_v1 dds_i 
 			(
 		  		.aclk					(clk						),
 		  		.s_axis_phase_tvalid	(1'b1						),
