@@ -9,9 +9,9 @@ case class QickSgTranslatorIo() extends Bundle {
   val aresetn = in Bool()
   val aclk = in Bool()
   val s_axis = slave port Axi4Stream(Axi4StreamConfig(dataWidth = 168))
-  s_axis.payload.data.setName("s_axis_tdata")
-  s_axis.valid.setName("s_axis_tvalid")
-  s_axis.ready.setName("s_axis_tready")
+  s_axis.payload.data.setName("s_tproc_axis_tdata")
+  s_axis.valid.setName("s_tproc_axis_tvalid")
+  s_axis.ready.setName("s_tproc_axis_tready")
   val m_gen_v6_axis = master port Axi4Stream(Axi4StreamConfig(dataWidth = 160))
   m_gen_v6_axis.payload.data.setName("m_gen_v6_axis_tdata")
   m_gen_v6_axis.valid.setName("m_gen_v6_axis_tvalid")
@@ -25,9 +25,9 @@ case class QickSgTranslatorIo() extends Bundle {
   m_mux4_axis.valid.setName("m_mux4_axis_tvalid")
   m_mux4_axis.ready.setName("m_mux4_axis_tready")
   val m_readout_axis = master port Axi4Stream(Axi4StreamConfig(dataWidth = 88))
-  m_readout_axis.payload.data.setName("m_readout_axis_tdata")
-  m_readout_axis.valid.setName("m_readout_axis_tvalid")
-  m_readout_axis.ready.setName("m_readout_axis_tready")
+  m_readout_axis.payload.data.setName("m_readout_v3_axis_tdata")
+  m_readout_axis.valid.setName("m_readout_v3_axis_tvalid")
+  m_readout_axis.ready.setName("m_readout_v3_axis_tready")
 }
 
 case class sg_translator(
