@@ -435,25 +435,33 @@ proc create_root_design { parentCell } {
   ] $rst_dac3
 
   # Create instance: sg_translator_0, and set properties
-  set sg_translator_0 [ create_bd_cell -type module -reference QickSgTranslator_0 sg_translator_0 ]
+  set sg_translator_0 [ create_bd_cell -type ip -vlnv QICK:QICK:sg_translator:1.0 sg_translator_0 ]
 
   # Create instance: sg_translator_1, and set properties
-  set sg_translator_1 [ create_bd_cell -type module -reference QickSgTranslator_2 sg_translator_1 ]
+  set sg_translator_1 [ create_bd_cell -type ip -vlnv QICK:QICK:sg_translator:1.0 sg_translator_1 ]
+  set_property CONFIG.OUT_TYPE {2} $sg_translator_1
 
   # Create instance: sg_translator_3, and set properties
-  set sg_translator_3 [ create_bd_cell -type module -reference QickSgTranslator_0 sg_translator_3 ]
+  set sg_translator_3 [ create_bd_cell -type ip -vlnv QICK:QICK:sg_translator:1.0 sg_translator_3 ]
+  set_property CONFIG.OUT_TYPE {0} $sg_translator_3
 
   # Create instance: sg_translator_4, and set properties
-  set sg_translator_4 [ create_bd_cell -type module -reference QickSgTranslator_0 sg_translator_4 ]
+  set sg_translator_4 [ create_bd_cell -type ip -vlnv QICK:QICK:sg_translator:1.0 sg_translator_4 ]
+  set_property CONFIG.OUT_TYPE {0} $sg_translator_4
 
-  # Create instance: sg_translator_5, and set properties
-  set sg_translator_5 [ create_bd_cell -type module -reference QickSgTranslator_2 sg_translator_5 ]
+ # Create instance: sg_translator_5, and set properties
+  set sg_translator_5 [ create_bd_cell -type ip -vlnv QICK:QICK:sg_translator:1.0 sg_translator_5 ]
+  set_property CONFIG.OUT_TYPE {2} $sg_translator_5
+
 
   # Create instance: sg_translator_6, and set properties
-  set sg_translator_6 [ create_bd_cell -type module -reference QickSgTranslator_3 sg_translator_6 ]
+  set sg_translator_6 [ create_bd_cell -type ip -vlnv QICK:QICK:sg_translator:1.0 sg_translator_6 ]
+  set_property CONFIG.OUT_TYPE {3} $sg_translator_6
+
 
   # Create instance: sg_translator_7, and set properties
-  set sg_translator_7 [ create_bd_cell -type module -reference QickSgTranslator_3 sg_translator_7 ]
+  set sg_translator_7 [ create_bd_cell -type ip -vlnv QICK:QICK:sg_translator:1.0 sg_translator_7 ]
+  set_property CONFIG.OUT_TYPE {3} $sg_translator_7
 
   # Create instance: xlconcat_intc, and set properties
   set xlconcat_intc [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_intc ]
@@ -480,7 +488,7 @@ proc create_root_design { parentCell } {
 
 
   # Create instance: sg_translator_2, and set properties
-  set sg_translator_2 [ create_bd_cell -type module -reference QickSgTranslator_0 sg_translator_2 ]
+  set sg_translator_2 [ create_bd_cell -type ip -vlnv QICK:QICK:sg_translator:1.0 sg_translator_2 ]
 
   # Create instance: axi_dma_avg, and set properties
   set axi_dma_avg [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_avg ]
