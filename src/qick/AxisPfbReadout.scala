@@ -6,11 +6,11 @@ import spinal.lib.bus.amba4.axis._
 import spinal.lib.bus.amba4.axilite._
 
 case class AxisPfbReadoutIO(N: Int) extends Bundle {
-  val a_axi_aresetn = in Bool()
-  val a_axi_aclk = in Bool()
+  val s_axi_aresetn = in Bool()
+  val s_axi_aclk = in Bool()
   val s_axi_lite = slave port AxiLite4(AxiLite4Config(dataWidth = 32, addressWidth = 6))
   s_axi_lite.aw.addr.setName("s_axi_awaddr")
-  //s_axi_lite.aw.addr.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 99999985")
+  s_axi_lite.aw.addr.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 99999985")
   s_axi_lite.aw.prot.setName("s_axi_awprot")
   s_axi_lite.aw.valid.setName("s_axi_awvalid")
   s_axi_lite.aw.ready.setName("s_axi_awready")
@@ -52,6 +52,7 @@ case class AxisPfbReadout(N: Int = 64) extends Component {
   val axisPfbReadout = axis_pfb_readout_v3(N)
   noIoPrefix()
   io <> axisPfbReadout.io
+  io.s_axi_aclk.setName("s_axi_aclk_i")
 }
 
 object AxisPfbReadout extends App {

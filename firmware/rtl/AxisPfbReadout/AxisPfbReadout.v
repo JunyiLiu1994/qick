@@ -1,15 +1,15 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : AxisPfbReadout
-// Git hash  : 9ee0020cb9ba56cc33d690877cf36ca408f9d248
+// Git hash  : 6d53a16c9fb9293b1f88d0e8cbd8e326b2c1ea66
 
 `timescale 1ns/1ps
 
 module AxisPfbReadout (
-  input  wire          a_axi_aresetn,
-  input  wire          a_axi_aclk,
+  input  wire          s_axi_aresetn,
+  input  wire          s_axi_aclk_i,
   input  wire          s_axi_awvalid,
   output wire          s_axi_awready,
-  input  wire [5:0]    s_axi_awaddr,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [5:0]    s_axi_awaddr,
   input  wire [2:0]    s_axi_awprot,
   input  wire          s_axi_wvalid,
   output wire          s_axi_wready,
@@ -60,8 +60,8 @@ module AxisPfbReadout (
   axis_pfb_readout_v3 #(
     .N (64)
   ) axisPfbReadout (
-    .a_axi_aresetn  (a_axi_aresetn                     ), //i
-    .a_axi_aclk     (a_axi_aclk                        ), //i
+    .s_axi_aresetn  (s_axi_aresetn                     ), //i
+    .s_axi_aclk     (s_axi_aclk_i                      ), //i
     .s_axi_awvalid  (s_axi_awvalid                     ), //i
     .s_axi_awready  (axisPfbReadout_s_axi_awready      ), //o
     .s_axi_awaddr   (s_axi_awaddr[5:0]                 ), //i
