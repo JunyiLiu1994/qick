@@ -471,17 +471,13 @@ proc create_root_design { parentCell } {
   set axis_sg_mixmux8_v1_0 [ create_bd_cell -type module -reference AxisSgMixMux8 axis_sg_mixmux8_v1_0 ]
 
   # Create instance: axis_signal_gen_v6_0, and set properties
-  # set axis_signal_gen_v6_0 [ create_bd_cell -type module -reference AxisSignalGenV6_10 axis_signal_gen_v6_0 ]
-  set axis_signal_gen_v6_0 [ create_bd_cell -type ip -vlnv QICK:QICK:axis_signal_gen_v6:1.0 axis_signal_gen_v6_0 ]
-  set_property CONFIG.N {10} $axis_signal_gen_v6_0
+  set axis_signal_gen_v6_0 [ create_bd_cell -type module -reference AxisSignalGenV6_10 axis_signal_gen_v6_0 ]
 
   # Create instance: axis_cdcsync_v1_1, and set properties
   set axis_cdcsync_v1_1 [ create_bd_cell -type module -reference AxisCdcsync axis_cdcsync_v1_1 ]
 
   # Create instance: axis_signal_gen_v6_1, and set properties
-  # set axis_signal_gen_v6_1 [ create_bd_cell -type module -reference AxisSignalGenV6_10 axis_signal_gen_v6_1 ]
-  set axis_signal_gen_v6_1 [ create_bd_cell -type ip -vlnv QICK:QICK:axis_signal_gen_v6:1.0 axis_signal_gen_v6_1 ]
-  set_property CONFIG.N {9} $axis_signal_gen_v6_1
+  set axis_signal_gen_v6_1 [ create_bd_cell -type module -reference AxisSignalGenV6_10 axis_signal_gen_v6_1 ]
 
   # Create instance: axis_register_slice_2, and set properties
   set axis_register_slice_2 [ create_bd_cell -type module -reference AxisRegisterSliceNb_2 axis_register_slice_2 ]
