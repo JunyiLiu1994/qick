@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : AxisPfbReadout
-// Git hash  : 6d53a16c9fb9293b1f88d0e8cbd8e326b2c1ea66
+// Git hash  : fa4c97ca741a1a13987817d05773a2049b159a08
 
 `timescale 1ns/1ps
 
@@ -27,17 +27,17 @@ module AxisPfbReadout (
   output wire [31:0]   s_axi_rdata,
   output wire [1:0]    s_axi_rresp,
   input  wire          aresetn,
-  input  wire          aclk,
+  input  wire          aclk_i,
   input  wire          s_axis_tvalid,
-  input  wire [127:0]  s_axis_tdata,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [127:0]  s_axis_tdata,
   output wire          m0_axis_tvalid,
-  output wire [31:0]   m0_axis_tdata,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [31:0]   m0_axis_tdata,
   output wire          m1_axis_tvalid,
-  output wire [31:0]   m1_axis_tdata,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [31:0]   m1_axis_tdata,
   output wire          m2_axis_tvalid,
-  output wire [31:0]   m2_axis_tdata,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [31:0]   m2_axis_tdata,
   output wire          m3_axis_tvalid,
-  output wire [31:0]   m3_axis_tdata
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [31:0]   m3_axis_tdata
 );
 
   wire                axisPfbReadout_s_axi_awready;
@@ -82,7 +82,7 @@ module AxisPfbReadout (
     .s_axi_rdata    (axisPfbReadout_s_axi_rdata[31:0]  ), //o
     .s_axi_rresp    (axisPfbReadout_s_axi_rresp[1:0]   ), //o
     .aresetn        (aresetn                           ), //i
-    .aclk           (aclk                              ), //i
+    .aclk           (aclk_i                            ), //i
     .s_axis_tvalid  (s_axis_tvalid                     ), //i
     .s_axis_tdata   (s_axis_tdata[127:0]               ), //i
     .m0_axis_tvalid (axisPfbReadout_m0_axis_tvalid     ), //o

@@ -33,10 +33,12 @@ case class AxisPfbReadoutIO(N: Int) extends Bundle {
   val aclk = in Bool()
   val s_axis = in port Flow(Bits(4 * 32 bits))
   s_axis.payload.setName("s_axis_tdata")
+  s_axis.payload.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 307200000")
   s_axis.valid.setName("s_axis_tvalid")
   val m_axis = Vec.fill(4)(out port Flow(Bits(32 bits)))
   for(i <- 0 until 4) {
     m_axis(i).payload.setName(f"m${i}_axis_tdata")
+    m_axis(i).payload.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 307200000")
     m_axis(i).valid.setName(f"m${i}_axis_tvalid")
   }
 }
@@ -53,6 +55,7 @@ case class AxisPfbReadout(N: Int = 64) extends Component {
   noIoPrefix()
   io <> axisPfbReadout.io
   io.s_axi_aclk.setName("s_axi_aclk_i")
+  io.aclk.setName("aclk_i")
 }
 
 object AxisPfbReadout extends App {
