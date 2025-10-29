@@ -1,13 +1,13 @@
 {
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
-    "xci_name": "dds_compiler_0",
+    "xci_name": "dds_compiler_axis_dyn_readout",
     "component_reference": "xilinx.com:ip:dds_compiler:6.0",
     "ip_revision": "26",
-    "gen_directory": "../../../../projects/spinalhdl_bd_tprocv2_216/top/top.tmp/axis_dyn_readout_v1_v1_0_project/axis_dyn_readout_v1_v1_0_project.gen/sources_1/ip/dds_compiler_0",
+    "gen_directory": "../../../../projects/spinalhdl_bd_tprocv2_216/top/top.tmp/axis_dyn_readout_v1_v1_0_project/axis_dyn_readout_v1_v1_0_project.gen/sources_1/ip/dds_compiler_axis_dyn_readout",
     "parameters": {
       "component_parameters": {
-        "Component_Name": [ { "value": "dds_compiler_0", "resolve_type": "user", "usage": "all" } ],
+        "Component_Name": [ { "value": "dds_compiler_axis_dyn_readout", "resolve_type": "user", "usage": "all" } ],
         "PartsPresent": [ { "value": "Phase_Generator_and_SIN_COS_LUT", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "DDS_Clock_Rate": [ { "value": "256", "value_src": "user", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "Channels": [ { "value": "1", "resolve_type": "user", "usage": "all" } ],
@@ -179,7 +179,7 @@
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
         "IPREVISION": [ { "value": "26" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../projects/spinalhdl_bd_tprocv2_216/top/top.tmp/axis_dyn_readout_v1_v1_0_project/axis_dyn_readout_v1_v1_0_project.gen/sources_1/ip/dds_compiler_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../projects/spinalhdl_bd_tprocv2_216/top/top.tmp/axis_dyn_readout_v1_v1_0_project/axis_dyn_readout_v1_v1_0_project.gen/sources_1/ip/dds_compiler_axis_dyn_readout" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
         "SWVERSION": [ { "value": "2024.2" } ],
