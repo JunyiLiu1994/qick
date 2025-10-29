@@ -81,7 +81,7 @@ wire				valid_int		;
 /* Begin Architecture */
 /**********************/
 // AXI Slave.
-axi_slv axi_slv_i
+axi_slv_axis_pfb_readout axi_slv_i
 	(
 		.aclk			(s_axi_aclk	 	),
 		.aresetn		(s_axi_aresetn	),

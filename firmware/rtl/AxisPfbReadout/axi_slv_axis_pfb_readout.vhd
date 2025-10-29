@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity axi_slv is
+entity axi_slv_axis_pfb_readout is
 	Generic 
 	(
 		DATA_WIDTH	: integer	:= 32;
@@ -56,9 +56,9 @@ entity axi_slv is
 		PINC3_REG	: out std_logic_vector (31 downto 0);
 		POFF3_REG	: out std_logic_vector (31 downto 0)
 	);
-end axi_slv;
+end axi_slv_axis_pfb_readout;
 
-architecture rtl of axi_slv is
+architecture rtl of axi_slv_axis_pfb_readout is
 
 	-- AXI4LITE signals
 	signal axi_awaddr	: std_logic_vector(ADDR_WIDTH-1 downto 0);

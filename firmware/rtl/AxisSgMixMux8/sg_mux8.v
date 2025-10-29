@@ -272,7 +272,7 @@ genvar i,j;
 		/* Block instantiation */
 		/***********************/
 		// DDS.
-		dds_top 
+		dds_top_sg_mixmux8 
 			#(
 				.N_DDS(N_DDS)
 			)

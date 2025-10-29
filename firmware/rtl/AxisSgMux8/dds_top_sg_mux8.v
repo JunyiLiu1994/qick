@@ -1,4 +1,4 @@
-module dds_top (
+module dds_top_sg_mux8 (
 	// Reset and clock.
 	rstn			,
 	clk				,
@@ -25,7 +25,7 @@ parameter [31:0] N_DDS = 2;
 input						rstn;
 input						clk;
 
-output		[N_DDS*32-1:0]	dds_dout_o;
+output		[N_DDS*16-1:0]	dds_dout_o;
 
 input		[31:0]			PINC_REG;
 input		[31:0]			POFF_REG;
@@ -40,21 +40,17 @@ wire 		[N_DDS*72-1:0]	dds_ctrl_int;
 reg 		[N_DDS*72-1:0]	dds_ctrl_int_r;
 
 // DDS output.
-wire 		[31:0]			dds_dout	[0:N_DDS-1];
-wire		[31:0]			dds_dout_la	[0:N_DDS-1];
+wire 		[15:0]			dds_dout	[0:N_DDS-1];
+wire		[15:0]			dds_dout_la	[0:N_DDS-1];
 
 // Product.
 wire signed [15:0]			gain;
 wire signed	[15:0]			prod_a_real	[0:N_DDS-1];
-wire signed	[15:0]			prod_a_imag	[0:N_DDS-1];
 wire signed	[31:0]			prod_real	[0:N_DDS-1];
-wire signed	[31:0]			prod_imag	[0:N_DDS-1];
 reg			[31:0]			prod_real_r1[0:N_DDS-1];
-reg			[31:0]			prod_imag_r1[0:N_DDS-1];
 wire		[15:0]			prod_real_q	[0:N_DDS-1];
-wire		[15:0]			prod_imag_q	[0:N_DDS-1];
-wire		[31:0]			prod		[0:N_DDS-1];
-reg			[31:0]			prod_r1		[0:N_DDS-1];
+wire		[15:0]			prod		[0:N_DDS-1];
+reg			[15:0]			prod_r1		[0:N_DDS-1];
 
 /**********************/
 /* Begin Architecture */
@@ -87,7 +83,7 @@ genvar i;
 		/***********************/
 		// DDS.
 		// Latency: 10.
-		dds_compiler_axis_sg_mixmux8_v1 dds_i 
+		dds_compiler_axis_sg_mux8_v1 dds_i 
 			(
 		  		.aclk					(clk						),
 		  		.s_axis_phase_tvalid	(1'b1						),
@@ -100,7 +96,7 @@ genvar i;
 		latency_reg
 			#(
 				.N(4),
-				.B(32)
+				.B(16)
 			)
 			dds_dout_latency_reg_i
 			(
@@ -112,26 +108,22 @@ genvar i;
 			);
 
 		// Product.
-		assign prod_a_real	[i] = dds_dout_la[i][15:0];
-		assign prod_a_imag	[i] = dds_dout_la[i][31:16];
+		assign prod_a_real	[i] = dds_dout_la[i];
 		assign prod_real	[i] = prod_a_real[i]*gain;
-		assign prod_imag	[i] = prod_a_imag[i]*gain;
 		assign prod_real_q	[i] = prod_real_r1[i][30 -: 16];
-		assign prod_imag_q	[i] = prod_imag_r1[i][30 -: 16];
-		assign prod			[i]	= {prod_imag_q[i], prod_real_q[i]};
+		assign prod			[i]	= prod_real_q[i];
 
 		// Registers.
 		always @(posedge clk) begin
 			// Product.
 			prod_real_r1	[i]	<= prod_real	[i];
-			prod_imag_r1	[i]	<= prod_imag	[i];
 			prod_r1			[i]	<= prod			[i];
 		end
 
 		/***********/
 		/* Outputs */
 		/***********/
-		assign dds_dout_o[i*32 +: 32] = prod_r1[i];
+		assign dds_dout_o[i*16 +: 16] = prod_r1[i];
 
 	end
 endgenerate 
