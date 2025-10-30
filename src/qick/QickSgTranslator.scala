@@ -36,12 +36,6 @@ case class sg_translator(
   addGeneric("OUT_TYPE", OUT_TYPE)
   val io = QickSgTranslatorIo()
   noIoPrefix()
-  io.s_axis.payload.data.setName("s_tproc_axis_tdata")
-  io.s_axis.valid.setName("s_tproc_axis_tvalid")
-  io.s_axis.ready.setName("s_tproc_axis_tready")
-  io.m_readout_axis.payload.data.setName("m_readout_v3_axis_tdata")
-  io.m_readout_axis.valid.setName("m_readout_v3_axis_tvalid")
-  io.m_readout_axis.ready.setName("m_readout_v3_axis_tready")
 }
 
 case class QickSgTranslator(OUT_TYPE : Int = 0) extends Component {
@@ -49,6 +43,12 @@ case class QickSgTranslator(OUT_TYPE : Int = 0) extends Component {
   val sgTranslator = sg_translator(OUT_TYPE)
   noIoPrefix()
   io <> sgTranslator.io
+  io.s_axis.payload.data.setName("s_tproc_axis_tdata")
+  io.s_axis.valid.setName("s_tproc_axis_tvalid")
+  io.s_axis.ready.setName("s_tproc_axis_tready")
+  io.m_readout_axis.payload.data.setName("m_readout_v3_axis_tdata")
+  io.m_readout_axis.valid.setName("m_readout_v3_axis_tvalid")
+  io.m_readout_axis.ready.setName("m_readout_v3_axis_tready")
 }
 
 object QickSgTranslator extends App {
