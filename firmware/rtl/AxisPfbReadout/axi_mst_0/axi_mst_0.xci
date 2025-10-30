@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "axi_mst_0",
     "component_reference": "xilinx.com:ip:axi_vip:1.1",
-    "ip_revision": "14",
+    "ip_revision": "19",
     "gen_directory": "../project_1/project_1.gen/sources_1/ip/axi_mst_0",
     "parameters": {
       "component_parameters": {
@@ -22,20 +22,21 @@
         "WUSER_BITS_PER_BYTE": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "RUSER_BITS_PER_BYTE": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "HAS_USER_BITS_PER_BYTE": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
-        "SUPPORTS_NARROW": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "SUPPORTS_NARROW": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "HAS_SIZE": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
-        "HAS_BURST": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
-        "HAS_LOCK": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
-        "HAS_CACHE": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
-        "HAS_REGION": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
-        "HAS_QOS": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "HAS_BURST": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "HAS_LOCK": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "HAS_CACHE": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "HAS_REGION": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "HAS_QOS": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "HAS_PROT": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "HAS_WSTRB": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "HAS_BRESP": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "HAS_RRESP": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "HAS_ACLKEN": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "HAS_ARESETN": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "VIP_PKG_NAME": [ { "value": "0", "resolve_type": "user", "usage": "all" } ]
+        "VIP_PKG_NAME": [ { "value": "0", "resolve_type": "user", "usage": "all" } ],
+        "SLAVE_SEG_TYPE": [ { "value": "REG", "resolve_type": "user", "enabled": false, "usage": "all" } ]
       },
       "model_parameters": {
         "C_AXI_PROTOCOL": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -73,18 +74,16 @@
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
         "SPEEDGRADE": [ { "value": "-2" } ],
         "STATIC_POWER": [ { "value": "" } ],
-        "TEMPERATURE_GRADE": [ { "value": "E" } ],
-        "USE_RDI_CUSTOMIZATION": [ { "value": "TRUE" } ],
-        "USE_RDI_GENERATION": [ { "value": "TRUE" } ]
+        "TEMPERATURE_GRADE": [ { "value": "E" } ]
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "14" } ],
+        "IPREVISION": [ { "value": "19" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../project_1/project_1.gen/sources_1/ip/axi_mst_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
-        "SWVERSION": [ { "value": "2023.1" } ],
+        "SWVERSION": [ { "value": "2024.2" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },

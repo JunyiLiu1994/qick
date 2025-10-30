@@ -58,11 +58,12 @@ add_files -fileset $obj $files
 #############################################################################################################
 # spinalhdl generated files
 
-add_files [glob ${origin_dir}/../../rtl/**/*.v]
-add_files [glob ${origin_dir}/../../rtl/**/*.sv]
-add_files [glob ${origin_dir}/../../rtl/**/*.svh]
-add_files [glob ${origin_dir}/../../rtl/**/*.vhd]
-add_files [glob ${origin_dir}/../../rtl/**/*.xci]
+add_files [glob ${origin_dir}/../../rtl/*/*.v]
+add_files [glob ${origin_dir}/../../rtl/*/*.sv]
+add_files [glob ${origin_dir}/../../rtl/*/*.svh]
+add_files [glob ${origin_dir}/../../rtl/*/*.vhd]
+add_files [glob ${origin_dir}/../../rtl/*/*.xci]
+add_files [glob ${origin_dir}/../../rtl/*/*/*.xci]
 add_files -fileset constrs_1 [glob ${origin_dir}/../../rtl/**/*.xdc]
 
 #############################################################################################################
