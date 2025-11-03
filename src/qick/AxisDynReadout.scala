@@ -26,7 +26,7 @@ case class AxisDynReadoutIO(N_DDS: Int) extends Bundle {
   m1_axis.ready.setName("m1_axis_tready")
 }
 
-case class axi_dyn_readout_v1(N_DDS: Int) extends BlackBox {
+case class axis_dyn_readout_v1(N_DDS: Int) extends BlackBox {
   addGeneric("N_DDS", N_DDS)
   val io = AxisDynReadoutIO(N_DDS)
   noIoPrefix()
@@ -34,7 +34,7 @@ case class axi_dyn_readout_v1(N_DDS: Int) extends BlackBox {
 
 case class AxisDynReadout(N_DDS: Int = 8) extends Component {
   val io = AxisDynReadoutIO(N_DDS)
-  val axisDynReadout = axi_dyn_readout_v1(N_DDS)
+  val axisDynReadout = axis_dyn_readout_v1(N_DDS)
   noIoPrefix()
   io <> axisDynReadout.io
 }
