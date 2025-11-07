@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : AxisDynReadout
-// Git hash  : 436a656190691f53ae4a17717db05d81d67bac2f
+// Git hash  : f862cf9d914b4446d2c4f7a3ddaff57d7ddce531
 
 `timescale 1ns/1ps
 
@@ -28,9 +28,7 @@ module AxisDynReadout (
   wire                axisDynReadout_m1_axis_tvalid;
   wire       [31:0]   axisDynReadout_m1_axis_tdata;
 
-  axis_dyn_readout_v1 #(
-    .N_DDS (8)
-  ) axisDynReadout (
+  axis_dyn_readout_v1 axisDynReadout (
     .aresetn        (aresetn                            ), //i
     .aclk           (aclk                               ), //i
     .s0_axis_tvalid (s0_axis_tvalid                     ), //i

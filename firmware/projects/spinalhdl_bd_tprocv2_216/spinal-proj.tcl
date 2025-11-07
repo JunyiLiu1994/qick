@@ -65,6 +65,7 @@ add_files [glob ${origin_dir}/../../rtl/*/*.vhd]
 add_files [glob ${origin_dir}/../../rtl/*/*.xci]
 add_files [glob ${origin_dir}/../../rtl/*/*/*.xci]
 add_files -fileset constrs_1 [glob ${origin_dir}/../../rtl/**/*.xdc]
+set_property file_type {VHDL 2008} [get_files *.vhd]
 
 #############################################################################################################
 

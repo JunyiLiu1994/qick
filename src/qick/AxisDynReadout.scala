@@ -5,7 +5,8 @@ import spinal.lib._
 import spinal.lib.bus.amba4.axis._
 import spinal.lib.bus.amba4.axilite._
 
-case class AxisDynReadoutIO(N_DDS: Int) extends Bundle {
+case class AxisDynReadoutIO() extends Bundle {
+  val N_DDS = 8
   val aresetn = in Bool()
   val aclk = in Bool()
   val s0_axis = slave port Axi4Stream(Axi4StreamConfig(dataWidth = 88 / 8))
@@ -26,15 +27,14 @@ case class AxisDynReadoutIO(N_DDS: Int) extends Bundle {
   m1_axis.ready.setName("m1_axis_tready")
 }
 
-case class axis_dyn_readout_v1(N_DDS: Int) extends BlackBox {
-  addGeneric("N_DDS", N_DDS)
-  val io = AxisDynReadoutIO(N_DDS)
+case class axis_dyn_readout_v1() extends BlackBox {
+  val io = AxisDynReadoutIO()
   noIoPrefix()
 }
 
-case class AxisDynReadout(N_DDS: Int = 8) extends Component {
-  val io = AxisDynReadoutIO(N_DDS)
-  val axisDynReadout = axis_dyn_readout_v1(N_DDS)
+case class AxisDynReadout() extends Component {
+  val io = AxisDynReadoutIO()
+  val axisDynReadout = axis_dyn_readout_v1()
   noIoPrefix()
   io <> axisDynReadout.io
 }
