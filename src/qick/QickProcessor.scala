@@ -240,7 +240,7 @@ case class QickProcessor() extends Component {
 object QickProcessor extends App {
   SpinalConfig(
     mode = Verilog,
-    targetDirectory = "./firmware/rtl/QickProcessor"
+    targetDirectory = "./firmware/rtl/"
   ).generate(
     QickProcessor()
   )
