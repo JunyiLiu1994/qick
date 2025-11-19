@@ -51,6 +51,61 @@ case class QickTop() extends Component {
   }
   val axis_avg_buffer_1 = AxisAvgBuffer(N_AVG = 13, N_BUF = 12)
   axis_avg_buffer_1_io <> axis_avg_buffer_1.io
+  /* -- axis_avg_buffer_2 -- */
+  val axis_avg_buffer_2_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 10, B = 16)
+  axis_avg_buffer_2_io.setName("")
+  axis_avg_buffer_2_io.s_axi_aclk.setName("s_axi_aclk_i")
+  axis_avg_buffer_2_io.s_axis_aclk.setName("s_axis_aclk_i")
+  axis_avg_buffer_2_io.m_axis_aclk.setName("m_axis_aclk_i")
+  axis_avg_buffer_2_io.flatten.foreach { w =>
+    w.setName("axis_avg_buffer_2_" + w.getName())
+  }
+  val axis_avg_buffer_2 = AxisAvgBuffer(N_AVG = 13)
+  axis_avg_buffer_2_io <> axis_avg_buffer_2.io
+  /* -- axis_avg_buffer_3 -- */
+  val axis_avg_buffer_3_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 10, B = 16)
+  axis_avg_buffer_3_io.setName("")
+  axis_avg_buffer_3_io.s_axi_aclk.setName("s_axi_aclk_i")
+  axis_avg_buffer_3_io.s_axis_aclk.setName("s_axis_aclk_i")
+  axis_avg_buffer_3_io.m_axis_aclk.setName("m_axis_aclk_i")
+  axis_avg_buffer_3_io.flatten.foreach { w =>
+    w.setName("axis_avg_buffer_3_" + w.getName())
+  }
+  val axis_avg_buffer_3 = AxisAvgBuffer(N_AVG = 13)
+  axis_avg_buffer_3_io <> axis_avg_buffer_3.io
+  /* -- axis_avg_buffer_4 -- */
+  val axis_avg_buffer_4_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 10, B = 16)
+  axis_avg_buffer_4_io.setName("")
+  axis_avg_buffer_4_io.s_axi_aclk.setName("s_axi_aclk_i")
+  axis_avg_buffer_4_io.s_axis_aclk.setName("s_axis_aclk_i")
+  axis_avg_buffer_4_io.m_axis_aclk.setName("m_axis_aclk_i")
+  axis_avg_buffer_4_io.flatten.foreach { w =>
+    w.setName("axis_avg_buffer_4_" + w.getName())
+  }
+  val axis_avg_buffer_4 = AxisAvgBuffer(N_AVG = 13)
+  axis_avg_buffer_4_io <> axis_avg_buffer_4.io
+  /* -- axis_avg_buffer_5 -- */
+  val axis_avg_buffer_5_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 10, B = 16)
+  axis_avg_buffer_5_io.setName("")
+  axis_avg_buffer_5_io.s_axi_aclk.setName("s_axi_aclk_i")
+  axis_avg_buffer_5_io.s_axis_aclk.setName("s_axis_aclk_i")
+  axis_avg_buffer_5_io.m_axis_aclk.setName("m_axis_aclk_i")
+  axis_avg_buffer_5_io.flatten.foreach { w =>
+    w.setName("axis_avg_buffer_5_" + w.getName())
+  }
+  val axis_avg_buffer_5 = AxisAvgBuffer(N_AVG = 13)
+  axis_avg_buffer_5_io <> axis_avg_buffer_5.io
+  /* -- axis_avg_buffer_6 -- */
+  val axis_avg_buffer_6_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 12, B = 16)
+  axis_avg_buffer_6_io.setName("")
+  axis_avg_buffer_6_io.s_axi_aclk.setName("s_axi_aclk_i")
+  axis_avg_buffer_6_io.s_axis_aclk.setName("s_axis_aclk_i")
+  axis_avg_buffer_6_io.m_axis_aclk.setName("m_axis_aclk_i")
+  axis_avg_buffer_6_io.flatten.foreach { w =>
+    w.setName("axis_avg_buffer_6_" + w.getName())
+  }
+  val axis_avg_buffer_6 = AxisAvgBuffer(N_AVG = 13, N_BUF = 12)
+  axis_avg_buffer_6_io <> axis_avg_buffer_6.io
 }
 
 object QickTop extends App {
