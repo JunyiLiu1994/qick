@@ -5,11 +5,12 @@ import spinal.lib._
 import spinal.lib.bus.amba4.axi._
 import spinal.lib.bus.amba4.axilite._
 
-case class QickIo() extends Bundle {
-}
-
 case class QickTop() extends Component {
-  val io = QickProcessorIo()
+  val qick_processor_0_io = QickProcessorIo()
+  qick_processor_0_io.setName("")
+  qick_processor_0_io.flatten.foreach { w =>
+    w.setName("qick_processor_0_" + w.getName())
+  }
   noIoPrefix()
   val qickProcessor = axis_qick_processor(
     ARITH = 1,
@@ -26,11 +27,7 @@ case class QickTop() extends Component {
     PMEM_AW = 12,
     WMEM_AW = 10,
   )
-  io <> qickProcessor.io
-
-  val qickSgTranslator = sg_translator(
-    OUT_TYPE = 0
-  )
+  qick_processor_0_io <> qickProcessor.io
 }
 
 object QickTop extends App {
