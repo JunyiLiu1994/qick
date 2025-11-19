@@ -58,12 +58,55 @@ add_files -fileset $obj $files
 #############################################################################################################
 # spinalhdl generated files
 
-add_files [glob ${origin_dir}/../../rtl/**/*.v]
-add_files [glob ${origin_dir}/../../rtl/**/*.sv]
-add_files [glob ${origin_dir}/../../rtl/**/*.svh]
-add_files [glob ${origin_dir}/../../rtl/**/*.vhd]
-add_files [glob ${origin_dir}/../../rtl/**/*.xci]
-add_files -fileset constrs_1 [glob ${origin_dir}/../../rtl/**/*.xdc]
+# OLD
+# add_files [glob ${origin_dir}/../../rtl/*/*.v]
+# add_files [glob ${origin_dir}/../../rtl/*/*.sv]
+# add_files [glob ${origin_dir}/../../rtl/*/*.svh]
+# add_files [glob ${origin_dir}/../../rtl/*/*.vhd]
+# add_files [glob ${origin_dir}/../../rtl/*/*.xci]
+# add_files [glob ${origin_dir}/../../rtl/*/*/*.xci]
+# add_files -fileset constrs_1 [glob ${origin_dir}/../../rtl/**/*.xdc]
+
+proc make_lib {name} {
+    set dir "./../../ip/$name"
+    set lib "lib_$name"
+    set matches [exec find $dir -name *.v -o -name *.sv -o -name *.vhd -o -name *.xci -o -name *.svh]
+    add_files $matches
+    set_property library $lib [get_files $matches]
+    set xdcs [exec find $dir -name *.xdc]
+    if {$xdcs ne ""} {
+      add_files -fileset constrs_1 $xdcs
+      set_property library $lib [get_files $xdcs]
+    }
+}
+
+make_lib axis_avg_buffer
+make_lib axis_buffer_ddr_v1
+make_lib axis_cdcsync_v1
+make_lib axis_dyn_readout_v1
+make_lib axis_pfb_readout_v3
+make_lib axis_readout_v2
+make_lib axis_readout_v3
+make_lib axis_register_slice_nb
+make_lib axis_resampler_2x1_v1
+make_lib axis_sg_int4_v2
+make_lib axis_sg_mixmux8_v1
+make_lib axis_sg_mux8_v1
+make_lib axis_signal_gen_v6
+make_lib axis_tmux_v1
+make_lib mr_buffer_et
+make_lib qick_processor
+make_lib qick_sg_translator
+
+add_files [glob $origin_dir/../../rtl/*.v]
+add_files [glob $origin_dir/../../hdl/*.v]
+add_files [glob $origin_dir/../../hdl/*.sv]
+add_files [glob $origin_dir/../../hdl/*.vhd]
+
+set xil_lib_files [exec find ./../../ip/axis_pfb_readout_v3/src/pfb/ -name *.vhd]
+set_property library xil_defaultlib [get_files $xil_lib_files]
+
+set_property file_type {VHDL 2008} [get_files *.vhd]
 
 #############################################################################################################
 

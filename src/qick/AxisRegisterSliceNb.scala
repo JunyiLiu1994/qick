@@ -15,6 +15,7 @@ case class AxisRegisterSliceNbIo(B: Int, N: Int) extends Bundle {
    val m_axis = master port Axi4Stream(Axi4StreamConfig(dataWidth = B / 8))
    m_axis.payload.data.setName("m_axis_tdata")
    m_axis.valid.setName("m_axis_tvalid")
+   m_axis.ready.setName("m_axis_tready")
 }
 
 case class axis_register_slice_nb(B: Int = 16, N: Int = 4) extends BlackBox {
@@ -40,7 +41,7 @@ object AxisRegisterSliceNb extends App {
   for(((b, n), i) <- params.zipWithIndex) {
     SpinalConfig(
       mode = Verilog,
-      targetDirectory = s"./firmware/rtl/AxisRegisterSliceNb"
+      targetDirectory = s"./firmware/rtl/"
     ).generate{
       val dut = AxisRegisterSliceNb(b, n)
       dut.setDefinitionName(s"AxisRegisterSliceNb_${i}")

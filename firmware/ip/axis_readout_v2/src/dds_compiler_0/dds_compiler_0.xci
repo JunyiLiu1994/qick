@@ -2,10 +2,9 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "dds_compiler_0",
-    "cell_name": "readout_top_i/down_conversion_fir_i/down_conversion_i/GEN_dds[0].dds_i/dds_compiler_0",
     "component_reference": "xilinx.com:ip:dds_compiler:6.0",
-    "ip_revision": "22",
-    "gen_directory": "../../../../projects/qick_tprocv2_216_demo/top/top.tmp/axis_readout_v2_v1_0_project/axis_readout_v2_v1_0_project.gen/sources_1/ip/dds_compiler_0",
+    "ip_revision": "26",
+    "gen_directory": "../../../../projects/spinalhdl_bd_tprocv2_216/top/top.tmp/axis_readout_v2_v1_0_project/axis_readout_v2_v1_0_project.gen/sources_1/ip/dds_compiler_0",
     "parameters": {
       "component_parameters": {
         "Component_Name": [ { "value": "dds_compiler_0", "resolve_type": "user", "usage": "all" } ],
@@ -14,6 +13,7 @@
         "Channels": [ { "value": "1", "resolve_type": "user", "usage": "all" } ],
         "Mode_of_Operation": [ { "value": "Standard", "resolve_type": "user", "usage": "all" } ],
         "Modulus": [ { "value": "9", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Output_Type": [ { "value": "Integer", "resolve_type": "user", "usage": "all" } ],
         "Parameter_Entry": [ { "value": "System_Parameters", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "Spurious_Free_Dynamic_Range": [ { "value": "96", "value_src": "user", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "Frequency_Resolution": [ { "value": "0.06", "value_src": "user", "resolve_type": "user", "format": "float", "usage": "all" } ],
@@ -128,6 +128,7 @@
         "C_NOISE_SHAPING": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_OUTPUTS_REQUIRED": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_OUTPUT_FORM": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_OUTPUT_TYPE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_OUTPUT_WIDTH": [ { "value": "16", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_PHASE_ANGLE_WIDTH": [ { "value": "14", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_PHASE_INCREMENT": [ { "value": "3", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -163,7 +164,7 @@
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynquplusRFSOC" } ],
-        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BASE_BOARD_PART": [ { "value": "xilinx.com:zcu216:part0:2.0" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xczu49dr" } ],
         "PACKAGE": [ { "value": "ffvf1760" } ],
@@ -172,18 +173,16 @@
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
         "SPEEDGRADE": [ { "value": "-2" } ],
         "STATIC_POWER": [ { "value": "" } ],
-        "TEMPERATURE_GRADE": [ { "value": "E" } ],
-        "USE_RDI_CUSTOMIZATION": [ { "value": "TRUE" } ],
-        "USE_RDI_GENERATION": [ { "value": "TRUE" } ]
+        "TEMPERATURE_GRADE": [ { "value": "E" } ]
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "22" } ],
+        "IPREVISION": [ { "value": "26" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../projects/qick_tprocv2_216_demo/top/top.tmp/axis_readout_v2_v1_0_project/axis_readout_v2_v1_0_project.gen/sources_1/ip/dds_compiler_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../projects/spinalhdl_bd_tprocv2_216/top/top.tmp/axis_readout_v2_v1_0_project/axis_readout_v2_v1_0_project.gen/sources_1/ip/dds_compiler_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
-        "SWVERSION": [ { "value": "2023.1" } ],
+        "SWVERSION": [ { "value": "2024.2" } ],
         "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },
