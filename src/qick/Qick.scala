@@ -115,8 +115,16 @@ case class QickTop() extends Component {
   }
   val mr_buffer_et_0 = MrBufferV1(B=32, N=10)
   mr_buffer_et_0_io <> mr_buffer_et_0.io
-
-
+  /* -- axis_pfb_readout_v3_0 -- */
+  val axis_pfb_readout_v3_0_io = AxisPfbReadoutIO(64)
+  axis_pfb_readout_v3_0_io.setName("")
+  axis_pfb_readout_v3_0_io.s_axi_aclk.setName("s_axi_aclk_i")
+  axis_pfb_readout_v3_0_io.aclk.setName("aclk_i")
+  axis_pfb_readout_v3_0_io.flatten.foreach { w =>
+    w.setName("axis_pfb_readout_v3_0_" + w.getName())
+  }
+  val axis_pfb_readout_v3_0 = AxisPfbReadout()
+  axis_pfb_readout_v3_0_io <> axis_pfb_readout_v3_0.io
 
 
 }
