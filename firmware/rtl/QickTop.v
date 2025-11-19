@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 91938e3de9e8a70dd9d958f31a8876d68b423280
+// Git hash  : 207623221a3254e1d2fcb5a44ea95186538c4a5e
 
 `timescale 1ns/1ps
 
@@ -622,7 +622,21 @@ module QickTop (
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [63:0]   axis_readout_v3_0_s1_axis_tdata,
   output wire          axis_readout_v3_0_m_axis_tvalid,
   input  wire          axis_readout_v3_0_m_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [31:0]   axis_readout_v3_0_m_axis_tdata
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [31:0]   axis_readout_v3_0_m_axis_tdata,
+  input  wire          axis_dyn_readout_v1_0_aresetn,
+  input  wire          axis_dyn_readout_v1_0_aclk,
+  input  wire          axis_dyn_readout_v1_0_s0_axis_tvalid,
+  output wire          axis_dyn_readout_v1_0_s0_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [87:0]   axis_dyn_readout_v1_0_s0_axis_tdata,
+  input  wire          axis_dyn_readout_v1_0_s1_axis_tvalid,
+  output wire          axis_dyn_readout_v1_0_s1_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [127:0]  axis_dyn_readout_v1_0_s1_axis_tdata,
+  output wire          axis_dyn_readout_v1_0_m0_axis_tvalid,
+  input  wire          axis_dyn_readout_v1_0_m0_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [255:0]  axis_dyn_readout_v1_0_m0_axis_tdata,
+  output wire          axis_dyn_readout_v1_0_m1_axis_tvalid,
+  input  wire          axis_dyn_readout_v1_0_m1_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [31:0]   axis_dyn_readout_v1_0_m1_axis_tdata
 );
 
   wire       [47:0]   qickProcessor_t_time_abs_o;
@@ -919,6 +933,12 @@ module QickTop (
   wire                axis_readout_v3_0_s1_axis_tready_1;
   wire                axis_readout_v3_0_m_axis_tvalid_1;
   wire       [31:0]   axis_readout_v3_0_m_axis_tdata_1;
+  wire                axis_dyn_readout_v1_0_s0_axis_tready_1;
+  wire                axis_dyn_readout_v1_0_s1_axis_tready_1;
+  wire                axis_dyn_readout_v1_0_m0_axis_tvalid_1;
+  wire       [255:0]  axis_dyn_readout_v1_0_m0_axis_tdata_1;
+  wire                axis_dyn_readout_v1_0_m1_axis_tvalid_1;
+  wire       [31:0]   axis_dyn_readout_v1_0_m1_axis_tdata_1;
 
   axis_qick_processor #(
     .DUAL_CORE     (0  ),
@@ -1589,6 +1609,22 @@ module QickTop (
     .m_axis_tready  (axis_readout_v3_0_m_axis_tready       ), //i
     .m_axis_tdata   (axis_readout_v3_0_m_axis_tdata_1[31:0])  //o
   );
+  AxisDynReadout axis_dyn_readout_v1_0 (
+    .aresetn        (axis_dyn_readout_v1_0_aresetn               ), //i
+    .aclk           (axis_dyn_readout_v1_0_aclk                  ), //i
+    .s0_axis_tvalid (axis_dyn_readout_v1_0_s0_axis_tvalid        ), //i
+    .s0_axis_tready (axis_dyn_readout_v1_0_s0_axis_tready_1      ), //o
+    .s0_axis_tdata  (axis_dyn_readout_v1_0_s0_axis_tdata[87:0]   ), //i
+    .s1_axis_tvalid (axis_dyn_readout_v1_0_s1_axis_tvalid        ), //i
+    .s1_axis_tready (axis_dyn_readout_v1_0_s1_axis_tready_1      ), //o
+    .s1_axis_tdata  (axis_dyn_readout_v1_0_s1_axis_tdata[127:0]  ), //i
+    .m0_axis_tvalid (axis_dyn_readout_v1_0_m0_axis_tvalid_1      ), //o
+    .m0_axis_tready (axis_dyn_readout_v1_0_m0_axis_tready        ), //i
+    .m0_axis_tdata  (axis_dyn_readout_v1_0_m0_axis_tdata_1[255:0]), //o
+    .m1_axis_tvalid (axis_dyn_readout_v1_0_m1_axis_tvalid_1      ), //o
+    .m1_axis_tready (axis_dyn_readout_v1_0_m1_axis_tready        ), //i
+    .m1_axis_tdata  (axis_dyn_readout_v1_0_m1_axis_tdata_1[31:0] )  //o
+  );
   assign qick_processor_0_t_time_abs_o = qickProcessor_t_time_abs_o;
   assign qick_processor_0_pulse_sync_o = qickProcessor_pulse_sync_o;
   assign qick_processor_0_qnet_en_o = qickProcessor_qnet_en_o;
@@ -1883,6 +1919,61 @@ module QickTop (
   assign axis_readout_v3_0_s1_axis_tready = axis_readout_v3_0_s1_axis_tready_1;
   assign axis_readout_v3_0_m_axis_tvalid = axis_readout_v3_0_m_axis_tvalid_1;
   assign axis_readout_v3_0_m_axis_tdata = axis_readout_v3_0_m_axis_tdata_1;
+  assign axis_dyn_readout_v1_0_s0_axis_tready = axis_dyn_readout_v1_0_s0_axis_tready_1;
+  assign axis_dyn_readout_v1_0_s1_axis_tready = axis_dyn_readout_v1_0_s1_axis_tready_1;
+  assign axis_dyn_readout_v1_0_m0_axis_tvalid = axis_dyn_readout_v1_0_m0_axis_tvalid_1;
+  assign axis_dyn_readout_v1_0_m0_axis_tdata = axis_dyn_readout_v1_0_m0_axis_tdata_1;
+  assign axis_dyn_readout_v1_0_m1_axis_tvalid = axis_dyn_readout_v1_0_m1_axis_tvalid_1;
+  assign axis_dyn_readout_v1_0_m1_axis_tdata = axis_dyn_readout_v1_0_m1_axis_tdata_1;
+
+endmodule
+
+module AxisDynReadout (
+  input  wire          aresetn,
+  input  wire          aclk,
+  input  wire          s0_axis_tvalid,
+  output wire          s0_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [87:0]   s0_axis_tdata,
+  input  wire          s1_axis_tvalid,
+  output wire          s1_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [127:0]  s1_axis_tdata,
+  output wire          m0_axis_tvalid,
+  input  wire          m0_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [255:0]  m0_axis_tdata,
+  output wire          m1_axis_tvalid,
+  input  wire          m1_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [31:0]   m1_axis_tdata
+);
+
+  wire                axisDynReadout_1_s0_axis_tready;
+  wire                axisDynReadout_1_s1_axis_tready;
+  wire                axisDynReadout_1_m0_axis_tvalid;
+  wire       [255:0]  axisDynReadout_1_m0_axis_tdata;
+  wire                axisDynReadout_1_m1_axis_tvalid;
+  wire       [31:0]   axisDynReadout_1_m1_axis_tdata;
+
+  axis_dyn_readout_v1 axisDynReadout_1 (
+    .aresetn        (aresetn                              ), //i
+    .aclk           (aclk                                 ), //i
+    .s0_axis_tvalid (s0_axis_tvalid                       ), //i
+    .s0_axis_tready (axisDynReadout_1_s0_axis_tready      ), //o
+    .s0_axis_tdata  (s0_axis_tdata[87:0]                  ), //i
+    .s1_axis_tvalid (s1_axis_tvalid                       ), //i
+    .s1_axis_tready (axisDynReadout_1_s1_axis_tready      ), //o
+    .s1_axis_tdata  (s1_axis_tdata[127:0]                 ), //i
+    .m0_axis_tvalid (axisDynReadout_1_m0_axis_tvalid      ), //o
+    .m0_axis_tready (m0_axis_tready                       ), //i
+    .m0_axis_tdata  (axisDynReadout_1_m0_axis_tdata[255:0]), //o
+    .m1_axis_tvalid (axisDynReadout_1_m1_axis_tvalid      ), //o
+    .m1_axis_tready (m1_axis_tready                       ), //i
+    .m1_axis_tdata  (axisDynReadout_1_m1_axis_tdata[31:0] )  //o
+  );
+  assign s0_axis_tready = axisDynReadout_1_s0_axis_tready;
+  assign s1_axis_tready = axisDynReadout_1_s1_axis_tready;
+  assign m0_axis_tvalid = axisDynReadout_1_m0_axis_tvalid;
+  assign m0_axis_tdata = axisDynReadout_1_m0_axis_tdata;
+  assign m1_axis_tvalid = axisDynReadout_1_m1_axis_tvalid;
+  assign m1_axis_tdata = axisDynReadout_1_m1_axis_tdata;
 
 endmodule
 

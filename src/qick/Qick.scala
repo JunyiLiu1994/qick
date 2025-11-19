@@ -144,9 +144,14 @@ case class QickTop() extends Component {
   }
   val axis_readout_v3_0 = AxisReadoutV3()
   axis_readout_v3_0_io <> axis_readout_v3_0.io
-
-
-
+  /* -- axis_dyn_readout_v1_0 -- */
+  val axis_dyn_readout_v1_0_io = AxisDynReadoutIO()
+  axis_dyn_readout_v1_0_io.setName("")
+  axis_dyn_readout_v1_0_io.flatten.foreach { w =>
+    w.setName("axis_dyn_readout_v1_0_" + w.getName())
+  }
+  val axis_dyn_readout_v1_0 = AxisDynReadout()
+  axis_dyn_readout_v1_0_io <> axis_dyn_readout_v1_0.io
 }
 
 object QickTop extends App {
