@@ -12,10 +12,12 @@ case class AxisTMuxV1IO(N: Int, B: Int) extends Bundle {
   s_axis.payload.data.setName("s_axis_tdata")
   s_axis.valid.setName("s_axis_tvalid")
   s_axis.ready.setName("s_axis_tready")
+  s_axis.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
   val m_axis = Vec.fill(8)(out port Flow(Bits(B bits)))
   for((a, i) <- m_axis.zipWithIndex) {
     a.payload.setName(f"m${i}_axis_tdata")
     a.valid.setName(f"m${i}_axis_tvalid")
+    a.payload.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
   }
 }
 

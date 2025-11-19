@@ -152,6 +152,37 @@ case class QickTop() extends Component {
   }
   val axis_dyn_readout_v1_0 = AxisDynReadout()
   axis_dyn_readout_v1_0_io <> axis_dyn_readout_v1_0.io
+  /* -- axis_signal_gen_v6_0 -- */
+  val axis_signal_gen_v6_0_io = AxisSignalGenV6IO(10)
+  axis_signal_gen_v6_0_io.setName("")
+  axis_signal_gen_v6_0_io.s_axi_aclk.setName("s_axi_aclk_i")
+  axis_signal_gen_v6_0_io.s0_axis_aclk.setName("s0_axis_aclk_i")
+  axis_signal_gen_v6_0_io.aclk.setName("aclk_i")
+  axis_signal_gen_v6_0_io.flatten.foreach { w => 
+    w.setName("axis_signal_gen_v6_0_" + w.getName())
+  }
+  val axis_signal_gen_v6_0 = AxisSignalGenV6(10)
+  axis_signal_gen_v6_0_io <> axis_signal_gen_v6_0.io
+  /* -- axis_signal_gen_v6_1 -- */
+  val axis_signal_gen_v6_1_io = AxisSignalGenV6IO(9)
+  axis_signal_gen_v6_1_io.setName("")
+  axis_signal_gen_v6_1_io.s_axi_aclk.setName("s_axi_aclk_i")
+  axis_signal_gen_v6_1_io.s0_axis_aclk.setName("s0_axis_aclk_i")
+  axis_signal_gen_v6_1_io.aclk.setName("aclk_i")
+  axis_signal_gen_v6_1_io.flatten.foreach { w => 
+    w.setName("axis_signal_gen_v6_1_" + w.getName())
+  }
+  val axis_signal_gen_v6_1 = AxisSignalGenV6(9)
+  axis_signal_gen_v6_1_io <> axis_signal_gen_v6_1.io
+  /* -- axis_tmux_v1_0 -- */
+  val axis_tmux_v1_0_io = AxisTMuxV1IO(4, 168)
+  axis_tmux_v1_0_io.setName("")
+  axis_tmux_v1_0_io.flatten.foreach { w => 
+    w.setName("axis_tmux_v1_0_" + w.getName())
+  }
+  val axis_tmux_v1_0 = AxisTMuxV1(4, 168)
+  axis_tmux_v1_0_io <> axis_tmux_v1_0.io
+
 }
 
 object QickTop extends App {
