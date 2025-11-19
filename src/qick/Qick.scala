@@ -106,6 +106,19 @@ case class QickTop() extends Component {
   }
   val axis_avg_buffer_6 = AxisAvgBuffer(N_AVG = 13, N_BUF = 12)
   axis_avg_buffer_6_io <> axis_avg_buffer_6.io
+  /* -- mr_buffer_et_0 -- */
+  val mr_buffer_et_0_io = MrBufferIO(B=32, N=10, NM=8,
+    C_S00_AXI_DATA_WIDTH = 32, C_S00_AXI_ADDR_WIDTH = 6, DEBUG = 0)
+  mr_buffer_et_0_io.setName("")
+  mr_buffer_et_0_io.flatten.foreach { w =>
+    w.setName("mr_buffer_et_0_" + w.getName())
+  }
+  val mr_buffer_et_0 = MrBufferV1(B=32, N=10)
+  mr_buffer_et_0_io <> mr_buffer_et_0.io
+
+
+
+
 }
 
 object QickTop extends App {
