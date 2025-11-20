@@ -200,6 +200,19 @@ case class QickTop() extends Component {
   }
   val axis_sg_mux8_v1_0 = AxisSgMux8(16)
   axis_sg_mux8_v1_0_io <> axis_sg_mux8_v1_0.io
+  /* -- axis_sg_mixmux8_v1_0 -- */
+  val axis_sg_mixmux8_v1_0_io = AxisSgMixMux8IO(4)
+  axis_sg_mixmux8_v1_0_io.setName("")
+  axis_sg_mixmux8_v1_0_io.s_axi_aclk.setName("s_axi_aclk_i")
+  axis_sg_mixmux8_v1_0_io.aclk.setName("aclk_i")
+  axis_sg_mixmux8_v1_0_io.flatten.foreach { w =>
+    w.setName("axis_sg_mixmux8_v1_0_" + w.getName())
+  }
+  val axis_sg_mixmux8_v1_0 = AxisSgMixMux8(4)
+  axis_sg_mixmux8_v1_0_io <> axis_sg_mixmux8_v1_0.io
+
+
+
 }
 
 object QickTop extends App {
