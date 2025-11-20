@@ -182,6 +182,14 @@ case class QickTop() extends Component {
   }
   val axis_tmux_v1_0 = AxisTMuxV1(4, 168)
   axis_tmux_v1_0_io <> axis_tmux_v1_0.io
+  /* -- axis_cdcsync_v1_1 -- */
+  val axis_cdcsync_v1_1_io = AxisCdcsyncIO(3, 168)
+  axis_cdcsync_v1_1_io.setName("")
+  axis_cdcsync_v1_1_io.flatten.foreach { w =>
+    w.setName("axis_cdcsync_v1_1_" + w.getName())
+  }
+  val axis_cdcsync_v1_1 = AxisCdcsync(3, 168)
+  axis_cdcsync_v1_1_io <> axis_cdcsync_v1_1.io
 
 }
 
