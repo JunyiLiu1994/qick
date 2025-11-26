@@ -45,7 +45,10 @@ case class QickTop() extends Component {
   }
   val axis_avg_buffer_0 = AxisAvgBuffer(N_AVG = 13, N_BUF = 12)
   axis_avg_buffer_0_io <> axis_avg_buffer_0.io
-  /* -- axis_avg_buffer_1 -- */
+  axis_avg_buffer_0.io.s_axis_aclk.removeAssignments()
+  axis_avg_buffer_0.io.s_axis_aclk := clk_adc2
+  axis_avg_buffer_0_io.s_axis_aclk.setAsDirectionLess()
+    /* -- axis_avg_buffer_1 -- */
   val axis_avg_buffer_1_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 12, B = 16)
   axis_avg_buffer_1_io.setName("")
   axis_avg_buffer_1_io.s_axi_aclk.setName("s_axi_aclk_i")
