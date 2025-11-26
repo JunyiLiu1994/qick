@@ -252,6 +252,15 @@ case class QickTop() extends Component {
   }
   val axis_signal_gen_v6_0 = AxisSignalGenV6(10)
   axis_signal_gen_v6_0_io <> axis_signal_gen_v6_0.io
+  axis_signal_gen_v6_0.io.s_axi_aclk.removeAssignments()
+  axis_signal_gen_v6_0.io.s_axi_aclk := clk_pl
+  axis_signal_gen_v6_0_io.s_axi_aclk.setAsDirectionLess()
+  axis_signal_gen_v6_0.io.s0_axis_aclk.removeAssignments()
+  axis_signal_gen_v6_0.io.s0_axis_aclk := clk_pl
+  axis_signal_gen_v6_0_io.s0_axis_aclk.setAsDirectionLess()
+  axis_signal_gen_v6_0.io.aclk.removeAssignments()
+  axis_signal_gen_v6_0.io.aclk := clk_dac2
+  axis_signal_gen_v6_0_io.aclk.setAsDirectionLess()
   /* -- axis_signal_gen_v6_1 -- */
   val axis_signal_gen_v6_1_io = AxisSignalGenV6IO(9)
   axis_signal_gen_v6_1_io.setName("")
