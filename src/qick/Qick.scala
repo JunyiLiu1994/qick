@@ -34,11 +34,6 @@ case class QickTop() extends Component {
     WMEM_AW = 10,
   )
   qick_processor_0_io <> qickProcessor.io
-  /*
-  qickProcessor.io.c_clk_i.removeAssignments()
-  qickProcessor.io.c_clk_i := clk_dac2
-  qick_processor_0_io.c_clk_i.setAsDirectionLess()
-  */
   qickProcessor.io.t_clk_i.removeAssignments()
   qickProcessor.io.t_clk_i := clk_dac2
   qick_processor_0_io.t_clk_i.setAsDirectionLess()
@@ -194,6 +189,15 @@ case class QickTop() extends Component {
   }
   val mr_buffer_et_0 = MrBufferV1(B=32, N=10)
   mr_buffer_et_0_io <> mr_buffer_et_0.io
+  mr_buffer_et_0.io.s00_axis_aclk.removeAssignments()
+  mr_buffer_et_0.io.s00_axis_aclk := clk_adc2
+  mr_buffer_et_0_io.s00_axis_aclk.setAsDirectionLess()
+  mr_buffer_et_0.io.s00_axi_aclk.removeAssignments()
+  mr_buffer_et_0.io.s00_axi_aclk := clk_pl
+  mr_buffer_et_0_io.s00_axi_aclk.setAsDirectionLess()
+  mr_buffer_et_0.io.m00_axis_aclk.removeAssignments()
+  mr_buffer_et_0.io.m00_axis_aclk := clk_pl
+  mr_buffer_et_0_io.m00_axis_aclk.setAsDirectionLess()
   /* -- axis_pfb_readout_v3_0 -- */
   val axis_pfb_readout_v3_0_io = AxisPfbReadoutIO(64)
   axis_pfb_readout_v3_0_io.setName("")
