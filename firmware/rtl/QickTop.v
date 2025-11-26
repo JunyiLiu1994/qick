@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 48d92070bd48f99ad91983e7707c3f722eafcb9a
+// Git hash  : a1510fccc472ef32ca30cabf2547e91928eaee17
 
 `timescale 1ns/1ps
 
@@ -697,7 +697,6 @@ module QickTop (
   output wire          axis_tmux_v1_0_m7_axis_tvalid,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [167:0]  axis_tmux_v1_0_m7_axis_tdata,
   input  wire          axis_cdcsync_v1_1_s_axis_aresetn,
-  input  wire          axis_cdcsync_v1_1_s_axis_aclk,
   input  wire          axis_cdcsync_v1_1_s0_axis_tvalid,
   output wire          axis_cdcsync_v1_1_s0_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  axis_cdcsync_v1_1_s0_axis_tdata,
@@ -747,7 +746,6 @@ module QickTop (
   output wire          axis_cdcsync_v1_1_s15_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  axis_cdcsync_v1_1_s15_axis_tdata,
   input  wire          axis_cdcsync_v1_1_m_axis_aresetn,
-  input  wire          axis_cdcsync_v1_1_m_axis_aclk,
   output wire          axis_cdcsync_v1_1_m0_axis_tvalid,
   input  wire          axis_cdcsync_v1_1_m0_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) output wire [167:0]  axis_cdcsync_v1_1_m0_axis_tdata,
@@ -1301,6 +1299,8 @@ module QickTop (
   wire                axis_signal_gen_v6_1_s_axi_aclk_i;
   wire                axis_signal_gen_v6_1_s0_axis_aclk_i;
   wire                axis_signal_gen_v6_1_aclk_i;
+  wire                axis_cdcsync_v1_1_s_axis_aclk;
+  wire                axis_cdcsync_v1_1_m_axis_aclk;
 
   axis_qick_processor #(
     .DUAL_CORE     (0  ),
@@ -2084,7 +2084,7 @@ module QickTop (
   );
   AxisCdcsync axis_cdcsync_v1_1 (
     .s_axis_aresetn  (axis_cdcsync_v1_1_s_axis_aresetn         ), //i
-    .s_axis_aclk     (axis_cdcsync_v1_1_s_axis_aclk            ), //i
+    .s_axis_aclk     (clk_dac2                                 ), //i
     .s0_axis_tvalid  (axis_cdcsync_v1_1_s0_axis_tvalid         ), //i
     .s0_axis_tready  (axis_cdcsync_v1_1_s0_axis_tready_1       ), //o
     .s0_axis_tdata   (axis_cdcsync_v1_1_s0_axis_tdata[167:0]   ), //i
@@ -2134,7 +2134,7 @@ module QickTop (
     .s15_axis_tready (axis_cdcsync_v1_1_s15_axis_tready_1      ), //o
     .s15_axis_tdata  (axis_cdcsync_v1_1_s15_axis_tdata[167:0]  ), //i
     .m_axis_aresetn  (axis_cdcsync_v1_1_m_axis_aresetn         ), //i
-    .m_axis_aclk     (axis_cdcsync_v1_1_m_axis_aclk            ), //i
+    .m_axis_aclk     (clk_dac3                                 ), //i
     .m0_axis_tvalid  (axis_cdcsync_v1_1_m0_axis_tvalid_1       ), //o
     .m0_axis_tready  (axis_cdcsync_v1_1_m0_axis_tready         ), //i
     .m0_axis_tdata   (axis_cdcsync_v1_1_m0_axis_tdata_1[167:0] ), //o
