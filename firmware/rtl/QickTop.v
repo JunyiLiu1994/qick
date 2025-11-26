@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 72db350acca4fef14ed9f4c757aeee255af53f3a
+// Git hash  : 48d92070bd48f99ad91983e7707c3f722eafcb9a
 
 `timescale 1ns/1ps
 
@@ -644,7 +644,6 @@ module QickTop (
   output wire          axis_signal_gen_v6_0_m_axis_tvalid,
   input  wire          axis_signal_gen_v6_0_m_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  axis_signal_gen_v6_0_m_axis_tdata,
-  input  wire          axis_signal_gen_v6_1_s_axi_aclk_i,
   input  wire          axis_signal_gen_v6_1_s_axi_aresetn,
   input  wire          axis_signal_gen_v6_1_s_axi_awvalid,
   output wire          axis_signal_gen_v6_1_s_axi_awready,
@@ -665,13 +664,11 @@ module QickTop (
   input  wire          axis_signal_gen_v6_1_s_axi_rready,
   output wire [31:0]   axis_signal_gen_v6_1_s_axi_rdata,
   output wire [1:0]    axis_signal_gen_v6_1_s_axi_rresp,
-  input  wire          axis_signal_gen_v6_1_s0_axis_aclk_i,
   input  wire          axis_signal_gen_v6_1_s0_axis_aresetn,
   input  wire          axis_signal_gen_v6_1_s0_axis_tvalid,
   output wire          axis_signal_gen_v6_1_s0_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [31:0]   axis_signal_gen_v6_1_s0_axis_tdata,
   input  wire          axis_signal_gen_v6_1_aresetn,
-  input  wire          axis_signal_gen_v6_1_aclk_i,
   input  wire          axis_signal_gen_v6_1_s1_axis_tvalid,
   output wire          axis_signal_gen_v6_1_s1_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [159:0]  axis_signal_gen_v6_1_s1_axis_tdata,
@@ -1301,6 +1298,9 @@ module QickTop (
   wire                axis_signal_gen_v6_0_s_axi_aclk_i;
   wire                axis_signal_gen_v6_0_s0_axis_aclk_i;
   wire                axis_signal_gen_v6_0_aclk_i;
+  wire                axis_signal_gen_v6_1_s_axi_aclk_i;
+  wire                axis_signal_gen_v6_1_s0_axis_aclk_i;
+  wire                axis_signal_gen_v6_1_aclk_i;
 
   axis_qick_processor #(
     .DUAL_CORE     (0  ),
@@ -2024,7 +2024,7 @@ module QickTop (
     .m_axis_tdata    (axis_signal_gen_v6_0_m_axis_tdata_1[255:0])  //o
   );
   AxisSignalGenV6_1 axis_signal_gen_v6_1 (
-    .s_axi_aclk_i    (axis_signal_gen_v6_1_s_axi_aclk_i         ), //i
+    .s_axi_aclk_i    (clk_pl                                    ), //i
     .s_axi_aresetn   (axis_signal_gen_v6_1_s_axi_aresetn        ), //i
     .s_axi_awvalid   (axis_signal_gen_v6_1_s_axi_awvalid        ), //i
     .s_axi_awready   (axis_signal_gen_v6_1_s_axi_awready_1      ), //o
@@ -2045,13 +2045,13 @@ module QickTop (
     .s_axi_rready    (axis_signal_gen_v6_1_s_axi_rready         ), //i
     .s_axi_rdata     (axis_signal_gen_v6_1_s_axi_rdata_1[31:0]  ), //o
     .s_axi_rresp     (axis_signal_gen_v6_1_s_axi_rresp_1[1:0]   ), //o
-    .s0_axis_aclk_i  (axis_signal_gen_v6_1_s0_axis_aclk_i       ), //i
+    .s0_axis_aclk_i  (clk_pl                                    ), //i
     .s0_axis_aresetn (axis_signal_gen_v6_1_s0_axis_aresetn      ), //i
     .s0_axis_tvalid  (axis_signal_gen_v6_1_s0_axis_tvalid       ), //i
     .s0_axis_tready  (axis_signal_gen_v6_1_s0_axis_tready_1     ), //o
     .s0_axis_tdata   (axis_signal_gen_v6_1_s0_axis_tdata[31:0]  ), //i
     .aresetn         (axis_signal_gen_v6_1_aresetn              ), //i
-    .aclk_i          (axis_signal_gen_v6_1_aclk_i               ), //i
+    .aclk_i          (clk_dac2                                  ), //i
     .s1_axis_tvalid  (axis_signal_gen_v6_1_s1_axis_tvalid       ), //i
     .s1_axis_tready  (axis_signal_gen_v6_1_s1_axis_tready_1     ), //o
     .s1_axis_tdata   (axis_signal_gen_v6_1_s1_axis_tdata[159:0] ), //i
