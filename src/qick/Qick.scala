@@ -7,6 +7,11 @@ import spinal.lib.bus.amba4.axilite._
 
 case class QickTop() extends Component {
   noIoPrefix()
+  val clk_adc2 = in Bool()
+  val clk_dac2 = in Bool()
+  val clk_dac3 = in Bool()
+  val clk_pl = in Bool()
+
   /* -- qick_processor_0 -- */
   val qick_processor_0_io = QickProcessorIo()
   qick_processor_0_io.setName("")
@@ -210,7 +215,6 @@ case class QickTop() extends Component {
   }
   val axis_sg_mixmux8_v1_0 = AxisSgMixMux8(4)
   axis_sg_mixmux8_v1_0_io <> axis_sg_mixmux8_v1_0.io
-
 
 
 }
