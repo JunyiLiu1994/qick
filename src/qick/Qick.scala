@@ -34,6 +34,17 @@ case class QickTop() extends Component {
     WMEM_AW = 10,
   )
   qick_processor_0_io <> qickProcessor.io
+  /*
+  qickProcessor.io.c_clk_i.removeAssignments()
+  qickProcessor.io.c_clk_i := clk_dac2
+  qick_processor_0_io.c_clk_i.setAsDirectionLess()
+  */
+  qickProcessor.io.t_clk_i.removeAssignments()
+  qickProcessor.io.t_clk_i := clk_dac2
+  qick_processor_0_io.t_clk_i.setAsDirectionLess()
+  qickProcessor.io.ps_clk_i.removeAssignments()
+  qickProcessor.io.ps_clk_i := clk_pl
+  qick_processor_0_io.ps_clk_i.setAsDirectionLess()
   /* -- axis_avg_buffer_0 -- */
   val axis_avg_buffer_0_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 12, B = 16)
   axis_avg_buffer_0_io.setName("")

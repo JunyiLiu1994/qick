@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 89d46031b603a7f545ba366960b29b390919b605
+// Git hash  : 0b79499537196355959c960108fa3f88b50c4ac4
 
 `timescale 1ns/1ps
 
@@ -11,9 +11,7 @@ module QickTop (
   input  wire          clk_pl,
   input  wire          qick_processor_0_c_clk_i,
   input  wire          qick_processor_0_c_resetn,
-  input  wire          qick_processor_0_t_clk_i,
   input  wire          qick_processor_0_t_resetn,
-  input  wire          qick_processor_0_ps_clk_i,
   input  wire          qick_processor_0_ps_resetn,
   input  wire          qick_processor_0_ext_flag_i,
   input  wire          qick_processor_0_proc_start_i,
@@ -1300,6 +1298,8 @@ module QickTop (
   wire                axis_sg_mixmux8_v1_0_s_axis_tready_1;
   wire                axis_sg_mixmux8_v1_0_m_axis_tvalid_1;
   wire       [127:0]  axis_sg_mixmux8_v1_0_m_axis_tdata_1;
+  wire                qick_processor_0_t_clk_i;
+  wire                qick_processor_0_ps_clk_i;
   wire                axis_avg_buffer_0_s_axis_aclk_i;
 
   axis_qick_processor #(
@@ -1332,9 +1332,9 @@ module QickTop (
   ) qickProcessor (
     .c_clk_i             (qick_processor_0_c_clk_i                  ), //i
     .c_resetn            (qick_processor_0_c_resetn                 ), //i
-    .t_clk_i             (qick_processor_0_t_clk_i                  ), //i
+    .t_clk_i             (clk_dac2                                  ), //i
     .t_resetn            (qick_processor_0_t_resetn                 ), //i
-    .ps_clk_i            (qick_processor_0_ps_clk_i                 ), //i
+    .ps_clk_i            (clk_pl                                    ), //i
     .ps_resetn           (qick_processor_0_ps_resetn                ), //i
     .ext_flag_i          (qick_processor_0_ext_flag_i               ), //i
     .proc_start_i        (qick_processor_0_proc_start_i             ), //i
