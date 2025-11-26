@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : cb8a41d18f7d62e5ce9d73a1d484a61a20f01393
+// Git hash  : ccef3b5a6ae35cd9cc7b020a015d86227de73d16
 
 `timescale 1ns/1ps
 
@@ -526,7 +526,6 @@ module QickTop (
   output wire          mr_buffer_et_0_s_dbg_probe,
   output wire          mr_buffer_et_0_m_dbg_probe,
   input  wire          axis_pfb_readout_v3_0_s_axi_aresetn,
-  input  wire          axis_pfb_readout_v3_0_s_axi_aclk_i,
   input  wire          axis_pfb_readout_v3_0_s_axi_awvalid,
   output wire          axis_pfb_readout_v3_0_s_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [5:0]    axis_pfb_readout_v3_0_s_axi_awaddr,
@@ -1301,6 +1300,7 @@ module QickTop (
   wire                mr_buffer_et_0_s00_axi_aclk;
   wire                mr_buffer_et_0_s00_axis_aclk;
   wire                mr_buffer_et_0_m00_axis_aclk;
+  wire                axis_pfb_readout_v3_0_s_axi_aclk_i;
 
   axis_qick_processor #(
     .DUAL_CORE     (0  ),
@@ -1891,7 +1891,7 @@ module QickTop (
   );
   AxisPfbReadout axis_pfb_readout_v3_0 (
     .s_axi_aresetn  (axis_pfb_readout_v3_0_s_axi_aresetn        ), //i
-    .s_axi_aclk_i   (axis_pfb_readout_v3_0_s_axi_aclk_i         ), //i
+    .s_axi_aclk_i   (clk_pl                                     ), //i
     .s_axi_awvalid  (axis_pfb_readout_v3_0_s_axi_awvalid        ), //i
     .s_axi_awready  (axis_pfb_readout_v3_0_s_axi_awready_1      ), //o
     .s_axi_awaddr   (axis_pfb_readout_v3_0_s_axi_awaddr[5:0]    ), //i
