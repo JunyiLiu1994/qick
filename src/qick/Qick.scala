@@ -221,6 +221,9 @@ case class QickTop() extends Component {
   }
   val axis_readout_v2_0 = AxisReadoutV2()
   axis_readout_v2_0_io <> axis_readout_v2_0.io
+  axis_readout_v2_0.io.s_axi_aclk.removeAssignments()
+  axis_readout_v2_0.io.s_axi_aclk := clk_pl
+  axis_readout_v2_0_io.s_axi_aclk.setAsDirectionLess()
   /* -- axis_readout_v3_0 -- */
   val axis_readout_v3_0_io = AxisReadoutV3IO()
   axis_readout_v3_0_io.setName("")

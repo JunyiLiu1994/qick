@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : ccef3b5a6ae35cd9cc7b020a015d86227de73d16
+// Git hash  : 3714af7bf8f6d389a6bd0fe702e7b227df3bbd7d
 
 `timescale 1ns/1ps
 
@@ -576,7 +576,6 @@ module QickTop (
   input  wire          axis_readout_v2_0_s_axi_rready,
   output wire [31:0]   axis_readout_v2_0_s_axi_rdata,
   output wire [1:0]    axis_readout_v2_0_s_axi_rresp,
-  input  wire          axis_readout_v2_0_s_axi_aclk_i,
   input  wire          axis_readout_v2_0_s_axi_aresetn,
   input  wire          axis_readout_v2_0_aresetn,
   input  wire          axis_readout_v2_0_aclk_i,
@@ -1301,6 +1300,7 @@ module QickTop (
   wire                mr_buffer_et_0_s00_axis_aclk;
   wire                mr_buffer_et_0_m00_axis_aclk;
   wire                axis_pfb_readout_v3_0_s_axi_aclk_i;
+  wire                axis_readout_v2_0_s_axi_aclk_i;
 
   axis_qick_processor #(
     .DUAL_CORE     (0  ),
@@ -1944,7 +1944,7 @@ module QickTop (
     .s_axi_rready   (axis_readout_v2_0_s_axi_rready          ), //i
     .s_axi_rdata    (axis_readout_v2_0_s_axi_rdata_1[31:0]   ), //o
     .s_axi_rresp    (axis_readout_v2_0_s_axi_rresp_1[1:0]    ), //o
-    .s_axi_aclk_i   (axis_readout_v2_0_s_axi_aclk_i          ), //i
+    .s_axi_aclk_i   (clk_pl                                  ), //i
     .s_axi_aresetn  (axis_readout_v2_0_s_axi_aresetn         ), //i
     .aresetn        (axis_readout_v2_0_aresetn               ), //i
     .aclk_i         (axis_readout_v2_0_aclk_i                ), //i
