@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 0b79499537196355959c960108fa3f88b50c4ac4
+// Git hash  : 470002480f29a4e0dfcf54cede11e2f7fc13766c
 
 `timescale 1ns/1ps
 
@@ -250,14 +250,12 @@ module QickTop (
   input  wire          axis_avg_buffer_0_s_axi_rready,
   output wire [31:0]   axis_avg_buffer_0_s_axi_rdata,
   output wire [1:0]    axis_avg_buffer_0_s_axi_rresp,
-  input  wire          axis_avg_buffer_0_s_axi_aclk_i,
   input  wire          axis_avg_buffer_0_s_axi_aresetn,
   input  wire          axis_avg_buffer_0_trigger,
   input  wire          axis_avg_buffer_0_s_axis_tvalid,
   output wire          axis_avg_buffer_0_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [31:0]   axis_avg_buffer_0_s_axis_tdata,
   input  wire          axis_avg_buffer_0_s_axis_aresetn,
-  input  wire          axis_avg_buffer_0_m_axis_aclk_i,
   input  wire          axis_avg_buffer_0_m_axis_aresetn,
   output wire          axis_avg_buffer_0_m0_axis_tvalid,
   input  wire          axis_avg_buffer_0_m0_axis_tready,
@@ -1300,7 +1298,9 @@ module QickTop (
   wire       [127:0]  axis_sg_mixmux8_v1_0_m_axis_tdata_1;
   wire                qick_processor_0_t_clk_i;
   wire                qick_processor_0_ps_clk_i;
+  wire                axis_avg_buffer_0_s_axi_aclk_i;
   wire                axis_avg_buffer_0_s_axis_aclk_i;
+  wire                axis_avg_buffer_0_m_axis_aclk_i;
 
   axis_qick_processor #(
     .DUAL_CORE     (0  ),
@@ -1575,7 +1575,7 @@ module QickTop (
     .s_axi_rready   (axis_avg_buffer_0_s_axi_rready         ), //i
     .s_axi_rdata    (axis_avg_buffer_0_s_axi_rdata_1[31:0]  ), //o
     .s_axi_rresp    (axis_avg_buffer_0_s_axi_rresp_1[1:0]   ), //o
-    .s_axi_aclk_i   (axis_avg_buffer_0_s_axi_aclk_i         ), //i
+    .s_axi_aclk_i   (clk_pl                                 ), //i
     .s_axi_aresetn  (axis_avg_buffer_0_s_axi_aresetn        ), //i
     .trigger        (axis_avg_buffer_0_trigger              ), //i
     .s_axis_tvalid  (axis_avg_buffer_0_s_axis_tvalid        ), //i
@@ -1583,7 +1583,7 @@ module QickTop (
     .s_axis_tdata   (axis_avg_buffer_0_s_axis_tdata[31:0]   ), //i
     .s_axis_aclk_i  (clk_adc2                               ), //i
     .s_axis_aresetn (axis_avg_buffer_0_s_axis_aresetn       ), //i
-    .m_axis_aclk_i  (axis_avg_buffer_0_m_axis_aclk_i        ), //i
+    .m_axis_aclk_i  (clk_pl                                 ), //i
     .m_axis_aresetn (axis_avg_buffer_0_m_axis_aresetn       ), //i
     .m0_axis_tvalid (axis_avg_buffer_0_m0_axis_tvalid_1     ), //o
     .m0_axis_tready (axis_avg_buffer_0_m0_axis_tready       ), //i
