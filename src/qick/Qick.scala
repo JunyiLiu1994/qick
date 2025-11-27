@@ -72,15 +72,22 @@ case class QickTop() extends Component {
   removeAssignmentsAll(Seq(
     axis_avg_buffer_0.io.s_axis_aclk,
     axis_avg_buffer_0.io.s_axi_aclk,
-    axis_avg_buffer_0.io.m_axis_aclk))
+    axis_avg_buffer_0.io.m_axis_aclk,
+    axis_avg_buffer_0.io.s_axi_aresetn,
+    axis_avg_buffer_0.io.m_axis_aresetn))
   axis_avg_buffer_0.io.s_axis_aclk := clk_adc2
   axis_avg_buffer_0.io.s_axi_aclk := clk_pl
   axis_avg_buffer_0.io.m_axis_aclk := clk_pl
+//  axis_avg_buffer_0.io.s_axis_aresetn := rst_adc2
+  axis_avg_buffer_0.io.s_axi_aresetn := rst_100
+  axis_avg_buffer_0.io.m_axis_aresetn := rst_100
   setAsDirectionlessAll(Seq(
     axis_avg_buffer_0_io.s_axis_aclk,
     axis_avg_buffer_0_io.s_axi_aclk,
-    axis_avg_buffer_0_io.m_axis_aclk))
-    /* -- axis_avg_buffer_1 -- */
+    axis_avg_buffer_0_io.m_axis_aclk,
+    axis_avg_buffer_0_io.s_axi_aresetn,
+    axis_avg_buffer_0_io.m_axis_aresetn))
+  /* -- axis_avg_buffer_1 -- */
   val axis_avg_buffer_1_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 12, B = 16)
   axis_avg_buffer_1_io.setName("")
   axis_avg_buffer_1_io.s_axi_aclk.setName("s_axi_aclk_i")
