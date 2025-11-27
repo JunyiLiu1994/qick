@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : edfd50ce0f004daeea07068f9e80d06ee9454ba0
+// Git hash  : 30fa591dcdc413328a6fe36f9de2110c0a3d96dd
 
 `timescale 1ns/1ps
 
@@ -9,6 +9,10 @@ module QickTop (
   input  wire          clk_dac2,
   input  wire          clk_dac3,
   input  wire          clk_pl,
+  input  wire          rst_100,
+  input  wire          rst_adc2,
+  input  wire          rst_dac2,
+  input  wire          rst_dac3,
   input  wire          qick_processor_0_c_clk_i,
   input  wire          qick_processor_0_c_resetn,
   input  wire          qick_processor_0_t_resetn,

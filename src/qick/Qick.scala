@@ -11,7 +11,10 @@ case class QickTop() extends Component {
   val clk_dac2 = in Bool()
   val clk_dac3 = in Bool()
   val clk_pl = in Bool()
-
+  val rst_100 = in Bool()
+  val rst_adc2 = in Bool()
+  val rst_dac2 = in Bool()
+  val rst_dac3 = in Bool()
   /* -- qick_processor_0 -- */
   val qick_processor_0_io = QickProcessorIo()
   qick_processor_0_io.setName("")
