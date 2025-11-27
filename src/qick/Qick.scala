@@ -401,14 +401,23 @@ case class QickTop() extends Component {
   removeAssignmentsAll(Seq(
     axis_signal_gen_v6_0.io.s_axi_aclk,
     axis_signal_gen_v6_0.io.s0_axis_aclk,
-    axis_signal_gen_v6_0.io.aclk))
+    axis_signal_gen_v6_0.io.aclk,
+    axis_signal_gen_v6_0.io.s_axi_aresetn,
+    axis_signal_gen_v6_0.io.s0_axis_aresetn,
+    axis_signal_gen_v6_0.io.aresetn))
   axis_signal_gen_v6_0.io.s_axi_aclk := clk_pl
   axis_signal_gen_v6_0.io.s0_axis_aclk := clk_pl
   axis_signal_gen_v6_0.io.aclk := clk_dac2
+  axis_signal_gen_v6_0.io.s_axi_aresetn := rst_100
+  axis_signal_gen_v6_0.io.s0_axis_aresetn := rst_100
+  axis_signal_gen_v6_0.io.aresetn := rst_dac2
   setAsDirectionlessAll(Seq(
     axis_signal_gen_v6_0_io.s_axi_aclk,
     axis_signal_gen_v6_0_io.s0_axis_aclk,
-    axis_signal_gen_v6_0_io.aclk))
+    axis_signal_gen_v6_0_io.aclk,
+    axis_signal_gen_v6_0_io.s_axi_aresetn,
+    axis_signal_gen_v6_0_io.s0_axis_aresetn,
+    axis_signal_gen_v6_0_io.aresetn))
   /* -- axis_signal_gen_v6_1 -- */
   val axis_signal_gen_v6_1_io = AxisSignalGenV6IO(9)
   axis_signal_gen_v6_1_io.setName("")
