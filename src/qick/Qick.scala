@@ -287,14 +287,23 @@ case class QickTop() extends Component {
   removeAssignmentsAll(Seq(
     mr_buffer_et_0.io.s00_axis_aclk,
     mr_buffer_et_0.io.s00_axi_aclk,
-    mr_buffer_et_0.io.m00_axis_aclk))
+    mr_buffer_et_0.io.m00_axis_aclk,
+    mr_buffer_et_0.io.s00_axi_aresetn,
+    mr_buffer_et_0.io.s00_axis_aresetn,
+    mr_buffer_et_0.io.m00_axis_aresetn))
   mr_buffer_et_0.io.s00_axis_aclk := clk_adc2
   mr_buffer_et_0.io.s00_axi_aclk := clk_pl
   mr_buffer_et_0.io.m00_axis_aclk := clk_pl
+  mr_buffer_et_0.io.s00_axi_aresetn := rst_100
+  mr_buffer_et_0.io.s00_axis_aresetn := rst_adc2
+  mr_buffer_et_0.io.m00_axis_aresetn := rst_100
   setAsDirectionlessAll(Seq(
     mr_buffer_et_0_io.s00_axis_aclk,
     mr_buffer_et_0_io.s00_axi_aclk,
-    mr_buffer_et_0_io.m00_axis_aclk))
+    mr_buffer_et_0_io.m00_axis_aclk,
+    mr_buffer_et_0_io.s00_axi_aresetn,
+    mr_buffer_et_0_io.s00_axis_aresetn,
+    mr_buffer_et_0_io.m00_axis_aresetn))
   /* -- axis_pfb_readout_v3_0 -- */
   val axis_pfb_readout_v3_0_io = AxisPfbReadoutIO(64)
   axis_pfb_readout_v3_0_io.setName("")

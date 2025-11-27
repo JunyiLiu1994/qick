@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 433889a7d146ab09dd0313105f42ae0b8000474e
+// Git hash  : 36007ce64012cb83d991ba28300627393c794bd6
 
 `timescale 1ns/1ps
 
@@ -493,19 +493,16 @@ module QickTop (
   input  wire          mr_buffer_et_0_s00_axi_rready,
   output wire [31:0]   mr_buffer_et_0_s00_axi_rdata,
   output wire [1:0]    mr_buffer_et_0_s00_axi_rresp,
-  input  wire          mr_buffer_et_0_s00_axi_aresetn,
   input  wire          mr_buffer_et_0_s00_axis_tvalid,
   output wire          mr_buffer_et_0_s00_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [255:0]  mr_buffer_et_0_s00_axis_tdata,
   input  wire [31:0]   mr_buffer_et_0_s00_axis_tstrb,
   input  wire          mr_buffer_et_0_s00_axis_tlast,
-  input  wire          mr_buffer_et_0_s00_axis_aresetn,
   output wire          mr_buffer_et_0_m00_axis_tvalid,
   input  wire          mr_buffer_et_0_m00_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [31:0]   mr_buffer_et_0_m00_axis_tdata,
   output wire [3:0]    mr_buffer_et_0_m00_axis_tstrb,
   output wire          mr_buffer_et_0_m00_axis_tlast,
-  input  wire          mr_buffer_et_0_m00_axis_aresetn,
   output wire          mr_buffer_et_0_s_dbg_probe,
   output wire          mr_buffer_et_0_m_dbg_probe,
   input  wire          axis_pfb_readout_v3_0_s_axi_aresetn,
@@ -1284,8 +1281,11 @@ module QickTop (
   wire                axis_avg_buffer_6_m_axis_aclk_i;
   wire                axis_avg_buffer_6_m_axis_aresetn;
   wire                mr_buffer_et_0_s00_axi_aclk;
+  wire                mr_buffer_et_0_s00_axi_aresetn;
   wire                mr_buffer_et_0_s00_axis_aclk;
+  wire                mr_buffer_et_0_s00_axis_aresetn;
   wire                mr_buffer_et_0_m00_axis_aclk;
+  wire                mr_buffer_et_0_m00_axis_aresetn;
   wire                axis_pfb_readout_v3_0_s_axi_aclk_i;
   wire                axis_pfb_readout_v3_0_aclk_i;
   wire                axis_readout_v2_0_s_axi_aclk_i;
@@ -1875,21 +1875,21 @@ module QickTop (
     .s00_axi_rdata    (mr_buffer_et_0_s00_axi_rdata_1[31:0] ), //o
     .s00_axi_rresp    (mr_buffer_et_0_s00_axi_rresp_1[1:0]  ), //o
     .s00_axi_aclk     (clk_pl                               ), //i
-    .s00_axi_aresetn  (mr_buffer_et_0_s00_axi_aresetn       ), //i
+    .s00_axi_aresetn  (rst_100                              ), //i
     .s00_axis_tvalid  (mr_buffer_et_0_s00_axis_tvalid       ), //i
     .s00_axis_tready  (mr_buffer_et_0_s00_axis_tready_1     ), //o
     .s00_axis_tdata   (mr_buffer_et_0_s00_axis_tdata[255:0] ), //i
     .s00_axis_tstrb   (mr_buffer_et_0_s00_axis_tstrb[31:0]  ), //i
     .s00_axis_tlast   (mr_buffer_et_0_s00_axis_tlast        ), //i
     .s00_axis_aclk    (clk_adc2                             ), //i
-    .s00_axis_aresetn (mr_buffer_et_0_s00_axis_aresetn      ), //i
+    .s00_axis_aresetn (rst_adc2                             ), //i
     .m00_axis_tvalid  (mr_buffer_et_0_m00_axis_tvalid_1     ), //o
     .m00_axis_tready  (mr_buffer_et_0_m00_axis_tready       ), //i
     .m00_axis_tdata   (mr_buffer_et_0_m00_axis_tdata_1[31:0]), //o
     .m00_axis_tstrb   (mr_buffer_et_0_m00_axis_tstrb_1[3:0] ), //o
     .m00_axis_tlast   (mr_buffer_et_0_m00_axis_tlast_1      ), //o
     .m00_axis_aclk    (clk_pl                               ), //i
-    .m00_axis_aresetn (mr_buffer_et_0_m00_axis_aresetn      ), //i
+    .m00_axis_aresetn (rst_100                              ), //i
     .s_dbg_probe      (mr_buffer_et_0_s_dbg_probe_1         ), //o
     .m_dbg_probe      (mr_buffer_et_0_m_dbg_probe_1         )  //o
   );
