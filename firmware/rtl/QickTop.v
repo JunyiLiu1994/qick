@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 46c2ac09f8dbacbce8fbc7d21b4dab85c115ba2c
+// Git hash  : ce8453cc37cd4d98e88794a1a09eb54c972009e4
 
 `timescale 1ns/1ps
 
@@ -15,8 +15,6 @@ module QickTop (
   input  wire          rst_dac3,
   input  wire          qick_processor_0_c_clk_i,
   input  wire          qick_processor_0_c_resetn,
-  input  wire          qick_processor_0_t_resetn,
-  input  wire          qick_processor_0_ps_resetn,
   input  wire          qick_processor_0_ext_flag_i,
   input  wire          qick_processor_0_proc_start_i,
   input  wire          qick_processor_0_proc_stop_i,
@@ -639,7 +637,6 @@ module QickTop (
   output wire          axis_signal_gen_v6_1_m_axis_tvalid,
   input  wire          axis_signal_gen_v6_1_m_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  axis_signal_gen_v6_1_m_axis_tdata,
-  input  wire          axis_tmux_v1_0_aresetn,
   input  wire          axis_tmux_v1_0_s_axis_tvalid,
   output wire          axis_tmux_v1_0_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  axis_tmux_v1_0_s_axis_tdata,
@@ -659,7 +656,6 @@ module QickTop (
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [167:0]  axis_tmux_v1_0_m6_axis_tdata,
   output wire          axis_tmux_v1_0_m7_axis_tvalid,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [167:0]  axis_tmux_v1_0_m7_axis_tdata,
-  input  wire          axis_cdcsync_v1_1_s_axis_aresetn,
   input  wire          axis_cdcsync_v1_1_s0_axis_tvalid,
   output wire          axis_cdcsync_v1_1_s0_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  axis_cdcsync_v1_1_s0_axis_tdata,
@@ -708,7 +704,6 @@ module QickTop (
   input  wire          axis_cdcsync_v1_1_s15_axis_tvalid,
   output wire          axis_cdcsync_v1_1_s15_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  axis_cdcsync_v1_1_s15_axis_tdata,
-  input  wire          axis_cdcsync_v1_1_m_axis_aresetn,
   output wire          axis_cdcsync_v1_1_m0_axis_tvalid,
   input  wire          axis_cdcsync_v1_1_m0_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) output wire [167:0]  axis_cdcsync_v1_1_m0_axis_tdata,
@@ -757,7 +752,6 @@ module QickTop (
   output wire          axis_cdcsync_v1_1_m15_axis_tvalid,
   input  wire          axis_cdcsync_v1_1_m15_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) output wire [167:0]  axis_cdcsync_v1_1_m15_axis_tdata,
-  input  wire          axis_sg_mux8_v1_0_s_axi_aresetn,
   input  wire          axis_sg_mux8_v1_0_s_axi_awvalid,
   output wire          axis_sg_mux8_v1_0_s_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [7:0]    axis_sg_mux8_v1_0_s_axi_awaddr,
@@ -777,14 +771,12 @@ module QickTop (
   input  wire          axis_sg_mux8_v1_0_s_axi_rready,
   output wire [31:0]   axis_sg_mux8_v1_0_s_axi_rdata,
   output wire [1:0]    axis_sg_mux8_v1_0_s_axi_rresp,
-  input  wire          axis_sg_mux8_v1_0_aresetn,
   input  wire          axis_sg_mux8_v1_0_s_axis_tvalid,
   output wire          axis_sg_mux8_v1_0_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [31:0]   axis_sg_mux8_v1_0_s_axis_tdata,
   output wire          axis_sg_mux8_v1_0_m_axis_tvalid,
   input  wire          axis_sg_mux8_v1_0_m_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  axis_sg_mux8_v1_0_m_axis_tdata,
-  input  wire          axis_sg_mixmux8_v1_0_s_axi_aresetn,
   input  wire          axis_sg_mixmux8_v1_0_s_axi_awvalid,
   output wire          axis_sg_mixmux8_v1_0_s_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [7:0]    axis_sg_mixmux8_v1_0_s_axi_awaddr,
@@ -804,7 +796,6 @@ module QickTop (
   input  wire          axis_sg_mixmux8_v1_0_s_axi_rready,
   output wire [31:0]   axis_sg_mixmux8_v1_0_s_axi_rdata,
   output wire [1:0]    axis_sg_mixmux8_v1_0_s_axi_rresp,
-  input  wire          axis_sg_mixmux8_v1_0_aresetn,
   input  wire          axis_sg_mixmux8_v1_0_s_axis_tvalid,
   output wire          axis_sg_mixmux8_v1_0_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) input  wire [39:0]   axis_sg_mixmux8_v1_0_s_axis_tdata,
@@ -1225,7 +1216,9 @@ module QickTop (
   wire                axis_sg_mixmux8_v1_0_m_axis_tvalid_1;
   wire       [127:0]  axis_sg_mixmux8_v1_0_m_axis_tdata_1;
   wire                qick_processor_0_t_clk_i;
+  wire                qick_processor_0_t_resetn;
   wire                qick_processor_0_ps_clk_i;
+  wire                qick_processor_0_ps_resetn;
   wire                axis_avg_buffer_0_s_axi_aclk_i;
   wire                axis_avg_buffer_0_s_axi_aresetn;
   wire                axis_avg_buffer_0_s_axis_aclk_i;
@@ -1298,12 +1291,19 @@ module QickTop (
   wire                axis_signal_gen_v6_1_s0_axis_aresetn;
   wire                axis_signal_gen_v6_1_aresetn;
   wire                axis_signal_gen_v6_1_aclk_i;
+  wire                axis_tmux_v1_0_aresetn;
   wire                axis_tmux_v1_0_aclk;
+  wire                axis_cdcsync_v1_1_s_axis_aresetn;
   wire                axis_cdcsync_v1_1_s_axis_aclk;
+  wire                axis_cdcsync_v1_1_m_axis_aresetn;
   wire                axis_cdcsync_v1_1_m_axis_aclk;
+  wire                axis_sg_mux8_v1_0_s_axi_aresetn;
   wire                axis_sg_mux8_v1_0_s_axi_aclk_i;
   wire                axis_sg_mux8_v1_0_aclk_i;
+  wire                axis_sg_mux8_v1_0_aresetn;
+  wire                axis_sg_mixmux8_v1_0_s_axi_aresetn;
   wire                axis_sg_mixmux8_v1_0_s_axi_aclk_i;
+  wire                axis_sg_mixmux8_v1_0_aresetn;
   wire                axis_sg_mixmux8_v1_0_aclk_i;
 
   axis_qick_processor #(
@@ -1337,9 +1337,9 @@ module QickTop (
     .c_clk_i             (qick_processor_0_c_clk_i                  ), //i
     .c_resetn            (qick_processor_0_c_resetn                 ), //i
     .t_clk_i             (clk_dac2                                  ), //i
-    .t_resetn            (qick_processor_0_t_resetn                 ), //i
+    .t_resetn            (rst_dac2                                  ), //i
     .ps_clk_i            (clk_pl                                    ), //i
-    .ps_resetn           (qick_processor_0_ps_resetn                ), //i
+    .ps_resetn           (rst_100                                   ), //i
     .ext_flag_i          (qick_processor_0_ext_flag_i               ), //i
     .proc_start_i        (qick_processor_0_proc_start_i             ), //i
     .proc_stop_i         (qick_processor_0_proc_stop_i              ), //i
@@ -2064,7 +2064,7 @@ module QickTop (
     .m_axis_tdata    (axis_signal_gen_v6_1_m_axis_tdata_1[255:0])  //o
   );
   AxisTMuxV1 axis_tmux_v1_0 (
-    .aresetn        (axis_tmux_v1_0_aresetn               ), //i
+    .aresetn        (rst_dac2                             ), //i
     .aclk           (clk_dac2                             ), //i
     .s_axis_tvalid  (axis_tmux_v1_0_s_axis_tvalid         ), //i
     .s_axis_tready  (axis_tmux_v1_0_s_axis_tready_1       ), //o
@@ -2087,7 +2087,7 @@ module QickTop (
     .m7_axis_tdata  (axis_tmux_v1_0_m7_axis_tdata_1[167:0])  //o
   );
   AxisCdcsync axis_cdcsync_v1_1 (
-    .s_axis_aresetn  (axis_cdcsync_v1_1_s_axis_aresetn         ), //i
+    .s_axis_aresetn  (rst_dac2                                 ), //i
     .s_axis_aclk     (clk_dac2                                 ), //i
     .s0_axis_tvalid  (axis_cdcsync_v1_1_s0_axis_tvalid         ), //i
     .s0_axis_tready  (axis_cdcsync_v1_1_s0_axis_tready_1       ), //o
@@ -2137,7 +2137,7 @@ module QickTop (
     .s15_axis_tvalid (axis_cdcsync_v1_1_s15_axis_tvalid        ), //i
     .s15_axis_tready (axis_cdcsync_v1_1_s15_axis_tready_1      ), //o
     .s15_axis_tdata  (axis_cdcsync_v1_1_s15_axis_tdata[167:0]  ), //i
-    .m_axis_aresetn  (axis_cdcsync_v1_1_m_axis_aresetn         ), //i
+    .m_axis_aresetn  (rst_dac3                                 ), //i
     .m_axis_aclk     (clk_dac3                                 ), //i
     .m0_axis_tvalid  (axis_cdcsync_v1_1_m0_axis_tvalid_1       ), //o
     .m0_axis_tready  (axis_cdcsync_v1_1_m0_axis_tready         ), //i
@@ -2189,7 +2189,7 @@ module QickTop (
     .m15_axis_tdata  (axis_cdcsync_v1_1_m15_axis_tdata_1[167:0])  //o
   );
   AxisSgMux8 axis_sg_mux8_v1_0 (
-    .s_axi_aresetn (axis_sg_mux8_v1_0_s_axi_aresetn        ), //i
+    .s_axi_aresetn (rst_100                                ), //i
     .s_axi_aclk_i  (clk_pl                                 ), //i
     .s_axi_awvalid (axis_sg_mux8_v1_0_s_axi_awvalid        ), //i
     .s_axi_awready (axis_sg_mux8_v1_0_s_axi_awready_1      ), //o
@@ -2211,7 +2211,7 @@ module QickTop (
     .s_axi_rdata   (axis_sg_mux8_v1_0_s_axi_rdata_1[31:0]  ), //o
     .s_axi_rresp   (axis_sg_mux8_v1_0_s_axi_rresp_1[1:0]   ), //o
     .aclk_i        (clk_dac2                               ), //i
-    .aresetn       (axis_sg_mux8_v1_0_aresetn              ), //i
+    .aresetn       (rst_dac2                               ), //i
     .s_axis_tvalid (axis_sg_mux8_v1_0_s_axis_tvalid        ), //i
     .s_axis_tready (axis_sg_mux8_v1_0_s_axis_tready_1      ), //o
     .s_axis_tdata  (axis_sg_mux8_v1_0_s_axis_tdata[31:0]   ), //i
@@ -2220,7 +2220,7 @@ module QickTop (
     .m_axis_tdata  (axis_sg_mux8_v1_0_m_axis_tdata_1[255:0])  //o
   );
   AxisSgMixMux8 axis_sg_mixmux8_v1_0 (
-    .s_axi_aresetn (axis_sg_mixmux8_v1_0_s_axi_aresetn        ), //i
+    .s_axi_aresetn (rst_100                                   ), //i
     .s_axi_aclk_i  (clk_pl                                    ), //i
     .s_axi_awvalid (axis_sg_mixmux8_v1_0_s_axi_awvalid        ), //i
     .s_axi_awready (axis_sg_mixmux8_v1_0_s_axi_awready_1      ), //o
@@ -2241,7 +2241,7 @@ module QickTop (
     .s_axi_rready  (axis_sg_mixmux8_v1_0_s_axi_rready         ), //i
     .s_axi_rdata   (axis_sg_mixmux8_v1_0_s_axi_rdata_1[31:0]  ), //o
     .s_axi_rresp   (axis_sg_mixmux8_v1_0_s_axi_rresp_1[1:0]   ), //o
-    .aresetn       (axis_sg_mixmux8_v1_0_aresetn              ), //i
+    .aresetn       (rst_dac3                                  ), //i
     .aclk_i        (clk_dac3                                  ), //i
     .s_axis_tvalid (axis_sg_mixmux8_v1_0_s_axis_tvalid        ), //i
     .s_axis_tready (axis_sg_mixmux8_v1_0_s_axis_tready_1      ), //o

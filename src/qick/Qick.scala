@@ -52,12 +52,18 @@ case class QickTop() extends Component {
   qick_processor_0_io <> qickProcessor.io
   removeAssignmentsAll(Seq(
     qickProcessor.io.t_clk_i,
-    qickProcessor.io.ps_clk_i))
+    qickProcessor.io.ps_clk_i,
+    qickProcessor.io.ps_resetn,
+    qickProcessor.io.t_resetn))
   qickProcessor.io.t_clk_i := clk_dac2
   qickProcessor.io.ps_clk_i := clk_pl
+  qickProcessor.io.ps_resetn := rst_100
+  qickProcessor.io.t_resetn := rst_dac2
   setAsDirectionlessAll(Seq(
     qick_processor_0_io.t_clk_i,
-    qick_processor_0_io.ps_clk_i))
+    qick_processor_0_io.ps_clk_i,
+    qick_processor_0_io.ps_resetn,
+    qick_processor_0_io.t_resetn))
   /* -- axis_avg_buffer_0 -- */
   val axis_avg_buffer_0_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 12, B = 16)
   axis_avg_buffer_0_io.setName("")
@@ -457,9 +463,14 @@ case class QickTop() extends Component {
   }
   val axis_tmux_v1_0 = AxisTMuxV1(4, 168)
   axis_tmux_v1_0_io <> axis_tmux_v1_0.io
-  axis_tmux_v1_0.io.aclk.removeAssignments()
+  removeAssignmentsAll(Seq(
+    axis_tmux_v1_0.io.aclk,
+    axis_tmux_v1_0.io.aresetn))
   axis_tmux_v1_0.io.aclk := clk_dac2
-  axis_tmux_v1_0_io.aclk.setAsDirectionLess()
+  axis_tmux_v1_0.io.aresetn := rst_dac2
+  setAsDirectionlessAll(Seq(
+    axis_tmux_v1_0_io.aclk,
+    axis_tmux_v1_0_io.aresetn))
   /* -- axis_cdcsync_v1_1 -- */
   val axis_cdcsync_v1_1_io = AxisCdcsyncIO(3, 168)
   axis_cdcsync_v1_1_io.setName("")
@@ -470,12 +481,18 @@ case class QickTop() extends Component {
   axis_cdcsync_v1_1_io <> axis_cdcsync_v1_1.io
   removeAssignmentsAll(Seq(
     axis_cdcsync_v1_1.io.s_axis_aclk,
-    axis_cdcsync_v1_1.io.m_axis_aclk))
+    axis_cdcsync_v1_1.io.m_axis_aclk,
+    axis_cdcsync_v1_1.io.s_axis_aresetn,
+    axis_cdcsync_v1_1.io.m_axis_aresetn))
   axis_cdcsync_v1_1.io.s_axis_aclk := clk_dac2
   axis_cdcsync_v1_1.io.m_axis_aclk := clk_dac3
+  axis_cdcsync_v1_1.io.s_axis_aresetn := rst_dac2
+  axis_cdcsync_v1_1.io.m_axis_aresetn := rst_dac3
   setAsDirectionlessAll(Seq(
     axis_cdcsync_v1_1_io.s_axis_aclk,
-    axis_cdcsync_v1_1_io.m_axis_aclk))
+    axis_cdcsync_v1_1_io.m_axis_aclk,
+    axis_cdcsync_v1_1_io.s_axis_aresetn,
+    axis_cdcsync_v1_1_io.m_axis_aresetn))
   /* -- axis_sg_mux8_v1_0 -- */
   val axis_sg_mux8_v1_0_io = AxisSgMux8IO(16)
   axis_sg_mux8_v1_0_io.setName("")
@@ -488,12 +505,18 @@ case class QickTop() extends Component {
   axis_sg_mux8_v1_0_io <> axis_sg_mux8_v1_0.io
   removeAssignmentsAll(Seq(
     axis_sg_mux8_v1_0.io.s_axi_aclk,
-    axis_sg_mux8_v1_0.io.aclk))
+    axis_sg_mux8_v1_0.io.aclk,
+    axis_sg_mux8_v1_0.io.s_axi_aresetn,
+    axis_sg_mux8_v1_0.io.aresetn))
   axis_sg_mux8_v1_0.io.s_axi_aclk := clk_pl
   axis_sg_mux8_v1_0.io.aclk := clk_dac2
+  axis_sg_mux8_v1_0.io.s_axi_aresetn := rst_100
+  axis_sg_mux8_v1_0.io.aresetn := rst_dac2
   setAsDirectionlessAll(Seq(
     axis_sg_mux8_v1_0_io.s_axi_aclk,
-    axis_sg_mux8_v1_0_io.aclk))
+    axis_sg_mux8_v1_0_io.aclk,
+    axis_sg_mux8_v1_0_io.s_axi_aresetn,
+    axis_sg_mux8_v1_0_io.aresetn))
   /* -- axis_sg_mixmux8_v1_0 -- */
   val axis_sg_mixmux8_v1_0_io = AxisSgMixMux8IO(4)
   axis_sg_mixmux8_v1_0_io.setName("")
@@ -506,12 +529,18 @@ case class QickTop() extends Component {
   axis_sg_mixmux8_v1_0_io <> axis_sg_mixmux8_v1_0.io
   removeAssignmentsAll(Seq(
     axis_sg_mixmux8_v1_0.io.s_axi_aclk,
-    axis_sg_mixmux8_v1_0.io.aclk))
+    axis_sg_mixmux8_v1_0.io.aclk,
+    axis_sg_mixmux8_v1_0.io.s_axi_aresetn,
+    axis_sg_mixmux8_v1_0.io.aresetn))
   axis_sg_mixmux8_v1_0.io.s_axi_aclk := clk_pl
   axis_sg_mixmux8_v1_0.io.aclk := clk_dac3
+  axis_sg_mixmux8_v1_0.io.s_axi_aresetn := rst_100
+  axis_sg_mixmux8_v1_0.io.aresetn := rst_dac3
   setAsDirectionlessAll(Seq(
     axis_sg_mixmux8_v1_0_io.s_axi_aclk,
-    axis_sg_mixmux8_v1_0_io.aclk))
+    axis_sg_mixmux8_v1_0_io.aclk,
+    axis_sg_mixmux8_v1_0_io.s_axi_aresetn,
+    axis_sg_mixmux8_v1_0_io.aresetn))
 }
 
 object QickTop extends App {
