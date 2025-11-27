@@ -432,14 +432,23 @@ case class QickTop() extends Component {
   removeAssignmentsAll(Seq(
     axis_signal_gen_v6_1.io.s_axi_aclk,
     axis_signal_gen_v6_1.io.s0_axis_aclk,
-    axis_signal_gen_v6_1.io.aclk))
+    axis_signal_gen_v6_1.io.aclk,
+    axis_signal_gen_v6_1.io.s_axi_aresetn,
+    axis_signal_gen_v6_1.io.s0_axis_aresetn,
+    axis_signal_gen_v6_1.io.aresetn))
   axis_signal_gen_v6_1.io.s_axi_aclk := clk_pl
   axis_signal_gen_v6_1.io.s0_axis_aclk := clk_pl
   axis_signal_gen_v6_1.io.aclk := clk_dac2
+  axis_signal_gen_v6_1.io.s_axi_aresetn := rst_100
+  axis_signal_gen_v6_1.io.s0_axis_aresetn := rst_100
+  axis_signal_gen_v6_1.io.aresetn := rst_dac2
   setAsDirectionlessAll(Seq(
     axis_signal_gen_v6_1_io.s_axi_aclk,
     axis_signal_gen_v6_1_io.s0_axis_aclk,
-    axis_signal_gen_v6_1_io.aclk))
+    axis_signal_gen_v6_1_io.aclk,
+    axis_signal_gen_v6_1_io.s_axi_aresetn,
+    axis_signal_gen_v6_1_io.s0_axis_aresetn,
+    axis_signal_gen_v6_1_io.aresetn))
   /* -- axis_tmux_v1_0 -- */
   val axis_tmux_v1_0_io = AxisTMuxV1IO(4, 168)
   axis_tmux_v1_0_io.setName("")
