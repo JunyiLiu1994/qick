@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : e6a575e9d1ace77d3989a5f4ac43444268052204
+// Git hash  : edfd50ce0f004daeea07068f9e80d06ee9454ba0
 
 `timescale 1ns/1ps
 
