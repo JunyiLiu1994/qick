@@ -362,9 +362,15 @@ case class QickTop() extends Component {
   }
   val axis_readout_v3_0 = AxisReadoutV3()
   axis_readout_v3_0_io <> axis_readout_v3_0.io
-  axis_readout_v3_0.io.aclk.removeAssignments()
+  removeAssignmentsAll(Seq(
+    axis_readout_v3_0.io.aclk,
+    axis_readout_v3_0.io.aresetn
+  ))
   axis_readout_v3_0.io.aclk := clk_dac2
-  axis_readout_v3_0_io.aclk.setAsDirectionLess()
+  axis_readout_v3_0.io.aresetn := rst_dac2
+  setAsDirectionlessAll(Seq(
+    axis_readout_v3_0_io.aclk,
+    axis_readout_v3_0_io.aresetn))
   /* -- axis_dyn_readout_v1_0 -- */
   val axis_dyn_readout_v1_0_io = AxisDynReadoutIO()
   axis_dyn_readout_v1_0_io.setName("")
@@ -373,9 +379,14 @@ case class QickTop() extends Component {
   }
   val axis_dyn_readout_v1_0 = AxisDynReadout()
   axis_dyn_readout_v1_0_io <> axis_dyn_readout_v1_0.io
-  axis_dyn_readout_v1_0.io.aclk.removeAssignments()
+  removeAssignmentsAll(Seq(
+    axis_dyn_readout_v1_0.io.aclk,
+    axis_dyn_readout_v1_0.io.aresetn))
   axis_dyn_readout_v1_0.io.aclk := clk_adc2
-  axis_dyn_readout_v1_0_io.aclk.setAsDirectionLess()
+  axis_dyn_readout_v1_0.io.aresetn := rst_adc2
+  setAsDirectionlessAll(Seq(
+    axis_dyn_readout_v1_0_io.aclk,
+    axis_dyn_readout_v1_0_io.aresetn))
   /* -- axis_signal_gen_v6_0 -- */
   val axis_signal_gen_v6_0_io = AxisSignalGenV6IO(10)
   axis_signal_gen_v6_0_io.setName("")

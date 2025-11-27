@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 0abef468852d12df1dd3d861843ef12418191a55
+// Git hash  : ab257da70d1dacd977e6b823569344f702e060ed
 
 `timescale 1ns/1ps
 
@@ -562,7 +562,6 @@ module QickTop (
   output wire          axis_readout_v2_0_m1_axis_tvalid,
   input  wire          axis_readout_v2_0_m1_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [31:0]   axis_readout_v2_0_m1_axis_tdata,
-  input  wire          axis_readout_v3_0_aresetn,
   input  wire          axis_readout_v3_0_s0_axis_tvalid,
   output wire          axis_readout_v3_0_s0_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [87:0]   axis_readout_v3_0_s0_axis_tdata,
@@ -572,7 +571,6 @@ module QickTop (
   output wire          axis_readout_v3_0_m_axis_tvalid,
   input  wire          axis_readout_v3_0_m_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [31:0]   axis_readout_v3_0_m_axis_tdata,
-  input  wire          axis_dyn_readout_v1_0_aresetn,
   input  wire          axis_dyn_readout_v1_0_s0_axis_tvalid,
   output wire          axis_dyn_readout_v1_0_s0_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [87:0]   axis_dyn_readout_v1_0_s0_axis_tdata,
@@ -1291,6 +1289,8 @@ module QickTop (
   wire                axis_readout_v2_0_aresetn;
   wire                axis_readout_v2_0_aclk_i;
   wire                axis_readout_v3_0_aclk_i;
+  wire                axis_readout_v3_0_aresetn;
+  wire                axis_dyn_readout_v1_0_aresetn;
   wire                axis_dyn_readout_v1_0_aclk;
   wire                axis_signal_gen_v6_0_s_axi_aclk_i;
   wire                axis_signal_gen_v6_0_s0_axis_aclk_i;
@@ -1964,7 +1964,7 @@ module QickTop (
   );
   AxisReadoutV3 axis_readout_v3_0 (
     .aclk_i         (clk_dac2                              ), //i
-    .aresetn        (axis_readout_v3_0_aresetn             ), //i
+    .aresetn        (rst_dac2                              ), //i
     .s0_axis_tvalid (axis_readout_v3_0_s0_axis_tvalid      ), //i
     .s0_axis_tready (axis_readout_v3_0_s0_axis_tready_1    ), //o
     .s0_axis_tdata  (axis_readout_v3_0_s0_axis_tdata[87:0] ), //i
@@ -1976,7 +1976,7 @@ module QickTop (
     .m_axis_tdata   (axis_readout_v3_0_m_axis_tdata_1[31:0])  //o
   );
   AxisDynReadout axis_dyn_readout_v1_0 (
-    .aresetn        (axis_dyn_readout_v1_0_aresetn               ), //i
+    .aresetn        (rst_adc2                                    ), //i
     .aclk           (clk_adc2                                    ), //i
     .s0_axis_tvalid (axis_dyn_readout_v1_0_s0_axis_tvalid        ), //i
     .s0_axis_tready (axis_dyn_readout_v1_0_s0_axis_tready_1      ), //o
