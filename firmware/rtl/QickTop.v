@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 36007ce64012cb83d991ba28300627393c794bd6
+// Git hash  : 0abef468852d12df1dd3d861843ef12418191a55
 
 `timescale 1ns/1ps
 
@@ -505,7 +505,6 @@ module QickTop (
   output wire          mr_buffer_et_0_m00_axis_tlast,
   output wire          mr_buffer_et_0_s_dbg_probe,
   output wire          mr_buffer_et_0_m_dbg_probe,
-  input  wire          axis_pfb_readout_v3_0_s_axi_aresetn,
   input  wire          axis_pfb_readout_v3_0_s_axi_awvalid,
   output wire          axis_pfb_readout_v3_0_s_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [5:0]    axis_pfb_readout_v3_0_s_axi_awaddr,
@@ -525,7 +524,6 @@ module QickTop (
   input  wire          axis_pfb_readout_v3_0_s_axi_rready,
   output wire [31:0]   axis_pfb_readout_v3_0_s_axi_rdata,
   output wire [1:0]    axis_pfb_readout_v3_0_s_axi_rresp,
-  input  wire          axis_pfb_readout_v3_0_aresetn,
   input  wire          axis_pfb_readout_v3_0_s_axis_tvalid,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [127:0]  axis_pfb_readout_v3_0_s_axis_tdata,
   output wire          axis_pfb_readout_v3_0_m0_axis_tvalid,
@@ -555,8 +553,6 @@ module QickTop (
   input  wire          axis_readout_v2_0_s_axi_rready,
   output wire [31:0]   axis_readout_v2_0_s_axi_rdata,
   output wire [1:0]    axis_readout_v2_0_s_axi_rresp,
-  input  wire          axis_readout_v2_0_s_axi_aresetn,
-  input  wire          axis_readout_v2_0_aresetn,
   input  wire          axis_readout_v2_0_s_axis_tvalid,
   output wire          axis_readout_v2_0_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [127:0]  axis_readout_v2_0_s_axis_tdata,
@@ -1286,9 +1282,13 @@ module QickTop (
   wire                mr_buffer_et_0_s00_axis_aresetn;
   wire                mr_buffer_et_0_m00_axis_aclk;
   wire                mr_buffer_et_0_m00_axis_aresetn;
+  wire                axis_pfb_readout_v3_0_s_axi_aresetn;
   wire                axis_pfb_readout_v3_0_s_axi_aclk_i;
+  wire                axis_pfb_readout_v3_0_aresetn;
   wire                axis_pfb_readout_v3_0_aclk_i;
   wire                axis_readout_v2_0_s_axi_aclk_i;
+  wire                axis_readout_v2_0_s_axi_aresetn;
+  wire                axis_readout_v2_0_aresetn;
   wire                axis_readout_v2_0_aclk_i;
   wire                axis_readout_v3_0_aclk_i;
   wire                axis_dyn_readout_v1_0_aclk;
@@ -1894,7 +1894,7 @@ module QickTop (
     .m_dbg_probe      (mr_buffer_et_0_m_dbg_probe_1         )  //o
   );
   AxisPfbReadout axis_pfb_readout_v3_0 (
-    .s_axi_aresetn  (axis_pfb_readout_v3_0_s_axi_aresetn        ), //i
+    .s_axi_aresetn  (rst_100                                    ), //i
     .s_axi_aclk_i   (clk_pl                                     ), //i
     .s_axi_awvalid  (axis_pfb_readout_v3_0_s_axi_awvalid        ), //i
     .s_axi_awready  (axis_pfb_readout_v3_0_s_axi_awready_1      ), //o
@@ -1915,7 +1915,7 @@ module QickTop (
     .s_axi_rready   (axis_pfb_readout_v3_0_s_axi_rready         ), //i
     .s_axi_rdata    (axis_pfb_readout_v3_0_s_axi_rdata_1[31:0]  ), //o
     .s_axi_rresp    (axis_pfb_readout_v3_0_s_axi_rresp_1[1:0]   ), //o
-    .aresetn        (axis_pfb_readout_v3_0_aresetn              ), //i
+    .aresetn        (rst_adc2                                   ), //i
     .aclk_i         (clk_adc2                                   ), //i
     .s_axis_tvalid  (axis_pfb_readout_v3_0_s_axis_tvalid        ), //i
     .s_axis_tdata   (axis_pfb_readout_v3_0_s_axis_tdata[127:0]  ), //i
@@ -1949,8 +1949,8 @@ module QickTop (
     .s_axi_rdata    (axis_readout_v2_0_s_axi_rdata_1[31:0]   ), //o
     .s_axi_rresp    (axis_readout_v2_0_s_axi_rresp_1[1:0]    ), //o
     .s_axi_aclk_i   (clk_pl                                  ), //i
-    .s_axi_aresetn  (axis_readout_v2_0_s_axi_aresetn         ), //i
-    .aresetn        (axis_readout_v2_0_aresetn               ), //i
+    .s_axi_aresetn  (rst_100                                 ), //i
+    .aresetn        (rst_adc2                                ), //i
     .aclk_i         (clk_adc2                                ), //i
     .s_axis_tvalid  (axis_readout_v2_0_s_axis_tvalid         ), //i
     .s_axis_tready  (axis_readout_v2_0_s_axis_tready_1       ), //o

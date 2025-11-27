@@ -316,12 +316,18 @@ case class QickTop() extends Component {
   axis_pfb_readout_v3_0_io <> axis_pfb_readout_v3_0.io
   removeAssignmentsAll(Seq(
     axis_pfb_readout_v3_0.io.s_axi_aclk,
-    axis_pfb_readout_v3_0.io.aclk))
+    axis_pfb_readout_v3_0.io.aclk,
+    axis_pfb_readout_v3_0.io.s_axi_aresetn,
+    axis_pfb_readout_v3_0.io.aresetn))
   axis_pfb_readout_v3_0.io.s_axi_aclk := clk_pl
   axis_pfb_readout_v3_0.io.aclk := clk_adc2
+  axis_pfb_readout_v3_0.io.s_axi_aresetn := rst_100
+  axis_pfb_readout_v3_0.io.aresetn := rst_adc2
   setAsDirectionlessAll(Seq(
     axis_pfb_readout_v3_0_io.s_axi_aclk,
-    axis_pfb_readout_v3_0_io.aclk))
+    axis_pfb_readout_v3_0_io.aclk,
+    axis_pfb_readout_v3_0_io.s_axi_aresetn,
+    axis_pfb_readout_v3_0_io.aresetn))
   /* -- axis_readout_v2_0 -- */
   val axis_readout_v2_0_io = AxisReadoutV2IO()
   axis_readout_v2_0_io.setName("")
@@ -334,13 +340,19 @@ case class QickTop() extends Component {
   axis_readout_v2_0_io <> axis_readout_v2_0.io
   removeAssignmentsAll(Seq(
     axis_readout_v2_0.io.s_axi_aclk,
-    axis_readout_v2_0.io.aclk
+    axis_readout_v2_0.io.aclk,
+    axis_readout_v2_0.io.s_axi_aresetn,
+    axis_readout_v2_0.io.aresetn
   ))
   axis_readout_v2_0.io.s_axi_aclk := clk_pl
   axis_readout_v2_0.io.aclk := clk_adc2
+  axis_readout_v2_0.io.s_axi_aresetn := rst_100
+  axis_readout_v2_0.io.aresetn := rst_adc2
   setAsDirectionlessAll(Seq(
     axis_readout_v2_0_io.s_axi_aclk,
-    axis_readout_v2_0_io.aclk))
+    axis_readout_v2_0_io.aclk,
+    axis_readout_v2_0_io.s_axi_aresetn,
+    axis_readout_v2_0_io.aresetn))
   /* -- axis_readout_v3_0 -- */
   val axis_readout_v3_0_io = AxisReadoutV3IO()
   axis_readout_v3_0_io.setName("")
