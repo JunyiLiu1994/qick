@@ -665,6 +665,35 @@ case class QickTop() extends Component {
   setAsDirectionlessAll(Seq(
     axis_register_slice_2_io.aclk,
     axis_register_slice_2_io.aresetn))
+  /* -- loops -- */
+  removeAssignmentsAll(Seq(
+    axis_avg_buffer_0.io.trigger,
+    axis_avg_buffer_1.io.trigger,
+    axis_avg_buffer_2.io.trigger,
+    axis_avg_buffer_3.io.trigger,
+    axis_avg_buffer_4.io.trigger,
+    axis_avg_buffer_5.io.trigger,
+    axis_avg_buffer_6.io.trigger,
+    mr_buffer_et_0.io.trigger
+  ))
+  axis_avg_buffer_0.io.trigger := qickProcessor.io.trig_o(10)
+  axis_avg_buffer_1.io.trigger := qickProcessor.io.trig_o(11)
+  axis_avg_buffer_2.io.trigger := qickProcessor.io.trig_o(12)
+  axis_avg_buffer_3.io.trigger := qickProcessor.io.trig_o(13)
+  axis_avg_buffer_4.io.trigger := qickProcessor.io.trig_o(14)
+  axis_avg_buffer_5.io.trigger := qickProcessor.io.trig_o(15)
+  axis_avg_buffer_6.io.trigger := qickProcessor.io.trig_o(16)
+  mr_buffer_et_0.io.trigger := qickProcessor.io.trig_o(9)
+  setAsDirectionlessAll(Seq(
+    axis_avg_buffer_0_io.trigger,
+    axis_avg_buffer_1_io.trigger,
+    axis_avg_buffer_2_io.trigger,
+    axis_avg_buffer_3_io.trigger,
+    axis_avg_buffer_4_io.trigger,
+    axis_avg_buffer_5_io.trigger,
+    axis_avg_buffer_6_io.trigger,
+    mr_buffer_et_0_io.trigger
+  ))
 }
 
 object QickTop extends App {

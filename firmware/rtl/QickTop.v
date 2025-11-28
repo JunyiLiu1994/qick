@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : ed0383a89159655543a59444a6bf0d43461577ce
+// Git hash  : 04d4e39fe1dc94706d43cfe9601b101551596f3d
 
 `timescale 1ns/1ps
 
@@ -252,7 +252,6 @@ module QickTop (
   input  wire          axis_avg_buffer_0_s_axi_rready,
   output wire [31:0]   axis_avg_buffer_0_s_axi_rdata,
   output wire [1:0]    axis_avg_buffer_0_s_axi_rresp,
-  input  wire          axis_avg_buffer_0_trigger,
   input  wire          axis_avg_buffer_0_s_axis_tvalid,
   output wire          axis_avg_buffer_0_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [31:0]   axis_avg_buffer_0_s_axis_tdata,
@@ -286,7 +285,6 @@ module QickTop (
   input  wire          axis_avg_buffer_1_s_axi_rready,
   output wire [31:0]   axis_avg_buffer_1_s_axi_rdata,
   output wire [1:0]    axis_avg_buffer_1_s_axi_rresp,
-  input  wire          axis_avg_buffer_1_trigger,
   input  wire          axis_avg_buffer_1_s_axis_tvalid,
   output wire          axis_avg_buffer_1_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [31:0]   axis_avg_buffer_1_s_axis_tdata,
@@ -320,7 +318,6 @@ module QickTop (
   input  wire          axis_avg_buffer_2_s_axi_rready,
   output wire [31:0]   axis_avg_buffer_2_s_axi_rdata,
   output wire [1:0]    axis_avg_buffer_2_s_axi_rresp,
-  input  wire          axis_avg_buffer_2_trigger,
   input  wire          axis_avg_buffer_2_s_axis_tvalid,
   output wire          axis_avg_buffer_2_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [31:0]   axis_avg_buffer_2_s_axis_tdata,
@@ -354,7 +351,6 @@ module QickTop (
   input  wire          axis_avg_buffer_3_s_axi_rready,
   output wire [31:0]   axis_avg_buffer_3_s_axi_rdata,
   output wire [1:0]    axis_avg_buffer_3_s_axi_rresp,
-  input  wire          axis_avg_buffer_3_trigger,
   input  wire          axis_avg_buffer_3_s_axis_tvalid,
   output wire          axis_avg_buffer_3_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [31:0]   axis_avg_buffer_3_s_axis_tdata,
@@ -388,7 +384,6 @@ module QickTop (
   input  wire          axis_avg_buffer_4_s_axi_rready,
   output wire [31:0]   axis_avg_buffer_4_s_axi_rdata,
   output wire [1:0]    axis_avg_buffer_4_s_axi_rresp,
-  input  wire          axis_avg_buffer_4_trigger,
   input  wire          axis_avg_buffer_4_s_axis_tvalid,
   output wire          axis_avg_buffer_4_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [31:0]   axis_avg_buffer_4_s_axis_tdata,
@@ -422,7 +417,6 @@ module QickTop (
   input  wire          axis_avg_buffer_5_s_axi_rready,
   output wire [31:0]   axis_avg_buffer_5_s_axi_rdata,
   output wire [1:0]    axis_avg_buffer_5_s_axi_rresp,
-  input  wire          axis_avg_buffer_5_trigger,
   input  wire          axis_avg_buffer_5_s_axis_tvalid,
   output wire          axis_avg_buffer_5_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [31:0]   axis_avg_buffer_5_s_axis_tdata,
@@ -456,7 +450,6 @@ module QickTop (
   input  wire          axis_avg_buffer_6_s_axi_rready,
   output wire [31:0]   axis_avg_buffer_6_s_axi_rdata,
   output wire [1:0]    axis_avg_buffer_6_s_axi_rresp,
-  input  wire          axis_avg_buffer_6_trigger,
   input  wire          axis_avg_buffer_6_s_axis_tvalid,
   output wire          axis_avg_buffer_6_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [31:0]   axis_avg_buffer_6_s_axis_tdata,
@@ -471,7 +464,6 @@ module QickTop (
   output wire          axis_avg_buffer_6_m2_axis_tvalid,
   input  wire          axis_avg_buffer_6_m2_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [63:0]   axis_avg_buffer_6_m2_axis_tdata,
-  input  wire          mr_buffer_et_0_trigger,
   input  wire          mr_buffer_et_0_s00_axi_awvalid,
   output wire          mr_buffer_et_0_s00_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [5:0]    mr_buffer_et_0_s00_axi_awaddr,
@@ -1337,46 +1329,54 @@ module QickTop (
   wire                qick_processor_0_ps_resetn;
   wire                axis_avg_buffer_0_s_axi_aclk_i;
   wire                axis_avg_buffer_0_s_axi_aresetn;
+  wire                axis_avg_buffer_0_trigger;
   wire                axis_avg_buffer_0_s_axis_aclk_i;
   wire                axis_avg_buffer_0_s_axis_aresetn;
   wire                axis_avg_buffer_0_m_axis_aclk_i;
   wire                axis_avg_buffer_0_m_axis_aresetn;
   wire                axis_avg_buffer_1_s_axi_aclk_i;
   wire                axis_avg_buffer_1_s_axi_aresetn;
+  wire                axis_avg_buffer_1_trigger;
   wire                axis_avg_buffer_1_s_axis_aclk_i;
   wire                axis_avg_buffer_1_s_axis_aresetn;
   wire                axis_avg_buffer_1_m_axis_aclk_i;
   wire                axis_avg_buffer_1_m_axis_aresetn;
   wire                axis_avg_buffer_2_s_axi_aclk_i;
   wire                axis_avg_buffer_2_s_axi_aresetn;
+  wire                axis_avg_buffer_2_trigger;
   wire                axis_avg_buffer_2_s_axis_aclk_i;
   wire                axis_avg_buffer_2_s_axis_aresetn;
   wire                axis_avg_buffer_2_m_axis_aclk_i;
   wire                axis_avg_buffer_2_m_axis_aresetn;
   wire                axis_avg_buffer_3_s_axi_aclk_i;
   wire                axis_avg_buffer_3_s_axi_aresetn;
+  wire                axis_avg_buffer_3_trigger;
   wire                axis_avg_buffer_3_s_axis_aclk_i;
   wire                axis_avg_buffer_3_s_axis_aresetn;
   wire                axis_avg_buffer_3_m_axis_aclk_i;
   wire                axis_avg_buffer_3_m_axis_aresetn;
   wire                axis_avg_buffer_4_s_axi_aclk_i;
   wire                axis_avg_buffer_4_s_axi_aresetn;
+  wire                axis_avg_buffer_4_trigger;
   wire                axis_avg_buffer_4_s_axis_aclk_i;
   wire                axis_avg_buffer_4_s_axis_aresetn;
   wire                axis_avg_buffer_4_m_axis_aclk_i;
   wire                axis_avg_buffer_4_m_axis_aresetn;
   wire                axis_avg_buffer_5_s_axi_aclk_i;
   wire                axis_avg_buffer_5_s_axi_aresetn;
+  wire                axis_avg_buffer_5_trigger;
   wire                axis_avg_buffer_5_s_axis_aclk_i;
   wire                axis_avg_buffer_5_s_axis_aresetn;
   wire                axis_avg_buffer_5_m_axis_aclk_i;
   wire                axis_avg_buffer_5_m_axis_aresetn;
   wire                axis_avg_buffer_6_s_axi_aclk_i;
   wire                axis_avg_buffer_6_s_axi_aresetn;
+  wire                axis_avg_buffer_6_trigger;
   wire                axis_avg_buffer_6_s_axis_aclk_i;
   wire                axis_avg_buffer_6_s_axis_aresetn;
   wire                axis_avg_buffer_6_m_axis_aclk_i;
   wire                axis_avg_buffer_6_m_axis_aresetn;
+  wire                mr_buffer_et_0_trigger;
   wire                mr_buffer_et_0_s00_axi_aclk;
   wire                mr_buffer_et_0_s00_axi_aresetn;
   wire                mr_buffer_et_0_s00_axis_aclk;
@@ -1717,7 +1717,7 @@ module QickTop (
     .s_axi_rresp    (axis_avg_buffer_0_s_axi_rresp_1[1:0]   ), //o
     .s_axi_aclk_i   (clk_pl                                 ), //i
     .s_axi_aresetn  (rst_100                                ), //i
-    .trigger        (axis_avg_buffer_0_trigger              ), //i
+    .trigger        (qickProcessor_trig_10_o                ), //i
     .s_axis_tvalid  (axis_avg_buffer_0_s_axis_tvalid        ), //i
     .s_axis_tready  (axis_avg_buffer_0_s_axis_tready_1      ), //o
     .s_axis_tdata   (axis_avg_buffer_0_s_axis_tdata[31:0]   ), //i
@@ -1759,7 +1759,7 @@ module QickTop (
     .s_axi_rresp    (axis_avg_buffer_1_s_axi_rresp_1[1:0]   ), //o
     .s_axi_aclk_i   (clk_pl                                 ), //i
     .s_axi_aresetn  (rst_100                                ), //i
-    .trigger        (axis_avg_buffer_1_trigger              ), //i
+    .trigger        (qickProcessor_trig_11_o                ), //i
     .s_axis_tvalid  (axis_avg_buffer_1_s_axis_tvalid        ), //i
     .s_axis_tready  (axis_avg_buffer_1_s_axis_tready_1      ), //o
     .s_axis_tdata   (axis_avg_buffer_1_s_axis_tdata[31:0]   ), //i
@@ -1801,7 +1801,7 @@ module QickTop (
     .s_axi_rresp    (axis_avg_buffer_2_s_axi_rresp_1[1:0]   ), //o
     .s_axi_aclk_i   (clk_pl                                 ), //i
     .s_axi_aresetn  (rst_100                                ), //i
-    .trigger        (axis_avg_buffer_2_trigger              ), //i
+    .trigger        (qickProcessor_trig_12_o                ), //i
     .s_axis_tvalid  (axis_avg_buffer_2_s_axis_tvalid        ), //i
     .s_axis_tready  (axis_avg_buffer_2_s_axis_tready_1      ), //o
     .s_axis_tdata   (axis_avg_buffer_2_s_axis_tdata[31:0]   ), //i
@@ -1843,7 +1843,7 @@ module QickTop (
     .s_axi_rresp    (axis_avg_buffer_3_s_axi_rresp_1[1:0]   ), //o
     .s_axi_aclk_i   (clk_pl                                 ), //i
     .s_axi_aresetn  (rst_100                                ), //i
-    .trigger        (axis_avg_buffer_3_trigger              ), //i
+    .trigger        (qickProcessor_trig_13_o                ), //i
     .s_axis_tvalid  (axis_avg_buffer_3_s_axis_tvalid        ), //i
     .s_axis_tready  (axis_avg_buffer_3_s_axis_tready_1      ), //o
     .s_axis_tdata   (axis_avg_buffer_3_s_axis_tdata[31:0]   ), //i
@@ -1885,7 +1885,7 @@ module QickTop (
     .s_axi_rresp    (axis_avg_buffer_4_s_axi_rresp_1[1:0]   ), //o
     .s_axi_aclk_i   (clk_pl                                 ), //i
     .s_axi_aresetn  (rst_100                                ), //i
-    .trigger        (axis_avg_buffer_4_trigger              ), //i
+    .trigger        (qickProcessor_trig_14_o                ), //i
     .s_axis_tvalid  (axis_avg_buffer_4_s_axis_tvalid        ), //i
     .s_axis_tready  (axis_avg_buffer_4_s_axis_tready_1      ), //o
     .s_axis_tdata   (axis_avg_buffer_4_s_axis_tdata[31:0]   ), //i
@@ -1927,7 +1927,7 @@ module QickTop (
     .s_axi_rresp    (axis_avg_buffer_5_s_axi_rresp_1[1:0]   ), //o
     .s_axi_aclk_i   (clk_pl                                 ), //i
     .s_axi_aresetn  (rst_100                                ), //i
-    .trigger        (axis_avg_buffer_5_trigger              ), //i
+    .trigger        (qickProcessor_trig_15_o                ), //i
     .s_axis_tvalid  (axis_avg_buffer_5_s_axis_tvalid        ), //i
     .s_axis_tready  (axis_avg_buffer_5_s_axis_tready_1      ), //o
     .s_axis_tdata   (axis_avg_buffer_5_s_axis_tdata[31:0]   ), //i
@@ -1969,7 +1969,7 @@ module QickTop (
     .s_axi_rresp    (axis_avg_buffer_6_s_axi_rresp_1[1:0]   ), //o
     .s_axi_aclk_i   (clk_pl                                 ), //i
     .s_axi_aresetn  (rst_100                                ), //i
-    .trigger        (axis_avg_buffer_6_trigger              ), //i
+    .trigger        (qickProcessor_trig_16_o                ), //i
     .s_axis_tvalid  (axis_avg_buffer_6_s_axis_tvalid        ), //i
     .s_axis_tready  (axis_avg_buffer_6_s_axis_tready_1      ), //o
     .s_axis_tdata   (axis_avg_buffer_6_s_axis_tdata[31:0]   ), //i
@@ -1990,7 +1990,7 @@ module QickTop (
     .m2_axis_tdata  (axis_avg_buffer_6_m2_axis_tdata_1[63:0])  //o
   );
   MrBufferV1 mr_buffer_et_0 (
-    .trigger          (mr_buffer_et_0_trigger               ), //i
+    .trigger          (qickProcessor_trig_9_o               ), //i
     .s00_axi_awvalid  (mr_buffer_et_0_s00_axi_awvalid       ), //i
     .s00_axi_awready  (mr_buffer_et_0_s00_axi_awready_1     ), //o
     .s00_axi_awaddr   (mr_buffer_et_0_s00_axi_awaddr[5:0]   ), //i
