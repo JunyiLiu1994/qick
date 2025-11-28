@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 50f9d4aafe24769b17d5c2995d8abd41e109e71d
+// Git hash  : 6b732c821c83b6eafa2613c15e2f4bf90c82852a
 
 `timescale 1ns/1ps
 
@@ -869,7 +869,15 @@ module QickTop (
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) input  wire [159:0]  axis_sg_int4_v2_1_s1_axis_tdata,
   output wire          axis_sg_int4_v2_1_m_axis_tvalid,
   input  wire          axis_sg_int4_v2_1_m_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) output wire [127:0]  axis_sg_int4_v2_1_m_axis_tdata
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) output wire [127:0]  axis_sg_int4_v2_1_m_axis_tdata,
+  input  wire          axis_resampler_2x1_v1_0_aclk,
+  input  wire          axis_resampler_2x1_v1_0_aresetn,
+  input  wire          axis_resampler_2x1_v1_0_s_axis_tvalid,
+  output wire          axis_resampler_2x1_v1_0_s_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [127:0]  axis_resampler_2x1_v1_0_s_axis_tdata,
+  output wire          axis_resampler_2x1_v1_0_m_axis_tvalid,
+  input  wire          axis_resampler_2x1_v1_0_m_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [63:0]   axis_resampler_2x1_v1_0_m_axis_tdata
 );
 
   wire       [47:0]   qickProcessor_t_time_abs_o;
@@ -1307,6 +1315,9 @@ module QickTop (
   wire                axis_sg_int4_v2_1_s1_axis_tready_1;
   wire                axis_sg_int4_v2_1_m_axis_tvalid_1;
   wire       [127:0]  axis_sg_int4_v2_1_m_axis_tdata_1;
+  wire                axis_resampler_2x1_v1_0_s_axis_tready_1;
+  wire                axis_resampler_2x1_v1_0_m_axis_tvalid_1;
+  wire       [63:0]   axis_resampler_2x1_v1_0_m_axis_tdata_1;
   wire                qick_processor_0_t_clk_i;
   wire                qick_processor_0_t_resetn;
   wire                qick_processor_0_ps_clk_i;
@@ -2414,6 +2425,16 @@ module QickTop (
     .m_axis_tready   (axis_sg_int4_v2_1_m_axis_tready        ), //i
     .m_axis_tdata    (axis_sg_int4_v2_1_m_axis_tdata_1[127:0])  //o
   );
+  AxisResampler axis_resampler_2x1_v1_0 (
+    .aclk          (axis_resampler_2x1_v1_0_aclk                ), //i
+    .aresetn       (axis_resampler_2x1_v1_0_aresetn             ), //i
+    .s_axis_tvalid (axis_resampler_2x1_v1_0_s_axis_tvalid       ), //i
+    .s_axis_tready (axis_resampler_2x1_v1_0_s_axis_tready_1     ), //o
+    .s_axis_tdata  (axis_resampler_2x1_v1_0_s_axis_tdata[127:0] ), //i
+    .m_axis_tvalid (axis_resampler_2x1_v1_0_m_axis_tvalid_1     ), //o
+    .m_axis_tready (axis_resampler_2x1_v1_0_m_axis_tready       ), //i
+    .m_axis_tdata  (axis_resampler_2x1_v1_0_m_axis_tdata_1[63:0])  //o
+  );
   assign qick_processor_0_t_time_abs_o = qickProcessor_t_time_abs_o;
   assign qick_processor_0_pulse_sync_o = qickProcessor_pulse_sync_o;
   assign qick_processor_0_qnet_en_o = qickProcessor_qnet_en_o;
@@ -2849,6 +2870,43 @@ module QickTop (
   assign axis_sg_int4_v2_1_s1_axis_tready = axis_sg_int4_v2_1_s1_axis_tready_1;
   assign axis_sg_int4_v2_1_m_axis_tvalid = axis_sg_int4_v2_1_m_axis_tvalid_1;
   assign axis_sg_int4_v2_1_m_axis_tdata = axis_sg_int4_v2_1_m_axis_tdata_1;
+  assign axis_resampler_2x1_v1_0_s_axis_tready = axis_resampler_2x1_v1_0_s_axis_tready_1;
+  assign axis_resampler_2x1_v1_0_m_axis_tvalid = axis_resampler_2x1_v1_0_m_axis_tvalid_1;
+  assign axis_resampler_2x1_v1_0_m_axis_tdata = axis_resampler_2x1_v1_0_m_axis_tdata_1;
+
+endmodule
+
+module AxisResampler (
+  input  wire          aclk,
+  input  wire          aresetn,
+  input  wire          s_axis_tvalid,
+  output wire          s_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [127:0]  s_axis_tdata,
+  output wire          m_axis_tvalid,
+  input  wire          m_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [63:0]   m_axis_tdata
+);
+
+  wire                axisResampler_1_s_axis_tready;
+  wire                axisResampler_1_m_axis_tvalid;
+  wire       [63:0]   axisResampler_1_m_axis_tdata;
+
+  axis_resampler_2x1_v1 #(
+    .B (16),
+    .N (8 )
+  ) axisResampler_1 (
+    .aclk          (aclk                              ), //i
+    .aresetn       (aresetn                           ), //i
+    .s_axis_tvalid (s_axis_tvalid                     ), //i
+    .s_axis_tready (axisResampler_1_s_axis_tready     ), //o
+    .s_axis_tdata  (s_axis_tdata[127:0]               ), //i
+    .m_axis_tvalid (axisResampler_1_m_axis_tvalid     ), //o
+    .m_axis_tready (m_axis_tready                     ), //i
+    .m_axis_tdata  (axisResampler_1_m_axis_tdata[63:0])  //o
+  );
+  assign s_axis_tready = axisResampler_1_s_axis_tready;
+  assign m_axis_tvalid = axisResampler_1_m_axis_tvalid;
+  assign m_axis_tdata = axisResampler_1_m_axis_tdata;
 
 endmodule
 
