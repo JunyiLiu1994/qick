@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 3d82e0827439dda26c2fe0d63890f0fcc3b2ee12
+// Git hash  : ed0383a89159655543a59444a6bf0d43461577ce
 
 `timescale 1ns/1ps
 
@@ -858,32 +858,24 @@ module QickTop (
   output wire          axis_sg_int4_v2_1_m_axis_tvalid,
   input  wire          axis_sg_int4_v2_1_m_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) output wire [127:0]  axis_sg_int4_v2_1_m_axis_tdata,
-  input  wire          axis_resampler_2x1_v1_0_aclk,
-  input  wire          axis_resampler_2x1_v1_0_aresetn,
   input  wire          axis_resampler_2x1_v1_0_s_axis_tvalid,
   output wire          axis_resampler_2x1_v1_0_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [127:0]  axis_resampler_2x1_v1_0_s_axis_tdata,
   output wire          axis_resampler_2x1_v1_0_m_axis_tvalid,
   input  wire          axis_resampler_2x1_v1_0_m_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [63:0]   axis_resampler_2x1_v1_0_m_axis_tdata,
-  input  wire          axis_register_slice_0_aresetn,
-  input  wire          axis_register_slice_0_aclk,
   input  wire          axis_register_slice_0_s_axis_tvalid,
   output wire          axis_register_slice_0_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [255:0]  axis_register_slice_0_s_axis_tdata,
   output wire          axis_register_slice_0_m_axis_tvalid,
   input  wire          axis_register_slice_0_m_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  axis_register_slice_0_m_axis_tdata,
-  input  wire          axis_register_slice_1_aresetn,
-  input  wire          axis_register_slice_1_aclk,
   input  wire          axis_register_slice_1_s_axis_tvalid,
   output wire          axis_register_slice_1_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [255:0]  axis_register_slice_1_s_axis_tdata,
   output wire          axis_register_slice_1_m_axis_tvalid,
   input  wire          axis_register_slice_1_m_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  axis_register_slice_1_m_axis_tdata,
-  input  wire          axis_register_slice_2_aresetn,
-  input  wire          axis_register_slice_2_aclk,
   input  wire          axis_register_slice_2_s_axis_tvalid,
   output wire          axis_register_slice_2_s_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [255:0]  axis_register_slice_2_s_axis_tdata,
@@ -1441,6 +1433,14 @@ module QickTop (
   wire                axis_sg_int4_v2_1_s0_axis_aresetn;
   wire                axis_sg_int4_v2_1_aresetn;
   wire                axis_sg_int4_v2_1_aclk_i;
+  wire                axis_resampler_2x1_v1_0_aclk;
+  wire                axis_resampler_2x1_v1_0_aresetn;
+  wire                axis_register_slice_0_aresetn;
+  wire                axis_register_slice_0_aclk;
+  wire                axis_register_slice_1_aresetn;
+  wire                axis_register_slice_1_aclk;
+  wire                axis_register_slice_2_aresetn;
+  wire                axis_register_slice_2_aclk;
 
   axis_qick_processor #(
     .DUAL_CORE     (0  ),
@@ -2459,8 +2459,8 @@ module QickTop (
     .m_axis_tdata    (axis_sg_int4_v2_1_m_axis_tdata_1[127:0])  //o
   );
   AxisResampler axis_resampler_2x1_v1_0 (
-    .aclk          (axis_resampler_2x1_v1_0_aclk                ), //i
-    .aresetn       (axis_resampler_2x1_v1_0_aresetn             ), //i
+    .aclk          (clk_dac2                                    ), //i
+    .aresetn       (rst_dac2                                    ), //i
     .s_axis_tvalid (axis_resampler_2x1_v1_0_s_axis_tvalid       ), //i
     .s_axis_tready (axis_resampler_2x1_v1_0_s_axis_tready_1     ), //o
     .s_axis_tdata  (axis_resampler_2x1_v1_0_s_axis_tdata[127:0] ), //i
@@ -2469,8 +2469,8 @@ module QickTop (
     .m_axis_tdata  (axis_resampler_2x1_v1_0_m_axis_tdata_1[63:0])  //o
   );
   AxisRegisterSliceNb axis_register_slice_0 (
-    .aresetn       (axis_register_slice_0_aresetn              ), //i
-    .aclk          (axis_register_slice_0_aclk                 ), //i
+    .aresetn       (rst_dac2                                   ), //i
+    .aclk          (clk_dac2                                   ), //i
     .s_axis_tvalid (axis_register_slice_0_s_axis_tvalid        ), //i
     .s_axis_tready (axis_register_slice_0_s_axis_tready_1      ), //o
     .s_axis_tdata  (axis_register_slice_0_s_axis_tdata[255:0]  ), //i
@@ -2479,8 +2479,8 @@ module QickTop (
     .m_axis_tdata  (axis_register_slice_0_m_axis_tdata_1[255:0])  //o
   );
   AxisRegisterSliceNb axis_register_slice_1 (
-    .aresetn       (axis_register_slice_1_aresetn              ), //i
-    .aclk          (axis_register_slice_1_aclk                 ), //i
+    .aresetn       (rst_dac2                                   ), //i
+    .aclk          (clk_dac2                                   ), //i
     .s_axis_tvalid (axis_register_slice_1_s_axis_tvalid        ), //i
     .s_axis_tready (axis_register_slice_1_s_axis_tready_1      ), //o
     .s_axis_tdata  (axis_register_slice_1_s_axis_tdata[255:0]  ), //i
@@ -2489,8 +2489,8 @@ module QickTop (
     .m_axis_tdata  (axis_register_slice_1_m_axis_tdata_1[255:0])  //o
   );
   AxisRegisterSliceNb axis_register_slice_2 (
-    .aresetn       (axis_register_slice_2_aresetn              ), //i
-    .aclk          (axis_register_slice_2_aclk                 ), //i
+    .aresetn       (rst_dac2                                   ), //i
+    .aclk          (clk_dac2                                   ), //i
     .s_axis_tvalid (axis_register_slice_2_s_axis_tvalid        ), //i
     .s_axis_tready (axis_register_slice_2_s_axis_tready_1      ), //o
     .s_axis_tdata  (axis_register_slice_2_s_axis_tdata[255:0]  ), //i

@@ -609,6 +609,14 @@ case class QickTop() extends Component {
   }
   val axis_resampler_2x1_v1_0 = AxisResampler(B = 16, N = 8)
   axis_resampler_2x1_v1_0_io <> axis_resampler_2x1_v1_0.io
+  removeAssignmentsAll(Seq(
+    axis_resampler_2x1_v1_0.io.aclk,
+    axis_resampler_2x1_v1_0.io.aresetn))
+  axis_resampler_2x1_v1_0.io.aclk := clk_dac2
+  axis_resampler_2x1_v1_0.io.aresetn := rst_dac2
+  setAsDirectionlessAll(Seq(
+    axis_resampler_2x1_v1_0_io.aclk,
+    axis_resampler_2x1_v1_0_io.aresetn))
   /* -- axis_register_slice_0 -- */
   val axis_register_slice_0_io = AxisRegisterSliceNbIo(B = 256, N = 6)
   axis_register_slice_0_io.setName("")
@@ -617,6 +625,14 @@ case class QickTop() extends Component {
   }
   val axis_register_slice_0 = AxisRegisterSliceNb(B = 256, N = 6)
   axis_register_slice_0_io <> axis_register_slice_0.io
+  removeAssignmentsAll(Seq(
+    axis_register_slice_0.io.aclk,
+    axis_register_slice_0.io.aresetn))
+  axis_register_slice_0.io.aclk := clk_dac2
+  axis_register_slice_0.io.aresetn := rst_dac2
+  setAsDirectionlessAll(Seq(
+    axis_register_slice_0_io.aclk,
+    axis_register_slice_0_io.aresetn))
   /* -- axis_register_slice_1 -- */
   val axis_register_slice_1_io = AxisRegisterSliceNbIo(B = 256, N = 6)
   axis_register_slice_1_io.setName("")
@@ -625,6 +641,14 @@ case class QickTop() extends Component {
   }
   val axis_register_slice_1 = AxisRegisterSliceNb(B = 256, N = 6)
   axis_register_slice_1_io <> axis_register_slice_1.io
+  removeAssignmentsAll(Seq(
+    axis_register_slice_1.io.aclk,
+    axis_register_slice_1.io.aresetn))
+  axis_register_slice_1.io.aclk := clk_dac2
+  axis_register_slice_1.io.aresetn := rst_dac2
+  setAsDirectionlessAll(Seq(
+    axis_register_slice_1_io.aclk,
+    axis_register_slice_1_io.aresetn))
   /* -- axis_register_slice_2 -- */
   val axis_register_slice_2_io = AxisRegisterSliceNbIo(B = 256, N = 6)
   axis_register_slice_2_io.setName("")
@@ -633,6 +657,14 @@ case class QickTop() extends Component {
   }
   val axis_register_slice_2 = AxisRegisterSliceNb(B = 256, N = 6)
   axis_register_slice_2_io <> axis_register_slice_2.io
+  removeAssignmentsAll(Seq(
+    axis_register_slice_2.io.aclk,
+    axis_register_slice_2.io.aresetn))
+  axis_register_slice_2.io.aclk := clk_dac2
+  axis_register_slice_2.io.aresetn := rst_dac2
+  setAsDirectionlessAll(Seq(
+    axis_register_slice_2_io.aclk,
+    axis_register_slice_2_io.aresetn))
 }
 
 object QickTop extends App {
