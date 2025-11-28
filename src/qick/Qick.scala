@@ -551,6 +551,26 @@ case class QickTop() extends Component {
   }
   val axis_sg_int4_v2_0 = AxisSgInt4()
   axis_sg_int4_v2_0_io <> axis_sg_int4_v2_0.io
+  removeAssignmentsAll(Seq(
+    axis_sg_int4_v2_0.io.s_axi_aclk,
+    axis_sg_int4_v2_0.io.s0_axis_aclk,
+    axis_sg_int4_v2_0.io.aclk,
+    axis_sg_int4_v2_0.io.s_axi_aresetn,
+    axis_sg_int4_v2_0.io.s0_axis_aresetn,
+    axis_sg_int4_v2_0.io.aresetn))
+  axis_sg_int4_v2_0.io.s_axi_aclk := clk_pl
+  axis_sg_int4_v2_0.io.s0_axis_aclk := clk_pl
+  axis_sg_int4_v2_0.io.aclk := clk_dac3
+  axis_sg_int4_v2_0.io.s_axi_aresetn := rst_100
+  axis_sg_int4_v2_0.io.s0_axis_aresetn := rst_100
+  axis_sg_int4_v2_0.io.aresetn := rst_dac3
+  setAsDirectionlessAll(Seq(
+    axis_sg_int4_v2_0_io.s_axi_aclk,
+    axis_sg_int4_v2_0_io.s0_axis_aclk,
+    axis_sg_int4_v2_0_io.aclk,
+    axis_sg_int4_v2_0_io.s_axi_aresetn,
+    axis_sg_int4_v2_0_io.s0_axis_aresetn,
+    axis_sg_int4_v2_0_io.aresetn))
   /* -- axis_sg_int4_v2_1 -- */
   val axis_sg_int4_v2_1_io = AxisSgInt4IO()
   axis_sg_int4_v2_1_io.setName("")
@@ -561,6 +581,26 @@ case class QickTop() extends Component {
   }
   val axis_sg_int4_v2_1 = AxisSgInt4()
   axis_sg_int4_v2_1_io <> axis_sg_int4_v2_1.io
+  removeAssignmentsAll(Seq(
+    axis_sg_int4_v2_1.io.s_axi_aclk,
+    axis_sg_int4_v2_1.io.s0_axis_aclk,
+    axis_sg_int4_v2_1.io.aclk,
+    axis_sg_int4_v2_1.io.s_axi_aresetn,
+    axis_sg_int4_v2_1.io.s0_axis_aresetn,
+    axis_sg_int4_v2_1.io.aresetn))
+  axis_sg_int4_v2_1.io.s_axi_aclk := clk_pl
+  axis_sg_int4_v2_1.io.s0_axis_aclk := clk_pl
+  axis_sg_int4_v2_1.io.aclk := clk_dac3
+  axis_sg_int4_v2_1.io.s_axi_aresetn := rst_100
+  axis_sg_int4_v2_1.io.s0_axis_aresetn := rst_100
+  axis_sg_int4_v2_1.io.aresetn := rst_dac3
+  setAsDirectionlessAll(Seq(
+    axis_sg_int4_v2_1_io.s_axi_aclk,
+    axis_sg_int4_v2_1_io.s0_axis_aclk,
+    axis_sg_int4_v2_1_io.aclk,
+    axis_sg_int4_v2_1_io.s_axi_aresetn,
+    axis_sg_int4_v2_1_io.s0_axis_aresetn,
+    axis_sg_int4_v2_1_io.aresetn))
   /* -- axis_resampler_2x1_v1_0 -- */
   val axis_resampler_2x1_v1_0_io = AxisResamplerIO(B = 16, N = 8)
   axis_resampler_2x1_v1_0_io.setName("")

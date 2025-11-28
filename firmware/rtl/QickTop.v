@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 383519d7be2749e349aa1308830bd9f7420d1079
+// Git hash  : 3d82e0827439dda26c2fe0d63890f0fcc3b2ee12
 
 `timescale 1ns/1ps
 
@@ -821,15 +821,9 @@ module QickTop (
   input  wire          axis_sg_int4_v2_0_s_axi_rready,
   output wire [31:0]   axis_sg_int4_v2_0_s_axi_rdata,
   output wire [1:0]    axis_sg_int4_v2_0_s_axi_rresp,
-  input  wire          axis_sg_int4_v2_0_s_axi_aclk_i,
-  input  wire          axis_sg_int4_v2_0_s_axi_aresetn,
   input  wire          axis_sg_int4_v2_0_s0_axis_tvalid,
   output wire          axis_sg_int4_v2_0_s0_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [31:0]   axis_sg_int4_v2_0_s0_axis_tdata,
-  input  wire          axis_sg_int4_v2_0_s0_axis_aclk,
-  input  wire          axis_sg_int4_v2_0_s0_axis_aresetn,
-  input  wire          axis_sg_int4_v2_0_aresetn,
-  input  wire          axis_sg_int4_v2_0_aclk_i,
   input  wire          axis_sg_int4_v2_0_s1_axis_tvalid,
   output wire          axis_sg_int4_v2_0_s1_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) input  wire [159:0]  axis_sg_int4_v2_0_s1_axis_tdata,
@@ -855,15 +849,9 @@ module QickTop (
   input  wire          axis_sg_int4_v2_1_s_axi_rready,
   output wire [31:0]   axis_sg_int4_v2_1_s_axi_rdata,
   output wire [1:0]    axis_sg_int4_v2_1_s_axi_rresp,
-  input  wire          axis_sg_int4_v2_1_s_axi_aclk_i,
-  input  wire          axis_sg_int4_v2_1_s_axi_aresetn,
   input  wire          axis_sg_int4_v2_1_s0_axis_tvalid,
   output wire          axis_sg_int4_v2_1_s0_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [31:0]   axis_sg_int4_v2_1_s0_axis_tdata,
-  input  wire          axis_sg_int4_v2_1_s0_axis_aclk,
-  input  wire          axis_sg_int4_v2_1_s0_axis_aresetn,
-  input  wire          axis_sg_int4_v2_1_aresetn,
-  input  wire          axis_sg_int4_v2_1_aclk_i,
   input  wire          axis_sg_int4_v2_1_s1_axis_tvalid,
   output wire          axis_sg_int4_v2_1_s1_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) input  wire [159:0]  axis_sg_int4_v2_1_s1_axis_tdata,
@@ -1441,6 +1429,18 @@ module QickTop (
   wire                axis_sg_mixmux8_v1_0_s_axi_aclk_i;
   wire                axis_sg_mixmux8_v1_0_aresetn;
   wire                axis_sg_mixmux8_v1_0_aclk_i;
+  wire                axis_sg_int4_v2_0_s_axi_aclk_i;
+  wire                axis_sg_int4_v2_0_s_axi_aresetn;
+  wire                axis_sg_int4_v2_0_s0_axis_aclk;
+  wire                axis_sg_int4_v2_0_s0_axis_aresetn;
+  wire                axis_sg_int4_v2_0_aresetn;
+  wire                axis_sg_int4_v2_0_aclk_i;
+  wire                axis_sg_int4_v2_1_s_axi_aclk_i;
+  wire                axis_sg_int4_v2_1_s_axi_aresetn;
+  wire                axis_sg_int4_v2_1_s0_axis_aclk;
+  wire                axis_sg_int4_v2_1_s0_axis_aresetn;
+  wire                axis_sg_int4_v2_1_aresetn;
+  wire                axis_sg_int4_v2_1_aclk_i;
 
   axis_qick_processor #(
     .DUAL_CORE     (0  ),
@@ -2406,15 +2406,15 @@ module QickTop (
     .s_axi_rready    (axis_sg_int4_v2_0_s_axi_rready         ), //i
     .s_axi_rdata     (axis_sg_int4_v2_0_s_axi_rdata_1[31:0]  ), //o
     .s_axi_rresp     (axis_sg_int4_v2_0_s_axi_rresp_1[1:0]   ), //o
-    .s_axi_aclk_i    (axis_sg_int4_v2_0_s_axi_aclk_i         ), //i
-    .s_axi_aresetn   (axis_sg_int4_v2_0_s_axi_aresetn        ), //i
+    .s_axi_aclk_i    (clk_pl                                 ), //i
+    .s_axi_aresetn   (rst_100                                ), //i
     .s0_axis_tvalid  (axis_sg_int4_v2_0_s0_axis_tvalid       ), //i
     .s0_axis_tready  (axis_sg_int4_v2_0_s0_axis_tready_1     ), //o
     .s0_axis_tdata   (axis_sg_int4_v2_0_s0_axis_tdata[31:0]  ), //i
-    .s0_axis_aclk    (axis_sg_int4_v2_0_s0_axis_aclk         ), //i
-    .s0_axis_aresetn (axis_sg_int4_v2_0_s0_axis_aresetn      ), //i
-    .aresetn         (axis_sg_int4_v2_0_aresetn              ), //i
-    .aclk_i          (axis_sg_int4_v2_0_aclk_i               ), //i
+    .s0_axis_aclk    (clk_pl                                 ), //i
+    .s0_axis_aresetn (rst_100                                ), //i
+    .aresetn         (rst_dac3                               ), //i
+    .aclk_i          (clk_dac3                               ), //i
     .s1_axis_tvalid  (axis_sg_int4_v2_0_s1_axis_tvalid       ), //i
     .s1_axis_tready  (axis_sg_int4_v2_0_s1_axis_tready_1     ), //o
     .s1_axis_tdata   (axis_sg_int4_v2_0_s1_axis_tdata[159:0] ), //i
@@ -2442,15 +2442,15 @@ module QickTop (
     .s_axi_rready    (axis_sg_int4_v2_1_s_axi_rready         ), //i
     .s_axi_rdata     (axis_sg_int4_v2_1_s_axi_rdata_1[31:0]  ), //o
     .s_axi_rresp     (axis_sg_int4_v2_1_s_axi_rresp_1[1:0]   ), //o
-    .s_axi_aclk_i    (axis_sg_int4_v2_1_s_axi_aclk_i         ), //i
-    .s_axi_aresetn   (axis_sg_int4_v2_1_s_axi_aresetn        ), //i
+    .s_axi_aclk_i    (clk_pl                                 ), //i
+    .s_axi_aresetn   (rst_100                                ), //i
     .s0_axis_tvalid  (axis_sg_int4_v2_1_s0_axis_tvalid       ), //i
     .s0_axis_tready  (axis_sg_int4_v2_1_s0_axis_tready_1     ), //o
     .s0_axis_tdata   (axis_sg_int4_v2_1_s0_axis_tdata[31:0]  ), //i
-    .s0_axis_aclk    (axis_sg_int4_v2_1_s0_axis_aclk         ), //i
-    .s0_axis_aresetn (axis_sg_int4_v2_1_s0_axis_aresetn      ), //i
-    .aresetn         (axis_sg_int4_v2_1_aresetn              ), //i
-    .aclk_i          (axis_sg_int4_v2_1_aclk_i               ), //i
+    .s0_axis_aclk    (clk_pl                                 ), //i
+    .s0_axis_aresetn (rst_100                                ), //i
+    .aresetn         (rst_dac3                               ), //i
+    .aclk_i          (clk_dac3                               ), //i
     .s1_axis_tvalid  (axis_sg_int4_v2_1_s1_axis_tvalid       ), //i
     .s1_axis_tready  (axis_sg_int4_v2_1_s1_axis_tready_1     ), //o
     .s1_axis_tdata   (axis_sg_int4_v2_1_s1_axis_tdata[159:0] ), //i
