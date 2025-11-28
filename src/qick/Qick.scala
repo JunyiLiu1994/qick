@@ -541,6 +541,26 @@ case class QickTop() extends Component {
     axis_sg_mixmux8_v1_0_io.aclk,
     axis_sg_mixmux8_v1_0_io.s_axi_aresetn,
     axis_sg_mixmux8_v1_0_io.aresetn))
+  /* -- axis_sg_int_4_v2_0 -- */
+  val axis_sg_int4_v2_0_io = AxisSgInt4IO()
+  axis_sg_int4_v2_0_io.setName("")
+  axis_sg_int4_v2_0_io.s_axi_aclk.setName("s_axi_aclk_i")
+  axis_sg_int4_v2_0_io.aclk.setName("aclk_i")
+  axis_sg_int4_v2_0_io.flatten.foreach { w =>
+    w.setName("axis_sg_int4_v2_0_" + w.getName())
+  }
+  val axis_sg_int4_v2_0 = AxisSgInt4()
+  axis_sg_int4_v2_0_io <> axis_sg_int4_v2_0.io
+  /* -- axis_sg_int4_v2_1 -- */
+  val axis_sg_int4_v2_1_io = AxisSgInt4IO()
+  axis_sg_int4_v2_1_io.setName("")
+  axis_sg_int4_v2_1_io.s_axi_aclk.setName("s_axi_aclk_i")
+  axis_sg_int4_v2_1_io.aclk.setName("aclk_i")
+  axis_sg_int4_v2_1_io.flatten.foreach { w =>
+    w.setName("axis_sg_int4_v2_1_" + w.getName())
+  }
+  val axis_sg_int4_v2_1 = AxisSgInt4()
+  axis_sg_int4_v2_1_io <> axis_sg_int4_v2_1.io
 }
 
 object QickTop extends App {
