@@ -569,6 +569,30 @@ case class QickTop() extends Component {
   }
   val axis_resampler_2x1_v1_0 = AxisResampler(B = 16, N = 8)
   axis_resampler_2x1_v1_0_io <> axis_resampler_2x1_v1_0.io
+  /* -- axis_register_slice_0 -- */
+  val axis_register_slice_0_io = AxisRegisterSliceNbIo(B = 256, N = 6)
+  axis_register_slice_0_io.setName("")
+  axis_register_slice_0_io.flatten.foreach { w =>
+    w.setName("axis_register_slice_0_" + w.getName())
+  }
+  val axis_register_slice_0 = AxisRegisterSliceNb(B = 256, N = 6)
+  axis_register_slice_0_io <> axis_register_slice_0.io
+  /* -- axis_register_slice_1 -- */
+  val axis_register_slice_1_io = AxisRegisterSliceNbIo(B = 256, N = 6)
+  axis_register_slice_1_io.setName("")
+  axis_register_slice_1_io.flatten.foreach { w =>
+    w.setName("axis_register_slice_1_" + w.getName())
+  }
+  val axis_register_slice_1 = AxisRegisterSliceNb(B = 256, N = 6)
+  axis_register_slice_1_io <> axis_register_slice_1.io
+  /* -- axis_register_slice_2 -- */
+  val axis_register_slice_2_io = AxisRegisterSliceNbIo(B = 256, N = 6)
+  axis_register_slice_2_io.setName("")
+  axis_register_slice_2_io.flatten.foreach { w =>
+    w.setName("axis_register_slice_2_" + w.getName())
+  }
+  val axis_register_slice_2 = AxisRegisterSliceNb(B = 256, N = 6)
+  axis_register_slice_2_io <> axis_register_slice_2.io
 }
 
 object QickTop extends App {
