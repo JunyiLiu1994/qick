@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 04d4e39fe1dc94706d43cfe9601b101551596f3d
+// Git hash  : 76c2c0dbbea3cc2f56a1420e3ae31672f0031df8
 
 `timescale 1ns/1ps
 
@@ -873,7 +873,127 @@ module QickTop (
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [255:0]  axis_register_slice_2_s_axis_tdata,
   output wire          axis_register_slice_2_m_axis_tvalid,
   input  wire          axis_register_slice_2_m_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  axis_register_slice_2_m_axis_tdata
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  axis_register_slice_2_m_axis_tdata,
+  input  wire          sg_translator_0_s_tproc_axis_tvalid,
+  output wire          sg_translator_0_s_tproc_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  sg_translator_0_s_tproc_axis_tdata,
+  output wire          sg_translator_0_m_gen_v6_axis_tvalid,
+  input  wire          sg_translator_0_m_gen_v6_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [159:0]  sg_translator_0_m_gen_v6_axis_tdata,
+  output wire          sg_translator_0_m_int4_axis_tvalid,
+  input  wire          sg_translator_0_m_int4_axis_tready,
+  output wire [87:0]   sg_translator_0_m_int4_axis_tdata,
+  output wire          sg_translator_0_m_mux4_axis_tvalid,
+  input  wire          sg_translator_0_m_mux4_axis_tready,
+  output wire [39:0]   sg_translator_0_m_mux4_axis_tdata,
+  output wire          sg_translator_0_m_readout_v3_axis_tvalid,
+  input  wire          sg_translator_0_m_readout_v3_axis_tready,
+  output wire [87:0]   sg_translator_0_m_readout_v3_axis_tdata,
+  input  wire          sg_translator_1_s_tproc_axis_tvalid,
+  output wire          sg_translator_1_s_tproc_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  sg_translator_1_s_tproc_axis_tdata,
+  output wire          sg_translator_1_m_gen_v6_axis_tvalid,
+  input  wire          sg_translator_1_m_gen_v6_axis_tready,
+  output wire [159:0]  sg_translator_1_m_gen_v6_axis_tdata,
+  output wire          sg_translator_1_m_int4_axis_tvalid,
+  input  wire          sg_translator_1_m_int4_axis_tready,
+  output wire [87:0]   sg_translator_1_m_int4_axis_tdata,
+  output wire          sg_translator_1_m_mux4_axis_tvalid,
+  input  wire          sg_translator_1_m_mux4_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [39:0]   sg_translator_1_m_mux4_axis_tdata,
+  output wire          sg_translator_1_m_readout_v3_axis_tvalid,
+  input  wire          sg_translator_1_m_readout_v3_axis_tready,
+  output wire [87:0]   sg_translator_1_m_readout_v3_axis_tdata,
+  input  wire          sg_translator_2_s_tproc_axis_tvalid,
+  output wire          sg_translator_2_s_tproc_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  sg_translator_2_s_tproc_axis_tdata,
+  output wire          sg_translator_2_m_gen_v6_axis_tvalid,
+  input  wire          sg_translator_2_m_gen_v6_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [159:0]  sg_translator_2_m_gen_v6_axis_tdata,
+  output wire          sg_translator_2_m_int4_axis_tvalid,
+  input  wire          sg_translator_2_m_int4_axis_tready,
+  output wire [87:0]   sg_translator_2_m_int4_axis_tdata,
+  output wire          sg_translator_2_m_mux4_axis_tvalid,
+  input  wire          sg_translator_2_m_mux4_axis_tready,
+  output wire [39:0]   sg_translator_2_m_mux4_axis_tdata,
+  output wire          sg_translator_2_m_readout_v3_axis_tvalid,
+  input  wire          sg_translator_2_m_readout_v3_axis_tready,
+  output wire [87:0]   sg_translator_2_m_readout_v3_axis_tdata,
+  input  wire          sg_translator_3_s_tproc_axis_tvalid,
+  output wire          sg_translator_3_s_tproc_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) input  wire [167:0]  sg_translator_3_s_tproc_axis_tdata,
+  output wire          sg_translator_3_m_gen_v6_axis_tvalid,
+  input  wire          sg_translator_3_m_gen_v6_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) output wire [159:0]  sg_translator_3_m_gen_v6_axis_tdata,
+  output wire          sg_translator_3_m_int4_axis_tvalid,
+  input  wire          sg_translator_3_m_int4_axis_tready,
+  output wire [87:0]   sg_translator_3_m_int4_axis_tdata,
+  output wire          sg_translator_3_m_mux4_axis_tvalid,
+  input  wire          sg_translator_3_m_mux4_axis_tready,
+  output wire [39:0]   sg_translator_3_m_mux4_axis_tdata,
+  output wire          sg_translator_3_m_readout_v3_axis_tvalid,
+  input  wire          sg_translator_3_m_readout_v3_axis_tready,
+  output wire [87:0]   sg_translator_3_m_readout_v3_axis_tdata,
+  input  wire          sg_translator_4_s_tproc_axis_tvalid,
+  output wire          sg_translator_4_s_tproc_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) input  wire [167:0]  sg_translator_4_s_tproc_axis_tdata,
+  output wire          sg_translator_4_m_gen_v6_axis_tvalid,
+  input  wire          sg_translator_4_m_gen_v6_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) output wire [159:0]  sg_translator_4_m_gen_v6_axis_tdata,
+  output wire          sg_translator_4_m_int4_axis_tvalid,
+  input  wire          sg_translator_4_m_int4_axis_tready,
+  output wire [87:0]   sg_translator_4_m_int4_axis_tdata,
+  output wire          sg_translator_4_m_mux4_axis_tvalid,
+  input  wire          sg_translator_4_m_mux4_axis_tready,
+  output wire [39:0]   sg_translator_4_m_mux4_axis_tdata,
+  output wire          sg_translator_4_m_readout_v3_axis_tvalid,
+  input  wire          sg_translator_4_m_readout_v3_axis_tready,
+  output wire [87:0]   sg_translator_4_m_readout_v3_axis_tdata,
+  input  wire          sg_translator_5_s_tproc_axis_tvalid,
+  output wire          sg_translator_5_s_tproc_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) input  wire [167:0]  sg_translator_5_s_tproc_axis_tdata,
+  output wire          sg_translator_5_m_gen_v6_axis_tvalid,
+  input  wire          sg_translator_5_m_gen_v6_axis_tready,
+  output wire [159:0]  sg_translator_5_m_gen_v6_axis_tdata,
+  output wire          sg_translator_5_m_int4_axis_tvalid,
+  input  wire          sg_translator_5_m_int4_axis_tready,
+  output wire [87:0]   sg_translator_5_m_int4_axis_tdata,
+  output wire          sg_translator_5_m_mux4_axis_tvalid,
+  input  wire          sg_translator_5_m_mux4_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) output wire [39:0]   sg_translator_5_m_mux4_axis_tdata,
+  output wire          sg_translator_5_m_readout_v3_axis_tvalid,
+  input  wire          sg_translator_5_m_readout_v3_axis_tready,
+  output wire [87:0]   sg_translator_5_m_readout_v3_axis_tdata,
+  input  wire          sg_translator_6_s_tproc_axis_tvalid,
+  output wire          sg_translator_6_s_tproc_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [167:0]  sg_translator_6_s_tproc_axis_tdata,
+  output wire          sg_translator_6_m_gen_v6_axis_tvalid,
+  input  wire          sg_translator_6_m_gen_v6_axis_tready,
+  output wire [159:0]  sg_translator_6_m_gen_v6_axis_tdata,
+  output wire          sg_translator_6_m_int4_axis_tvalid,
+  input  wire          sg_translator_6_m_int4_axis_tready,
+  output wire [87:0]   sg_translator_6_m_int4_axis_tdata,
+  output wire          sg_translator_6_m_mux4_axis_tvalid,
+  input  wire          sg_translator_6_m_mux4_axis_tready,
+  output wire [39:0]   sg_translator_6_m_mux4_axis_tdata,
+  output wire          sg_translator_6_m_readout_v3_axis_tvalid,
+  input  wire          sg_translator_6_m_readout_v3_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [87:0]   sg_translator_6_m_readout_v3_axis_tdata,
+  input  wire          sg_translator_7_s_tproc_axis_tvalid,
+  output wire          sg_translator_7_s_tproc_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  sg_translator_7_s_tproc_axis_tdata,
+  output wire          sg_translator_7_m_gen_v6_axis_tvalid,
+  input  wire          sg_translator_7_m_gen_v6_axis_tready,
+  output wire [159:0]  sg_translator_7_m_gen_v6_axis_tdata,
+  output wire          sg_translator_7_m_int4_axis_tvalid,
+  input  wire          sg_translator_7_m_int4_axis_tready,
+  output wire [87:0]   sg_translator_7_m_int4_axis_tdata,
+  output wire          sg_translator_7_m_mux4_axis_tvalid,
+  input  wire          sg_translator_7_m_mux4_axis_tready,
+  output wire [39:0]   sg_translator_7_m_mux4_axis_tdata,
+  output wire          sg_translator_7_m_readout_v3_axis_tvalid,
+  input  wire          sg_translator_7_m_readout_v3_axis_tready,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [87:0]   sg_translator_7_m_readout_v3_axis_tdata
 );
 
   wire       [47:0]   qickProcessor_t_time_abs_o;
@@ -1323,6 +1443,78 @@ module QickTop (
   wire                axis_register_slice_2_s_axis_tready_1;
   wire                axis_register_slice_2_m_axis_tvalid_1;
   wire       [255:0]  axis_register_slice_2_m_axis_tdata_1;
+  wire                sg_translator_0_s_tproc_axis_tready_1;
+  wire                sg_translator_0_m_gen_v6_axis_tvalid_1;
+  wire       [159:0]  sg_translator_0_m_gen_v6_axis_tdata_1;
+  wire                sg_translator_0_m_int4_axis_tvalid_1;
+  wire       [87:0]   sg_translator_0_m_int4_axis_tdata_1;
+  wire                sg_translator_0_m_mux4_axis_tvalid_1;
+  wire       [39:0]   sg_translator_0_m_mux4_axis_tdata_1;
+  wire                sg_translator_0_m_readout_v3_axis_tvalid_1;
+  wire       [87:0]   sg_translator_0_m_readout_v3_axis_tdata_1;
+  wire                sg_translator_1_s_tproc_axis_tready_1;
+  wire                sg_translator_1_m_gen_v6_axis_tvalid_1;
+  wire       [159:0]  sg_translator_1_m_gen_v6_axis_tdata_1;
+  wire                sg_translator_1_m_int4_axis_tvalid_1;
+  wire       [87:0]   sg_translator_1_m_int4_axis_tdata_1;
+  wire                sg_translator_1_m_mux4_axis_tvalid_1;
+  wire       [39:0]   sg_translator_1_m_mux4_axis_tdata_1;
+  wire                sg_translator_1_m_readout_v3_axis_tvalid_1;
+  wire       [87:0]   sg_translator_1_m_readout_v3_axis_tdata_1;
+  wire                sg_translator_2_s_tproc_axis_tready_1;
+  wire                sg_translator_2_m_gen_v6_axis_tvalid_1;
+  wire       [159:0]  sg_translator_2_m_gen_v6_axis_tdata_1;
+  wire                sg_translator_2_m_int4_axis_tvalid_1;
+  wire       [87:0]   sg_translator_2_m_int4_axis_tdata_1;
+  wire                sg_translator_2_m_mux4_axis_tvalid_1;
+  wire       [39:0]   sg_translator_2_m_mux4_axis_tdata_1;
+  wire                sg_translator_2_m_readout_v3_axis_tvalid_1;
+  wire       [87:0]   sg_translator_2_m_readout_v3_axis_tdata_1;
+  wire                sg_translator_3_s_tproc_axis_tready_1;
+  wire                sg_translator_3_m_gen_v6_axis_tvalid_1;
+  wire       [159:0]  sg_translator_3_m_gen_v6_axis_tdata_1;
+  wire                sg_translator_3_m_int4_axis_tvalid_1;
+  wire       [87:0]   sg_translator_3_m_int4_axis_tdata_1;
+  wire                sg_translator_3_m_mux4_axis_tvalid_1;
+  wire       [39:0]   sg_translator_3_m_mux4_axis_tdata_1;
+  wire                sg_translator_3_m_readout_v3_axis_tvalid_1;
+  wire       [87:0]   sg_translator_3_m_readout_v3_axis_tdata_1;
+  wire                sg_translator_4_s_tproc_axis_tready_1;
+  wire                sg_translator_4_m_gen_v6_axis_tvalid_1;
+  wire       [159:0]  sg_translator_4_m_gen_v6_axis_tdata_1;
+  wire                sg_translator_4_m_int4_axis_tvalid_1;
+  wire       [87:0]   sg_translator_4_m_int4_axis_tdata_1;
+  wire                sg_translator_4_m_mux4_axis_tvalid_1;
+  wire       [39:0]   sg_translator_4_m_mux4_axis_tdata_1;
+  wire                sg_translator_4_m_readout_v3_axis_tvalid_1;
+  wire       [87:0]   sg_translator_4_m_readout_v3_axis_tdata_1;
+  wire                sg_translator_5_s_tproc_axis_tready_1;
+  wire                sg_translator_5_m_gen_v6_axis_tvalid_1;
+  wire       [159:0]  sg_translator_5_m_gen_v6_axis_tdata_1;
+  wire                sg_translator_5_m_int4_axis_tvalid_1;
+  wire       [87:0]   sg_translator_5_m_int4_axis_tdata_1;
+  wire                sg_translator_5_m_mux4_axis_tvalid_1;
+  wire       [39:0]   sg_translator_5_m_mux4_axis_tdata_1;
+  wire                sg_translator_5_m_readout_v3_axis_tvalid_1;
+  wire       [87:0]   sg_translator_5_m_readout_v3_axis_tdata_1;
+  wire                sg_translator_6_s_tproc_axis_tready_1;
+  wire                sg_translator_6_m_gen_v6_axis_tvalid_1;
+  wire       [159:0]  sg_translator_6_m_gen_v6_axis_tdata_1;
+  wire                sg_translator_6_m_int4_axis_tvalid_1;
+  wire       [87:0]   sg_translator_6_m_int4_axis_tdata_1;
+  wire                sg_translator_6_m_mux4_axis_tvalid_1;
+  wire       [39:0]   sg_translator_6_m_mux4_axis_tdata_1;
+  wire                sg_translator_6_m_readout_v3_axis_tvalid_1;
+  wire       [87:0]   sg_translator_6_m_readout_v3_axis_tdata_1;
+  wire                sg_translator_7_s_tproc_axis_tready_1;
+  wire                sg_translator_7_m_gen_v6_axis_tvalid_1;
+  wire       [159:0]  sg_translator_7_m_gen_v6_axis_tdata_1;
+  wire                sg_translator_7_m_int4_axis_tvalid_1;
+  wire       [87:0]   sg_translator_7_m_int4_axis_tdata_1;
+  wire                sg_translator_7_m_mux4_axis_tvalid_1;
+  wire       [39:0]   sg_translator_7_m_mux4_axis_tdata_1;
+  wire                sg_translator_7_m_readout_v3_axis_tvalid_1;
+  wire       [87:0]   sg_translator_7_m_readout_v3_axis_tdata_1;
   wire                qick_processor_0_t_clk_i;
   wire                qick_processor_0_t_resetn;
   wire                qick_processor_0_ps_clk_i;
@@ -1441,6 +1633,22 @@ module QickTop (
   wire                axis_register_slice_1_aclk;
   wire                axis_register_slice_2_aresetn;
   wire                axis_register_slice_2_aclk;
+  wire                sg_translator_0_aresetn;
+  wire                sg_translator_0_aclk;
+  wire                sg_translator_1_aresetn;
+  wire                sg_translator_1_aclk;
+  wire                sg_translator_2_aresetn;
+  wire                sg_translator_2_aclk;
+  wire                sg_translator_3_aresetn;
+  wire                sg_translator_3_aclk;
+  wire                sg_translator_4_aresetn;
+  wire                sg_translator_4_aclk;
+  wire                sg_translator_5_aresetn;
+  wire                sg_translator_5_aclk;
+  wire                sg_translator_6_aresetn;
+  wire                sg_translator_6_aclk;
+  wire                sg_translator_7_aresetn;
+  wire                sg_translator_7_aclk;
 
   axis_qick_processor #(
     .DUAL_CORE     (0  ),
@@ -2498,6 +2706,158 @@ module QickTop (
     .m_axis_tready (axis_register_slice_2_m_axis_tready        ), //i
     .m_axis_tdata  (axis_register_slice_2_m_axis_tdata_1[255:0])  //o
   );
+  QickSgTranslator sg_translator_0 (
+    .aresetn                  (rst_dac2                                       ), //i
+    .aclk                     (clk_dac2                                       ), //i
+    .s_tproc_axis_tvalid      (sg_translator_0_s_tproc_axis_tvalid            ), //i
+    .s_tproc_axis_tready      (sg_translator_0_s_tproc_axis_tready_1          ), //o
+    .s_tproc_axis_tdata       (sg_translator_0_s_tproc_axis_tdata[167:0]      ), //i
+    .m_gen_v6_axis_tvalid     (sg_translator_0_m_gen_v6_axis_tvalid_1         ), //o
+    .m_gen_v6_axis_tready     (sg_translator_0_m_gen_v6_axis_tready           ), //i
+    .m_gen_v6_axis_tdata      (sg_translator_0_m_gen_v6_axis_tdata_1[159:0]   ), //o
+    .m_int4_axis_tvalid       (sg_translator_0_m_int4_axis_tvalid_1           ), //o
+    .m_int4_axis_tready       (sg_translator_0_m_int4_axis_tready             ), //i
+    .m_int4_axis_tdata        (sg_translator_0_m_int4_axis_tdata_1[87:0]      ), //o
+    .m_mux4_axis_tvalid       (sg_translator_0_m_mux4_axis_tvalid_1           ), //o
+    .m_mux4_axis_tready       (sg_translator_0_m_mux4_axis_tready             ), //i
+    .m_mux4_axis_tdata        (sg_translator_0_m_mux4_axis_tdata_1[39:0]      ), //o
+    .m_readout_v3_axis_tvalid (sg_translator_0_m_readout_v3_axis_tvalid_1     ), //o
+    .m_readout_v3_axis_tready (sg_translator_0_m_readout_v3_axis_tready       ), //i
+    .m_readout_v3_axis_tdata  (sg_translator_0_m_readout_v3_axis_tdata_1[87:0])  //o
+  );
+  QickSgTranslator_1 sg_translator_1 (
+    .aresetn                  (rst_dac2                                       ), //i
+    .aclk                     (clk_dac2                                       ), //i
+    .s_tproc_axis_tvalid      (sg_translator_1_s_tproc_axis_tvalid            ), //i
+    .s_tproc_axis_tready      (sg_translator_1_s_tproc_axis_tready_1          ), //o
+    .s_tproc_axis_tdata       (sg_translator_1_s_tproc_axis_tdata[167:0]      ), //i
+    .m_gen_v6_axis_tvalid     (sg_translator_1_m_gen_v6_axis_tvalid_1         ), //o
+    .m_gen_v6_axis_tready     (sg_translator_1_m_gen_v6_axis_tready           ), //i
+    .m_gen_v6_axis_tdata      (sg_translator_1_m_gen_v6_axis_tdata_1[159:0]   ), //o
+    .m_int4_axis_tvalid       (sg_translator_1_m_int4_axis_tvalid_1           ), //o
+    .m_int4_axis_tready       (sg_translator_1_m_int4_axis_tready             ), //i
+    .m_int4_axis_tdata        (sg_translator_1_m_int4_axis_tdata_1[87:0]      ), //o
+    .m_mux4_axis_tvalid       (sg_translator_1_m_mux4_axis_tvalid_1           ), //o
+    .m_mux4_axis_tready       (sg_translator_1_m_mux4_axis_tready             ), //i
+    .m_mux4_axis_tdata        (sg_translator_1_m_mux4_axis_tdata_1[39:0]      ), //o
+    .m_readout_v3_axis_tvalid (sg_translator_1_m_readout_v3_axis_tvalid_1     ), //o
+    .m_readout_v3_axis_tready (sg_translator_1_m_readout_v3_axis_tready       ), //i
+    .m_readout_v3_axis_tdata  (sg_translator_1_m_readout_v3_axis_tdata_1[87:0])  //o
+  );
+  QickSgTranslator sg_translator_2 (
+    .aresetn                  (rst_dac2                                       ), //i
+    .aclk                     (clk_dac2                                       ), //i
+    .s_tproc_axis_tvalid      (sg_translator_2_s_tproc_axis_tvalid            ), //i
+    .s_tproc_axis_tready      (sg_translator_2_s_tproc_axis_tready_1          ), //o
+    .s_tproc_axis_tdata       (sg_translator_2_s_tproc_axis_tdata[167:0]      ), //i
+    .m_gen_v6_axis_tvalid     (sg_translator_2_m_gen_v6_axis_tvalid_1         ), //o
+    .m_gen_v6_axis_tready     (sg_translator_2_m_gen_v6_axis_tready           ), //i
+    .m_gen_v6_axis_tdata      (sg_translator_2_m_gen_v6_axis_tdata_1[159:0]   ), //o
+    .m_int4_axis_tvalid       (sg_translator_2_m_int4_axis_tvalid_1           ), //o
+    .m_int4_axis_tready       (sg_translator_2_m_int4_axis_tready             ), //i
+    .m_int4_axis_tdata        (sg_translator_2_m_int4_axis_tdata_1[87:0]      ), //o
+    .m_mux4_axis_tvalid       (sg_translator_2_m_mux4_axis_tvalid_1           ), //o
+    .m_mux4_axis_tready       (sg_translator_2_m_mux4_axis_tready             ), //i
+    .m_mux4_axis_tdata        (sg_translator_2_m_mux4_axis_tdata_1[39:0]      ), //o
+    .m_readout_v3_axis_tvalid (sg_translator_2_m_readout_v3_axis_tvalid_1     ), //o
+    .m_readout_v3_axis_tready (sg_translator_2_m_readout_v3_axis_tready       ), //i
+    .m_readout_v3_axis_tdata  (sg_translator_2_m_readout_v3_axis_tdata_1[87:0])  //o
+  );
+  QickSgTranslator sg_translator_3 (
+    .aresetn                  (rst_dac3                                       ), //i
+    .aclk                     (clk_dac3                                       ), //i
+    .s_tproc_axis_tvalid      (sg_translator_3_s_tproc_axis_tvalid            ), //i
+    .s_tproc_axis_tready      (sg_translator_3_s_tproc_axis_tready_1          ), //o
+    .s_tproc_axis_tdata       (sg_translator_3_s_tproc_axis_tdata[167:0]      ), //i
+    .m_gen_v6_axis_tvalid     (sg_translator_3_m_gen_v6_axis_tvalid_1         ), //o
+    .m_gen_v6_axis_tready     (sg_translator_3_m_gen_v6_axis_tready           ), //i
+    .m_gen_v6_axis_tdata      (sg_translator_3_m_gen_v6_axis_tdata_1[159:0]   ), //o
+    .m_int4_axis_tvalid       (sg_translator_3_m_int4_axis_tvalid_1           ), //o
+    .m_int4_axis_tready       (sg_translator_3_m_int4_axis_tready             ), //i
+    .m_int4_axis_tdata        (sg_translator_3_m_int4_axis_tdata_1[87:0]      ), //o
+    .m_mux4_axis_tvalid       (sg_translator_3_m_mux4_axis_tvalid_1           ), //o
+    .m_mux4_axis_tready       (sg_translator_3_m_mux4_axis_tready             ), //i
+    .m_mux4_axis_tdata        (sg_translator_3_m_mux4_axis_tdata_1[39:0]      ), //o
+    .m_readout_v3_axis_tvalid (sg_translator_3_m_readout_v3_axis_tvalid_1     ), //o
+    .m_readout_v3_axis_tready (sg_translator_3_m_readout_v3_axis_tready       ), //i
+    .m_readout_v3_axis_tdata  (sg_translator_3_m_readout_v3_axis_tdata_1[87:0])  //o
+  );
+  QickSgTranslator sg_translator_4 (
+    .aresetn                  (rst_dac3                                       ), //i
+    .aclk                     (clk_dac3                                       ), //i
+    .s_tproc_axis_tvalid      (sg_translator_4_s_tproc_axis_tvalid            ), //i
+    .s_tproc_axis_tready      (sg_translator_4_s_tproc_axis_tready_1          ), //o
+    .s_tproc_axis_tdata       (sg_translator_4_s_tproc_axis_tdata[167:0]      ), //i
+    .m_gen_v6_axis_tvalid     (sg_translator_4_m_gen_v6_axis_tvalid_1         ), //o
+    .m_gen_v6_axis_tready     (sg_translator_4_m_gen_v6_axis_tready           ), //i
+    .m_gen_v6_axis_tdata      (sg_translator_4_m_gen_v6_axis_tdata_1[159:0]   ), //o
+    .m_int4_axis_tvalid       (sg_translator_4_m_int4_axis_tvalid_1           ), //o
+    .m_int4_axis_tready       (sg_translator_4_m_int4_axis_tready             ), //i
+    .m_int4_axis_tdata        (sg_translator_4_m_int4_axis_tdata_1[87:0]      ), //o
+    .m_mux4_axis_tvalid       (sg_translator_4_m_mux4_axis_tvalid_1           ), //o
+    .m_mux4_axis_tready       (sg_translator_4_m_mux4_axis_tready             ), //i
+    .m_mux4_axis_tdata        (sg_translator_4_m_mux4_axis_tdata_1[39:0]      ), //o
+    .m_readout_v3_axis_tvalid (sg_translator_4_m_readout_v3_axis_tvalid_1     ), //o
+    .m_readout_v3_axis_tready (sg_translator_4_m_readout_v3_axis_tready       ), //i
+    .m_readout_v3_axis_tdata  (sg_translator_4_m_readout_v3_axis_tdata_1[87:0])  //o
+  );
+  QickSgTranslator_1 sg_translator_5 (
+    .aresetn                  (rst_dac3                                       ), //i
+    .aclk                     (clk_dac3                                       ), //i
+    .s_tproc_axis_tvalid      (sg_translator_5_s_tproc_axis_tvalid            ), //i
+    .s_tproc_axis_tready      (sg_translator_5_s_tproc_axis_tready_1          ), //o
+    .s_tproc_axis_tdata       (sg_translator_5_s_tproc_axis_tdata[167:0]      ), //i
+    .m_gen_v6_axis_tvalid     (sg_translator_5_m_gen_v6_axis_tvalid_1         ), //o
+    .m_gen_v6_axis_tready     (sg_translator_5_m_gen_v6_axis_tready           ), //i
+    .m_gen_v6_axis_tdata      (sg_translator_5_m_gen_v6_axis_tdata_1[159:0]   ), //o
+    .m_int4_axis_tvalid       (sg_translator_5_m_int4_axis_tvalid_1           ), //o
+    .m_int4_axis_tready       (sg_translator_5_m_int4_axis_tready             ), //i
+    .m_int4_axis_tdata        (sg_translator_5_m_int4_axis_tdata_1[87:0]      ), //o
+    .m_mux4_axis_tvalid       (sg_translator_5_m_mux4_axis_tvalid_1           ), //o
+    .m_mux4_axis_tready       (sg_translator_5_m_mux4_axis_tready             ), //i
+    .m_mux4_axis_tdata        (sg_translator_5_m_mux4_axis_tdata_1[39:0]      ), //o
+    .m_readout_v3_axis_tvalid (sg_translator_5_m_readout_v3_axis_tvalid_1     ), //o
+    .m_readout_v3_axis_tready (sg_translator_5_m_readout_v3_axis_tready       ), //i
+    .m_readout_v3_axis_tdata  (sg_translator_5_m_readout_v3_axis_tdata_1[87:0])  //o
+  );
+  QickSgTranslator_6 sg_translator_6 (
+    .aresetn                  (rst_adc2                                       ), //i
+    .aclk                     (clk_adc2                                       ), //i
+    .s_tproc_axis_tvalid      (sg_translator_6_s_tproc_axis_tvalid            ), //i
+    .s_tproc_axis_tready      (sg_translator_6_s_tproc_axis_tready_1          ), //o
+    .s_tproc_axis_tdata       (sg_translator_6_s_tproc_axis_tdata[167:0]      ), //i
+    .m_gen_v6_axis_tvalid     (sg_translator_6_m_gen_v6_axis_tvalid_1         ), //o
+    .m_gen_v6_axis_tready     (sg_translator_6_m_gen_v6_axis_tready           ), //i
+    .m_gen_v6_axis_tdata      (sg_translator_6_m_gen_v6_axis_tdata_1[159:0]   ), //o
+    .m_int4_axis_tvalid       (sg_translator_6_m_int4_axis_tvalid_1           ), //o
+    .m_int4_axis_tready       (sg_translator_6_m_int4_axis_tready             ), //i
+    .m_int4_axis_tdata        (sg_translator_6_m_int4_axis_tdata_1[87:0]      ), //o
+    .m_mux4_axis_tvalid       (sg_translator_6_m_mux4_axis_tvalid_1           ), //o
+    .m_mux4_axis_tready       (sg_translator_6_m_mux4_axis_tready             ), //i
+    .m_mux4_axis_tdata        (sg_translator_6_m_mux4_axis_tdata_1[39:0]      ), //o
+    .m_readout_v3_axis_tvalid (sg_translator_6_m_readout_v3_axis_tvalid_1     ), //o
+    .m_readout_v3_axis_tready (sg_translator_6_m_readout_v3_axis_tready       ), //i
+    .m_readout_v3_axis_tdata  (sg_translator_6_m_readout_v3_axis_tdata_1[87:0])  //o
+  );
+  QickSgTranslator_6 sg_translator_7 (
+    .aresetn                  (rst_dac2                                       ), //i
+    .aclk                     (clk_dac2                                       ), //i
+    .s_tproc_axis_tvalid      (sg_translator_7_s_tproc_axis_tvalid            ), //i
+    .s_tproc_axis_tready      (sg_translator_7_s_tproc_axis_tready_1          ), //o
+    .s_tproc_axis_tdata       (sg_translator_7_s_tproc_axis_tdata[167:0]      ), //i
+    .m_gen_v6_axis_tvalid     (sg_translator_7_m_gen_v6_axis_tvalid_1         ), //o
+    .m_gen_v6_axis_tready     (sg_translator_7_m_gen_v6_axis_tready           ), //i
+    .m_gen_v6_axis_tdata      (sg_translator_7_m_gen_v6_axis_tdata_1[159:0]   ), //o
+    .m_int4_axis_tvalid       (sg_translator_7_m_int4_axis_tvalid_1           ), //o
+    .m_int4_axis_tready       (sg_translator_7_m_int4_axis_tready             ), //i
+    .m_int4_axis_tdata        (sg_translator_7_m_int4_axis_tdata_1[87:0]      ), //o
+    .m_mux4_axis_tvalid       (sg_translator_7_m_mux4_axis_tvalid_1           ), //o
+    .m_mux4_axis_tready       (sg_translator_7_m_mux4_axis_tready             ), //i
+    .m_mux4_axis_tdata        (sg_translator_7_m_mux4_axis_tdata_1[39:0]      ), //o
+    .m_readout_v3_axis_tvalid (sg_translator_7_m_readout_v3_axis_tvalid_1     ), //o
+    .m_readout_v3_axis_tready (sg_translator_7_m_readout_v3_axis_tready       ), //i
+    .m_readout_v3_axis_tdata  (sg_translator_7_m_readout_v3_axis_tdata_1[87:0])  //o
+  );
   assign qick_processor_0_t_time_abs_o = qickProcessor_t_time_abs_o;
   assign qick_processor_0_pulse_sync_o = qickProcessor_pulse_sync_o;
   assign qick_processor_0_qnet_en_o = qickProcessor_qnet_en_o;
@@ -2945,6 +3305,277 @@ module QickTop (
   assign axis_register_slice_2_s_axis_tready = axis_register_slice_2_s_axis_tready_1;
   assign axis_register_slice_2_m_axis_tvalid = axis_register_slice_2_m_axis_tvalid_1;
   assign axis_register_slice_2_m_axis_tdata = axis_register_slice_2_m_axis_tdata_1;
+  assign sg_translator_0_s_tproc_axis_tready = sg_translator_0_s_tproc_axis_tready_1;
+  assign sg_translator_0_m_gen_v6_axis_tvalid = sg_translator_0_m_gen_v6_axis_tvalid_1;
+  assign sg_translator_0_m_gen_v6_axis_tdata = sg_translator_0_m_gen_v6_axis_tdata_1;
+  assign sg_translator_0_m_int4_axis_tvalid = sg_translator_0_m_int4_axis_tvalid_1;
+  assign sg_translator_0_m_int4_axis_tdata = sg_translator_0_m_int4_axis_tdata_1;
+  assign sg_translator_0_m_mux4_axis_tvalid = sg_translator_0_m_mux4_axis_tvalid_1;
+  assign sg_translator_0_m_mux4_axis_tdata = sg_translator_0_m_mux4_axis_tdata_1;
+  assign sg_translator_0_m_readout_v3_axis_tvalid = sg_translator_0_m_readout_v3_axis_tvalid_1;
+  assign sg_translator_0_m_readout_v3_axis_tdata = sg_translator_0_m_readout_v3_axis_tdata_1;
+  assign sg_translator_1_s_tproc_axis_tready = sg_translator_1_s_tproc_axis_tready_1;
+  assign sg_translator_1_m_gen_v6_axis_tvalid = sg_translator_1_m_gen_v6_axis_tvalid_1;
+  assign sg_translator_1_m_gen_v6_axis_tdata = sg_translator_1_m_gen_v6_axis_tdata_1;
+  assign sg_translator_1_m_int4_axis_tvalid = sg_translator_1_m_int4_axis_tvalid_1;
+  assign sg_translator_1_m_int4_axis_tdata = sg_translator_1_m_int4_axis_tdata_1;
+  assign sg_translator_1_m_mux4_axis_tvalid = sg_translator_1_m_mux4_axis_tvalid_1;
+  assign sg_translator_1_m_mux4_axis_tdata = sg_translator_1_m_mux4_axis_tdata_1;
+  assign sg_translator_1_m_readout_v3_axis_tvalid = sg_translator_1_m_readout_v3_axis_tvalid_1;
+  assign sg_translator_1_m_readout_v3_axis_tdata = sg_translator_1_m_readout_v3_axis_tdata_1;
+  assign sg_translator_2_s_tproc_axis_tready = sg_translator_2_s_tproc_axis_tready_1;
+  assign sg_translator_2_m_gen_v6_axis_tvalid = sg_translator_2_m_gen_v6_axis_tvalid_1;
+  assign sg_translator_2_m_gen_v6_axis_tdata = sg_translator_2_m_gen_v6_axis_tdata_1;
+  assign sg_translator_2_m_int4_axis_tvalid = sg_translator_2_m_int4_axis_tvalid_1;
+  assign sg_translator_2_m_int4_axis_tdata = sg_translator_2_m_int4_axis_tdata_1;
+  assign sg_translator_2_m_mux4_axis_tvalid = sg_translator_2_m_mux4_axis_tvalid_1;
+  assign sg_translator_2_m_mux4_axis_tdata = sg_translator_2_m_mux4_axis_tdata_1;
+  assign sg_translator_2_m_readout_v3_axis_tvalid = sg_translator_2_m_readout_v3_axis_tvalid_1;
+  assign sg_translator_2_m_readout_v3_axis_tdata = sg_translator_2_m_readout_v3_axis_tdata_1;
+  assign sg_translator_3_s_tproc_axis_tready = sg_translator_3_s_tproc_axis_tready_1;
+  assign sg_translator_3_m_gen_v6_axis_tvalid = sg_translator_3_m_gen_v6_axis_tvalid_1;
+  assign sg_translator_3_m_gen_v6_axis_tdata = sg_translator_3_m_gen_v6_axis_tdata_1;
+  assign sg_translator_3_m_int4_axis_tvalid = sg_translator_3_m_int4_axis_tvalid_1;
+  assign sg_translator_3_m_int4_axis_tdata = sg_translator_3_m_int4_axis_tdata_1;
+  assign sg_translator_3_m_mux4_axis_tvalid = sg_translator_3_m_mux4_axis_tvalid_1;
+  assign sg_translator_3_m_mux4_axis_tdata = sg_translator_3_m_mux4_axis_tdata_1;
+  assign sg_translator_3_m_readout_v3_axis_tvalid = sg_translator_3_m_readout_v3_axis_tvalid_1;
+  assign sg_translator_3_m_readout_v3_axis_tdata = sg_translator_3_m_readout_v3_axis_tdata_1;
+  assign sg_translator_4_s_tproc_axis_tready = sg_translator_4_s_tproc_axis_tready_1;
+  assign sg_translator_4_m_gen_v6_axis_tvalid = sg_translator_4_m_gen_v6_axis_tvalid_1;
+  assign sg_translator_4_m_gen_v6_axis_tdata = sg_translator_4_m_gen_v6_axis_tdata_1;
+  assign sg_translator_4_m_int4_axis_tvalid = sg_translator_4_m_int4_axis_tvalid_1;
+  assign sg_translator_4_m_int4_axis_tdata = sg_translator_4_m_int4_axis_tdata_1;
+  assign sg_translator_4_m_mux4_axis_tvalid = sg_translator_4_m_mux4_axis_tvalid_1;
+  assign sg_translator_4_m_mux4_axis_tdata = sg_translator_4_m_mux4_axis_tdata_1;
+  assign sg_translator_4_m_readout_v3_axis_tvalid = sg_translator_4_m_readout_v3_axis_tvalid_1;
+  assign sg_translator_4_m_readout_v3_axis_tdata = sg_translator_4_m_readout_v3_axis_tdata_1;
+  assign sg_translator_5_s_tproc_axis_tready = sg_translator_5_s_tproc_axis_tready_1;
+  assign sg_translator_5_m_gen_v6_axis_tvalid = sg_translator_5_m_gen_v6_axis_tvalid_1;
+  assign sg_translator_5_m_gen_v6_axis_tdata = sg_translator_5_m_gen_v6_axis_tdata_1;
+  assign sg_translator_5_m_int4_axis_tvalid = sg_translator_5_m_int4_axis_tvalid_1;
+  assign sg_translator_5_m_int4_axis_tdata = sg_translator_5_m_int4_axis_tdata_1;
+  assign sg_translator_5_m_mux4_axis_tvalid = sg_translator_5_m_mux4_axis_tvalid_1;
+  assign sg_translator_5_m_mux4_axis_tdata = sg_translator_5_m_mux4_axis_tdata_1;
+  assign sg_translator_5_m_readout_v3_axis_tvalid = sg_translator_5_m_readout_v3_axis_tvalid_1;
+  assign sg_translator_5_m_readout_v3_axis_tdata = sg_translator_5_m_readout_v3_axis_tdata_1;
+  assign sg_translator_6_s_tproc_axis_tready = sg_translator_6_s_tproc_axis_tready_1;
+  assign sg_translator_6_m_gen_v6_axis_tvalid = sg_translator_6_m_gen_v6_axis_tvalid_1;
+  assign sg_translator_6_m_gen_v6_axis_tdata = sg_translator_6_m_gen_v6_axis_tdata_1;
+  assign sg_translator_6_m_int4_axis_tvalid = sg_translator_6_m_int4_axis_tvalid_1;
+  assign sg_translator_6_m_int4_axis_tdata = sg_translator_6_m_int4_axis_tdata_1;
+  assign sg_translator_6_m_mux4_axis_tvalid = sg_translator_6_m_mux4_axis_tvalid_1;
+  assign sg_translator_6_m_mux4_axis_tdata = sg_translator_6_m_mux4_axis_tdata_1;
+  assign sg_translator_6_m_readout_v3_axis_tvalid = sg_translator_6_m_readout_v3_axis_tvalid_1;
+  assign sg_translator_6_m_readout_v3_axis_tdata = sg_translator_6_m_readout_v3_axis_tdata_1;
+  assign sg_translator_7_s_tproc_axis_tready = sg_translator_7_s_tproc_axis_tready_1;
+  assign sg_translator_7_m_gen_v6_axis_tvalid = sg_translator_7_m_gen_v6_axis_tvalid_1;
+  assign sg_translator_7_m_gen_v6_axis_tdata = sg_translator_7_m_gen_v6_axis_tdata_1;
+  assign sg_translator_7_m_int4_axis_tvalid = sg_translator_7_m_int4_axis_tvalid_1;
+  assign sg_translator_7_m_int4_axis_tdata = sg_translator_7_m_int4_axis_tdata_1;
+  assign sg_translator_7_m_mux4_axis_tvalid = sg_translator_7_m_mux4_axis_tvalid_1;
+  assign sg_translator_7_m_mux4_axis_tdata = sg_translator_7_m_mux4_axis_tdata_1;
+  assign sg_translator_7_m_readout_v3_axis_tvalid = sg_translator_7_m_readout_v3_axis_tvalid_1;
+  assign sg_translator_7_m_readout_v3_axis_tdata = sg_translator_7_m_readout_v3_axis_tdata_1;
+
+endmodule
+
+//QickSgTranslator_7 replaced by QickSgTranslator_6
+
+module QickSgTranslator_6 (
+  input  wire          aresetn,
+  input  wire          aclk,
+  input  wire          s_tproc_axis_tvalid,
+  output wire          s_tproc_axis_tready,
+  input  wire [167:0]  s_tproc_axis_tdata,
+  output wire          m_gen_v6_axis_tvalid,
+  input  wire          m_gen_v6_axis_tready,
+  output wire [159:0]  m_gen_v6_axis_tdata,
+  output wire          m_int4_axis_tvalid,
+  input  wire          m_int4_axis_tready,
+  output wire [87:0]   m_int4_axis_tdata,
+  output wire          m_mux4_axis_tvalid,
+  input  wire          m_mux4_axis_tready,
+  output wire [39:0]   m_mux4_axis_tdata,
+  output wire          m_readout_v3_axis_tvalid,
+  input  wire          m_readout_v3_axis_tready,
+  output wire [87:0]   m_readout_v3_axis_tdata
+);
+
+  wire                sgTranslator_s_tproc_axis_tready;
+  wire                sgTranslator_m_gen_v6_axis_tvalid;
+  wire       [159:0]  sgTranslator_m_gen_v6_axis_tdata;
+  wire                sgTranslator_m_int4_axis_tvalid;
+  wire       [87:0]   sgTranslator_m_int4_axis_tdata;
+  wire                sgTranslator_m_mux4_axis_tvalid;
+  wire       [39:0]   sgTranslator_m_mux4_axis_tdata;
+  wire                sgTranslator_m_readout_v3_axis_tvalid;
+  wire       [87:0]   sgTranslator_m_readout_v3_axis_tdata;
+
+  sg_translator #(
+    .OUT_TYPE (3)
+  ) sgTranslator (
+    .aresetn                  (aresetn                                   ), //i
+    .aclk                     (aclk                                      ), //i
+    .s_tproc_axis_tvalid      (s_tproc_axis_tvalid                       ), //i
+    .s_tproc_axis_tready      (sgTranslator_s_tproc_axis_tready          ), //o
+    .s_tproc_axis_tdata       (s_tproc_axis_tdata[167:0]                 ), //i
+    .m_gen_v6_axis_tvalid     (sgTranslator_m_gen_v6_axis_tvalid         ), //o
+    .m_gen_v6_axis_tready     (m_gen_v6_axis_tready                      ), //i
+    .m_gen_v6_axis_tdata      (sgTranslator_m_gen_v6_axis_tdata[159:0]   ), //o
+    .m_int4_axis_tvalid       (sgTranslator_m_int4_axis_tvalid           ), //o
+    .m_int4_axis_tready       (m_int4_axis_tready                        ), //i
+    .m_int4_axis_tdata        (sgTranslator_m_int4_axis_tdata[87:0]      ), //o
+    .m_mux4_axis_tvalid       (sgTranslator_m_mux4_axis_tvalid           ), //o
+    .m_mux4_axis_tready       (m_mux4_axis_tready                        ), //i
+    .m_mux4_axis_tdata        (sgTranslator_m_mux4_axis_tdata[39:0]      ), //o
+    .m_readout_v3_axis_tvalid (sgTranslator_m_readout_v3_axis_tvalid     ), //o
+    .m_readout_v3_axis_tready (m_readout_v3_axis_tready                  ), //i
+    .m_readout_v3_axis_tdata  (sgTranslator_m_readout_v3_axis_tdata[87:0])  //o
+  );
+  assign s_tproc_axis_tready = sgTranslator_s_tproc_axis_tready;
+  assign m_gen_v6_axis_tvalid = sgTranslator_m_gen_v6_axis_tvalid;
+  assign m_gen_v6_axis_tdata = sgTranslator_m_gen_v6_axis_tdata;
+  assign m_int4_axis_tvalid = sgTranslator_m_int4_axis_tvalid;
+  assign m_int4_axis_tdata = sgTranslator_m_int4_axis_tdata;
+  assign m_mux4_axis_tvalid = sgTranslator_m_mux4_axis_tvalid;
+  assign m_mux4_axis_tdata = sgTranslator_m_mux4_axis_tdata;
+  assign m_readout_v3_axis_tvalid = sgTranslator_m_readout_v3_axis_tvalid;
+  assign m_readout_v3_axis_tdata = sgTranslator_m_readout_v3_axis_tdata;
+
+endmodule
+
+//QickSgTranslator_5 replaced by QickSgTranslator_1
+
+//QickSgTranslator_4 replaced by QickSgTranslator
+
+//QickSgTranslator_3 replaced by QickSgTranslator
+
+//QickSgTranslator_2 replaced by QickSgTranslator
+
+module QickSgTranslator_1 (
+  input  wire          aresetn,
+  input  wire          aclk,
+  input  wire          s_tproc_axis_tvalid,
+  output wire          s_tproc_axis_tready,
+  input  wire [167:0]  s_tproc_axis_tdata,
+  output wire          m_gen_v6_axis_tvalid,
+  input  wire          m_gen_v6_axis_tready,
+  output wire [159:0]  m_gen_v6_axis_tdata,
+  output wire          m_int4_axis_tvalid,
+  input  wire          m_int4_axis_tready,
+  output wire [87:0]   m_int4_axis_tdata,
+  output wire          m_mux4_axis_tvalid,
+  input  wire          m_mux4_axis_tready,
+  output wire [39:0]   m_mux4_axis_tdata,
+  output wire          m_readout_v3_axis_tvalid,
+  input  wire          m_readout_v3_axis_tready,
+  output wire [87:0]   m_readout_v3_axis_tdata
+);
+
+  wire                sgTranslator_s_tproc_axis_tready;
+  wire                sgTranslator_m_gen_v6_axis_tvalid;
+  wire       [159:0]  sgTranslator_m_gen_v6_axis_tdata;
+  wire                sgTranslator_m_int4_axis_tvalid;
+  wire       [87:0]   sgTranslator_m_int4_axis_tdata;
+  wire                sgTranslator_m_mux4_axis_tvalid;
+  wire       [39:0]   sgTranslator_m_mux4_axis_tdata;
+  wire                sgTranslator_m_readout_v3_axis_tvalid;
+  wire       [87:0]   sgTranslator_m_readout_v3_axis_tdata;
+
+  sg_translator #(
+    .OUT_TYPE (2)
+  ) sgTranslator (
+    .aresetn                  (aresetn                                   ), //i
+    .aclk                     (aclk                                      ), //i
+    .s_tproc_axis_tvalid      (s_tproc_axis_tvalid                       ), //i
+    .s_tproc_axis_tready      (sgTranslator_s_tproc_axis_tready          ), //o
+    .s_tproc_axis_tdata       (s_tproc_axis_tdata[167:0]                 ), //i
+    .m_gen_v6_axis_tvalid     (sgTranslator_m_gen_v6_axis_tvalid         ), //o
+    .m_gen_v6_axis_tready     (m_gen_v6_axis_tready                      ), //i
+    .m_gen_v6_axis_tdata      (sgTranslator_m_gen_v6_axis_tdata[159:0]   ), //o
+    .m_int4_axis_tvalid       (sgTranslator_m_int4_axis_tvalid           ), //o
+    .m_int4_axis_tready       (m_int4_axis_tready                        ), //i
+    .m_int4_axis_tdata        (sgTranslator_m_int4_axis_tdata[87:0]      ), //o
+    .m_mux4_axis_tvalid       (sgTranslator_m_mux4_axis_tvalid           ), //o
+    .m_mux4_axis_tready       (m_mux4_axis_tready                        ), //i
+    .m_mux4_axis_tdata        (sgTranslator_m_mux4_axis_tdata[39:0]      ), //o
+    .m_readout_v3_axis_tvalid (sgTranslator_m_readout_v3_axis_tvalid     ), //o
+    .m_readout_v3_axis_tready (m_readout_v3_axis_tready                  ), //i
+    .m_readout_v3_axis_tdata  (sgTranslator_m_readout_v3_axis_tdata[87:0])  //o
+  );
+  assign s_tproc_axis_tready = sgTranslator_s_tproc_axis_tready;
+  assign m_gen_v6_axis_tvalid = sgTranslator_m_gen_v6_axis_tvalid;
+  assign m_gen_v6_axis_tdata = sgTranslator_m_gen_v6_axis_tdata;
+  assign m_int4_axis_tvalid = sgTranslator_m_int4_axis_tvalid;
+  assign m_int4_axis_tdata = sgTranslator_m_int4_axis_tdata;
+  assign m_mux4_axis_tvalid = sgTranslator_m_mux4_axis_tvalid;
+  assign m_mux4_axis_tdata = sgTranslator_m_mux4_axis_tdata;
+  assign m_readout_v3_axis_tvalid = sgTranslator_m_readout_v3_axis_tvalid;
+  assign m_readout_v3_axis_tdata = sgTranslator_m_readout_v3_axis_tdata;
+
+endmodule
+
+module QickSgTranslator (
+  input  wire          aresetn,
+  input  wire          aclk,
+  input  wire          s_tproc_axis_tvalid,
+  output wire          s_tproc_axis_tready,
+  input  wire [167:0]  s_tproc_axis_tdata,
+  output wire          m_gen_v6_axis_tvalid,
+  input  wire          m_gen_v6_axis_tready,
+  output wire [159:0]  m_gen_v6_axis_tdata,
+  output wire          m_int4_axis_tvalid,
+  input  wire          m_int4_axis_tready,
+  output wire [87:0]   m_int4_axis_tdata,
+  output wire          m_mux4_axis_tvalid,
+  input  wire          m_mux4_axis_tready,
+  output wire [39:0]   m_mux4_axis_tdata,
+  output wire          m_readout_v3_axis_tvalid,
+  input  wire          m_readout_v3_axis_tready,
+  output wire [87:0]   m_readout_v3_axis_tdata
+);
+
+  wire                sgTranslator_s_tproc_axis_tready;
+  wire                sgTranslator_m_gen_v6_axis_tvalid;
+  wire       [159:0]  sgTranslator_m_gen_v6_axis_tdata;
+  wire                sgTranslator_m_int4_axis_tvalid;
+  wire       [87:0]   sgTranslator_m_int4_axis_tdata;
+  wire                sgTranslator_m_mux4_axis_tvalid;
+  wire       [39:0]   sgTranslator_m_mux4_axis_tdata;
+  wire                sgTranslator_m_readout_v3_axis_tvalid;
+  wire       [87:0]   sgTranslator_m_readout_v3_axis_tdata;
+
+  sg_translator #(
+    .OUT_TYPE (0)
+  ) sgTranslator (
+    .aresetn                  (aresetn                                   ), //i
+    .aclk                     (aclk                                      ), //i
+    .s_tproc_axis_tvalid      (s_tproc_axis_tvalid                       ), //i
+    .s_tproc_axis_tready      (sgTranslator_s_tproc_axis_tready          ), //o
+    .s_tproc_axis_tdata       (s_tproc_axis_tdata[167:0]                 ), //i
+    .m_gen_v6_axis_tvalid     (sgTranslator_m_gen_v6_axis_tvalid         ), //o
+    .m_gen_v6_axis_tready     (m_gen_v6_axis_tready                      ), //i
+    .m_gen_v6_axis_tdata      (sgTranslator_m_gen_v6_axis_tdata[159:0]   ), //o
+    .m_int4_axis_tvalid       (sgTranslator_m_int4_axis_tvalid           ), //o
+    .m_int4_axis_tready       (m_int4_axis_tready                        ), //i
+    .m_int4_axis_tdata        (sgTranslator_m_int4_axis_tdata[87:0]      ), //o
+    .m_mux4_axis_tvalid       (sgTranslator_m_mux4_axis_tvalid           ), //o
+    .m_mux4_axis_tready       (m_mux4_axis_tready                        ), //i
+    .m_mux4_axis_tdata        (sgTranslator_m_mux4_axis_tdata[39:0]      ), //o
+    .m_readout_v3_axis_tvalid (sgTranslator_m_readout_v3_axis_tvalid     ), //o
+    .m_readout_v3_axis_tready (m_readout_v3_axis_tready                  ), //i
+    .m_readout_v3_axis_tdata  (sgTranslator_m_readout_v3_axis_tdata[87:0])  //o
+  );
+  assign s_tproc_axis_tready = sgTranslator_s_tproc_axis_tready;
+  assign m_gen_v6_axis_tvalid = sgTranslator_m_gen_v6_axis_tvalid;
+  assign m_gen_v6_axis_tdata = sgTranslator_m_gen_v6_axis_tdata;
+  assign m_int4_axis_tvalid = sgTranslator_m_int4_axis_tvalid;
+  assign m_int4_axis_tdata = sgTranslator_m_int4_axis_tdata;
+  assign m_mux4_axis_tvalid = sgTranslator_m_mux4_axis_tvalid;
+  assign m_mux4_axis_tdata = sgTranslator_m_mux4_axis_tdata;
+  assign m_readout_v3_axis_tvalid = sgTranslator_m_readout_v3_axis_tvalid;
+  assign m_readout_v3_axis_tdata = sgTranslator_m_readout_v3_axis_tdata;
 
 endmodule
 

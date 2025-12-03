@@ -694,6 +694,166 @@ case class QickTop() extends Component {
     axis_avg_buffer_6_io.trigger,
     mr_buffer_et_0_io.trigger
   ))
+
+  val sg_translator_0_io = QickSgTranslatorIo()
+  sg_translator_0_io.setName("")
+  sg_translator_0_io.flatten.foreach { w =>
+    w.setName("sg_translator_0_" + w.getName())
+  }
+  sg_translator_0_io.s_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
+  sg_translator_0_io.m_gen_v6_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
+  val sg_translator_0 = QickSgTranslator()
+  sg_translator_0_io <> sg_translator_0.io
+  removeAssignmentsAll(Seq(
+    sg_translator_0.io.aresetn,
+    sg_translator_0.io.aclk,
+  ))
+  sg_translator_0.io.aresetn := rst_dac2
+  sg_translator_0.io.aclk := clk_dac2
+  setAsDirectionlessAll(Seq(
+    sg_translator_0_io.aresetn,
+    sg_translator_0_io.aclk,
+  ))
+
+  val sg_translator_1_io = QickSgTranslatorIo()
+  sg_translator_1_io.setName("")
+  sg_translator_1_io.flatten.foreach { w =>
+    w.setName("sg_translator_1_" + w.getName())
+  }
+  sg_translator_1_io.s_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
+  sg_translator_1_io.m_mux4_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
+  val sg_translator_1 = QickSgTranslator(2)
+  sg_translator_1_io <> sg_translator_1.io
+  removeAssignmentsAll(Seq(
+    sg_translator_1.io.aresetn,
+    sg_translator_1.io.aclk,
+  ))
+  sg_translator_1.io.aresetn := rst_dac2
+  sg_translator_1.io.aclk := clk_dac2
+  setAsDirectionlessAll(Seq(
+    sg_translator_1_io.aresetn,
+    sg_translator_1_io.aclk,
+  ))
+
+  val sg_translator_2_io = QickSgTranslatorIo()
+  sg_translator_2_io.setName("")
+  sg_translator_2_io.flatten.foreach { w =>
+    w.setName("sg_translator_2_" + w.getName())
+  }
+  sg_translator_2_io.s_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
+  sg_translator_2_io.m_gen_v6_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
+  val sg_translator_2 = QickSgTranslator()
+  sg_translator_2_io <> sg_translator_2.io
+  removeAssignmentsAll(Seq(
+    sg_translator_2.io.aresetn,
+    sg_translator_2.io.aclk,
+  ))
+  sg_translator_2.io.aresetn := rst_dac2
+  sg_translator_2.io.aclk := clk_dac2
+  setAsDirectionlessAll(Seq(
+    sg_translator_2_io.aresetn,
+    sg_translator_2_io.aclk,
+  ))
+
+  val sg_translator_3_io = QickSgTranslatorIo()
+  sg_translator_3_io.setName("")
+  sg_translator_3_io.flatten.foreach { w =>
+    w.setName("sg_translator_3_" + w.getName())
+  }
+  sg_translator_3_io.s_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 430080000")
+  sg_translator_3_io.m_gen_v6_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 430080000")
+  val sg_translator_3 = QickSgTranslator(0)
+  sg_translator_3_io <> sg_translator_3.io
+  removeAssignmentsAll(Seq(
+    sg_translator_3.io.aresetn,
+    sg_translator_3.io.aclk,
+  ))
+  sg_translator_3.io.aresetn := rst_dac3
+  sg_translator_3.io.aclk := clk_dac3
+  setAsDirectionlessAll(Seq(
+    sg_translator_3_io.aresetn,
+    sg_translator_3_io.aclk,
+  ))
+
+  val sg_translator_4_io = QickSgTranslatorIo()
+  sg_translator_4_io.setName("")
+  sg_translator_4_io.flatten.foreach { w =>
+    w.setName("sg_translator_4_" + w.getName())
+  }
+  sg_translator_4_io.s_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 430080000")
+  sg_translator_4_io.m_gen_v6_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 430080000")
+  val sg_translator_4 = QickSgTranslator(0)
+  sg_translator_4_io <> sg_translator_4.io
+  removeAssignmentsAll(Seq(
+    sg_translator_4.io.aresetn,
+    sg_translator_4.io.aclk,
+  ))
+  sg_translator_4.io.aresetn := rst_dac3
+  sg_translator_4.io.aclk := clk_dac3
+  setAsDirectionlessAll(Seq(
+    sg_translator_4_io.aresetn,
+    sg_translator_4_io.aclk,
+  ))
+
+  val sg_translator_5_io = QickSgTranslatorIo()
+  sg_translator_5_io.setName("")
+  sg_translator_5_io.flatten.foreach { w =>
+    w.setName("sg_translator_5_" + w.getName())
+  }
+  sg_translator_5_io.s_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 430080000")
+  sg_translator_5_io.m_mux4_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 430080000")
+  val sg_translator_5 = QickSgTranslator(2)
+  sg_translator_5_io <> sg_translator_5.io
+  removeAssignmentsAll(Seq(
+    sg_translator_5.io.aresetn,
+    sg_translator_5.io.aclk,
+  ))
+  sg_translator_5.io.aresetn := rst_dac3
+  sg_translator_5.io.aclk := clk_dac3
+  setAsDirectionlessAll(Seq(
+    sg_translator_5_io.aresetn,
+    sg_translator_5_io.aclk,
+  ))
+
+  val sg_translator_6_io = QickSgTranslatorIo()
+  sg_translator_6_io.setName("")
+  sg_translator_6_io.flatten.foreach { w =>
+    w.setName("sg_translator_6_" + w.getName())
+  }
+  sg_translator_6_io.s_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 307200000")
+  sg_translator_6_io.m_readout_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 307200000")
+  val sg_translator_6 = QickSgTranslator(3)
+  sg_translator_6_io <> sg_translator_6.io
+  removeAssignmentsAll(Seq(
+    sg_translator_6.io.aresetn,
+    sg_translator_6.io.aclk,
+  ))
+  sg_translator_6.io.aresetn := rst_adc2
+  sg_translator_6.io.aclk := clk_adc2
+  setAsDirectionlessAll(Seq(
+    sg_translator_6_io.aresetn,
+    sg_translator_6_io.aclk,
+  ))
+
+  val sg_translator_7_io = QickSgTranslatorIo()
+  sg_translator_7_io.setName("")
+  sg_translator_7_io.flatten.foreach { w =>
+    w.setName("sg_translator_7_" + w.getName())
+  }
+  sg_translator_7_io.s_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
+  sg_translator_7_io.m_readout_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
+  val sg_translator_7 = QickSgTranslator(3)
+  sg_translator_7_io <> sg_translator_7.io
+  removeAssignmentsAll(Seq(
+    sg_translator_7.io.aresetn,
+    sg_translator_7.io.aclk,
+  ))
+  sg_translator_7.io.aresetn := rst_dac2
+  sg_translator_7.io.aclk := clk_dac2
+  setAsDirectionlessAll(Seq(
+    sg_translator_7_io.aresetn,
+    sg_translator_7_io.aclk,
+  ))
 }
 
 object QickTop extends App {
