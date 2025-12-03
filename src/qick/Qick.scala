@@ -28,8 +28,14 @@ case class QickTop() extends Component {
   val rst_adc2 = in Bool()
   val rst_dac2 = in Bool()
   val rst_dac3 = in Bool()
+
+  val cd_adc2 = ClockDomain(clk_adc2, rst_adc2)
+  val cd_dac2 = ClockDomain(clk_dac2, rst_dac2)
+  val cd_dac3 = ClockDomain(clk_dac3, rst_dac3)
+  val cd_pl = ClockDomain(clk_pl, rst_100)
   /* -- qick_processor_0 -- */
   val qick_processor_0_io = QickProcessorIo()
+  val cd_qick_core = ClockDomain(qick_processor_0_io.c_clk_i, qick_processor_0_io.c_resetn)
   qick_processor_0_io.setName("")
   qick_processor_0_io.flatten.foreach { w =>
     w.setName("qick_processor_0_" + w.getName())
@@ -94,7 +100,17 @@ case class QickTop() extends Component {
     axis_avg_buffer_0_io.m_axis_aclk,
     axis_avg_buffer_0_io.s_axi_aresetn,
     axis_avg_buffer_0_io.m_axis_aresetn,
-    axis_avg_buffer_0_io.s_axis_aresetn))
+    axis_avg_buffer_0_io.s_axis_aresetn
+    ))
+  
+  axis_avg_buffer_0_io.m2_axis.setAsDirectionLess()
+  axis_avg_buffer_0_io.m2_axis.removeAssignments()
+  qick_processor_0_io.s_axis(0).setAsDirectionLess()
+  qick_processor_0_io.s_axis(0).removeAssignments()
+  axis_avg_buffer_0.io.m2_axis.ready.removeAssignments()
+  qickProcessor.io.s_axis(0).payload.removeAssignments()
+  qickProcessor.io.s_axis(0).valid.removeAssignments()
+  axis_avg_buffer_0.io.m2_axis.queue(2, cd_pl, cd_qick_core) >> qickProcessor.io.s_axis(0)
   /* -- axis_avg_buffer_1 -- */
   val axis_avg_buffer_1_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 12, B = 16)
   axis_avg_buffer_1_io.setName("")
@@ -126,6 +142,15 @@ case class QickTop() extends Component {
     axis_avg_buffer_1_io.s_axi_aresetn,
     axis_avg_buffer_1_io.m_axis_aresetn,
     axis_avg_buffer_1_io.s_axis_aresetn))
+
+  axis_avg_buffer_1_io.m2_axis.setAsDirectionLess()
+  axis_avg_buffer_1_io.m2_axis.removeAssignments()
+  qick_processor_0_io.s_axis(1).setAsDirectionLess()
+  qick_processor_0_io.s_axis(1).removeAssignments()
+  axis_avg_buffer_1.io.m2_axis.ready.removeAssignments()
+  qickProcessor.io.s_axis(1).payload.removeAssignments()
+  qickProcessor.io.s_axis(1).valid.removeAssignments()
+  axis_avg_buffer_1.io.m2_axis.queue(2, cd_pl, cd_qick_core) >> qickProcessor.io.s_axis(1)
   /* -- axis_avg_buffer_2 -- */
   val axis_avg_buffer_2_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 10, B = 16)
   axis_avg_buffer_2_io.setName("")
@@ -157,6 +182,16 @@ case class QickTop() extends Component {
     axis_avg_buffer_2_io.s_axi_aresetn,
     axis_avg_buffer_2_io.m_axis_aresetn,
     axis_avg_buffer_2_io.s_axis_aresetn))
+
+
+  axis_avg_buffer_2_io.m2_axis.setAsDirectionLess()
+  axis_avg_buffer_2_io.m2_axis.removeAssignments()
+  qick_processor_0_io.s_axis(2).setAsDirectionLess()
+  qick_processor_0_io.s_axis(2).removeAssignments()
+  axis_avg_buffer_2.io.m2_axis.ready.removeAssignments()
+  qickProcessor.io.s_axis(2).payload.removeAssignments()
+  qickProcessor.io.s_axis(2).valid.removeAssignments()
+  axis_avg_buffer_2.io.m2_axis.queue(2, cd_pl, cd_qick_core) >> qickProcessor.io.s_axis(2)
   /* -- axis_avg_buffer_3 -- */
   val axis_avg_buffer_3_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 10, B = 16)
   axis_avg_buffer_3_io.setName("")
@@ -188,6 +223,16 @@ case class QickTop() extends Component {
     axis_avg_buffer_3_io.s_axi_aresetn,
     axis_avg_buffer_3_io.m_axis_aresetn,
     axis_avg_buffer_3_io.s_axis_aresetn))
+
+
+  axis_avg_buffer_3_io.m2_axis.setAsDirectionLess()
+  axis_avg_buffer_3_io.m2_axis.removeAssignments()
+  qick_processor_0_io.s_axis(3).setAsDirectionLess()
+  qick_processor_0_io.s_axis(3).removeAssignments()
+  axis_avg_buffer_3.io.m2_axis.ready.removeAssignments()
+  qickProcessor.io.s_axis(3).payload.removeAssignments()
+  qickProcessor.io.s_axis(3).valid.removeAssignments()
+  axis_avg_buffer_3.io.m2_axis.queue(2, cd_pl, cd_qick_core) >> qickProcessor.io.s_axis(3)
   /* -- axis_avg_buffer_4 -- */
   val axis_avg_buffer_4_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 10, B = 16)
   axis_avg_buffer_4_io.setName("")
@@ -219,6 +264,16 @@ case class QickTop() extends Component {
     axis_avg_buffer_4_io.s_axi_aresetn,
     axis_avg_buffer_4_io.m_axis_aresetn,
     axis_avg_buffer_4_io.s_axis_aresetn))
+
+  
+  axis_avg_buffer_4_io.m2_axis.setAsDirectionLess()
+  axis_avg_buffer_4_io.m2_axis.removeAssignments()
+  qick_processor_0_io.s_axis(4).setAsDirectionLess()
+  qick_processor_0_io.s_axis(4).removeAssignments()
+  axis_avg_buffer_4.io.m2_axis.ready.removeAssignments()
+  qickProcessor.io.s_axis(4).payload.removeAssignments()
+  qickProcessor.io.s_axis(4).valid.removeAssignments()
+  axis_avg_buffer_4.io.m2_axis.queue(2, cd_pl, cd_qick_core) >> qickProcessor.io.s_axis(4)
   /* -- axis_avg_buffer_5 -- */
   val axis_avg_buffer_5_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 10, B = 16)
   axis_avg_buffer_5_io.setName("")
@@ -250,6 +305,16 @@ case class QickTop() extends Component {
     axis_avg_buffer_5_io.s_axi_aresetn,
     axis_avg_buffer_5_io.m_axis_aresetn,
     axis_avg_buffer_5_io.s_axis_aresetn))
+
+
+  axis_avg_buffer_5_io.m2_axis.setAsDirectionLess()
+  axis_avg_buffer_5_io.m2_axis.removeAssignments()
+  qick_processor_0_io.s_axis(5).setAsDirectionLess()
+  qick_processor_0_io.s_axis(5).removeAssignments()
+  axis_avg_buffer_5.io.m2_axis.ready.removeAssignments()
+  qickProcessor.io.s_axis(5).payload.removeAssignments()
+  qickProcessor.io.s_axis(5).valid.removeAssignments()
+  axis_avg_buffer_5.io.m2_axis.queue(2, cd_pl, cd_qick_core) >> qickProcessor.io.s_axis(5)
   /* -- axis_avg_buffer_6 -- */
   val axis_avg_buffer_6_io = AxisAvgBufferIO(N_AVG = 13, N_BUF = 12, B = 16)
   axis_avg_buffer_6_io.setName("")
@@ -281,6 +346,15 @@ case class QickTop() extends Component {
     axis_avg_buffer_6_io.s_axi_aresetn,
     axis_avg_buffer_6_io.m_axis_aresetn,
     axis_avg_buffer_6_io.s_axis_aresetn))
+
+  axis_avg_buffer_6_io.m2_axis.setAsDirectionLess()
+  axis_avg_buffer_6_io.m2_axis.removeAssignments()
+  qick_processor_0_io.s_axis(6).setAsDirectionLess()
+  qick_processor_0_io.s_axis(6).removeAssignments()
+  axis_avg_buffer_6.io.m2_axis.ready.removeAssignments()
+  qickProcessor.io.s_axis(6).payload.removeAssignments()
+  qickProcessor.io.s_axis(6).valid.removeAssignments()
+  axis_avg_buffer_6.io.m2_axis.queue(2, cd_pl, cd_qick_core) >> qickProcessor.io.s_axis(6)
   /* -- mr_buffer_et_0 -- */
   val mr_buffer_et_0_io = MrBufferIO(B=32, N=10, NM=8,
     C_S00_AXI_DATA_WIDTH = 32, C_S00_AXI_ADDR_WIDTH = 6, DEBUG = 0)

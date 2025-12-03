@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : 76c2c0dbbea3cc2f56a1420e3ae31672f0031df8
+// Git hash  : 4b21a4f4b99e9a25b16e9d620b1bfdd7f1b1a452
 
 `timescale 1ns/1ps
 
@@ -92,27 +92,6 @@ module QickTop (
   input  wire          qick_processor_0_s_axi_rready,
   output wire [31:0]   qick_processor_0_s_axi_rdata,
   output wire [1:0]    qick_processor_0_s_axi_rresp,
-  input  wire          qick_processor_0_s0_axis_tvalid,
-  output wire          qick_processor_0_s0_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) input  wire [63:0]   qick_processor_0_s0_axis_tdata,
-  input  wire          qick_processor_0_s1_axis_tvalid,
-  output wire          qick_processor_0_s1_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) input  wire [63:0]   qick_processor_0_s1_axis_tdata,
-  input  wire          qick_processor_0_s2_axis_tvalid,
-  output wire          qick_processor_0_s2_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) input  wire [63:0]   qick_processor_0_s2_axis_tdata,
-  input  wire          qick_processor_0_s3_axis_tvalid,
-  output wire          qick_processor_0_s3_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) input  wire [63:0]   qick_processor_0_s3_axis_tdata,
-  input  wire          qick_processor_0_s4_axis_tvalid,
-  output wire          qick_processor_0_s4_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) input  wire [63:0]   qick_processor_0_s4_axis_tdata,
-  input  wire          qick_processor_0_s5_axis_tvalid,
-  output wire          qick_processor_0_s5_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) input  wire [63:0]   qick_processor_0_s5_axis_tdata,
-  input  wire          qick_processor_0_s6_axis_tvalid,
-  output wire          qick_processor_0_s6_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) input  wire [63:0]   qick_processor_0_s6_axis_tdata,
   input  wire          qick_processor_0_s7_axis_tvalid,
   output wire          qick_processor_0_s7_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) input  wire [63:0]   qick_processor_0_s7_axis_tdata,
@@ -263,9 +242,6 @@ module QickTop (
   input  wire          axis_avg_buffer_0_m1_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [31:0]   axis_avg_buffer_0_m1_axis_tdata,
   output wire          axis_avg_buffer_0_m1_axis_tlast,
-  output wire          axis_avg_buffer_0_m2_axis_tvalid,
-  input  wire          axis_avg_buffer_0_m2_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [63:0]   axis_avg_buffer_0_m2_axis_tdata,
   input  wire          axis_avg_buffer_1_s_axi_awvalid,
   output wire          axis_avg_buffer_1_s_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [5:0]    axis_avg_buffer_1_s_axi_awaddr,
@@ -296,9 +272,6 @@ module QickTop (
   input  wire          axis_avg_buffer_1_m1_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [31:0]   axis_avg_buffer_1_m1_axis_tdata,
   output wire          axis_avg_buffer_1_m1_axis_tlast,
-  output wire          axis_avg_buffer_1_m2_axis_tvalid,
-  input  wire          axis_avg_buffer_1_m2_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [63:0]   axis_avg_buffer_1_m2_axis_tdata,
   input  wire          axis_avg_buffer_2_s_axi_awvalid,
   output wire          axis_avg_buffer_2_s_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [5:0]    axis_avg_buffer_2_s_axi_awaddr,
@@ -329,9 +302,6 @@ module QickTop (
   input  wire          axis_avg_buffer_2_m1_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [31:0]   axis_avg_buffer_2_m1_axis_tdata,
   output wire          axis_avg_buffer_2_m1_axis_tlast,
-  output wire          axis_avg_buffer_2_m2_axis_tvalid,
-  input  wire          axis_avg_buffer_2_m2_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [63:0]   axis_avg_buffer_2_m2_axis_tdata,
   input  wire          axis_avg_buffer_3_s_axi_awvalid,
   output wire          axis_avg_buffer_3_s_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [5:0]    axis_avg_buffer_3_s_axi_awaddr,
@@ -362,9 +332,6 @@ module QickTop (
   input  wire          axis_avg_buffer_3_m1_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [31:0]   axis_avg_buffer_3_m1_axis_tdata,
   output wire          axis_avg_buffer_3_m1_axis_tlast,
-  output wire          axis_avg_buffer_3_m2_axis_tvalid,
-  input  wire          axis_avg_buffer_3_m2_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [63:0]   axis_avg_buffer_3_m2_axis_tdata,
   input  wire          axis_avg_buffer_4_s_axi_awvalid,
   output wire          axis_avg_buffer_4_s_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [5:0]    axis_avg_buffer_4_s_axi_awaddr,
@@ -395,9 +362,6 @@ module QickTop (
   input  wire          axis_avg_buffer_4_m1_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [31:0]   axis_avg_buffer_4_m1_axis_tdata,
   output wire          axis_avg_buffer_4_m1_axis_tlast,
-  output wire          axis_avg_buffer_4_m2_axis_tvalid,
-  input  wire          axis_avg_buffer_4_m2_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [63:0]   axis_avg_buffer_4_m2_axis_tdata,
   input  wire          axis_avg_buffer_5_s_axi_awvalid,
   output wire          axis_avg_buffer_5_s_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [5:0]    axis_avg_buffer_5_s_axi_awaddr,
@@ -428,9 +392,6 @@ module QickTop (
   input  wire          axis_avg_buffer_5_m1_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [31:0]   axis_avg_buffer_5_m1_axis_tdata,
   output wire          axis_avg_buffer_5_m1_axis_tlast,
-  output wire          axis_avg_buffer_5_m2_axis_tvalid,
-  input  wire          axis_avg_buffer_5_m2_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [63:0]   axis_avg_buffer_5_m2_axis_tdata,
   input  wire          axis_avg_buffer_6_s_axi_awvalid,
   output wire          axis_avg_buffer_6_s_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [5:0]    axis_avg_buffer_6_s_axi_awaddr,
@@ -461,9 +422,6 @@ module QickTop (
   input  wire          axis_avg_buffer_6_m1_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [31:0]   axis_avg_buffer_6_m1_axis_tdata,
   output wire          axis_avg_buffer_6_m1_axis_tlast,
-  output wire          axis_avg_buffer_6_m2_axis_tvalid,
-  input  wire          axis_avg_buffer_6_m2_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) output wire [63:0]   axis_avg_buffer_6_m2_axis_tdata,
   input  wire          mr_buffer_et_0_s00_axi_awvalid,
   output wire          mr_buffer_et_0_s00_axi_awready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) input  wire [5:0]    mr_buffer_et_0_s00_axi_awaddr,
@@ -1140,6 +1098,12 @@ module QickTop (
   wire                axis_avg_buffer_0_m1_axis_tlast_1;
   wire                axis_avg_buffer_0_m2_axis_tvalid_1;
   wire       [63:0]   axis_avg_buffer_0_m2_axis_tdata_1;
+  wire                m2_axis_queue_io_push_ready;
+  wire                m2_axis_queue_io_pop_valid;
+  wire       [63:0]   m2_axis_queue_io_pop_payload_data;
+  wire       [1:0]    m2_axis_queue_io_pushOccupancy;
+  wire       [1:0]    m2_axis_queue_io_popOccupancy;
+  wire                m2_axis_queue_toplevel_rst_100_synchronized_1;
   wire                axis_avg_buffer_1_s_axi_awready_1;
   wire                axis_avg_buffer_1_s_axi_wready_1;
   wire                axis_avg_buffer_1_s_axi_bvalid_1;
@@ -1157,6 +1121,11 @@ module QickTop (
   wire                axis_avg_buffer_1_m1_axis_tlast_1;
   wire                axis_avg_buffer_1_m2_axis_tvalid_1;
   wire       [63:0]   axis_avg_buffer_1_m2_axis_tdata_1;
+  wire                m2_axis_queue_1_io_push_ready;
+  wire                m2_axis_queue_1_io_pop_valid;
+  wire       [63:0]   m2_axis_queue_1_io_pop_payload_data;
+  wire       [1:0]    m2_axis_queue_1_io_pushOccupancy;
+  wire       [1:0]    m2_axis_queue_1_io_popOccupancy;
   wire                axis_avg_buffer_2_s_axi_awready_1;
   wire                axis_avg_buffer_2_s_axi_wready_1;
   wire                axis_avg_buffer_2_s_axi_bvalid_1;
@@ -1174,6 +1143,11 @@ module QickTop (
   wire                axis_avg_buffer_2_m1_axis_tlast_1;
   wire                axis_avg_buffer_2_m2_axis_tvalid_1;
   wire       [63:0]   axis_avg_buffer_2_m2_axis_tdata_1;
+  wire                m2_axis_queue_2_io_push_ready;
+  wire                m2_axis_queue_2_io_pop_valid;
+  wire       [63:0]   m2_axis_queue_2_io_pop_payload_data;
+  wire       [1:0]    m2_axis_queue_2_io_pushOccupancy;
+  wire       [1:0]    m2_axis_queue_2_io_popOccupancy;
   wire                axis_avg_buffer_3_s_axi_awready_1;
   wire                axis_avg_buffer_3_s_axi_wready_1;
   wire                axis_avg_buffer_3_s_axi_bvalid_1;
@@ -1191,6 +1165,11 @@ module QickTop (
   wire                axis_avg_buffer_3_m1_axis_tlast_1;
   wire                axis_avg_buffer_3_m2_axis_tvalid_1;
   wire       [63:0]   axis_avg_buffer_3_m2_axis_tdata_1;
+  wire                m2_axis_queue_3_io_push_ready;
+  wire                m2_axis_queue_3_io_pop_valid;
+  wire       [63:0]   m2_axis_queue_3_io_pop_payload_data;
+  wire       [1:0]    m2_axis_queue_3_io_pushOccupancy;
+  wire       [1:0]    m2_axis_queue_3_io_popOccupancy;
   wire                axis_avg_buffer_4_s_axi_awready_1;
   wire                axis_avg_buffer_4_s_axi_wready_1;
   wire                axis_avg_buffer_4_s_axi_bvalid_1;
@@ -1208,6 +1187,11 @@ module QickTop (
   wire                axis_avg_buffer_4_m1_axis_tlast_1;
   wire                axis_avg_buffer_4_m2_axis_tvalid_1;
   wire       [63:0]   axis_avg_buffer_4_m2_axis_tdata_1;
+  wire                m2_axis_queue_4_io_push_ready;
+  wire                m2_axis_queue_4_io_pop_valid;
+  wire       [63:0]   m2_axis_queue_4_io_pop_payload_data;
+  wire       [1:0]    m2_axis_queue_4_io_pushOccupancy;
+  wire       [1:0]    m2_axis_queue_4_io_popOccupancy;
   wire                axis_avg_buffer_5_s_axi_awready_1;
   wire                axis_avg_buffer_5_s_axi_wready_1;
   wire                axis_avg_buffer_5_s_axi_bvalid_1;
@@ -1225,6 +1209,11 @@ module QickTop (
   wire                axis_avg_buffer_5_m1_axis_tlast_1;
   wire                axis_avg_buffer_5_m2_axis_tvalid_1;
   wire       [63:0]   axis_avg_buffer_5_m2_axis_tdata_1;
+  wire                m2_axis_queue_5_io_push_ready;
+  wire                m2_axis_queue_5_io_pop_valid;
+  wire       [63:0]   m2_axis_queue_5_io_pop_payload_data;
+  wire       [1:0]    m2_axis_queue_5_io_pushOccupancy;
+  wire       [1:0]    m2_axis_queue_5_io_popOccupancy;
   wire                axis_avg_buffer_6_s_axi_awready_1;
   wire                axis_avg_buffer_6_s_axi_wready_1;
   wire                axis_avg_buffer_6_s_axi_bvalid_1;
@@ -1242,6 +1231,11 @@ module QickTop (
   wire                axis_avg_buffer_6_m1_axis_tlast_1;
   wire                axis_avg_buffer_6_m2_axis_tvalid_1;
   wire       [63:0]   axis_avg_buffer_6_m2_axis_tdata_1;
+  wire                m2_axis_queue_6_io_push_ready;
+  wire                m2_axis_queue_6_io_pop_valid;
+  wire       [63:0]   m2_axis_queue_6_io_pop_payload_data;
+  wire       [1:0]    m2_axis_queue_6_io_pushOccupancy;
+  wire       [1:0]    m2_axis_queue_6_io_popOccupancy;
   wire                mr_buffer_et_0_s00_axi_awready_1;
   wire                mr_buffer_et_0_s00_axi_wready_1;
   wire                mr_buffer_et_0_s00_axi_bvalid_1;
@@ -1519,6 +1513,27 @@ module QickTop (
   wire                qick_processor_0_t_resetn;
   wire                qick_processor_0_ps_clk_i;
   wire                qick_processor_0_ps_resetn;
+  wire                qick_processor_0_s0_axis_tvalid;
+  wire                qick_processor_0_s0_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) wire       [63:0]   qick_processor_0_s0_axis_tdata;
+  wire                qick_processor_0_s1_axis_tvalid;
+  wire                qick_processor_0_s1_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) wire       [63:0]   qick_processor_0_s1_axis_tdata;
+  wire                qick_processor_0_s2_axis_tvalid;
+  wire                qick_processor_0_s2_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) wire       [63:0]   qick_processor_0_s2_axis_tdata;
+  wire                qick_processor_0_s3_axis_tvalid;
+  wire                qick_processor_0_s3_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) wire       [63:0]   qick_processor_0_s3_axis_tdata;
+  wire                qick_processor_0_s4_axis_tvalid;
+  wire                qick_processor_0_s4_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) wire       [63:0]   qick_processor_0_s4_axis_tdata;
+  wire                qick_processor_0_s5_axis_tvalid;
+  wire                qick_processor_0_s5_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) wire       [63:0]   qick_processor_0_s5_axis_tdata;
+  wire                qick_processor_0_s6_axis_tvalid;
+  wire                qick_processor_0_s6_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 204800000" *) wire       [63:0]   qick_processor_0_s6_axis_tdata;
   wire                axis_avg_buffer_0_s_axi_aclk_i;
   wire                axis_avg_buffer_0_s_axi_aresetn;
   wire                axis_avg_buffer_0_trigger;
@@ -1526,6 +1541,9 @@ module QickTop (
   wire                axis_avg_buffer_0_s_axis_aresetn;
   wire                axis_avg_buffer_0_m_axis_aclk_i;
   wire                axis_avg_buffer_0_m_axis_aresetn;
+  wire                axis_avg_buffer_0_m2_axis_tvalid;
+  wire                axis_avg_buffer_0_m2_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) wire       [63:0]   axis_avg_buffer_0_m2_axis_tdata;
   wire                axis_avg_buffer_1_s_axi_aclk_i;
   wire                axis_avg_buffer_1_s_axi_aresetn;
   wire                axis_avg_buffer_1_trigger;
@@ -1533,6 +1551,9 @@ module QickTop (
   wire                axis_avg_buffer_1_s_axis_aresetn;
   wire                axis_avg_buffer_1_m_axis_aclk_i;
   wire                axis_avg_buffer_1_m_axis_aresetn;
+  wire                axis_avg_buffer_1_m2_axis_tvalid;
+  wire                axis_avg_buffer_1_m2_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) wire       [63:0]   axis_avg_buffer_1_m2_axis_tdata;
   wire                axis_avg_buffer_2_s_axi_aclk_i;
   wire                axis_avg_buffer_2_s_axi_aresetn;
   wire                axis_avg_buffer_2_trigger;
@@ -1540,6 +1561,9 @@ module QickTop (
   wire                axis_avg_buffer_2_s_axis_aresetn;
   wire                axis_avg_buffer_2_m_axis_aclk_i;
   wire                axis_avg_buffer_2_m_axis_aresetn;
+  wire                axis_avg_buffer_2_m2_axis_tvalid;
+  wire                axis_avg_buffer_2_m2_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) wire       [63:0]   axis_avg_buffer_2_m2_axis_tdata;
   wire                axis_avg_buffer_3_s_axi_aclk_i;
   wire                axis_avg_buffer_3_s_axi_aresetn;
   wire                axis_avg_buffer_3_trigger;
@@ -1547,6 +1571,9 @@ module QickTop (
   wire                axis_avg_buffer_3_s_axis_aresetn;
   wire                axis_avg_buffer_3_m_axis_aclk_i;
   wire                axis_avg_buffer_3_m_axis_aresetn;
+  wire                axis_avg_buffer_3_m2_axis_tvalid;
+  wire                axis_avg_buffer_3_m2_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) wire       [63:0]   axis_avg_buffer_3_m2_axis_tdata;
   wire                axis_avg_buffer_4_s_axi_aclk_i;
   wire                axis_avg_buffer_4_s_axi_aresetn;
   wire                axis_avg_buffer_4_trigger;
@@ -1554,6 +1581,9 @@ module QickTop (
   wire                axis_avg_buffer_4_s_axis_aresetn;
   wire                axis_avg_buffer_4_m_axis_aclk_i;
   wire                axis_avg_buffer_4_m_axis_aresetn;
+  wire                axis_avg_buffer_4_m2_axis_tvalid;
+  wire                axis_avg_buffer_4_m2_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) wire       [63:0]   axis_avg_buffer_4_m2_axis_tdata;
   wire                axis_avg_buffer_5_s_axi_aclk_i;
   wire                axis_avg_buffer_5_s_axi_aresetn;
   wire                axis_avg_buffer_5_trigger;
@@ -1561,6 +1591,9 @@ module QickTop (
   wire                axis_avg_buffer_5_s_axis_aresetn;
   wire                axis_avg_buffer_5_m_axis_aclk_i;
   wire                axis_avg_buffer_5_m_axis_aresetn;
+  wire                axis_avg_buffer_5_m2_axis_tvalid;
+  wire                axis_avg_buffer_5_m2_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) wire       [63:0]   axis_avg_buffer_5_m2_axis_tdata;
   wire                axis_avg_buffer_6_s_axi_aclk_i;
   wire                axis_avg_buffer_6_s_axi_aresetn;
   wire                axis_avg_buffer_6_trigger;
@@ -1568,6 +1601,9 @@ module QickTop (
   wire                axis_avg_buffer_6_s_axis_aresetn;
   wire                axis_avg_buffer_6_m_axis_aclk_i;
   wire                axis_avg_buffer_6_m_axis_aresetn;
+  wire                axis_avg_buffer_6_m2_axis_tvalid;
+  wire                axis_avg_buffer_6_m2_axis_tready;
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 99999985" *) wire       [63:0]   axis_avg_buffer_6_m2_axis_tdata;
   wire                mr_buffer_et_0_trigger;
   wire                mr_buffer_et_0_s00_axi_aclk;
   wire                mr_buffer_et_0_s00_axi_aresetn;
@@ -1761,27 +1797,27 @@ module QickTop (
     .s_axi_rready        (qick_processor_0_s_axi_rready             ), //i
     .s_axi_rdata         (qickProcessor_s_axi_rdata[31:0]           ), //o
     .s_axi_rresp         (qickProcessor_s_axi_rresp[1:0]            ), //o
-    .s0_axis_tvalid      (qick_processor_0_s0_axis_tvalid           ), //i
+    .s0_axis_tvalid      (m2_axis_queue_io_pop_valid                ), //i
     .s0_axis_tready      (qickProcessor_s0_axis_tready              ), //o
-    .s0_axis_tdata       (qick_processor_0_s0_axis_tdata[63:0]      ), //i
-    .s1_axis_tvalid      (qick_processor_0_s1_axis_tvalid           ), //i
+    .s0_axis_tdata       (m2_axis_queue_io_pop_payload_data[63:0]   ), //i
+    .s1_axis_tvalid      (m2_axis_queue_1_io_pop_valid              ), //i
     .s1_axis_tready      (qickProcessor_s1_axis_tready              ), //o
-    .s1_axis_tdata       (qick_processor_0_s1_axis_tdata[63:0]      ), //i
-    .s2_axis_tvalid      (qick_processor_0_s2_axis_tvalid           ), //i
+    .s1_axis_tdata       (m2_axis_queue_1_io_pop_payload_data[63:0] ), //i
+    .s2_axis_tvalid      (m2_axis_queue_2_io_pop_valid              ), //i
     .s2_axis_tready      (qickProcessor_s2_axis_tready              ), //o
-    .s2_axis_tdata       (qick_processor_0_s2_axis_tdata[63:0]      ), //i
-    .s3_axis_tvalid      (qick_processor_0_s3_axis_tvalid           ), //i
+    .s2_axis_tdata       (m2_axis_queue_2_io_pop_payload_data[63:0] ), //i
+    .s3_axis_tvalid      (m2_axis_queue_3_io_pop_valid              ), //i
     .s3_axis_tready      (qickProcessor_s3_axis_tready              ), //o
-    .s3_axis_tdata       (qick_processor_0_s3_axis_tdata[63:0]      ), //i
-    .s4_axis_tvalid      (qick_processor_0_s4_axis_tvalid           ), //i
+    .s3_axis_tdata       (m2_axis_queue_3_io_pop_payload_data[63:0] ), //i
+    .s4_axis_tvalid      (m2_axis_queue_4_io_pop_valid              ), //i
     .s4_axis_tready      (qickProcessor_s4_axis_tready              ), //o
-    .s4_axis_tdata       (qick_processor_0_s4_axis_tdata[63:0]      ), //i
-    .s5_axis_tvalid      (qick_processor_0_s5_axis_tvalid           ), //i
+    .s4_axis_tdata       (m2_axis_queue_4_io_pop_payload_data[63:0] ), //i
+    .s5_axis_tvalid      (m2_axis_queue_5_io_pop_valid              ), //i
     .s5_axis_tready      (qickProcessor_s5_axis_tready              ), //o
-    .s5_axis_tdata       (qick_processor_0_s5_axis_tdata[63:0]      ), //i
-    .s6_axis_tvalid      (qick_processor_0_s6_axis_tvalid           ), //i
+    .s5_axis_tdata       (m2_axis_queue_5_io_pop_payload_data[63:0] ), //i
+    .s6_axis_tvalid      (m2_axis_queue_6_io_pop_valid              ), //i
     .s6_axis_tready      (qickProcessor_s6_axis_tready              ), //o
-    .s6_axis_tdata       (qick_processor_0_s6_axis_tdata[63:0]      ), //i
+    .s6_axis_tdata       (m2_axis_queue_6_io_pop_payload_data[63:0] ), //i
     .s7_axis_tvalid      (qick_processor_0_s7_axis_tvalid           ), //i
     .s7_axis_tready      (qickProcessor_s7_axis_tready              ), //o
     .s7_axis_tdata       (qick_processor_0_s7_axis_tdata[63:0]      ), //i
@@ -1942,8 +1978,22 @@ module QickTop (
     .m1_axis_tdata  (axis_avg_buffer_0_m1_axis_tdata_1[31:0]), //o
     .m1_axis_tlast  (axis_avg_buffer_0_m1_axis_tlast_1      ), //o
     .m2_axis_tvalid (axis_avg_buffer_0_m2_axis_tvalid_1     ), //o
-    .m2_axis_tready (axis_avg_buffer_0_m2_axis_tready       ), //i
+    .m2_axis_tready (m2_axis_queue_io_push_ready            ), //i
     .m2_axis_tdata  (axis_avg_buffer_0_m2_axis_tdata_1[63:0])  //o
+  );
+  StreamFifoCC m2_axis_queue (
+    .io_push_valid                   (axis_avg_buffer_0_m2_axis_tvalid_1           ), //i
+    .io_push_ready                   (m2_axis_queue_io_push_ready                  ), //o
+    .io_push_payload_data            (axis_avg_buffer_0_m2_axis_tdata_1[63:0]      ), //i
+    .io_pop_valid                    (m2_axis_queue_io_pop_valid                   ), //o
+    .io_pop_ready                    (qickProcessor_s0_axis_tready                 ), //i
+    .io_pop_payload_data             (m2_axis_queue_io_pop_payload_data[63:0]      ), //o
+    .io_pushOccupancy                (m2_axis_queue_io_pushOccupancy[1:0]          ), //o
+    .io_popOccupancy                 (m2_axis_queue_io_popOccupancy[1:0]           ), //o
+    .clk_pl                          (clk_pl                                       ), //i
+    .rst_100                         (rst_100                                      ), //i
+    .qick_processor_0_c_clk_i        (qick_processor_0_c_clk_i                     ), //i
+    .toplevel_rst_100_synchronized_1 (m2_axis_queue_toplevel_rst_100_synchronized_1)  //o
   );
   AxisAvgBuffer axis_avg_buffer_1 (
     .s_axi_awvalid  (axis_avg_buffer_1_s_axi_awvalid        ), //i
@@ -1984,8 +2034,22 @@ module QickTop (
     .m1_axis_tdata  (axis_avg_buffer_1_m1_axis_tdata_1[31:0]), //o
     .m1_axis_tlast  (axis_avg_buffer_1_m1_axis_tlast_1      ), //o
     .m2_axis_tvalid (axis_avg_buffer_1_m2_axis_tvalid_1     ), //o
-    .m2_axis_tready (axis_avg_buffer_1_m2_axis_tready       ), //i
+    .m2_axis_tready (m2_axis_queue_1_io_push_ready          ), //i
     .m2_axis_tdata  (axis_avg_buffer_1_m2_axis_tdata_1[63:0])  //o
+  );
+  StreamFifoCC_1 m2_axis_queue_1 (
+    .io_push_valid                   (axis_avg_buffer_1_m2_axis_tvalid_1           ), //i
+    .io_push_ready                   (m2_axis_queue_1_io_push_ready                ), //o
+    .io_push_payload_data            (axis_avg_buffer_1_m2_axis_tdata_1[63:0]      ), //i
+    .io_pop_valid                    (m2_axis_queue_1_io_pop_valid                 ), //o
+    .io_pop_ready                    (qickProcessor_s1_axis_tready                 ), //i
+    .io_pop_payload_data             (m2_axis_queue_1_io_pop_payload_data[63:0]    ), //o
+    .io_pushOccupancy                (m2_axis_queue_1_io_pushOccupancy[1:0]        ), //o
+    .io_popOccupancy                 (m2_axis_queue_1_io_popOccupancy[1:0]         ), //o
+    .clk_pl                          (clk_pl                                       ), //i
+    .rst_100                         (rst_100                                      ), //i
+    .qick_processor_0_c_clk_i        (qick_processor_0_c_clk_i                     ), //i
+    .toplevel_rst_100_synchronized_1 (m2_axis_queue_toplevel_rst_100_synchronized_1)  //i
   );
   AxisAvgBuffer_2 axis_avg_buffer_2 (
     .s_axi_awvalid  (axis_avg_buffer_2_s_axi_awvalid        ), //i
@@ -2026,8 +2090,22 @@ module QickTop (
     .m1_axis_tdata  (axis_avg_buffer_2_m1_axis_tdata_1[31:0]), //o
     .m1_axis_tlast  (axis_avg_buffer_2_m1_axis_tlast_1      ), //o
     .m2_axis_tvalid (axis_avg_buffer_2_m2_axis_tvalid_1     ), //o
-    .m2_axis_tready (axis_avg_buffer_2_m2_axis_tready       ), //i
+    .m2_axis_tready (m2_axis_queue_2_io_push_ready          ), //i
     .m2_axis_tdata  (axis_avg_buffer_2_m2_axis_tdata_1[63:0])  //o
+  );
+  StreamFifoCC_1 m2_axis_queue_2 (
+    .io_push_valid                   (axis_avg_buffer_2_m2_axis_tvalid_1           ), //i
+    .io_push_ready                   (m2_axis_queue_2_io_push_ready                ), //o
+    .io_push_payload_data            (axis_avg_buffer_2_m2_axis_tdata_1[63:0]      ), //i
+    .io_pop_valid                    (m2_axis_queue_2_io_pop_valid                 ), //o
+    .io_pop_ready                    (qickProcessor_s2_axis_tready                 ), //i
+    .io_pop_payload_data             (m2_axis_queue_2_io_pop_payload_data[63:0]    ), //o
+    .io_pushOccupancy                (m2_axis_queue_2_io_pushOccupancy[1:0]        ), //o
+    .io_popOccupancy                 (m2_axis_queue_2_io_popOccupancy[1:0]         ), //o
+    .clk_pl                          (clk_pl                                       ), //i
+    .rst_100                         (rst_100                                      ), //i
+    .qick_processor_0_c_clk_i        (qick_processor_0_c_clk_i                     ), //i
+    .toplevel_rst_100_synchronized_1 (m2_axis_queue_toplevel_rst_100_synchronized_1)  //i
   );
   AxisAvgBuffer_2 axis_avg_buffer_3 (
     .s_axi_awvalid  (axis_avg_buffer_3_s_axi_awvalid        ), //i
@@ -2068,8 +2146,22 @@ module QickTop (
     .m1_axis_tdata  (axis_avg_buffer_3_m1_axis_tdata_1[31:0]), //o
     .m1_axis_tlast  (axis_avg_buffer_3_m1_axis_tlast_1      ), //o
     .m2_axis_tvalid (axis_avg_buffer_3_m2_axis_tvalid_1     ), //o
-    .m2_axis_tready (axis_avg_buffer_3_m2_axis_tready       ), //i
+    .m2_axis_tready (m2_axis_queue_3_io_push_ready          ), //i
     .m2_axis_tdata  (axis_avg_buffer_3_m2_axis_tdata_1[63:0])  //o
+  );
+  StreamFifoCC_1 m2_axis_queue_3 (
+    .io_push_valid                   (axis_avg_buffer_3_m2_axis_tvalid_1           ), //i
+    .io_push_ready                   (m2_axis_queue_3_io_push_ready                ), //o
+    .io_push_payload_data            (axis_avg_buffer_3_m2_axis_tdata_1[63:0]      ), //i
+    .io_pop_valid                    (m2_axis_queue_3_io_pop_valid                 ), //o
+    .io_pop_ready                    (qickProcessor_s3_axis_tready                 ), //i
+    .io_pop_payload_data             (m2_axis_queue_3_io_pop_payload_data[63:0]    ), //o
+    .io_pushOccupancy                (m2_axis_queue_3_io_pushOccupancy[1:0]        ), //o
+    .io_popOccupancy                 (m2_axis_queue_3_io_popOccupancy[1:0]         ), //o
+    .clk_pl                          (clk_pl                                       ), //i
+    .rst_100                         (rst_100                                      ), //i
+    .qick_processor_0_c_clk_i        (qick_processor_0_c_clk_i                     ), //i
+    .toplevel_rst_100_synchronized_1 (m2_axis_queue_toplevel_rst_100_synchronized_1)  //i
   );
   AxisAvgBuffer_2 axis_avg_buffer_4 (
     .s_axi_awvalid  (axis_avg_buffer_4_s_axi_awvalid        ), //i
@@ -2110,8 +2202,22 @@ module QickTop (
     .m1_axis_tdata  (axis_avg_buffer_4_m1_axis_tdata_1[31:0]), //o
     .m1_axis_tlast  (axis_avg_buffer_4_m1_axis_tlast_1      ), //o
     .m2_axis_tvalid (axis_avg_buffer_4_m2_axis_tvalid_1     ), //o
-    .m2_axis_tready (axis_avg_buffer_4_m2_axis_tready       ), //i
+    .m2_axis_tready (m2_axis_queue_4_io_push_ready          ), //i
     .m2_axis_tdata  (axis_avg_buffer_4_m2_axis_tdata_1[63:0])  //o
+  );
+  StreamFifoCC_1 m2_axis_queue_4 (
+    .io_push_valid                   (axis_avg_buffer_4_m2_axis_tvalid_1           ), //i
+    .io_push_ready                   (m2_axis_queue_4_io_push_ready                ), //o
+    .io_push_payload_data            (axis_avg_buffer_4_m2_axis_tdata_1[63:0]      ), //i
+    .io_pop_valid                    (m2_axis_queue_4_io_pop_valid                 ), //o
+    .io_pop_ready                    (qickProcessor_s4_axis_tready                 ), //i
+    .io_pop_payload_data             (m2_axis_queue_4_io_pop_payload_data[63:0]    ), //o
+    .io_pushOccupancy                (m2_axis_queue_4_io_pushOccupancy[1:0]        ), //o
+    .io_popOccupancy                 (m2_axis_queue_4_io_popOccupancy[1:0]         ), //o
+    .clk_pl                          (clk_pl                                       ), //i
+    .rst_100                         (rst_100                                      ), //i
+    .qick_processor_0_c_clk_i        (qick_processor_0_c_clk_i                     ), //i
+    .toplevel_rst_100_synchronized_1 (m2_axis_queue_toplevel_rst_100_synchronized_1)  //i
   );
   AxisAvgBuffer_2 axis_avg_buffer_5 (
     .s_axi_awvalid  (axis_avg_buffer_5_s_axi_awvalid        ), //i
@@ -2152,8 +2258,22 @@ module QickTop (
     .m1_axis_tdata  (axis_avg_buffer_5_m1_axis_tdata_1[31:0]), //o
     .m1_axis_tlast  (axis_avg_buffer_5_m1_axis_tlast_1      ), //o
     .m2_axis_tvalid (axis_avg_buffer_5_m2_axis_tvalid_1     ), //o
-    .m2_axis_tready (axis_avg_buffer_5_m2_axis_tready       ), //i
+    .m2_axis_tready (m2_axis_queue_5_io_push_ready          ), //i
     .m2_axis_tdata  (axis_avg_buffer_5_m2_axis_tdata_1[63:0])  //o
+  );
+  StreamFifoCC_1 m2_axis_queue_5 (
+    .io_push_valid                   (axis_avg_buffer_5_m2_axis_tvalid_1           ), //i
+    .io_push_ready                   (m2_axis_queue_5_io_push_ready                ), //o
+    .io_push_payload_data            (axis_avg_buffer_5_m2_axis_tdata_1[63:0]      ), //i
+    .io_pop_valid                    (m2_axis_queue_5_io_pop_valid                 ), //o
+    .io_pop_ready                    (qickProcessor_s5_axis_tready                 ), //i
+    .io_pop_payload_data             (m2_axis_queue_5_io_pop_payload_data[63:0]    ), //o
+    .io_pushOccupancy                (m2_axis_queue_5_io_pushOccupancy[1:0]        ), //o
+    .io_popOccupancy                 (m2_axis_queue_5_io_popOccupancy[1:0]         ), //o
+    .clk_pl                          (clk_pl                                       ), //i
+    .rst_100                         (rst_100                                      ), //i
+    .qick_processor_0_c_clk_i        (qick_processor_0_c_clk_i                     ), //i
+    .toplevel_rst_100_synchronized_1 (m2_axis_queue_toplevel_rst_100_synchronized_1)  //i
   );
   AxisAvgBuffer axis_avg_buffer_6 (
     .s_axi_awvalid  (axis_avg_buffer_6_s_axi_awvalid        ), //i
@@ -2194,8 +2314,22 @@ module QickTop (
     .m1_axis_tdata  (axis_avg_buffer_6_m1_axis_tdata_1[31:0]), //o
     .m1_axis_tlast  (axis_avg_buffer_6_m1_axis_tlast_1      ), //o
     .m2_axis_tvalid (axis_avg_buffer_6_m2_axis_tvalid_1     ), //o
-    .m2_axis_tready (axis_avg_buffer_6_m2_axis_tready       ), //i
+    .m2_axis_tready (m2_axis_queue_6_io_push_ready          ), //i
     .m2_axis_tdata  (axis_avg_buffer_6_m2_axis_tdata_1[63:0])  //o
+  );
+  StreamFifoCC_1 m2_axis_queue_6 (
+    .io_push_valid                   (axis_avg_buffer_6_m2_axis_tvalid_1           ), //i
+    .io_push_ready                   (m2_axis_queue_6_io_push_ready                ), //o
+    .io_push_payload_data            (axis_avg_buffer_6_m2_axis_tdata_1[63:0]      ), //i
+    .io_pop_valid                    (m2_axis_queue_6_io_pop_valid                 ), //o
+    .io_pop_ready                    (qickProcessor_s6_axis_tready                 ), //i
+    .io_pop_payload_data             (m2_axis_queue_6_io_pop_payload_data[63:0]    ), //o
+    .io_pushOccupancy                (m2_axis_queue_6_io_pushOccupancy[1:0]        ), //o
+    .io_popOccupancy                 (m2_axis_queue_6_io_popOccupancy[1:0]         ), //o
+    .clk_pl                          (clk_pl                                       ), //i
+    .rst_100                         (rst_100                                      ), //i
+    .qick_processor_0_c_clk_i        (qick_processor_0_c_clk_i                     ), //i
+    .toplevel_rst_100_synchronized_1 (m2_axis_queue_toplevel_rst_100_synchronized_1)  //i
   );
   MrBufferV1 mr_buffer_et_0 (
     .trigger          (qickProcessor_trig_9_o               ), //i
@@ -2892,13 +3026,6 @@ module QickTop (
   assign qick_processor_0_s_axi_rvalid = qickProcessor_s_axi_rvalid;
   assign qick_processor_0_s_axi_rdata = qickProcessor_s_axi_rdata;
   assign qick_processor_0_s_axi_rresp = qickProcessor_s_axi_rresp;
-  assign qick_processor_0_s0_axis_tready = qickProcessor_s0_axis_tready;
-  assign qick_processor_0_s1_axis_tready = qickProcessor_s1_axis_tready;
-  assign qick_processor_0_s2_axis_tready = qickProcessor_s2_axis_tready;
-  assign qick_processor_0_s3_axis_tready = qickProcessor_s3_axis_tready;
-  assign qick_processor_0_s4_axis_tready = qickProcessor_s4_axis_tready;
-  assign qick_processor_0_s5_axis_tready = qickProcessor_s5_axis_tready;
-  assign qick_processor_0_s6_axis_tready = qickProcessor_s6_axis_tready;
   assign qick_processor_0_s7_axis_tready = qickProcessor_s7_axis_tready;
   assign qick_processor_0_s8_axis_tready = qickProcessor_s8_axis_tready;
   assign qick_processor_0_s9_axis_tready = qickProcessor_s9_axis_tready;
@@ -3000,8 +3127,6 @@ module QickTop (
   assign axis_avg_buffer_0_m1_axis_tvalid = axis_avg_buffer_0_m1_axis_tvalid_1;
   assign axis_avg_buffer_0_m1_axis_tdata = axis_avg_buffer_0_m1_axis_tdata_1;
   assign axis_avg_buffer_0_m1_axis_tlast = axis_avg_buffer_0_m1_axis_tlast_1;
-  assign axis_avg_buffer_0_m2_axis_tvalid = axis_avg_buffer_0_m2_axis_tvalid_1;
-  assign axis_avg_buffer_0_m2_axis_tdata = axis_avg_buffer_0_m2_axis_tdata_1;
   assign axis_avg_buffer_1_s_axi_awready = axis_avg_buffer_1_s_axi_awready_1;
   assign axis_avg_buffer_1_s_axi_wready = axis_avg_buffer_1_s_axi_wready_1;
   assign axis_avg_buffer_1_s_axi_bvalid = axis_avg_buffer_1_s_axi_bvalid_1;
@@ -3017,8 +3142,6 @@ module QickTop (
   assign axis_avg_buffer_1_m1_axis_tvalid = axis_avg_buffer_1_m1_axis_tvalid_1;
   assign axis_avg_buffer_1_m1_axis_tdata = axis_avg_buffer_1_m1_axis_tdata_1;
   assign axis_avg_buffer_1_m1_axis_tlast = axis_avg_buffer_1_m1_axis_tlast_1;
-  assign axis_avg_buffer_1_m2_axis_tvalid = axis_avg_buffer_1_m2_axis_tvalid_1;
-  assign axis_avg_buffer_1_m2_axis_tdata = axis_avg_buffer_1_m2_axis_tdata_1;
   assign axis_avg_buffer_2_s_axi_awready = axis_avg_buffer_2_s_axi_awready_1;
   assign axis_avg_buffer_2_s_axi_wready = axis_avg_buffer_2_s_axi_wready_1;
   assign axis_avg_buffer_2_s_axi_bvalid = axis_avg_buffer_2_s_axi_bvalid_1;
@@ -3034,8 +3157,6 @@ module QickTop (
   assign axis_avg_buffer_2_m1_axis_tvalid = axis_avg_buffer_2_m1_axis_tvalid_1;
   assign axis_avg_buffer_2_m1_axis_tdata = axis_avg_buffer_2_m1_axis_tdata_1;
   assign axis_avg_buffer_2_m1_axis_tlast = axis_avg_buffer_2_m1_axis_tlast_1;
-  assign axis_avg_buffer_2_m2_axis_tvalid = axis_avg_buffer_2_m2_axis_tvalid_1;
-  assign axis_avg_buffer_2_m2_axis_tdata = axis_avg_buffer_2_m2_axis_tdata_1;
   assign axis_avg_buffer_3_s_axi_awready = axis_avg_buffer_3_s_axi_awready_1;
   assign axis_avg_buffer_3_s_axi_wready = axis_avg_buffer_3_s_axi_wready_1;
   assign axis_avg_buffer_3_s_axi_bvalid = axis_avg_buffer_3_s_axi_bvalid_1;
@@ -3051,8 +3172,6 @@ module QickTop (
   assign axis_avg_buffer_3_m1_axis_tvalid = axis_avg_buffer_3_m1_axis_tvalid_1;
   assign axis_avg_buffer_3_m1_axis_tdata = axis_avg_buffer_3_m1_axis_tdata_1;
   assign axis_avg_buffer_3_m1_axis_tlast = axis_avg_buffer_3_m1_axis_tlast_1;
-  assign axis_avg_buffer_3_m2_axis_tvalid = axis_avg_buffer_3_m2_axis_tvalid_1;
-  assign axis_avg_buffer_3_m2_axis_tdata = axis_avg_buffer_3_m2_axis_tdata_1;
   assign axis_avg_buffer_4_s_axi_awready = axis_avg_buffer_4_s_axi_awready_1;
   assign axis_avg_buffer_4_s_axi_wready = axis_avg_buffer_4_s_axi_wready_1;
   assign axis_avg_buffer_4_s_axi_bvalid = axis_avg_buffer_4_s_axi_bvalid_1;
@@ -3068,8 +3187,6 @@ module QickTop (
   assign axis_avg_buffer_4_m1_axis_tvalid = axis_avg_buffer_4_m1_axis_tvalid_1;
   assign axis_avg_buffer_4_m1_axis_tdata = axis_avg_buffer_4_m1_axis_tdata_1;
   assign axis_avg_buffer_4_m1_axis_tlast = axis_avg_buffer_4_m1_axis_tlast_1;
-  assign axis_avg_buffer_4_m2_axis_tvalid = axis_avg_buffer_4_m2_axis_tvalid_1;
-  assign axis_avg_buffer_4_m2_axis_tdata = axis_avg_buffer_4_m2_axis_tdata_1;
   assign axis_avg_buffer_5_s_axi_awready = axis_avg_buffer_5_s_axi_awready_1;
   assign axis_avg_buffer_5_s_axi_wready = axis_avg_buffer_5_s_axi_wready_1;
   assign axis_avg_buffer_5_s_axi_bvalid = axis_avg_buffer_5_s_axi_bvalid_1;
@@ -3085,8 +3202,6 @@ module QickTop (
   assign axis_avg_buffer_5_m1_axis_tvalid = axis_avg_buffer_5_m1_axis_tvalid_1;
   assign axis_avg_buffer_5_m1_axis_tdata = axis_avg_buffer_5_m1_axis_tdata_1;
   assign axis_avg_buffer_5_m1_axis_tlast = axis_avg_buffer_5_m1_axis_tlast_1;
-  assign axis_avg_buffer_5_m2_axis_tvalid = axis_avg_buffer_5_m2_axis_tvalid_1;
-  assign axis_avg_buffer_5_m2_axis_tdata = axis_avg_buffer_5_m2_axis_tdata_1;
   assign axis_avg_buffer_6_s_axi_awready = axis_avg_buffer_6_s_axi_awready_1;
   assign axis_avg_buffer_6_s_axi_wready = axis_avg_buffer_6_s_axi_wready_1;
   assign axis_avg_buffer_6_s_axi_bvalid = axis_avg_buffer_6_s_axi_bvalid_1;
@@ -3102,8 +3217,6 @@ module QickTop (
   assign axis_avg_buffer_6_m1_axis_tvalid = axis_avg_buffer_6_m1_axis_tvalid_1;
   assign axis_avg_buffer_6_m1_axis_tdata = axis_avg_buffer_6_m1_axis_tdata_1;
   assign axis_avg_buffer_6_m1_axis_tlast = axis_avg_buffer_6_m1_axis_tlast_1;
-  assign axis_avg_buffer_6_m2_axis_tvalid = axis_avg_buffer_6_m2_axis_tvalid_1;
-  assign axis_avg_buffer_6_m2_axis_tdata = axis_avg_buffer_6_m2_axis_tdata_1;
   assign mr_buffer_et_0_s00_axi_awready = mr_buffer_et_0_s00_axi_awready_1;
   assign mr_buffer_et_0_s00_axi_wready = mr_buffer_et_0_s00_axi_wready_1;
   assign mr_buffer_et_0_s00_axi_bvalid = mr_buffer_et_0_s00_axi_bvalid_1;
@@ -4956,13 +5069,23 @@ module MrBufferV1 (
 
 endmodule
 
+//StreamFifoCC_6 replaced by StreamFifoCC_1
+
 //AxisAvgBuffer_6 replaced by AxisAvgBuffer
+
+//StreamFifoCC_5 replaced by StreamFifoCC_1
 
 //AxisAvgBuffer_5 replaced by AxisAvgBuffer_2
 
+//StreamFifoCC_4 replaced by StreamFifoCC_1
+
 //AxisAvgBuffer_4 replaced by AxisAvgBuffer_2
 
+//StreamFifoCC_3 replaced by StreamFifoCC_1
+
 //AxisAvgBuffer_3 replaced by AxisAvgBuffer_2
+
+//StreamFifoCC_2 replaced by StreamFifoCC_1
 
 module AxisAvgBuffer_2 (
   input  wire          s_axi_awvalid,
@@ -5091,7 +5214,377 @@ module AxisAvgBuffer_2 (
 
 endmodule
 
+module StreamFifoCC_1 (
+  input  wire          io_push_valid,
+  output wire          io_push_ready,
+  input  wire [63:0]   io_push_payload_data,
+  output wire          io_pop_valid,
+  input  wire          io_pop_ready,
+  output wire [63:0]   io_pop_payload_data,
+  output wire [1:0]    io_pushOccupancy,
+  output wire [1:0]    io_popOccupancy,
+  input  wire          clk_pl,
+  input  wire          rst_100,
+  input  wire          qick_processor_0_c_clk_i,
+  input  wire          toplevel_rst_100_synchronized_1
+);
+
+  reg        [63:0]   ram_spinal_port1;
+  wire       [1:0]    popToPushGray_buffercc_io_dataOut;
+  wire       [1:0]    pushToPopGray_buffercc_io_dataOut;
+  wire       [1:0]    _zz_pushCC_pushPtrGray;
+  wire       [0:0]    _zz_ram_port;
+  wire       [1:0]    _zz_popCC_popPtrGray;
+  reg                 _zz_1;
+  wire       [1:0]    popToPushGray;
+  wire       [1:0]    pushToPopGray;
+  reg        [1:0]    pushCC_pushPtr;
+  wire       [1:0]    pushCC_pushPtrPlus;
+  wire                io_push_fire;
+  (* altera_attribute = "-name ADV_NETLIST_OPT_ALLOWED NEVER_ALLOW" *) reg        [1:0]    pushCC_pushPtrGray;
+  wire       [1:0]    pushCC_popPtrGray;
+  wire                pushCC_full;
+  wire                _zz_io_pushOccupancy;
+  reg        [1:0]    popCC_popPtr;
+  (* keep , syn_keep *) wire       [1:0]    popCC_popPtrPlus /* synthesis syn_keep = 1 */ ;
+  wire       [1:0]    popCC_popPtrGray;
+  wire       [1:0]    popCC_pushPtrGray;
+  wire                popCC_addressGen_valid;
+  reg                 popCC_addressGen_ready;
+  wire       [0:0]    popCC_addressGen_payload;
+  wire                popCC_empty;
+  wire                popCC_addressGen_fire;
+  wire                popCC_readArbitation_valid;
+  wire                popCC_readArbitation_ready;
+  wire       [0:0]    popCC_readArbitation_payload;
+  reg                 popCC_addressGen_rValid;
+  reg        [0:0]    popCC_addressGen_rData;
+  wire                when_Stream_l477;
+  wire                popCC_readPort_cmd_valid;
+  wire       [0:0]    popCC_readPort_cmd_payload;
+  wire       [63:0]   popCC_readPort_rsp_data;
+  wire                popCC_addressGen_toFlowFire_valid;
+  wire       [0:0]    popCC_addressGen_toFlowFire_payload;
+  wire                popCC_readArbitation_translated_valid;
+  wire                popCC_readArbitation_translated_ready;
+  wire       [63:0]   popCC_readArbitation_translated_payload_data;
+  wire                popCC_readArbitation_fire;
+  (* altera_attribute = "-name ADV_NETLIST_OPT_ALLOWED NEVER_ALLOW" *) reg        [1:0]    popCC_ptrToPush;
+  reg        [1:0]    popCC_ptrToOccupancy;
+  wire                _zz_io_popOccupancy;
+  reg [63:0] ram [0:1];
+
+  assign _zz_pushCC_pushPtrGray = (pushCC_pushPtrPlus >>> 1'b1);
+  assign _zz_ram_port = pushCC_pushPtr[0:0];
+  assign _zz_popCC_popPtrGray = (popCC_popPtr >>> 1'b1);
+  always @(posedge clk_pl) begin
+    if(_zz_1) begin
+      ram[_zz_ram_port] <= io_push_payload_data;
+    end
+  end
+
+  always @(posedge qick_processor_0_c_clk_i) begin
+    if(popCC_readPort_cmd_valid) begin
+      ram_spinal_port1 <= ram[popCC_readPort_cmd_payload];
+    end
+  end
+
+  (* keep_hierarchy = "TRUE" *) BufferCC popToPushGray_buffercc (
+    .io_dataIn  (popToPushGray[1:0]                    ), //i
+    .io_dataOut (popToPushGray_buffercc_io_dataOut[1:0]), //o
+    .clk_pl     (clk_pl                                ), //i
+    .rst_100    (rst_100                               )  //i
+  );
+  (* keep_hierarchy = "TRUE" *) BufferCC_4 pushToPopGray_buffercc (
+    .io_dataIn                       (pushToPopGray[1:0]                    ), //i
+    .io_dataOut                      (pushToPopGray_buffercc_io_dataOut[1:0]), //o
+    .qick_processor_0_c_clk_i        (qick_processor_0_c_clk_i              ), //i
+    .toplevel_rst_100_synchronized_1 (toplevel_rst_100_synchronized_1       )  //i
+  );
+  always @(*) begin
+    _zz_1 = 1'b0;
+    if(io_push_fire) begin
+      _zz_1 = 1'b1;
+    end
+  end
+
+  assign pushCC_pushPtrPlus = (pushCC_pushPtr + 2'b01);
+  assign io_push_fire = (io_push_valid && io_push_ready);
+  assign pushCC_popPtrGray = popToPushGray_buffercc_io_dataOut;
+  assign pushCC_full = ((pushCC_pushPtrGray[1 : 0] == (~ pushCC_popPtrGray[1 : 0])) && 1'b1);
+  assign io_push_ready = (! pushCC_full);
+  assign _zz_io_pushOccupancy = pushCC_popPtrGray[1];
+  assign io_pushOccupancy = (pushCC_pushPtr - {_zz_io_pushOccupancy,(pushCC_popPtrGray[0] ^ _zz_io_pushOccupancy)});
+  assign popCC_popPtrPlus = (popCC_popPtr + 2'b01);
+  assign popCC_popPtrGray = (_zz_popCC_popPtrGray ^ popCC_popPtr);
+  assign popCC_pushPtrGray = pushToPopGray_buffercc_io_dataOut;
+  assign popCC_empty = (popCC_popPtrGray == popCC_pushPtrGray);
+  assign popCC_addressGen_valid = (! popCC_empty);
+  assign popCC_addressGen_payload = popCC_popPtr[0:0];
+  assign popCC_addressGen_fire = (popCC_addressGen_valid && popCC_addressGen_ready);
+  always @(*) begin
+    popCC_addressGen_ready = popCC_readArbitation_ready;
+    if(when_Stream_l477) begin
+      popCC_addressGen_ready = 1'b1;
+    end
+  end
+
+  assign when_Stream_l477 = (! popCC_readArbitation_valid);
+  assign popCC_readArbitation_valid = popCC_addressGen_rValid;
+  assign popCC_readArbitation_payload = popCC_addressGen_rData;
+  assign popCC_readPort_rsp_data = ram_spinal_port1[63 : 0];
+  assign popCC_addressGen_toFlowFire_valid = popCC_addressGen_fire;
+  assign popCC_addressGen_toFlowFire_payload = popCC_addressGen_payload;
+  assign popCC_readPort_cmd_valid = popCC_addressGen_toFlowFire_valid;
+  assign popCC_readPort_cmd_payload = popCC_addressGen_toFlowFire_payload;
+  assign popCC_readArbitation_translated_valid = popCC_readArbitation_valid;
+  assign popCC_readArbitation_ready = popCC_readArbitation_translated_ready;
+  assign popCC_readArbitation_translated_payload_data = popCC_readPort_rsp_data;
+  assign io_pop_valid = popCC_readArbitation_translated_valid;
+  assign popCC_readArbitation_translated_ready = io_pop_ready;
+  assign io_pop_payload_data = popCC_readArbitation_translated_payload_data;
+  assign popCC_readArbitation_fire = (popCC_readArbitation_valid && popCC_readArbitation_ready);
+  assign _zz_io_popOccupancy = popCC_pushPtrGray[1];
+  assign io_popOccupancy = ({_zz_io_popOccupancy,(popCC_pushPtrGray[0] ^ _zz_io_popOccupancy)} - popCC_ptrToOccupancy);
+  assign pushToPopGray = pushCC_pushPtrGray;
+  assign popToPushGray = popCC_ptrToPush;
+  always @(posedge clk_pl or posedge rst_100) begin
+    if(rst_100) begin
+      pushCC_pushPtr <= 2'b00;
+      pushCC_pushPtrGray <= 2'b00;
+    end else begin
+      if(io_push_fire) begin
+        pushCC_pushPtrGray <= (_zz_pushCC_pushPtrGray ^ pushCC_pushPtrPlus);
+      end
+      if(io_push_fire) begin
+        pushCC_pushPtr <= pushCC_pushPtrPlus;
+      end
+    end
+  end
+
+  always @(posedge qick_processor_0_c_clk_i or posedge toplevel_rst_100_synchronized_1) begin
+    if(toplevel_rst_100_synchronized_1) begin
+      popCC_popPtr <= 2'b00;
+      popCC_addressGen_rValid <= 1'b0;
+      popCC_ptrToPush <= 2'b00;
+      popCC_ptrToOccupancy <= 2'b00;
+    end else begin
+      if(popCC_addressGen_fire) begin
+        popCC_popPtr <= popCC_popPtrPlus;
+      end
+      if(popCC_addressGen_ready) begin
+        popCC_addressGen_rValid <= popCC_addressGen_valid;
+      end
+      if(popCC_readArbitation_fire) begin
+        popCC_ptrToPush <= popCC_popPtrGray;
+      end
+      if(popCC_readArbitation_fire) begin
+        popCC_ptrToOccupancy <= popCC_popPtr;
+      end
+    end
+  end
+
+  always @(posedge qick_processor_0_c_clk_i) begin
+    if(popCC_addressGen_ready) begin
+      popCC_addressGen_rData <= popCC_addressGen_payload;
+    end
+  end
+
+
+endmodule
+
 //AxisAvgBuffer_1 replaced by AxisAvgBuffer
+
+module StreamFifoCC (
+  input  wire          io_push_valid,
+  output wire          io_push_ready,
+  input  wire [63:0]   io_push_payload_data,
+  output wire          io_pop_valid,
+  input  wire          io_pop_ready,
+  output wire [63:0]   io_pop_payload_data,
+  output wire [1:0]    io_pushOccupancy,
+  output wire [1:0]    io_popOccupancy,
+  input  wire          clk_pl,
+  input  wire          rst_100,
+  input  wire          qick_processor_0_c_clk_i,
+  output wire          toplevel_rst_100_synchronized_1
+);
+
+  reg        [63:0]   ram_spinal_port1;
+  wire       [1:0]    popToPushGray_buffercc_io_dataOut;
+  wire                toplevel_rst_100_asyncAssertSyncDeassert_buffercc_io_dataOut;
+  wire       [1:0]    pushToPopGray_buffercc_io_dataOut;
+  wire       [1:0]    _zz_pushCC_pushPtrGray;
+  wire       [0:0]    _zz_ram_port;
+  wire       [1:0]    _zz_popCC_popPtrGray;
+  reg                 _zz_1;
+  wire       [1:0]    popToPushGray;
+  wire       [1:0]    pushToPopGray;
+  reg        [1:0]    pushCC_pushPtr;
+  wire       [1:0]    pushCC_pushPtrPlus;
+  wire                io_push_fire;
+  (* altera_attribute = "-name ADV_NETLIST_OPT_ALLOWED NEVER_ALLOW" *) reg        [1:0]    pushCC_pushPtrGray;
+  wire       [1:0]    pushCC_popPtrGray;
+  wire                pushCC_full;
+  wire                _zz_io_pushOccupancy;
+  wire                toplevel_rst_100_asyncAssertSyncDeassert;
+  wire                toplevel_rst_100_synchronized;
+  reg        [1:0]    popCC_popPtr;
+  (* keep , syn_keep *) wire       [1:0]    popCC_popPtrPlus /* synthesis syn_keep = 1 */ ;
+  wire       [1:0]    popCC_popPtrGray;
+  wire       [1:0]    popCC_pushPtrGray;
+  wire                popCC_addressGen_valid;
+  reg                 popCC_addressGen_ready;
+  wire       [0:0]    popCC_addressGen_payload;
+  wire                popCC_empty;
+  wire                popCC_addressGen_fire;
+  wire                popCC_readArbitation_valid;
+  wire                popCC_readArbitation_ready;
+  wire       [0:0]    popCC_readArbitation_payload;
+  reg                 popCC_addressGen_rValid;
+  reg        [0:0]    popCC_addressGen_rData;
+  wire                when_Stream_l477;
+  wire                popCC_readPort_cmd_valid;
+  wire       [0:0]    popCC_readPort_cmd_payload;
+  wire       [63:0]   popCC_readPort_rsp_data;
+  wire                popCC_addressGen_toFlowFire_valid;
+  wire       [0:0]    popCC_addressGen_toFlowFire_payload;
+  wire                popCC_readArbitation_translated_valid;
+  wire                popCC_readArbitation_translated_ready;
+  wire       [63:0]   popCC_readArbitation_translated_payload_data;
+  wire                popCC_readArbitation_fire;
+  (* altera_attribute = "-name ADV_NETLIST_OPT_ALLOWED NEVER_ALLOW" *) reg        [1:0]    popCC_ptrToPush;
+  reg        [1:0]    popCC_ptrToOccupancy;
+  wire                _zz_io_popOccupancy;
+  reg [63:0] ram [0:1];
+
+  assign _zz_pushCC_pushPtrGray = (pushCC_pushPtrPlus >>> 1'b1);
+  assign _zz_ram_port = pushCC_pushPtr[0:0];
+  assign _zz_popCC_popPtrGray = (popCC_popPtr >>> 1'b1);
+  always @(posedge clk_pl) begin
+    if(_zz_1) begin
+      ram[_zz_ram_port] <= io_push_payload_data;
+    end
+  end
+
+  always @(posedge qick_processor_0_c_clk_i) begin
+    if(popCC_readPort_cmd_valid) begin
+      ram_spinal_port1 <= ram[popCC_readPort_cmd_payload];
+    end
+  end
+
+  (* keep_hierarchy = "TRUE" *) BufferCC popToPushGray_buffercc (
+    .io_dataIn  (popToPushGray[1:0]                    ), //i
+    .io_dataOut (popToPushGray_buffercc_io_dataOut[1:0]), //o
+    .clk_pl     (clk_pl                                ), //i
+    .rst_100    (rst_100                               )  //i
+  );
+  (* keep_hierarchy = "TRUE" *) BufferCC_1 toplevel_rst_100_asyncAssertSyncDeassert_buffercc (
+    .io_dataIn                (toplevel_rst_100_asyncAssertSyncDeassert                    ), //i
+    .io_dataOut               (toplevel_rst_100_asyncAssertSyncDeassert_buffercc_io_dataOut), //o
+    .qick_processor_0_c_clk_i (qick_processor_0_c_clk_i                                    ), //i
+    .rst_100                  (rst_100                                                     )  //i
+  );
+  (* keep_hierarchy = "TRUE" *) BufferCC_2 pushToPopGray_buffercc (
+    .io_dataIn                     (pushToPopGray[1:0]                    ), //i
+    .io_dataOut                    (pushToPopGray_buffercc_io_dataOut[1:0]), //o
+    .qick_processor_0_c_clk_i      (qick_processor_0_c_clk_i              ), //i
+    .toplevel_rst_100_synchronized (toplevel_rst_100_synchronized         )  //i
+  );
+  always @(*) begin
+    _zz_1 = 1'b0;
+    if(io_push_fire) begin
+      _zz_1 = 1'b1;
+    end
+  end
+
+  assign pushCC_pushPtrPlus = (pushCC_pushPtr + 2'b01);
+  assign io_push_fire = (io_push_valid && io_push_ready);
+  assign pushCC_popPtrGray = popToPushGray_buffercc_io_dataOut;
+  assign pushCC_full = ((pushCC_pushPtrGray[1 : 0] == (~ pushCC_popPtrGray[1 : 0])) && 1'b1);
+  assign io_push_ready = (! pushCC_full);
+  assign _zz_io_pushOccupancy = pushCC_popPtrGray[1];
+  assign io_pushOccupancy = (pushCC_pushPtr - {_zz_io_pushOccupancy,(pushCC_popPtrGray[0] ^ _zz_io_pushOccupancy)});
+  assign toplevel_rst_100_asyncAssertSyncDeassert = (1'b0 ^ 1'b0);
+  assign toplevel_rst_100_synchronized = toplevel_rst_100_asyncAssertSyncDeassert_buffercc_io_dataOut;
+  assign popCC_popPtrPlus = (popCC_popPtr + 2'b01);
+  assign popCC_popPtrGray = (_zz_popCC_popPtrGray ^ popCC_popPtr);
+  assign popCC_pushPtrGray = pushToPopGray_buffercc_io_dataOut;
+  assign popCC_empty = (popCC_popPtrGray == popCC_pushPtrGray);
+  assign popCC_addressGen_valid = (! popCC_empty);
+  assign popCC_addressGen_payload = popCC_popPtr[0:0];
+  assign popCC_addressGen_fire = (popCC_addressGen_valid && popCC_addressGen_ready);
+  always @(*) begin
+    popCC_addressGen_ready = popCC_readArbitation_ready;
+    if(when_Stream_l477) begin
+      popCC_addressGen_ready = 1'b1;
+    end
+  end
+
+  assign when_Stream_l477 = (! popCC_readArbitation_valid);
+  assign popCC_readArbitation_valid = popCC_addressGen_rValid;
+  assign popCC_readArbitation_payload = popCC_addressGen_rData;
+  assign popCC_readPort_rsp_data = ram_spinal_port1[63 : 0];
+  assign popCC_addressGen_toFlowFire_valid = popCC_addressGen_fire;
+  assign popCC_addressGen_toFlowFire_payload = popCC_addressGen_payload;
+  assign popCC_readPort_cmd_valid = popCC_addressGen_toFlowFire_valid;
+  assign popCC_readPort_cmd_payload = popCC_addressGen_toFlowFire_payload;
+  assign popCC_readArbitation_translated_valid = popCC_readArbitation_valid;
+  assign popCC_readArbitation_ready = popCC_readArbitation_translated_ready;
+  assign popCC_readArbitation_translated_payload_data = popCC_readPort_rsp_data;
+  assign io_pop_valid = popCC_readArbitation_translated_valid;
+  assign popCC_readArbitation_translated_ready = io_pop_ready;
+  assign io_pop_payload_data = popCC_readArbitation_translated_payload_data;
+  assign popCC_readArbitation_fire = (popCC_readArbitation_valid && popCC_readArbitation_ready);
+  assign _zz_io_popOccupancy = popCC_pushPtrGray[1];
+  assign io_popOccupancy = ({_zz_io_popOccupancy,(popCC_pushPtrGray[0] ^ _zz_io_popOccupancy)} - popCC_ptrToOccupancy);
+  assign pushToPopGray = pushCC_pushPtrGray;
+  assign popToPushGray = popCC_ptrToPush;
+  assign toplevel_rst_100_synchronized_1 = toplevel_rst_100_synchronized;
+  always @(posedge clk_pl or posedge rst_100) begin
+    if(rst_100) begin
+      pushCC_pushPtr <= 2'b00;
+      pushCC_pushPtrGray <= 2'b00;
+    end else begin
+      if(io_push_fire) begin
+        pushCC_pushPtrGray <= (_zz_pushCC_pushPtrGray ^ pushCC_pushPtrPlus);
+      end
+      if(io_push_fire) begin
+        pushCC_pushPtr <= pushCC_pushPtrPlus;
+      end
+    end
+  end
+
+  always @(posedge qick_processor_0_c_clk_i or posedge toplevel_rst_100_synchronized) begin
+    if(toplevel_rst_100_synchronized) begin
+      popCC_popPtr <= 2'b00;
+      popCC_addressGen_rValid <= 1'b0;
+      popCC_ptrToPush <= 2'b00;
+      popCC_ptrToOccupancy <= 2'b00;
+    end else begin
+      if(popCC_addressGen_fire) begin
+        popCC_popPtr <= popCC_popPtrPlus;
+      end
+      if(popCC_addressGen_ready) begin
+        popCC_addressGen_rValid <= popCC_addressGen_valid;
+      end
+      if(popCC_readArbitation_fire) begin
+        popCC_ptrToPush <= popCC_popPtrGray;
+      end
+      if(popCC_readArbitation_fire) begin
+        popCC_ptrToOccupancy <= popCC_popPtr;
+      end
+    end
+  end
+
+  always @(posedge qick_processor_0_c_clk_i) begin
+    if(popCC_addressGen_ready) begin
+      popCC_addressGen_rData <= popCC_addressGen_payload;
+    end
+  end
+
+
+endmodule
 
 module AxisAvgBuffer (
   input  wire          s_axi_awvalid,
@@ -5217,5 +5710,123 @@ module AxisAvgBuffer (
   assign m1_axis_tlast = axisAvgBuffer_7_m1_axis_tlast;
   assign m2_axis_tvalid = axisAvgBuffer_7_m2_axis_tvalid;
   assign m2_axis_tdata = axisAvgBuffer_7_m2_axis_tdata;
+
+endmodule
+
+//BufferCC_14 replaced by BufferCC_4
+
+//BufferCC_13 replaced by BufferCC
+
+//BufferCC_12 replaced by BufferCC_4
+
+//BufferCC_11 replaced by BufferCC
+
+//BufferCC_10 replaced by BufferCC_4
+
+//BufferCC_9 replaced by BufferCC
+
+//BufferCC_8 replaced by BufferCC_4
+
+//BufferCC_7 replaced by BufferCC
+
+//BufferCC_6 replaced by BufferCC_4
+
+//BufferCC_5 replaced by BufferCC
+
+module BufferCC_4 (
+  input  wire [1:0]    io_dataIn,
+  output wire [1:0]    io_dataOut,
+  input  wire          qick_processor_0_c_clk_i,
+  input  wire          toplevel_rst_100_synchronized_1
+);
+
+  (* async_reg = "true" , altera_attribute = "-name ADV_NETLIST_OPT_ALLOWED NEVER_ALLOW" *) reg        [1:0]    buffers_0;
+  (* async_reg = "true" *) reg        [1:0]    buffers_1;
+
+  assign io_dataOut = buffers_1;
+  always @(posedge qick_processor_0_c_clk_i or posedge toplevel_rst_100_synchronized_1) begin
+    if(toplevel_rst_100_synchronized_1) begin
+      buffers_0 <= 2'b00;
+      buffers_1 <= 2'b00;
+    end else begin
+      buffers_0 <= io_dataIn;
+      buffers_1 <= buffers_0;
+    end
+  end
+
+
+endmodule
+
+//BufferCC_3 replaced by BufferCC
+
+module BufferCC_2 (
+  input  wire [1:0]    io_dataIn,
+  output wire [1:0]    io_dataOut,
+  input  wire          qick_processor_0_c_clk_i,
+  input  wire          toplevel_rst_100_synchronized
+);
+
+  (* async_reg = "true" , altera_attribute = "-name ADV_NETLIST_OPT_ALLOWED NEVER_ALLOW" *) reg        [1:0]    buffers_0;
+  (* async_reg = "true" *) reg        [1:0]    buffers_1;
+
+  assign io_dataOut = buffers_1;
+  always @(posedge qick_processor_0_c_clk_i or posedge toplevel_rst_100_synchronized) begin
+    if(toplevel_rst_100_synchronized) begin
+      buffers_0 <= 2'b00;
+      buffers_1 <= 2'b00;
+    end else begin
+      buffers_0 <= io_dataIn;
+      buffers_1 <= buffers_0;
+    end
+  end
+
+
+endmodule
+
+module BufferCC_1 (
+  input  wire          io_dataIn,
+  output wire          io_dataOut,
+  input  wire          qick_processor_0_c_clk_i,
+  input  wire          rst_100
+);
+
+  (* async_reg = "true" *) reg                 buffers_0;
+  (* async_reg = "true" *) reg                 buffers_1;
+
+  assign io_dataOut = buffers_1;
+  always @(posedge qick_processor_0_c_clk_i or posedge rst_100) begin
+    if(rst_100) begin
+      buffers_0 <= 1'b1;
+      buffers_1 <= 1'b1;
+    end else begin
+      buffers_0 <= io_dataIn;
+      buffers_1 <= buffers_0;
+    end
+  end
+
+
+endmodule
+
+module BufferCC (
+  input  wire [1:0]    io_dataIn,
+  output wire [1:0]    io_dataOut,
+  input  wire          clk_pl,
+  input  wire          rst_100
+);
+
+  (* async_reg = "true" , altera_attribute = "-name ADV_NETLIST_OPT_ALLOWED NEVER_ALLOW" *) reg        [1:0]    buffers_0;
+  (* async_reg = "true" *) reg        [1:0]    buffers_1;
+
+  assign io_dataOut = buffers_1;
+  always @(posedge clk_pl or posedge rst_100) begin
+    if(rst_100) begin
+      buffers_0 <= 2'b00;
+      buffers_1 <= 2'b00;
+    end else begin
+      buffers_0 <= io_dataIn;
+      buffers_1 <= buffers_0;
+    end
+  end
+
 
 endmodule
