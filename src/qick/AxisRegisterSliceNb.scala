@@ -21,8 +21,8 @@ case class AxisRegisterSliceNbIo(B: Int, N: Int) extends Bundle {
 }
 
 case class axis_register_slice_nb(B: Int = 16, N: Int = 4) extends BlackBox {
-  addGeneric("B", B)
-  addGeneric("N", N)
+  // addGeneric("B", B)
+  // addGeneric("N", N)
   val io = AxisRegisterSliceNbIo(B, N)
   noIoPrefix()
 }

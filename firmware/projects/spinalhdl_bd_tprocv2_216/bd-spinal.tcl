@@ -1,3 +1,102 @@
+  set axis_avg_buffer_0 [ create_ip -name axis_avg_buffer -vendor QICK -library QICK -version 1.2 -module_name axis_avg_buffer_0 ]
+  set_property -dict [list CONFIG.N_AVG {13} CONFIG.N_BUF {12} CONFIG.B {16}] [get_ips axis_avg_buffer_0]
+  set axis_avg_buffer_1 [ create_ip -name axis_avg_buffer -vendor QICK -library QICK -version 1.2 -module_name axis_avg_buffer_1 ]
+  set_property -dict [list CONFIG.N_AVG {13} CONFIG.N_BUF {12} CONFIG.B {16}] [get_ips axis_avg_buffer_1]
+  set axis_avg_buffer_2 [ create_ip -name axis_avg_buffer -vendor QICK -library QICK -version 1.2 -module_name axis_avg_buffer_2 ]
+  set_property -dict [list CONFIG.N_AVG {13} CONFIG.B {16}] [get_ips axis_avg_buffer_2]
+  set axis_avg_buffer_3 [ create_ip -name axis_avg_buffer -vendor QICK -library QICK -version 1.2 -module_name axis_avg_buffer_3 ]
+  set_property -dict [list CONFIG.N_AVG {13} CONFIG.B {16}] [get_ips axis_avg_buffer_3]
+  set axis_avg_buffer_4 [ create_ip -name axis_avg_buffer -vendor QICK -library QICK -version 1.2 -module_name axis_avg_buffer_4 ]
+  set_property -dict [list CONFIG.N_AVG {13} CONFIG.B {16}] [get_ips axis_avg_buffer_4]
+  set axis_avg_buffer_5 [ create_ip -name axis_avg_buffer -vendor QICK -library QICK -version 1.2 -module_name axis_avg_buffer_5 ]
+  set_property -dict [list CONFIG.N_AVG {13} CONFIG.B {16}] [get_ips axis_avg_buffer_5]
+  set axis_avg_buffer_6 [ create_ip -name axis_avg_buffer -vendor QICK -library QICK -version 1.2 -module_name axis_avg_buffer_6 ]
+  set_property -dict [list CONFIG.N_AVG {13} CONFIG.N_BUF {12} CONFIG.B {16}] [get_ips axis_avg_buffer_6]
+
+  set axis_cdcsync_v1_1 [ create_ip -name axis_cdcsync_v1 -vendor QICK -library QICK -version 1.0 -module_name axis_cdcsync_v1_1 ]
+  set_property -dict [list CONFIG.B {168} CONFIG.N {3}] [get_ips axis_cdcsync_v1_1]
+
+  set axis_dyn_readout_v1_0 [ create_ip -name axis_dyn_readout_v1 -vendor QICK -library QICK -version 1.0 -module_name axis_dyn_readout_v1_0 ]
+
+  set axis_pfb_readout_v3_0 [ create_ip -name axis_pfb_readout_v3 -vendor QICK -library QICK -version 1.0 -module_name axis_pfb_readout_v3_0 ]
+
+  set axis_readout_v2_0 [ create_ip -name axis_readout_v2 -vendor QICK -library QICK -version 1.0 -module_name axis_readout_v2_0 ]
+
+  set axis_readout_v3_0 [ create_ip -name axis_readout_v3 -vendor QICK -library QICK -version 1.0 -module_name axis_readout_v3_0 ]
+
+  set axis_register_slice_0 [ create_ip -name axis_register_slice_nb -vendor QICK -library QICK -version 1.0 -module_name axis_register_slice_0 ]
+  set_property -dict [list CONFIG.B {256} CONFIG.N {6} ] [get_ips axis_register_slice_0]
+
+  set axis_register_slice_1 [ create_ip -name axis_register_slice_nb -vendor QICK -library QICK -version 1.0 -module_name axis_register_slice_1 ]
+  set_property -dict [list CONFIG.B {256} CONFIG.N {6} ] [get_ips axis_register_slice_1]
+
+  set axis_register_slice_2 [ create_ip -name axis_register_slice_nb -vendor QICK -library QICK -version 1.0 -module_name axis_register_slice_2 ]
+  set_property -dict [list CONFIG.B {256} CONFIG.N {6} ] [get_ips axis_register_slice_2]
+
+  set axis_resampler_2x1_v1_0 [ create_ip -name axis_resampler_2x1_v1 -vendor QICK -library QICK -version 1.0 -module_name axis_resampler_2x1_v1_0 ]
+
+  set axis_sg_int4_v2_0 [ create_ip -name axis_sg_int4_v2 -vendor QICK -library QICK -version 1.0 -module_name axis_sg_int4_v2_0 ]
+  set_property -dict [list CONFIG.N {12} ] [get_ips axis_sg_int4_v2_0]
+
+  set axis_sg_int4_v2_1 [ create_ip -name axis_sg_int4_v2 -vendor QICK -library QICK -version 1.0 -module_name axis_sg_int4_v2_1 ]
+  set_property -dict [list CONFIG.N {12} ] [get_ips axis_sg_int4_v2_1]
+
+  set axis_sg_mixmux8_v1_0 [ create_ip -name axis_sg_mixmux8_v1 -vendor QICK -library QICK -version 1.0 -module_name axis_sg_mixmux8_v1_0 ]
+  set_property -dict [list CONFIG.N_DDS {4} ] [get_ips axis_sg_mixmux8_v1_0]
+
+  set axis_sg_mux8_v1_0 [ create_ip -name axis_sg_mux8_v1 -vendor QICK -library QICK -version 1.0 -module_name axis_sg_mux8_v1_0 ]
+  set_property -dict [list CONFIG.N_DDS {16} ] [get_ips axis_sg_mux8_v1_0]
+
+  set axis_signal_gen_v6_0 [ create_ip -name axis_signal_gen_v6 -vendor QICK -library QICK -version 1.0 -module_name axis_signal_gen_v6_0 ]
+  set_property -dict [list CONFIG.N {10} ] [get_ips axis_signal_gen_v6_0]
+
+  set axis_signal_gen_v6_1 [ create_ip -name axis_signal_gen_v6 -vendor QICK -library QICK -version 1.0 -module_name axis_signal_gen_v6_1 ]
+  set_property -dict [list CONFIG.N {9} ] [get_ips axis_signal_gen_v6_1]
+
+  set axis_tmux_v1_0 [ create_ip -name axis_tmux_v1 -vendor QICK -library QICK -version 1.0 -module_name axis_tmux_v1_0 ]
+  set_property -dict [list CONFIG.B {168} CONFIG.N {4} ] [get_ips axis_tmux_v1_0]
+
+  set mr_buffer_et_0 [ create_ip -name mr_buffer_et -vendor QICK -library QICK -version 1.1 -module_name mr_buffer_et_0 ]
+  set_property -dict [list CONFIG.B {32} CONFIG.N {10} ] [get_ips mr_buffer_et_0]
+
+  set sg_translator_0 [ create_ip -name sg_translator -vendor QICK -library QICK -version 1.0 -module_name sg_translator_0 ]
+
+  set sg_translator_1 [ create_ip -name sg_translator -vendor QICK -library QICK -version 1.0 -module_name sg_translator_1 ]
+  set_property -dict [list CONFIG.OUT_TYPE {2}] [get_ips sg_translator_1]
+
+  set sg_translator_2 [ create_ip -name sg_translator -vendor QICK -library QICK -version 1.0 -module_name sg_translator_2 ]
+
+  set sg_translator_3 [ create_ip -name sg_translator -vendor QICK -library QICK -version 1.0 -module_name sg_translator_3 ]
+  set_property -dict [list CONFIG.OUT_TYPE {0}] [get_ips sg_translator_3]
+
+  set sg_translator_4 [ create_ip -name sg_translator -vendor QICK -library QICK -version 1.0 -module_name sg_translator_4 ]
+  set_property -dict [list CONFIG.OUT_TYPE {0}] [get_ips sg_translator_4]
+
+  set sg_translator_5 [ create_ip -name sg_translator -vendor QICK -library QICK -version 1.0 -module_name sg_translator_5 ]
+  set_property -dict [list CONFIG.OUT_TYPE {2}] [get_ips sg_translator_5]
+
+  set sg_translator_6 [ create_ip -name sg_translator -vendor QICK -library QICK -version 1.0 -module_name sg_translator_6 ]
+  set_property -dict [list CONFIG.OUT_TYPE {3}] [get_ips sg_translator_6]
+
+  set sg_translator_7 [ create_ip -name sg_translator -vendor QICK -library QICK -version 1.0 -module_name sg_translator_7 ]
+  set_property -dict [list CONFIG.OUT_TYPE {3}] [get_ips sg_translator_7]
+
+  set qick_processor_0 [ create_ip -name qick_processor -vendor QICK -library QICK -version 2.0 -module_name qick_processor_0 ]
+  set_property -dict [list \
+    CONFIG.ARITH {1} \
+    CONFIG.DEBUG {1} \
+    CONFIG.DIVIDER {1} \
+    CONFIG.DMEM_AW {14} \
+    CONFIG.EXT_FLAG {0} \
+    CONFIG.IN_PORT_QTY {7} \
+    CONFIG.IO_CTRL {1} \
+    CONFIG.OUT_DPORT_DW {8} \
+    CONFIG.OUT_DPORT_QTY {1} \
+    CONFIG.OUT_TRIG_QTY {17} \
+    CONFIG.OUT_WPORT_QTY {5} \
+    CONFIG.PMEM_AW {12} \
+    CONFIG.WMEM_AW {10} \
+  ] [get_ips qick_processor_0]
 
 ################################################################
 # This is a generated script based on design: d_1
@@ -1770,10 +1869,10 @@ Port;FD4A0000;FD4AFFFF;0|FPD;DPDMA;FD4C0000;FD4CFFFF;0|FPD;DDR_XMPU5_CFG;FD05000
   connect_bd_intf_net -intf_net axis_broadcaster_4_M01_AXIS [get_bd_intf_pins axis_broadcaster_4/M01_AXIS] [get_bd_intf_pins axis_switch_ddr/S03_AXIS]
   connect_bd_intf_net -intf_net axis_broadcaster_5_M00_AXIS [get_bd_intf_pins qick_top/axis_avg_buffer_5_s_axis] [get_bd_intf_pins axis_broadcaster_5/M00_AXIS]
   connect_bd_intf_net -intf_net axis_broadcaster_5_M01_AXIS [get_bd_intf_pins axis_broadcaster_5/M01_AXIS] [get_bd_intf_pins axis_switch_ddr/S04_AXIS]
-  connect_bd_intf_net -intf_net axis_cdcsync_v1_1_m0_axis [get_bd_intf_pins qick_top/axis_cdcsync_v1_1_m0_axis] [get_bd_intf_pins qick_top/sg_translator_3_s_tproc_axis]
-  connect_bd_intf_net -intf_net axis_cdcsync_v1_1_m1_axis [get_bd_intf_pins qick_top/axis_cdcsync_v1_1_m1_axis] [get_bd_intf_pins qick_top/sg_translator_4_s_tproc_axis]
-  connect_bd_intf_net -intf_net axis_cdcsync_v1_1_m2_axis [get_bd_intf_pins qick_top/axis_cdcsync_v1_1_m2_axis] [get_bd_intf_pins qick_top/sg_translator_5_s_tproc_axis]
-  connect_bd_intf_net -intf_net axis_clock_converter_1_M_AXIS1 [get_bd_intf_pins axis_clock_converter_1/M_AXIS] [get_bd_intf_pins qick_top/sg_translator_6_s_tproc_axis]
+  connect_bd_intf_net -intf_net axis_cdcsync_v1_1_m0_axis [get_bd_intf_pins qick_top/axis_cdcsync_v1_1_m0_axis] [get_bd_intf_pins qick_top/sg_translator_3_s_axis]
+  connect_bd_intf_net -intf_net axis_cdcsync_v1_1_m1_axis [get_bd_intf_pins qick_top/axis_cdcsync_v1_1_m1_axis] [get_bd_intf_pins qick_top/sg_translator_4_s_axis]
+  connect_bd_intf_net -intf_net axis_cdcsync_v1_1_m2_axis [get_bd_intf_pins qick_top/axis_cdcsync_v1_1_m2_axis] [get_bd_intf_pins qick_top/sg_translator_5_s_axis]
+  connect_bd_intf_net -intf_net axis_clock_converter_1_M_AXIS1 [get_bd_intf_pins axis_clock_converter_1/M_AXIS] [get_bd_intf_pins qick_top/sg_translator_6_s_axis]
   connect_bd_intf_net -intf_net axis_clock_converter_2_M_AXIS [get_bd_intf_pins axis_clock_converter_3/M_AXIS] [get_bd_intf_pins qick_top/axis_resampler_2x1_v1_0_s_axis]
   connect_bd_intf_net -intf_net axis_dyn_readout_v1_0_m0_axis [get_bd_intf_pins qick_top/axis_dyn_readout_v1_0_m0_axis] [get_bd_intf_pins axis_switch_mr/S00_AXIS]
   connect_bd_intf_net -intf_net axis_dyn_readout_v1_0_m1_axis [get_bd_intf_pins axis_broadcaster_0/S_AXIS] [get_bd_intf_pins qick_top/axis_dyn_readout_v1_0_m1_axis]
@@ -1808,10 +1907,10 @@ Port;FD4A0000;FD4AFFFF;0|FPD;DPDMA;FD4C0000;FD4CFFFF;0|FPD;DDR_XMPU5_CFG;FD05000
   connect_bd_intf_net -intf_net axis_switch_gen_M02_AXIS [get_bd_intf_pins axis_switch_gen/M02_AXIS] [get_bd_intf_pins qick_top/axis_sg_int4_v2_0_s0_axis]
   connect_bd_intf_net -intf_net axis_switch_gen_M03_AXIS [get_bd_intf_pins qick_top/axis_sg_int4_v2_1_s0_axis] [get_bd_intf_pins axis_switch_gen/M03_AXIS]
   connect_bd_intf_net -intf_net axis_switch_mr_M00_AXIS [get_bd_intf_pins axis_switch_mr/M00_AXIS] [get_bd_intf_pins qick_top/mr_buffer_et_0_s00_axis]
-  connect_bd_intf_net -intf_net axis_tmux_v1_0_m0_axis [get_bd_intf_pins qick_top/axis_tmux_v1_0_m0_axis] [get_bd_intf_pins qick_top/sg_translator_2_s_tproc_axis]
+  connect_bd_intf_net -intf_net axis_tmux_v1_0_m0_axis [get_bd_intf_pins qick_top/axis_tmux_v1_0_m0_axis] [get_bd_intf_pins qick_top/sg_translator_2_s_axis]
   connect_bd_intf_net -intf_net axis_tmux_v1_0_m1_axis [get_bd_intf_pins qick_top/axis_tmux_v1_0_m1_axis] [get_bd_intf_pins qick_top/axis_cdcsync_v1_1_s2_axis]
   connect_bd_intf_net -intf_net axis_tmux_v1_0_m2_axis [get_bd_intf_pins qick_top/axis_tmux_v1_0_m2_axis] [get_bd_intf_pins axis_clock_converter_1/S_AXIS]
-  connect_bd_intf_net -intf_net axis_tmux_v1_0_m3_axis [get_bd_intf_pins qick_top/axis_tmux_v1_0_m3_axis] [get_bd_intf_pins qick_top/sg_translator_7_s_tproc_axis]
+  connect_bd_intf_net -intf_net axis_tmux_v1_0_m3_axis [get_bd_intf_pins qick_top/axis_tmux_v1_0_m3_axis] [get_bd_intf_pins qick_top/sg_translator_7_s_axis]
   connect_bd_intf_net -intf_net dac2_clk_0_1 [get_bd_intf_ports dac2_clk_0] [get_bd_intf_pins usp_rf_data_converter_0/dac2_clk]
   connect_bd_intf_net -intf_net ddr4_0_C0_DDR4 [get_bd_intf_ports ddr4_sdram_c0] [get_bd_intf_pins ddr4/ddr4_sdram_c0]
   connect_bd_intf_net -intf_net default_sysclk_c0_300mhz_1 [get_bd_intf_ports default_sysclk_c0_300mhz] [get_bd_intf_pins ddr4/default_sysclk_c0_300mhz]
@@ -1845,8 +1944,8 @@ Port;FD4A0000;FD4AFFFF;0|FPD;DPDMA;FD4C0000;FD4CFFFF;0|FPD;DDR_XMPU5_CFG;FD05000
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M28_AXI [get_bd_intf_pins ps8_0_axi_periph/M28_AXI] [get_bd_intf_pins qick_top/axis_signal_gen_v6_1_s_axi]
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M29_AXI [get_bd_intf_pins qick_top/qick_processor_0_s_axi] [get_bd_intf_pins ps8_0_axi_periph/M29_AXI]
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M30_AXI [get_bd_intf_pins ps8_0_axi_periph/M30_AXI] [get_bd_intf_pins clk104_gpio/S_AXI]
-  connect_bd_intf_net -intf_net qick_processor_0_m0_axis [get_bd_intf_pins qick_top/qick_processor_0_m0_axis] [get_bd_intf_pins qick_top/sg_translator_0_s_tproc_axis]
-  connect_bd_intf_net -intf_net qick_processor_0_m1_axis [get_bd_intf_pins qick_top/qick_processor_0_m1_axis] [get_bd_intf_pins qick_top/sg_translator_1_s_tproc_axis]
+  connect_bd_intf_net -intf_net qick_processor_0_m0_axis [get_bd_intf_pins qick_top/qick_processor_0_m0_axis] [get_bd_intf_pins qick_top/sg_translator_0_s_axis]
+  connect_bd_intf_net -intf_net qick_processor_0_m1_axis [get_bd_intf_pins qick_top/qick_processor_0_m1_axis] [get_bd_intf_pins qick_top/sg_translator_1_s_axis]
   connect_bd_intf_net -intf_net qick_processor_0_m2_axis [get_bd_intf_pins qick_top/qick_processor_0_m2_axis] [get_bd_intf_pins qick_top/axis_cdcsync_v1_1_s0_axis]
   connect_bd_intf_net -intf_net qick_processor_0_m3_axis [get_bd_intf_pins qick_top/qick_processor_0_m3_axis] [get_bd_intf_pins qick_top/axis_cdcsync_v1_1_s1_axis]
   connect_bd_intf_net -intf_net qick_processor_0_m4_axis [get_bd_intf_pins qick_top/axis_tmux_v1_0_s_axis] [get_bd_intf_pins qick_top/qick_processor_0_m4_axis]
@@ -1857,8 +1956,8 @@ Port;FD4A0000;FD4AFFFF;0|FPD;DPDMA;FD4C0000;FD4CFFFF;0|FPD;DDR_XMPU5_CFG;FD05000
   connect_bd_intf_net -intf_net sg_translator_3_m_gen_v6_axis [get_bd_intf_pins qick_top/sg_translator_3_m_gen_v6_axis] [get_bd_intf_pins qick_top/axis_sg_int4_v2_0_s1_axis]
   connect_bd_intf_net -intf_net sg_translator_4_m_gen_v6_axis [get_bd_intf_pins qick_top/sg_translator_4_m_gen_v6_axis] [get_bd_intf_pins qick_top/axis_sg_int4_v2_1_s1_axis]
   connect_bd_intf_net -intf_net sg_translator_5_m_mux4_axis [get_bd_intf_pins qick_top/axis_sg_mixmux8_v1_0_s_axis] [get_bd_intf_pins qick_top/sg_translator_5_m_mux4_axis]
-  connect_bd_intf_net -intf_net sg_translator_6_m_readout_v3_axis [get_bd_intf_pins qick_top/axis_dyn_readout_v1_0_s0_axis] [get_bd_intf_pins qick_top/sg_translator_6_m_readout_v3_axis]
-  connect_bd_intf_net -intf_net sg_translator_7_m_readout_v3_axis [get_bd_intf_pins qick_top/sg_translator_7_m_readout_v3_axis] [get_bd_intf_pins axis_register_slice_10/S_AXIS]
+  connect_bd_intf_net -intf_net sg_translator_6_m_readout_axis [get_bd_intf_pins qick_top/axis_dyn_readout_v1_0_s0_axis] [get_bd_intf_pins qick_top/sg_translator_6_m_readout_axis]
+  connect_bd_intf_net -intf_net sg_translator_7_m_readout_axis [get_bd_intf_pins qick_top/sg_translator_7_m_readout_axis] [get_bd_intf_pins axis_register_slice_10/S_AXIS]
   connect_bd_intf_net -intf_net smartconnect_0_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HPC0_FPD]
   connect_bd_intf_net -intf_net sysref_in_0_1 [get_bd_intf_ports sysref_in_0] [get_bd_intf_pins usp_rf_data_converter_0/sysref_in]
   connect_bd_intf_net -intf_net usp_rf_data_converter_0_m20_axis [get_bd_intf_pins qick_top/axis_dyn_readout_v1_0_s1_axis] [get_bd_intf_pins usp_rf_data_converter_0/m20_axis]
@@ -2276,8 +2375,8 @@ preplace netloc sg_translator_2_m_gen_v6_axis 1 3 1 2790 1670n
 preplace netloc sg_translator_3_m_gen_v6_axis 1 4 1 3650 2320n
 preplace netloc sg_translator_4_m_gen_v6_axis 1 4 1 3680 2580n
 preplace netloc sg_translator_5_m_mux4_axis 1 4 1 3710 2820n
-preplace netloc sg_translator_6_m_readout_v3_axis 1 0 4 310 1990 940 1900 N 1900 2420
-preplace netloc sg_translator_7_m_readout_v3_axis 1 2 2 1740 2200 2420
+preplace netloc sg_translator_6_m_readout_axis 1 0 4 310 1990 940 1900 N 1900 2420
+preplace netloc sg_translator_7_m_readout_axis 1 2 2 1740 2200 2420
 preplace netloc smartconnect_0_M00_AXI 1 2 1 1390 40n
 preplace netloc sysref_in_0_1 1 5 2 4220 2390 N
 preplace netloc usp_rf_data_converter_0_m20_axis 1 0 7 280 820 950 840 1660 920 2600 1350 3550 930 N 930 4660

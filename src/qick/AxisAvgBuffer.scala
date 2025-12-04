@@ -63,9 +63,9 @@ case class AxisAvgBufferIO(N_AVG: Int, N_BUF: Int, B: Int) extends Bundle {
 }
 
 case class axis_avg_buffer(N_AVG: Int, N_BUF: Int, B: Int) extends BlackBox {
-  addGeneric("N_AVG", N_AVG)
-  addGeneric("N_BUF", N_BUF)
-  addGeneric("B", B)
+  // addGeneric("N_AVG", N_AVG)
+  // addGeneric("N_BUF", N_BUF)
+  // addGeneric("B", B)
   val io = AxisAvgBufferIO(N_AVG, N_BUF, B)
   noIoPrefix()
 }

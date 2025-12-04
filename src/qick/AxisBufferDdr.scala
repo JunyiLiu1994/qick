@@ -102,8 +102,8 @@ case class AxisBufferDdrIO(
 case class axis_buffer_ddr_v1(
   TARGET_SLAVE_BASE_ADDR : Int,
   DATA_WIDTH: Int) extends BlackBox {
-  addGeneric("TARGET_SLAVE_BASE_ADDR", TARGET_SLAVE_BASE_ADDR)
-  addGeneric("DATA_WIDTH", DATA_WIDTH)
+  // addGeneric("TARGET_SLAVE_BASE_ADDR", TARGET_SLAVE_BASE_ADDR)
+  // addGeneric("DATA_WIDTH", DATA_WIDTH)
   val io = AxisBufferDdrIO(DATA_WIDTH)
   noIoPrefix()
 }

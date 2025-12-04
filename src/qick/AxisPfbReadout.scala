@@ -44,7 +44,7 @@ case class AxisPfbReadoutIO(N: Int) extends Bundle {
 }
 
 case class axis_pfb_readout_v3(N: Int) extends BlackBox {
-  addGeneric("N", N)
+  // addGeneric("N", N)
   val io = AxisPfbReadoutIO(N)
   noIoPrefix()
 }

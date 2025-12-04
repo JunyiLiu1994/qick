@@ -22,8 +22,8 @@ case class AxisResamplerIO(B: Int, N: Int) extends Bundle {
 }
 
 case class axis_resampler_2x1_v1(B: Int, N: Int) extends BlackBox {
-  addGeneric("B", B)
-  addGeneric("N", N)
+  // addGeneric("B", B)
+  // addGeneric("N", N)
   val io = AxisResamplerIO(B, N)
   noIoPrefix()
 }

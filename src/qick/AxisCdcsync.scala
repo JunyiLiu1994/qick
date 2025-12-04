@@ -8,7 +8,7 @@ import spinal.lib.bus.amba4.axilite._
 case class AxisCdcsyncIO(N: Int, B: Int) extends Bundle {
   val s_axis_aresetn = in Bool()
   val s_axis_aclk = in Bool()
-  val s_axis = Vec.fill(16)(slave port Axi4Stream(Axi4StreamConfig(dataWidth = B / 8)))
+  val s_axis = Vec.fill(N)(slave port Axi4Stream(Axi4StreamConfig(dataWidth = B / 8)))
   for((a, i) <- s_axis.zipWithIndex) {
     a.payload.data.setName(f"s${i}_axis_tdata")
     a.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
@@ -17,7 +17,7 @@ case class AxisCdcsyncIO(N: Int, B: Int) extends Bundle {
   }
   val m_axis_aresetn = in Bool()
   val m_axis_aclk = in Bool()
-  val m_axis = Vec.fill(16)(master port Axi4Stream(Axi4StreamConfig(dataWidth = B / 8)))
+  val m_axis = Vec.fill(N)(master port Axi4Stream(Axi4StreamConfig(dataWidth = B / 8)))
   for((a, i) <- m_axis.zipWithIndex) {
     a.payload.data.setName(f"m${i}_axis_tdata")
     a.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 430080000")
@@ -27,8 +27,8 @@ case class AxisCdcsyncIO(N: Int, B: Int) extends Bundle {
 }
 
 case class axis_cdcsync_v1(N: Int = 2, B: Int = 8) extends BlackBox {
-  addGeneric("N", N)
-  addGeneric("B", B)
+  // addGeneric("N", N)
+  // addGeneric("B", B)
   val io = AxisCdcsyncIO(N, B)
   noIoPrefix()
 }

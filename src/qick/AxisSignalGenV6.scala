@@ -52,7 +52,7 @@ case class AxisSignalGenV6IO(N: Int) extends Bundle {
 }
 
 case class axis_signal_gen_v6(N : Int) extends BlackBox {
-  addGeneric("N", N)
+  // addGeneric("N", N)
   val io = AxisSignalGenV6IO(N)
   noIoPrefix()
 }

@@ -86,7 +86,7 @@ set_clock_group -name clk_ddr4_to_adc2 -asynchronous \
 
 # readout triggers
 #set_false_path -through [get_cells d_1_i/qick_vec2bit_1]
-set_false_path -through [get_pins -hier -filter {name =~ */qick_processor_0/trig_*_o}]
+set_false_path -through [get_pins -hier -filter {name =~ */qick_processor_0_trig_*_o}]
 
 # reset
 set_false_path  -through [get_pins -hier -filter {name =~ */rst_dac2/peripheral_aresetn[0]}]

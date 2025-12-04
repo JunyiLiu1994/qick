@@ -44,7 +44,7 @@ case class AxisSgMux8IO(N_DDS: Int) extends Bundle {
 }
 
 case class axis_sg_mux8_v1(N_DDS : Int) extends BlackBox {
-  addGeneric("N_DDS", N_DDS)
+  // addGeneric("N_DDS", N_DDS)
   val io = AxisSgMux8IO(N_DDS)
   noIoPrefix()
 }
