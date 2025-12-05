@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.12.3    git head : 591e64062329e5e2e2b81f4d52422948053edb97
 // Component : QickTop
-// Git hash  : c5b97e9354205347237d19f25299bed87fe2b541
+// Git hash  : c6a6683d23c0e4318603517047ba761165171a2e
 
 `timescale 1ns/1ps
 
@@ -500,7 +500,7 @@ module QickTop (
   output wire [1:0]    axis_sg_mux8_v1_0_s_axi_rresp,
   input  wire          axis_sg_mux8_v1_0_s_axis_tvalid,
   output wire          axis_sg_mux8_v1_0_s_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [31:0]   axis_sg_mux8_v1_0_s_axis_tdata,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [39:0]   axis_sg_mux8_v1_0_s_axis_tdata,
   output wire          axis_sg_mux8_v1_0_m_axis_tvalid,
   input  wire          axis_sg_mux8_v1_0_m_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  axis_sg_mux8_v1_0_m_axis_tdata,
@@ -608,57 +608,30 @@ module QickTop (
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [255:0]  axis_register_slice_2_s_axis_tdata,
   output wire          axis_register_slice_2_m_axis_tvalid,
   input  wire          axis_register_slice_2_m_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  axis_register_slice_2_m_axis_tdata,
-  input  wire          sg_translator_0_s_axis_tvalid,
-  output wire          sg_translator_0_s_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  sg_translator_0_s_axis_tdata,
-  output wire          sg_translator_0_m_gen_v6_axis_tvalid,
-  input  wire          sg_translator_0_m_gen_v6_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [159:0]  sg_translator_0_m_gen_v6_axis_tdata,
-  input  wire          sg_translator_1_s_axis_tvalid,
-  output wire          sg_translator_1_s_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  sg_translator_1_s_axis_tdata,
-  output wire          sg_translator_1_m_mux4_axis_tvalid,
-  input  wire          sg_translator_1_m_mux4_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [39:0]   sg_translator_1_m_mux4_axis_tdata,
-  input  wire          sg_translator_2_s_axis_tvalid,
-  output wire          sg_translator_2_s_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  sg_translator_2_s_axis_tdata,
-  output wire          sg_translator_2_m_gen_v6_axis_tvalid,
-  input  wire          sg_translator_2_m_gen_v6_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [159:0]  sg_translator_2_m_gen_v6_axis_tdata,
-  input  wire          sg_translator_3_s_axis_tvalid,
-  output wire          sg_translator_3_s_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) input  wire [167:0]  sg_translator_3_s_axis_tdata,
-  output wire          sg_translator_3_m_gen_v6_axis_tvalid,
-  input  wire          sg_translator_3_m_gen_v6_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) output wire [159:0]  sg_translator_3_m_gen_v6_axis_tdata,
-  input  wire          sg_translator_4_s_axis_tvalid,
-  output wire          sg_translator_4_s_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) input  wire [167:0]  sg_translator_4_s_axis_tdata,
-  output wire          sg_translator_4_m_gen_v6_axis_tvalid,
-  input  wire          sg_translator_4_m_gen_v6_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) output wire [159:0]  sg_translator_4_m_gen_v6_axis_tdata,
-  input  wire          sg_translator_5_s_axis_tvalid,
-  output wire          sg_translator_5_s_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) input  wire [167:0]  sg_translator_5_s_axis_tdata,
-  output wire          sg_translator_5_m_mux4_axis_tvalid,
-  input  wire          sg_translator_5_m_mux4_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 430080000" *) output wire [39:0]   sg_translator_5_m_mux4_axis_tdata,
-  input  wire          sg_translator_6_s_axis_tvalid,
-  output wire          sg_translator_6_s_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) input  wire [167:0]  sg_translator_6_s_axis_tdata,
-  output wire          sg_translator_6_m_readout_axis_tvalid,
-  input  wire          sg_translator_6_m_readout_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 307200000" *) output wire [87:0]   sg_translator_6_m_readout_axis_tdata,
-  input  wire          sg_translator_7_s_axis_tvalid,
-  output wire          sg_translator_7_s_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [167:0]  sg_translator_7_s_axis_tdata,
-  output wire          sg_translator_7_m_readout_axis_tvalid,
-  input  wire          sg_translator_7_m_readout_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [87:0]   sg_translator_7_m_readout_axis_tdata
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  axis_register_slice_2_m_axis_tdata
 );
 
+  reg                 qickProcessor_m0_axis_tready;
+  reg                 qickProcessor_m1_axis_tready;
+  reg                 axis_readout_v3_0_1_s0_axis_tvalid;
+  reg        [87:0]   axis_readout_v3_0_1_s0_axis_tdata;
+  reg                 axis_dyn_readout_v1_0_1_s0_axis_tvalid;
+  reg        [87:0]   axis_dyn_readout_v1_0_1_s0_axis_tdata;
+  reg                 axis_signal_gen_v6_0_1_s1_axis_tvalid;
+  reg        [159:0]  axis_signal_gen_v6_0_1_s1_axis_tdata;
+  reg                 axis_signal_gen_v6_1_1_s1_axis_tvalid;
+  reg        [159:0]  axis_signal_gen_v6_1_1_s1_axis_tdata;
+  reg                 axis_cdcsync_v1_1_1_m0_axis_tready;
+  reg                 axis_cdcsync_v1_1_1_m1_axis_tready;
+  reg                 axis_cdcsync_v1_1_1_m2_axis_tready;
+  reg                 axis_sg_mux8_v1_0_1_s_axis_tvalid;
+  reg        [39:0]   axis_sg_mux8_v1_0_1_s_axis_tdata;
+  reg                 axis_sg_mixmux8_v1_0_1_s_axis_tvalid;
+  reg        [39:0]   axis_sg_mixmux8_v1_0_1_s_axis_tdata;
+  reg                 axis_sg_int4_v2_0_1_s1_axis_tvalid;
+  reg        [159:0]  axis_sg_int4_v2_0_1_s1_axis_tdata;
+  reg                 axis_sg_int4_v2_1_1_s1_axis_tvalid;
+  reg        [159:0]  axis_sg_int4_v2_1_1_s1_axis_tdata;
   wire                qickProcessor_s_dma_axis_tready_o;
   wire                qickProcessor_m_dma_axis_tvalid_o;
   wire       [255:0]  qickProcessor_m_dma_axis_tdata_o;
@@ -1034,6 +1007,11 @@ module QickTop (
   wire                sg_translator_6_1_s_axis_tready;
   wire                sg_translator_6_1_m_readout_axis_tvalid;
   wire       [87:0]   sg_translator_6_1_m_readout_axis_tdata;
+  wire                m_axis_2_toStream_queue_io_push_ready;
+  wire                m_axis_2_toStream_queue_io_pop_valid;
+  wire       [167:0]  m_axis_2_toStream_queue_io_pop_payload;
+  wire       [1:0]    m_axis_2_toStream_queue_io_pushOccupancy;
+  wire       [1:0]    m_axis_2_toStream_queue_io_popOccupancy;
   wire                sg_translator_7_1_s_axis_tready;
   wire                sg_translator_7_1_m_readout_axis_tvalid;
   wire       [87:0]   sg_translator_7_1_m_readout_axis_tdata;
@@ -1197,22 +1175,64 @@ module QickTop (
   wire                axis_register_slice_1_aclk;
   wire                axis_register_slice_2_aresetn;
   wire                axis_register_slice_2_aclk;
-  wire                sg_translator_0_aresetn;
-  wire                sg_translator_0_aclk;
-  wire                sg_translator_1_aresetn;
-  wire                sg_translator_1_aclk;
-  wire                sg_translator_2_aresetn;
-  wire                sg_translator_2_aclk;
-  wire                sg_translator_3_aresetn;
-  wire                sg_translator_3_aclk;
-  wire                sg_translator_4_aresetn;
-  wire                sg_translator_4_aclk;
-  wire                sg_translator_5_aresetn;
-  wire                sg_translator_5_aclk;
-  wire                sg_translator_6_aresetn;
-  wire                sg_translator_6_aclk;
-  wire                sg_translator_7_aresetn;
-  wire                sg_translator_7_aclk;
+  wire                m_gen_v6_axis_s2mPipe_valid;
+  reg                 m_gen_v6_axis_s2mPipe_ready;
+  wire       [159:0]  m_gen_v6_axis_s2mPipe_payload_data;
+  reg                 m_gen_v6_axis_rValidN;
+  reg        [159:0]  m_gen_v6_axis_rData_data;
+  wire                m_gen_v6_axis_s2mPipe_m2sPipe_valid;
+  wire                m_gen_v6_axis_s2mPipe_m2sPipe_ready;
+  wire       [159:0]  m_gen_v6_axis_s2mPipe_m2sPipe_payload_data;
+  reg                 m_gen_v6_axis_s2mPipe_rValid;
+  reg        [159:0]  m_gen_v6_axis_s2mPipe_rData_data;
+  wire                when_Stream_l477;
+  wire                m_mux4_axis_s2mPipe_valid;
+  reg                 m_mux4_axis_s2mPipe_ready;
+  wire       [39:0]   m_mux4_axis_s2mPipe_payload_data;
+  reg                 m_mux4_axis_rValidN;
+  reg        [39:0]   m_mux4_axis_rData_data;
+  wire                m_mux4_axis_s2mPipe_m2sPipe_valid;
+  wire                m_mux4_axis_s2mPipe_m2sPipe_ready;
+  wire       [39:0]   m_mux4_axis_s2mPipe_m2sPipe_payload_data;
+  reg                 m_mux4_axis_s2mPipe_rValid;
+  reg        [39:0]   m_mux4_axis_s2mPipe_rData_data;
+  wire                when_Stream_l477_1;
+  wire                m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_valid;
+  reg                 m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_ready;
+  wire       [39:0]   m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_payload_data;
+  reg                 m_mux4_axis_s2mPipe_m2sPipe_rValidN;
+  reg        [39:0]   m_mux4_axis_s2mPipe_m2sPipe_rData_data;
+  wire                m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_m2sPipe_valid;
+  wire                m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_m2sPipe_ready;
+  wire       [39:0]   m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_m2sPipe_payload_data;
+  reg                 m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_rValid;
+  reg        [39:0]   m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_rData_data;
+  wire                when_Stream_l477_2;
+  wire                m_gen_v6_axis_s2mPipe_valid_1;
+  reg                 m_gen_v6_axis_s2mPipe_ready_1;
+  wire       [159:0]  m_gen_v6_axis_s2mPipe_payload_data_1;
+  reg                 m_gen_v6_axis_rValidN_1;
+  reg        [159:0]  m_gen_v6_axis_rData_data_1;
+  wire                m_gen_v6_axis_s2mPipe_m2sPipe_valid_1;
+  wire                m_gen_v6_axis_s2mPipe_m2sPipe_ready_1;
+  wire       [159:0]  m_gen_v6_axis_s2mPipe_m2sPipe_payload_data_1;
+  reg                 m_gen_v6_axis_s2mPipe_rValid_1;
+  reg        [159:0]  m_gen_v6_axis_s2mPipe_rData_data_1;
+  wire                when_Stream_l477_3;
+  wire                m_axis_2_toStream_valid;
+  wire                m_axis_2_toStream_ready;
+  wire       [167:0]  m_axis_2_toStream_payload;
+  wire                m_readout_axis_s2mPipe_valid;
+  reg                 m_readout_axis_s2mPipe_ready;
+  wire       [87:0]   m_readout_axis_s2mPipe_payload_data;
+  reg                 m_readout_axis_rValidN;
+  reg        [87:0]   m_readout_axis_rData_data;
+  wire                m_readout_axis_s2mPipe_m2sPipe_valid;
+  wire                m_readout_axis_s2mPipe_m2sPipe_ready;
+  wire       [87:0]   m_readout_axis_s2mPipe_m2sPipe_payload_data;
+  reg                 m_readout_axis_s2mPipe_rValid;
+  reg        [87:0]   m_readout_axis_s2mPipe_rData_data;
+  wire                when_Stream_l477_4;
 
   qick_processor_0 qickProcessor (
     .c_clk_i             (qick_processor_0_c_clk_i                  ), //i
@@ -1272,10 +1292,10 @@ module QickTop (
     .s6_axis_tready      (qickProcessor_s6_axis_tready              ), //o
     .s6_axis_tdata       (m2_axis_queue_6_io_pop_payload_data[63:0] ), //i
     .m0_axis_tvalid      (qickProcessor_m0_axis_tvalid              ), //o
-    .m0_axis_tready      (qick_processor_0_m0_axis_tready           ), //i
+    .m0_axis_tready      (qickProcessor_m0_axis_tready              ), //i
     .m0_axis_tdata       (qickProcessor_m0_axis_tdata[167:0]        ), //o
     .m1_axis_tvalid      (qickProcessor_m1_axis_tvalid              ), //o
-    .m1_axis_tready      (qick_processor_0_m1_axis_tready           ), //i
+    .m1_axis_tready      (qickProcessor_m1_axis_tready              ), //i
     .m1_axis_tdata       (qickProcessor_m1_axis_tdata[167:0]        ), //o
     .m2_axis_tvalid      (qickProcessor_m2_axis_tvalid              ), //o
     .m2_axis_tready      (qick_processor_0_m2_axis_tready           ), //i
@@ -1805,24 +1825,24 @@ module QickTop (
     .m1_axis_tdata  (axis_readout_v2_0_1_m1_axis_tdata[31:0] )  //o
   );
   AxisReadoutV3 axis_readout_v3_0_1 (
-    .aclk_i         (clk_dac2                              ), //i
-    .aresetn        (rst_dac2                              ), //i
-    .s0_axis_tvalid (axis_readout_v3_0_s0_axis_tvalid      ), //i
-    .s0_axis_tready (axis_readout_v3_0_1_s0_axis_tready    ), //o
-    .s0_axis_tdata  (axis_readout_v3_0_s0_axis_tdata[87:0] ), //i
-    .s1_axis_tvalid (axis_readout_v3_0_s1_axis_tvalid      ), //i
-    .s1_axis_tready (axis_readout_v3_0_1_s1_axis_tready    ), //o
-    .s1_axis_tdata  (axis_readout_v3_0_s1_axis_tdata[63:0] ), //i
-    .m_axis_tvalid  (axis_readout_v3_0_1_m_axis_tvalid     ), //o
-    .m_axis_tready  (axis_readout_v3_0_m_axis_tready       ), //i
-    .m_axis_tdata   (axis_readout_v3_0_1_m_axis_tdata[31:0])  //o
+    .aclk_i         (clk_dac2                               ), //i
+    .aresetn        (rst_dac2                               ), //i
+    .s0_axis_tvalid (axis_readout_v3_0_1_s0_axis_tvalid     ), //i
+    .s0_axis_tready (axis_readout_v3_0_1_s0_axis_tready     ), //o
+    .s0_axis_tdata  (axis_readout_v3_0_1_s0_axis_tdata[87:0]), //i
+    .s1_axis_tvalid (axis_readout_v3_0_s1_axis_tvalid       ), //i
+    .s1_axis_tready (axis_readout_v3_0_1_s1_axis_tready     ), //o
+    .s1_axis_tdata  (axis_readout_v3_0_s1_axis_tdata[63:0]  ), //i
+    .m_axis_tvalid  (axis_readout_v3_0_1_m_axis_tvalid      ), //o
+    .m_axis_tready  (axis_readout_v3_0_m_axis_tready        ), //i
+    .m_axis_tdata   (axis_readout_v3_0_1_m_axis_tdata[31:0] )  //o
   );
   AxisDynReadout axis_dyn_readout_v1_0_1 (
     .aresetn        (rst_adc2                                    ), //i
     .aclk           (clk_adc2                                    ), //i
-    .s0_axis_tvalid (axis_dyn_readout_v1_0_s0_axis_tvalid        ), //i
+    .s0_axis_tvalid (axis_dyn_readout_v1_0_1_s0_axis_tvalid      ), //i
     .s0_axis_tready (axis_dyn_readout_v1_0_1_s0_axis_tready      ), //o
-    .s0_axis_tdata  (axis_dyn_readout_v1_0_s0_axis_tdata[87:0]   ), //i
+    .s0_axis_tdata  (axis_dyn_readout_v1_0_1_s0_axis_tdata[87:0] ), //i
     .s1_axis_tvalid (axis_dyn_readout_v1_0_s1_axis_tvalid        ), //i
     .s1_axis_tready (axis_dyn_readout_v1_0_1_s1_axis_tready      ), //o
     .s1_axis_tdata  (axis_dyn_readout_v1_0_s1_axis_tdata[127:0]  ), //i
@@ -1834,76 +1854,76 @@ module QickTop (
     .m1_axis_tdata  (axis_dyn_readout_v1_0_1_m1_axis_tdata[31:0] )  //o
   );
   AxisSignalGenV6 axis_signal_gen_v6_0_1 (
-    .s_axi_aclk_i    (clk_pl                                    ), //i
-    .s_axi_aresetn   (rst_100                                   ), //i
-    .s_axi_awvalid   (axis_signal_gen_v6_0_s_axi_awvalid        ), //i
-    .s_axi_awready   (axis_signal_gen_v6_0_1_s_axi_awready      ), //o
-    .s_axi_awaddr    (axis_signal_gen_v6_0_s_axi_awaddr[5:0]    ), //i
-    .s_axi_awprot    (axis_signal_gen_v6_0_s_axi_awprot[2:0]    ), //i
-    .s_axi_wvalid    (axis_signal_gen_v6_0_s_axi_wvalid         ), //i
-    .s_axi_wready    (axis_signal_gen_v6_0_1_s_axi_wready       ), //o
-    .s_axi_wdata     (axis_signal_gen_v6_0_s_axi_wdata[31:0]    ), //i
-    .s_axi_wstrb     (axis_signal_gen_v6_0_s_axi_wstrb[3:0]     ), //i
-    .s_axi_bvalid    (axis_signal_gen_v6_0_1_s_axi_bvalid       ), //o
-    .s_axi_bready    (axis_signal_gen_v6_0_s_axi_bready         ), //i
-    .s_axi_bresp     (axis_signal_gen_v6_0_1_s_axi_bresp[1:0]   ), //o
-    .s_axi_arvalid   (axis_signal_gen_v6_0_s_axi_arvalid        ), //i
-    .s_axi_arready   (axis_signal_gen_v6_0_1_s_axi_arready      ), //o
-    .s_axi_araddr    (axis_signal_gen_v6_0_s_axi_araddr[5:0]    ), //i
-    .s_axi_arprot    (axis_signal_gen_v6_0_s_axi_arprot[2:0]    ), //i
-    .s_axi_rvalid    (axis_signal_gen_v6_0_1_s_axi_rvalid       ), //o
-    .s_axi_rready    (axis_signal_gen_v6_0_s_axi_rready         ), //i
-    .s_axi_rdata     (axis_signal_gen_v6_0_1_s_axi_rdata[31:0]  ), //o
-    .s_axi_rresp     (axis_signal_gen_v6_0_1_s_axi_rresp[1:0]   ), //o
-    .s0_axis_aclk_i  (clk_pl                                    ), //i
-    .s0_axis_aresetn (rst_100                                   ), //i
-    .s0_axis_tvalid  (axis_signal_gen_v6_0_s0_axis_tvalid       ), //i
-    .s0_axis_tready  (axis_signal_gen_v6_0_1_s0_axis_tready     ), //o
-    .s0_axis_tdata   (axis_signal_gen_v6_0_s0_axis_tdata[31:0]  ), //i
-    .aresetn         (rst_dac2                                  ), //i
-    .aclk_i          (clk_dac2                                  ), //i
-    .s1_axis_tvalid  (axis_signal_gen_v6_0_s1_axis_tvalid       ), //i
-    .s1_axis_tready  (axis_signal_gen_v6_0_1_s1_axis_tready     ), //o
-    .s1_axis_tdata   (axis_signal_gen_v6_0_s1_axis_tdata[159:0] ), //i
-    .m_axis_tvalid   (axis_signal_gen_v6_0_1_m_axis_tvalid      ), //o
-    .m_axis_tready   (axis_signal_gen_v6_0_m_axis_tready        ), //i
-    .m_axis_tdata    (axis_signal_gen_v6_0_1_m_axis_tdata[255:0])  //o
+    .s_axi_aclk_i    (clk_pl                                     ), //i
+    .s_axi_aresetn   (rst_100                                    ), //i
+    .s_axi_awvalid   (axis_signal_gen_v6_0_s_axi_awvalid         ), //i
+    .s_axi_awready   (axis_signal_gen_v6_0_1_s_axi_awready       ), //o
+    .s_axi_awaddr    (axis_signal_gen_v6_0_s_axi_awaddr[5:0]     ), //i
+    .s_axi_awprot    (axis_signal_gen_v6_0_s_axi_awprot[2:0]     ), //i
+    .s_axi_wvalid    (axis_signal_gen_v6_0_s_axi_wvalid          ), //i
+    .s_axi_wready    (axis_signal_gen_v6_0_1_s_axi_wready        ), //o
+    .s_axi_wdata     (axis_signal_gen_v6_0_s_axi_wdata[31:0]     ), //i
+    .s_axi_wstrb     (axis_signal_gen_v6_0_s_axi_wstrb[3:0]      ), //i
+    .s_axi_bvalid    (axis_signal_gen_v6_0_1_s_axi_bvalid        ), //o
+    .s_axi_bready    (axis_signal_gen_v6_0_s_axi_bready          ), //i
+    .s_axi_bresp     (axis_signal_gen_v6_0_1_s_axi_bresp[1:0]    ), //o
+    .s_axi_arvalid   (axis_signal_gen_v6_0_s_axi_arvalid         ), //i
+    .s_axi_arready   (axis_signal_gen_v6_0_1_s_axi_arready       ), //o
+    .s_axi_araddr    (axis_signal_gen_v6_0_s_axi_araddr[5:0]     ), //i
+    .s_axi_arprot    (axis_signal_gen_v6_0_s_axi_arprot[2:0]     ), //i
+    .s_axi_rvalid    (axis_signal_gen_v6_0_1_s_axi_rvalid        ), //o
+    .s_axi_rready    (axis_signal_gen_v6_0_s_axi_rready          ), //i
+    .s_axi_rdata     (axis_signal_gen_v6_0_1_s_axi_rdata[31:0]   ), //o
+    .s_axi_rresp     (axis_signal_gen_v6_0_1_s_axi_rresp[1:0]    ), //o
+    .s0_axis_aclk_i  (clk_pl                                     ), //i
+    .s0_axis_aresetn (rst_100                                    ), //i
+    .s0_axis_tvalid  (axis_signal_gen_v6_0_s0_axis_tvalid        ), //i
+    .s0_axis_tready  (axis_signal_gen_v6_0_1_s0_axis_tready      ), //o
+    .s0_axis_tdata   (axis_signal_gen_v6_0_s0_axis_tdata[31:0]   ), //i
+    .aresetn         (rst_dac2                                   ), //i
+    .aclk_i          (clk_dac2                                   ), //i
+    .s1_axis_tvalid  (axis_signal_gen_v6_0_1_s1_axis_tvalid      ), //i
+    .s1_axis_tready  (axis_signal_gen_v6_0_1_s1_axis_tready      ), //o
+    .s1_axis_tdata   (axis_signal_gen_v6_0_1_s1_axis_tdata[159:0]), //i
+    .m_axis_tvalid   (axis_signal_gen_v6_0_1_m_axis_tvalid       ), //o
+    .m_axis_tready   (axis_signal_gen_v6_0_m_axis_tready         ), //i
+    .m_axis_tdata    (axis_signal_gen_v6_0_1_m_axis_tdata[255:0] )  //o
   );
   AxisSignalGenV6_1 axis_signal_gen_v6_1_1 (
-    .s_axi_aclk_i    (clk_pl                                    ), //i
-    .s_axi_aresetn   (rst_100                                   ), //i
-    .s_axi_awvalid   (axis_signal_gen_v6_1_s_axi_awvalid        ), //i
-    .s_axi_awready   (axis_signal_gen_v6_1_1_s_axi_awready      ), //o
-    .s_axi_awaddr    (axis_signal_gen_v6_1_s_axi_awaddr[5:0]    ), //i
-    .s_axi_awprot    (axis_signal_gen_v6_1_s_axi_awprot[2:0]    ), //i
-    .s_axi_wvalid    (axis_signal_gen_v6_1_s_axi_wvalid         ), //i
-    .s_axi_wready    (axis_signal_gen_v6_1_1_s_axi_wready       ), //o
-    .s_axi_wdata     (axis_signal_gen_v6_1_s_axi_wdata[31:0]    ), //i
-    .s_axi_wstrb     (axis_signal_gen_v6_1_s_axi_wstrb[3:0]     ), //i
-    .s_axi_bvalid    (axis_signal_gen_v6_1_1_s_axi_bvalid       ), //o
-    .s_axi_bready    (axis_signal_gen_v6_1_s_axi_bready         ), //i
-    .s_axi_bresp     (axis_signal_gen_v6_1_1_s_axi_bresp[1:0]   ), //o
-    .s_axi_arvalid   (axis_signal_gen_v6_1_s_axi_arvalid        ), //i
-    .s_axi_arready   (axis_signal_gen_v6_1_1_s_axi_arready      ), //o
-    .s_axi_araddr    (axis_signal_gen_v6_1_s_axi_araddr[5:0]    ), //i
-    .s_axi_arprot    (axis_signal_gen_v6_1_s_axi_arprot[2:0]    ), //i
-    .s_axi_rvalid    (axis_signal_gen_v6_1_1_s_axi_rvalid       ), //o
-    .s_axi_rready    (axis_signal_gen_v6_1_s_axi_rready         ), //i
-    .s_axi_rdata     (axis_signal_gen_v6_1_1_s_axi_rdata[31:0]  ), //o
-    .s_axi_rresp     (axis_signal_gen_v6_1_1_s_axi_rresp[1:0]   ), //o
-    .s0_axis_aclk_i  (clk_pl                                    ), //i
-    .s0_axis_aresetn (rst_100                                   ), //i
-    .s0_axis_tvalid  (axis_signal_gen_v6_1_s0_axis_tvalid       ), //i
-    .s0_axis_tready  (axis_signal_gen_v6_1_1_s0_axis_tready     ), //o
-    .s0_axis_tdata   (axis_signal_gen_v6_1_s0_axis_tdata[31:0]  ), //i
-    .aresetn         (rst_dac2                                  ), //i
-    .aclk_i          (clk_dac2                                  ), //i
-    .s1_axis_tvalid  (axis_signal_gen_v6_1_s1_axis_tvalid       ), //i
-    .s1_axis_tready  (axis_signal_gen_v6_1_1_s1_axis_tready     ), //o
-    .s1_axis_tdata   (axis_signal_gen_v6_1_s1_axis_tdata[159:0] ), //i
-    .m_axis_tvalid   (axis_signal_gen_v6_1_1_m_axis_tvalid      ), //o
-    .m_axis_tready   (axis_signal_gen_v6_1_m_axis_tready        ), //i
-    .m_axis_tdata    (axis_signal_gen_v6_1_1_m_axis_tdata[255:0])  //o
+    .s_axi_aclk_i    (clk_pl                                     ), //i
+    .s_axi_aresetn   (rst_100                                    ), //i
+    .s_axi_awvalid   (axis_signal_gen_v6_1_s_axi_awvalid         ), //i
+    .s_axi_awready   (axis_signal_gen_v6_1_1_s_axi_awready       ), //o
+    .s_axi_awaddr    (axis_signal_gen_v6_1_s_axi_awaddr[5:0]     ), //i
+    .s_axi_awprot    (axis_signal_gen_v6_1_s_axi_awprot[2:0]     ), //i
+    .s_axi_wvalid    (axis_signal_gen_v6_1_s_axi_wvalid          ), //i
+    .s_axi_wready    (axis_signal_gen_v6_1_1_s_axi_wready        ), //o
+    .s_axi_wdata     (axis_signal_gen_v6_1_s_axi_wdata[31:0]     ), //i
+    .s_axi_wstrb     (axis_signal_gen_v6_1_s_axi_wstrb[3:0]      ), //i
+    .s_axi_bvalid    (axis_signal_gen_v6_1_1_s_axi_bvalid        ), //o
+    .s_axi_bready    (axis_signal_gen_v6_1_s_axi_bready          ), //i
+    .s_axi_bresp     (axis_signal_gen_v6_1_1_s_axi_bresp[1:0]    ), //o
+    .s_axi_arvalid   (axis_signal_gen_v6_1_s_axi_arvalid         ), //i
+    .s_axi_arready   (axis_signal_gen_v6_1_1_s_axi_arready       ), //o
+    .s_axi_araddr    (axis_signal_gen_v6_1_s_axi_araddr[5:0]     ), //i
+    .s_axi_arprot    (axis_signal_gen_v6_1_s_axi_arprot[2:0]     ), //i
+    .s_axi_rvalid    (axis_signal_gen_v6_1_1_s_axi_rvalid        ), //o
+    .s_axi_rready    (axis_signal_gen_v6_1_s_axi_rready          ), //i
+    .s_axi_rdata     (axis_signal_gen_v6_1_1_s_axi_rdata[31:0]   ), //o
+    .s_axi_rresp     (axis_signal_gen_v6_1_1_s_axi_rresp[1:0]    ), //o
+    .s0_axis_aclk_i  (clk_pl                                     ), //i
+    .s0_axis_aresetn (rst_100                                    ), //i
+    .s0_axis_tvalid  (axis_signal_gen_v6_1_s0_axis_tvalid        ), //i
+    .s0_axis_tready  (axis_signal_gen_v6_1_1_s0_axis_tready      ), //o
+    .s0_axis_tdata   (axis_signal_gen_v6_1_s0_axis_tdata[31:0]   ), //i
+    .aresetn         (rst_dac2                                   ), //i
+    .aclk_i          (clk_dac2                                   ), //i
+    .s1_axis_tvalid  (axis_signal_gen_v6_1_1_s1_axis_tvalid      ), //i
+    .s1_axis_tready  (axis_signal_gen_v6_1_1_s1_axis_tready      ), //o
+    .s1_axis_tdata   (axis_signal_gen_v6_1_1_s1_axis_tdata[159:0]), //i
+    .m_axis_tvalid   (axis_signal_gen_v6_1_1_m_axis_tvalid       ), //o
+    .m_axis_tready   (axis_signal_gen_v6_1_m_axis_tready         ), //i
+    .m_axis_tdata    (axis_signal_gen_v6_1_1_m_axis_tdata[255:0] )  //o
   );
   AxisTMuxV1 axis_tmux_v1_0_1 (
     .aresetn        (rst_dac2                             ), //i
@@ -1935,13 +1955,13 @@ module QickTop (
     .m_axis_aresetn (rst_dac3                                ), //i
     .m_axis_aclk    (clk_dac3                                ), //i
     .m0_axis_tvalid (axis_cdcsync_v1_1_1_m0_axis_tvalid      ), //o
-    .m0_axis_tready (axis_cdcsync_v1_1_m0_axis_tready        ), //i
+    .m0_axis_tready (axis_cdcsync_v1_1_1_m0_axis_tready      ), //i
     .m0_axis_tdata  (axis_cdcsync_v1_1_1_m0_axis_tdata[167:0]), //o
     .m1_axis_tvalid (axis_cdcsync_v1_1_1_m1_axis_tvalid      ), //o
-    .m1_axis_tready (axis_cdcsync_v1_1_m1_axis_tready        ), //i
+    .m1_axis_tready (axis_cdcsync_v1_1_1_m1_axis_tready      ), //i
     .m1_axis_tdata  (axis_cdcsync_v1_1_1_m1_axis_tdata[167:0]), //o
     .m2_axis_tvalid (axis_cdcsync_v1_1_1_m2_axis_tvalid      ), //o
-    .m2_axis_tready (axis_cdcsync_v1_1_m2_axis_tready        ), //i
+    .m2_axis_tready (axis_cdcsync_v1_1_1_m2_axis_tready      ), //i
     .m2_axis_tdata  (axis_cdcsync_v1_1_1_m2_axis_tdata[167:0])  //o
   );
   AxisSgMux8 axis_sg_mux8_v1_0_1 (
@@ -1968,9 +1988,9 @@ module QickTop (
     .s_axi_rresp   (axis_sg_mux8_v1_0_1_s_axi_rresp[1:0]   ), //o
     .aclk_i        (clk_dac2                               ), //i
     .aresetn       (rst_dac2                               ), //i
-    .s_axis_tvalid (axis_sg_mux8_v1_0_s_axis_tvalid        ), //i
+    .s_axis_tvalid (axis_sg_mux8_v1_0_1_s_axis_tvalid      ), //i
     .s_axis_tready (axis_sg_mux8_v1_0_1_s_axis_tready      ), //o
-    .s_axis_tdata  (axis_sg_mux8_v1_0_s_axis_tdata[31:0]   ), //i
+    .s_axis_tdata  (axis_sg_mux8_v1_0_1_s_axis_tdata[39:0] ), //i
     .m_axis_tvalid (axis_sg_mux8_v1_0_1_m_axis_tvalid      ), //o
     .m_axis_tready (axis_sg_mux8_v1_0_m_axis_tready        ), //i
     .m_axis_tdata  (axis_sg_mux8_v1_0_1_m_axis_tdata[255:0])  //o
@@ -1999,84 +2019,84 @@ module QickTop (
     .s_axi_rresp   (axis_sg_mixmux8_v1_0_1_s_axi_rresp[1:0]   ), //o
     .aresetn       (rst_dac3                                  ), //i
     .aclk_i        (clk_dac3                                  ), //i
-    .s_axis_tvalid (axis_sg_mixmux8_v1_0_s_axis_tvalid        ), //i
+    .s_axis_tvalid (axis_sg_mixmux8_v1_0_1_s_axis_tvalid      ), //i
     .s_axis_tready (axis_sg_mixmux8_v1_0_1_s_axis_tready      ), //o
-    .s_axis_tdata  (axis_sg_mixmux8_v1_0_s_axis_tdata[39:0]   ), //i
+    .s_axis_tdata  (axis_sg_mixmux8_v1_0_1_s_axis_tdata[39:0] ), //i
     .m_axis_tvalid (axis_sg_mixmux8_v1_0_1_m_axis_tvalid      ), //o
     .m_axis_tready (axis_sg_mixmux8_v1_0_m_axis_tready        ), //i
     .m_axis_tdata  (axis_sg_mixmux8_v1_0_1_m_axis_tdata[127:0])  //o
   );
   AxisSgInt4 axis_sg_int4_v2_0_1 (
-    .s_axi_awvalid   (axis_sg_int4_v2_0_s_axi_awvalid        ), //i
-    .s_axi_awready   (axis_sg_int4_v2_0_1_s_axi_awready      ), //o
-    .s_axi_awaddr    (axis_sg_int4_v2_0_s_axi_awaddr[5:0]    ), //i
-    .s_axi_awprot    (axis_sg_int4_v2_0_s_axi_awprot[2:0]    ), //i
-    .s_axi_wvalid    (axis_sg_int4_v2_0_s_axi_wvalid         ), //i
-    .s_axi_wready    (axis_sg_int4_v2_0_1_s_axi_wready       ), //o
-    .s_axi_wdata     (axis_sg_int4_v2_0_s_axi_wdata[31:0]    ), //i
-    .s_axi_wstrb     (axis_sg_int4_v2_0_s_axi_wstrb[3:0]     ), //i
-    .s_axi_bvalid    (axis_sg_int4_v2_0_1_s_axi_bvalid       ), //o
-    .s_axi_bready    (axis_sg_int4_v2_0_s_axi_bready         ), //i
-    .s_axi_bresp     (axis_sg_int4_v2_0_1_s_axi_bresp[1:0]   ), //o
-    .s_axi_arvalid   (axis_sg_int4_v2_0_s_axi_arvalid        ), //i
-    .s_axi_arready   (axis_sg_int4_v2_0_1_s_axi_arready      ), //o
-    .s_axi_araddr    (axis_sg_int4_v2_0_s_axi_araddr[5:0]    ), //i
-    .s_axi_arprot    (axis_sg_int4_v2_0_s_axi_arprot[2:0]    ), //i
-    .s_axi_rvalid    (axis_sg_int4_v2_0_1_s_axi_rvalid       ), //o
-    .s_axi_rready    (axis_sg_int4_v2_0_s_axi_rready         ), //i
-    .s_axi_rdata     (axis_sg_int4_v2_0_1_s_axi_rdata[31:0]  ), //o
-    .s_axi_rresp     (axis_sg_int4_v2_0_1_s_axi_rresp[1:0]   ), //o
-    .s_axi_aclk_i    (clk_pl                                 ), //i
-    .s_axi_aresetn   (rst_100                                ), //i
-    .s0_axis_tvalid  (axis_sg_int4_v2_0_s0_axis_tvalid       ), //i
-    .s0_axis_tready  (axis_sg_int4_v2_0_1_s0_axis_tready     ), //o
-    .s0_axis_tdata   (axis_sg_int4_v2_0_s0_axis_tdata[31:0]  ), //i
-    .s0_axis_aclk    (clk_pl                                 ), //i
-    .s0_axis_aresetn (rst_100                                ), //i
-    .aresetn         (rst_dac3                               ), //i
-    .aclk_i          (clk_dac3                               ), //i
-    .s1_axis_tvalid  (axis_sg_int4_v2_0_s1_axis_tvalid       ), //i
-    .s1_axis_tready  (axis_sg_int4_v2_0_1_s1_axis_tready     ), //o
-    .s1_axis_tdata   (axis_sg_int4_v2_0_s1_axis_tdata[159:0] ), //i
-    .m_axis_tvalid   (axis_sg_int4_v2_0_1_m_axis_tvalid      ), //o
-    .m_axis_tready   (axis_sg_int4_v2_0_m_axis_tready        ), //i
-    .m_axis_tdata    (axis_sg_int4_v2_0_1_m_axis_tdata[127:0])  //o
+    .s_axi_awvalid   (axis_sg_int4_v2_0_s_axi_awvalid         ), //i
+    .s_axi_awready   (axis_sg_int4_v2_0_1_s_axi_awready       ), //o
+    .s_axi_awaddr    (axis_sg_int4_v2_0_s_axi_awaddr[5:0]     ), //i
+    .s_axi_awprot    (axis_sg_int4_v2_0_s_axi_awprot[2:0]     ), //i
+    .s_axi_wvalid    (axis_sg_int4_v2_0_s_axi_wvalid          ), //i
+    .s_axi_wready    (axis_sg_int4_v2_0_1_s_axi_wready        ), //o
+    .s_axi_wdata     (axis_sg_int4_v2_0_s_axi_wdata[31:0]     ), //i
+    .s_axi_wstrb     (axis_sg_int4_v2_0_s_axi_wstrb[3:0]      ), //i
+    .s_axi_bvalid    (axis_sg_int4_v2_0_1_s_axi_bvalid        ), //o
+    .s_axi_bready    (axis_sg_int4_v2_0_s_axi_bready          ), //i
+    .s_axi_bresp     (axis_sg_int4_v2_0_1_s_axi_bresp[1:0]    ), //o
+    .s_axi_arvalid   (axis_sg_int4_v2_0_s_axi_arvalid         ), //i
+    .s_axi_arready   (axis_sg_int4_v2_0_1_s_axi_arready       ), //o
+    .s_axi_araddr    (axis_sg_int4_v2_0_s_axi_araddr[5:0]     ), //i
+    .s_axi_arprot    (axis_sg_int4_v2_0_s_axi_arprot[2:0]     ), //i
+    .s_axi_rvalid    (axis_sg_int4_v2_0_1_s_axi_rvalid        ), //o
+    .s_axi_rready    (axis_sg_int4_v2_0_s_axi_rready          ), //i
+    .s_axi_rdata     (axis_sg_int4_v2_0_1_s_axi_rdata[31:0]   ), //o
+    .s_axi_rresp     (axis_sg_int4_v2_0_1_s_axi_rresp[1:0]    ), //o
+    .s_axi_aclk_i    (clk_pl                                  ), //i
+    .s_axi_aresetn   (rst_100                                 ), //i
+    .s0_axis_tvalid  (axis_sg_int4_v2_0_s0_axis_tvalid        ), //i
+    .s0_axis_tready  (axis_sg_int4_v2_0_1_s0_axis_tready      ), //o
+    .s0_axis_tdata   (axis_sg_int4_v2_0_s0_axis_tdata[31:0]   ), //i
+    .s0_axis_aclk    (clk_pl                                  ), //i
+    .s0_axis_aresetn (rst_100                                 ), //i
+    .aresetn         (rst_dac3                                ), //i
+    .aclk_i          (clk_dac3                                ), //i
+    .s1_axis_tvalid  (axis_sg_int4_v2_0_1_s1_axis_tvalid      ), //i
+    .s1_axis_tready  (axis_sg_int4_v2_0_1_s1_axis_tready      ), //o
+    .s1_axis_tdata   (axis_sg_int4_v2_0_1_s1_axis_tdata[159:0]), //i
+    .m_axis_tvalid   (axis_sg_int4_v2_0_1_m_axis_tvalid       ), //o
+    .m_axis_tready   (axis_sg_int4_v2_0_m_axis_tready         ), //i
+    .m_axis_tdata    (axis_sg_int4_v2_0_1_m_axis_tdata[127:0] )  //o
   );
   AxisSgInt4_1 axis_sg_int4_v2_1_1 (
-    .s_axi_awvalid   (axis_sg_int4_v2_1_s_axi_awvalid        ), //i
-    .s_axi_awready   (axis_sg_int4_v2_1_1_s_axi_awready      ), //o
-    .s_axi_awaddr    (axis_sg_int4_v2_1_s_axi_awaddr[5:0]    ), //i
-    .s_axi_awprot    (axis_sg_int4_v2_1_s_axi_awprot[2:0]    ), //i
-    .s_axi_wvalid    (axis_sg_int4_v2_1_s_axi_wvalid         ), //i
-    .s_axi_wready    (axis_sg_int4_v2_1_1_s_axi_wready       ), //o
-    .s_axi_wdata     (axis_sg_int4_v2_1_s_axi_wdata[31:0]    ), //i
-    .s_axi_wstrb     (axis_sg_int4_v2_1_s_axi_wstrb[3:0]     ), //i
-    .s_axi_bvalid    (axis_sg_int4_v2_1_1_s_axi_bvalid       ), //o
-    .s_axi_bready    (axis_sg_int4_v2_1_s_axi_bready         ), //i
-    .s_axi_bresp     (axis_sg_int4_v2_1_1_s_axi_bresp[1:0]   ), //o
-    .s_axi_arvalid   (axis_sg_int4_v2_1_s_axi_arvalid        ), //i
-    .s_axi_arready   (axis_sg_int4_v2_1_1_s_axi_arready      ), //o
-    .s_axi_araddr    (axis_sg_int4_v2_1_s_axi_araddr[5:0]    ), //i
-    .s_axi_arprot    (axis_sg_int4_v2_1_s_axi_arprot[2:0]    ), //i
-    .s_axi_rvalid    (axis_sg_int4_v2_1_1_s_axi_rvalid       ), //o
-    .s_axi_rready    (axis_sg_int4_v2_1_s_axi_rready         ), //i
-    .s_axi_rdata     (axis_sg_int4_v2_1_1_s_axi_rdata[31:0]  ), //o
-    .s_axi_rresp     (axis_sg_int4_v2_1_1_s_axi_rresp[1:0]   ), //o
-    .s_axi_aclk_i    (clk_pl                                 ), //i
-    .s_axi_aresetn   (rst_100                                ), //i
-    .s0_axis_tvalid  (axis_sg_int4_v2_1_s0_axis_tvalid       ), //i
-    .s0_axis_tready  (axis_sg_int4_v2_1_1_s0_axis_tready     ), //o
-    .s0_axis_tdata   (axis_sg_int4_v2_1_s0_axis_tdata[31:0]  ), //i
-    .s0_axis_aclk    (clk_pl                                 ), //i
-    .s0_axis_aresetn (rst_100                                ), //i
-    .aresetn         (rst_dac3                               ), //i
-    .aclk_i          (clk_dac3                               ), //i
-    .s1_axis_tvalid  (axis_sg_int4_v2_1_s1_axis_tvalid       ), //i
-    .s1_axis_tready  (axis_sg_int4_v2_1_1_s1_axis_tready     ), //o
-    .s1_axis_tdata   (axis_sg_int4_v2_1_s1_axis_tdata[159:0] ), //i
-    .m_axis_tvalid   (axis_sg_int4_v2_1_1_m_axis_tvalid      ), //o
-    .m_axis_tready   (axis_sg_int4_v2_1_m_axis_tready        ), //i
-    .m_axis_tdata    (axis_sg_int4_v2_1_1_m_axis_tdata[127:0])  //o
+    .s_axi_awvalid   (axis_sg_int4_v2_1_s_axi_awvalid         ), //i
+    .s_axi_awready   (axis_sg_int4_v2_1_1_s_axi_awready       ), //o
+    .s_axi_awaddr    (axis_sg_int4_v2_1_s_axi_awaddr[5:0]     ), //i
+    .s_axi_awprot    (axis_sg_int4_v2_1_s_axi_awprot[2:0]     ), //i
+    .s_axi_wvalid    (axis_sg_int4_v2_1_s_axi_wvalid          ), //i
+    .s_axi_wready    (axis_sg_int4_v2_1_1_s_axi_wready        ), //o
+    .s_axi_wdata     (axis_sg_int4_v2_1_s_axi_wdata[31:0]     ), //i
+    .s_axi_wstrb     (axis_sg_int4_v2_1_s_axi_wstrb[3:0]      ), //i
+    .s_axi_bvalid    (axis_sg_int4_v2_1_1_s_axi_bvalid        ), //o
+    .s_axi_bready    (axis_sg_int4_v2_1_s_axi_bready          ), //i
+    .s_axi_bresp     (axis_sg_int4_v2_1_1_s_axi_bresp[1:0]    ), //o
+    .s_axi_arvalid   (axis_sg_int4_v2_1_s_axi_arvalid         ), //i
+    .s_axi_arready   (axis_sg_int4_v2_1_1_s_axi_arready       ), //o
+    .s_axi_araddr    (axis_sg_int4_v2_1_s_axi_araddr[5:0]     ), //i
+    .s_axi_arprot    (axis_sg_int4_v2_1_s_axi_arprot[2:0]     ), //i
+    .s_axi_rvalid    (axis_sg_int4_v2_1_1_s_axi_rvalid        ), //o
+    .s_axi_rready    (axis_sg_int4_v2_1_s_axi_rready          ), //i
+    .s_axi_rdata     (axis_sg_int4_v2_1_1_s_axi_rdata[31:0]   ), //o
+    .s_axi_rresp     (axis_sg_int4_v2_1_1_s_axi_rresp[1:0]    ), //o
+    .s_axi_aclk_i    (clk_pl                                  ), //i
+    .s_axi_aresetn   (rst_100                                 ), //i
+    .s0_axis_tvalid  (axis_sg_int4_v2_1_s0_axis_tvalid        ), //i
+    .s0_axis_tready  (axis_sg_int4_v2_1_1_s0_axis_tready      ), //o
+    .s0_axis_tdata   (axis_sg_int4_v2_1_s0_axis_tdata[31:0]   ), //i
+    .s0_axis_aclk    (clk_pl                                  ), //i
+    .s0_axis_aresetn (rst_100                                 ), //i
+    .aresetn         (rst_dac3                                ), //i
+    .aclk_i          (clk_dac3                                ), //i
+    .s1_axis_tvalid  (axis_sg_int4_v2_1_1_s1_axis_tvalid      ), //i
+    .s1_axis_tready  (axis_sg_int4_v2_1_1_s1_axis_tready      ), //o
+    .s1_axis_tdata   (axis_sg_int4_v2_1_1_s1_axis_tdata[159:0]), //i
+    .m_axis_tvalid   (axis_sg_int4_v2_1_1_m_axis_tvalid       ), //o
+    .m_axis_tready   (axis_sg_int4_v2_1_m_axis_tready         ), //i
+    .m_axis_tdata    (axis_sg_int4_v2_1_1_m_axis_tdata[127:0] )  //o
   );
   AxisResampler axis_resampler_2x1_v1_0_1 (
     .aclk          (clk_dac2                                    ), //i
@@ -2118,84 +2138,97 @@ module QickTop (
     .m_axis_tready (axis_register_slice_2_m_axis_tready        ), //i
     .m_axis_tdata  (axis_register_slice_2_1_m_axis_tdata[255:0])  //o
   );
-  QickSgTranslator sg_translator_0_1 (
+  sg_translator_0 sg_translator_0_1 (
     .aresetn              (rst_dac2                                    ), //i
     .aclk                 (clk_dac2                                    ), //i
-    .s_axis_tvalid        (sg_translator_0_s_axis_tvalid               ), //i
+    .s_axis_tvalid        (qickProcessor_m0_axis_tvalid                ), //i
     .s_axis_tready        (sg_translator_0_1_s_axis_tready             ), //o
-    .s_axis_tdata         (sg_translator_0_s_axis_tdata[167:0]         ), //i
+    .s_axis_tdata         (qickProcessor_m0_axis_tdata[167:0]          ), //i
     .m_gen_v6_axis_tvalid (sg_translator_0_1_m_gen_v6_axis_tvalid      ), //o
-    .m_gen_v6_axis_tready (sg_translator_0_m_gen_v6_axis_tready        ), //i
+    .m_gen_v6_axis_tready (m_gen_v6_axis_rValidN                       ), //i
     .m_gen_v6_axis_tdata  (sg_translator_0_1_m_gen_v6_axis_tdata[159:0])  //o
   );
-  QickSgTranslator_1 sg_translator_1_1 (
+  sg_translator_1 sg_translator_1_1 (
     .aresetn            (rst_dac2                                 ), //i
     .aclk               (clk_dac2                                 ), //i
-    .s_axis_tvalid      (sg_translator_1_s_axis_tvalid            ), //i
+    .s_axis_tvalid      (qickProcessor_m1_axis_tvalid             ), //i
     .s_axis_tready      (sg_translator_1_1_s_axis_tready          ), //o
-    .s_axis_tdata       (sg_translator_1_s_axis_tdata[167:0]      ), //i
+    .s_axis_tdata       (qickProcessor_m1_axis_tdata[167:0]       ), //i
     .m_mux4_axis_tvalid (sg_translator_1_1_m_mux4_axis_tvalid     ), //o
-    .m_mux4_axis_tready (sg_translator_1_m_mux4_axis_tready       ), //i
+    .m_mux4_axis_tready (m_mux4_axis_rValidN                      ), //i
     .m_mux4_axis_tdata  (sg_translator_1_1_m_mux4_axis_tdata[39:0])  //o
   );
-  QickSgTranslator_2 sg_translator_2_1 (
+  sg_translator_2 sg_translator_2_1 (
     .aresetn              (rst_dac2                                    ), //i
     .aclk                 (clk_dac2                                    ), //i
-    .s_axis_tvalid        (sg_translator_2_s_axis_tvalid               ), //i
+    .s_axis_tvalid        (axis_tmux_v1_0_1_m0_axis_tvalid             ), //i
     .s_axis_tready        (sg_translator_2_1_s_axis_tready             ), //o
-    .s_axis_tdata         (sg_translator_2_s_axis_tdata[167:0]         ), //i
+    .s_axis_tdata         (axis_tmux_v1_0_1_m0_axis_tdata[167:0]       ), //i
     .m_gen_v6_axis_tvalid (sg_translator_2_1_m_gen_v6_axis_tvalid      ), //o
-    .m_gen_v6_axis_tready (sg_translator_2_m_gen_v6_axis_tready        ), //i
+    .m_gen_v6_axis_tready (m_gen_v6_axis_rValidN_1                     ), //i
     .m_gen_v6_axis_tdata  (sg_translator_2_1_m_gen_v6_axis_tdata[159:0])  //o
   );
-  QickSgTranslator_3 sg_translator_3_1 (
+  sg_translator_3 sg_translator_3_1 (
     .aresetn              (rst_dac3                                    ), //i
     .aclk                 (clk_dac3                                    ), //i
-    .s_axis_tvalid        (sg_translator_3_s_axis_tvalid               ), //i
+    .s_axis_tvalid        (axis_cdcsync_v1_1_1_m0_axis_tvalid          ), //i
     .s_axis_tready        (sg_translator_3_1_s_axis_tready             ), //o
-    .s_axis_tdata         (sg_translator_3_s_axis_tdata[167:0]         ), //i
+    .s_axis_tdata         (axis_cdcsync_v1_1_1_m0_axis_tdata[167:0]    ), //i
     .m_gen_v6_axis_tvalid (sg_translator_3_1_m_gen_v6_axis_tvalid      ), //o
-    .m_gen_v6_axis_tready (sg_translator_3_m_gen_v6_axis_tready        ), //i
+    .m_gen_v6_axis_tready (axis_sg_int4_v2_0_1_s1_axis_tready          ), //i
     .m_gen_v6_axis_tdata  (sg_translator_3_1_m_gen_v6_axis_tdata[159:0])  //o
   );
-  QickSgTranslator_4 sg_translator_4_1 (
+  sg_translator_4 sg_translator_4_1 (
     .aresetn              (rst_dac3                                    ), //i
     .aclk                 (clk_dac3                                    ), //i
-    .s_axis_tvalid        (sg_translator_4_s_axis_tvalid               ), //i
+    .s_axis_tvalid        (axis_cdcsync_v1_1_1_m1_axis_tvalid          ), //i
     .s_axis_tready        (sg_translator_4_1_s_axis_tready             ), //o
-    .s_axis_tdata         (sg_translator_4_s_axis_tdata[167:0]         ), //i
+    .s_axis_tdata         (axis_cdcsync_v1_1_1_m1_axis_tdata[167:0]    ), //i
     .m_gen_v6_axis_tvalid (sg_translator_4_1_m_gen_v6_axis_tvalid      ), //o
-    .m_gen_v6_axis_tready (sg_translator_4_m_gen_v6_axis_tready        ), //i
+    .m_gen_v6_axis_tready (axis_sg_int4_v2_1_1_s1_axis_tready          ), //i
     .m_gen_v6_axis_tdata  (sg_translator_4_1_m_gen_v6_axis_tdata[159:0])  //o
   );
-  QickSgTranslator_5 sg_translator_5_1 (
+  sg_translator_5 sg_translator_5_1 (
     .aresetn            (rst_dac3                                 ), //i
     .aclk               (clk_dac3                                 ), //i
-    .s_axis_tvalid      (sg_translator_5_s_axis_tvalid            ), //i
+    .s_axis_tvalid      (axis_cdcsync_v1_1_1_m2_axis_tvalid       ), //i
     .s_axis_tready      (sg_translator_5_1_s_axis_tready          ), //o
-    .s_axis_tdata       (sg_translator_5_s_axis_tdata[167:0]      ), //i
+    .s_axis_tdata       (axis_cdcsync_v1_1_1_m2_axis_tdata[167:0] ), //i
     .m_mux4_axis_tvalid (sg_translator_5_1_m_mux4_axis_tvalid     ), //o
-    .m_mux4_axis_tready (sg_translator_5_m_mux4_axis_tready       ), //i
+    .m_mux4_axis_tready (axis_sg_mixmux8_v1_0_1_s_axis_tready     ), //i
     .m_mux4_axis_tdata  (sg_translator_5_1_m_mux4_axis_tdata[39:0])  //o
   );
-  QickSgTranslator_6 sg_translator_6_1 (
-    .aresetn               (rst_adc2                                    ), //i
-    .aclk                  (clk_adc2                                    ), //i
-    .s_axis_tvalid         (sg_translator_6_s_axis_tvalid               ), //i
-    .s_axis_tready         (sg_translator_6_1_s_axis_tready             ), //o
-    .s_axis_tdata          (sg_translator_6_s_axis_tdata[167:0]         ), //i
-    .m_readout_axis_tvalid (sg_translator_6_1_m_readout_axis_tvalid     ), //o
-    .m_readout_axis_tready (sg_translator_6_m_readout_axis_tready       ), //i
-    .m_readout_axis_tdata  (sg_translator_6_1_m_readout_axis_tdata[87:0])  //o
+  sg_translator_6 sg_translator_6_1 (
+    .aresetn               (rst_adc2                                     ), //i
+    .aclk                  (clk_adc2                                     ), //i
+    .s_axis_tvalid         (m_axis_2_toStream_queue_io_pop_valid         ), //i
+    .s_axis_tready         (sg_translator_6_1_s_axis_tready              ), //o
+    .s_axis_tdata          (m_axis_2_toStream_queue_io_pop_payload[167:0]), //i
+    .m_readout_axis_tvalid (sg_translator_6_1_m_readout_axis_tvalid      ), //o
+    .m_readout_axis_tready (axis_dyn_readout_v1_0_1_s0_axis_tready       ), //i
+    .m_readout_axis_tdata  (sg_translator_6_1_m_readout_axis_tdata[87:0] )  //o
   );
-  QickSgTranslator_7 sg_translator_7_1 (
+  StreamFifoCC_7 m_axis_2_toStream_queue (
+    .io_push_valid    (m_axis_2_toStream_valid                      ), //i
+    .io_push_ready    (m_axis_2_toStream_queue_io_push_ready        ), //o
+    .io_push_payload  (m_axis_2_toStream_payload[167:0]             ), //i
+    .io_pop_valid     (m_axis_2_toStream_queue_io_pop_valid         ), //o
+    .io_pop_ready     (sg_translator_6_1_s_axis_tready              ), //i
+    .io_pop_payload   (m_axis_2_toStream_queue_io_pop_payload[167:0]), //o
+    .io_pushOccupancy (m_axis_2_toStream_queue_io_pushOccupancy[1:0]), //o
+    .io_popOccupancy  (m_axis_2_toStream_queue_io_popOccupancy[1:0] ), //o
+    .clk_dac2         (clk_dac2                                     ), //i
+    .rst_dac2         (rst_dac2                                     ), //i
+    .clk_adc2         (clk_adc2                                     )  //i
+  );
+  sg_translator_7 sg_translator_7_1 (
     .aresetn               (rst_dac2                                    ), //i
     .aclk                  (clk_dac2                                    ), //i
-    .s_axis_tvalid         (sg_translator_7_s_axis_tvalid               ), //i
+    .s_axis_tvalid         (axis_tmux_v1_0_1_m3_axis_tvalid             ), //i
     .s_axis_tready         (sg_translator_7_1_s_axis_tready             ), //o
-    .s_axis_tdata          (sg_translator_7_s_axis_tdata[167:0]         ), //i
+    .s_axis_tdata          (axis_tmux_v1_0_1_m3_axis_tdata[167:0]       ), //i
     .m_readout_axis_tvalid (sg_translator_7_1_m_readout_axis_tvalid     ), //o
-    .m_readout_axis_tready (sg_translator_7_m_readout_axis_tready       ), //i
+    .m_readout_axis_tready (m_readout_axis_rValidN                      ), //i
     .m_readout_axis_tdata  (sg_translator_7_1_m_readout_axis_tdata[87:0])  //o
   );
   assign qick_processor_0_s_dma_axis_tready_o = qickProcessor_s_dma_axis_tready_o;
@@ -2211,8 +2244,18 @@ module QickTop (
   assign qick_processor_0_s_axi_rdata = qickProcessor_s_axi_rdata;
   assign qick_processor_0_s_axi_rresp = qickProcessor_s_axi_rresp;
   assign qick_processor_0_m0_axis_tvalid = qickProcessor_m0_axis_tvalid;
+  always @(*) begin
+    qickProcessor_m0_axis_tready = qick_processor_0_m0_axis_tready;
+    qickProcessor_m0_axis_tready = sg_translator_0_1_s_axis_tready;
+  end
+
   assign qick_processor_0_m0_axis_tdata = qickProcessor_m0_axis_tdata;
   assign qick_processor_0_m1_axis_tvalid = qickProcessor_m1_axis_tvalid;
+  always @(*) begin
+    qickProcessor_m1_axis_tready = qick_processor_0_m1_axis_tready;
+    qickProcessor_m1_axis_tready = sg_translator_1_1_s_axis_tready;
+  end
+
   assign qick_processor_0_m1_axis_tdata = qickProcessor_m1_axis_tdata;
   assign qick_processor_0_m2_axis_tvalid = qickProcessor_m2_axis_tvalid;
   assign qick_processor_0_m2_axis_tdata = qickProcessor_m2_axis_tdata;
@@ -2385,11 +2428,31 @@ module QickTop (
   assign axis_readout_v2_0_m0_axis_tdata = axis_readout_v2_0_1_m0_axis_tdata;
   assign axis_readout_v2_0_m1_axis_tvalid = axis_readout_v2_0_1_m1_axis_tvalid;
   assign axis_readout_v2_0_m1_axis_tdata = axis_readout_v2_0_1_m1_axis_tdata;
+  always @(*) begin
+    axis_readout_v3_0_1_s0_axis_tvalid = axis_readout_v3_0_s0_axis_tvalid;
+    axis_readout_v3_0_1_s0_axis_tvalid = m_readout_axis_s2mPipe_m2sPipe_valid;
+  end
+
   assign axis_readout_v3_0_s0_axis_tready = axis_readout_v3_0_1_s0_axis_tready;
+  always @(*) begin
+    axis_readout_v3_0_1_s0_axis_tdata = axis_readout_v3_0_s0_axis_tdata;
+    axis_readout_v3_0_1_s0_axis_tdata = m_readout_axis_s2mPipe_m2sPipe_payload_data;
+  end
+
   assign axis_readout_v3_0_s1_axis_tready = axis_readout_v3_0_1_s1_axis_tready;
   assign axis_readout_v3_0_m_axis_tvalid = axis_readout_v3_0_1_m_axis_tvalid;
   assign axis_readout_v3_0_m_axis_tdata = axis_readout_v3_0_1_m_axis_tdata;
+  always @(*) begin
+    axis_dyn_readout_v1_0_1_s0_axis_tvalid = axis_dyn_readout_v1_0_s0_axis_tvalid;
+    axis_dyn_readout_v1_0_1_s0_axis_tvalid = sg_translator_6_1_m_readout_axis_tvalid;
+  end
+
   assign axis_dyn_readout_v1_0_s0_axis_tready = axis_dyn_readout_v1_0_1_s0_axis_tready;
+  always @(*) begin
+    axis_dyn_readout_v1_0_1_s0_axis_tdata = axis_dyn_readout_v1_0_s0_axis_tdata;
+    axis_dyn_readout_v1_0_1_s0_axis_tdata = sg_translator_6_1_m_readout_axis_tdata;
+  end
+
   assign axis_dyn_readout_v1_0_s1_axis_tready = axis_dyn_readout_v1_0_1_s1_axis_tready;
   assign axis_dyn_readout_v1_0_m0_axis_tvalid = axis_dyn_readout_v1_0_1_m0_axis_tvalid;
   assign axis_dyn_readout_v1_0_m0_axis_tdata = axis_dyn_readout_v1_0_1_m0_axis_tdata;
@@ -2404,7 +2467,17 @@ module QickTop (
   assign axis_signal_gen_v6_0_s_axi_rdata = axis_signal_gen_v6_0_1_s_axi_rdata;
   assign axis_signal_gen_v6_0_s_axi_rresp = axis_signal_gen_v6_0_1_s_axi_rresp;
   assign axis_signal_gen_v6_0_s0_axis_tready = axis_signal_gen_v6_0_1_s0_axis_tready;
+  always @(*) begin
+    axis_signal_gen_v6_0_1_s1_axis_tvalid = axis_signal_gen_v6_0_s1_axis_tvalid;
+    axis_signal_gen_v6_0_1_s1_axis_tvalid = m_gen_v6_axis_s2mPipe_m2sPipe_valid;
+  end
+
   assign axis_signal_gen_v6_0_s1_axis_tready = axis_signal_gen_v6_0_1_s1_axis_tready;
+  always @(*) begin
+    axis_signal_gen_v6_0_1_s1_axis_tdata = axis_signal_gen_v6_0_s1_axis_tdata;
+    axis_signal_gen_v6_0_1_s1_axis_tdata = m_gen_v6_axis_s2mPipe_m2sPipe_payload_data;
+  end
+
   assign axis_signal_gen_v6_0_m_axis_tvalid = axis_signal_gen_v6_0_1_m_axis_tvalid;
   assign axis_signal_gen_v6_0_m_axis_tdata = axis_signal_gen_v6_0_1_m_axis_tdata;
   assign axis_signal_gen_v6_1_s_axi_awready = axis_signal_gen_v6_1_1_s_axi_awready;
@@ -2416,7 +2489,17 @@ module QickTop (
   assign axis_signal_gen_v6_1_s_axi_rdata = axis_signal_gen_v6_1_1_s_axi_rdata;
   assign axis_signal_gen_v6_1_s_axi_rresp = axis_signal_gen_v6_1_1_s_axi_rresp;
   assign axis_signal_gen_v6_1_s0_axis_tready = axis_signal_gen_v6_1_1_s0_axis_tready;
+  always @(*) begin
+    axis_signal_gen_v6_1_1_s1_axis_tvalid = axis_signal_gen_v6_1_s1_axis_tvalid;
+    axis_signal_gen_v6_1_1_s1_axis_tvalid = m_gen_v6_axis_s2mPipe_m2sPipe_valid_1;
+  end
+
   assign axis_signal_gen_v6_1_s1_axis_tready = axis_signal_gen_v6_1_1_s1_axis_tready;
+  always @(*) begin
+    axis_signal_gen_v6_1_1_s1_axis_tdata = axis_signal_gen_v6_1_s1_axis_tdata;
+    axis_signal_gen_v6_1_1_s1_axis_tdata = m_gen_v6_axis_s2mPipe_m2sPipe_payload_data_1;
+  end
+
   assign axis_signal_gen_v6_1_m_axis_tvalid = axis_signal_gen_v6_1_1_m_axis_tvalid;
   assign axis_signal_gen_v6_1_m_axis_tdata = axis_signal_gen_v6_1_1_m_axis_tdata;
   assign axis_tmux_v1_0_s_axis_tready = axis_tmux_v1_0_1_s_axis_tready;
@@ -2432,10 +2515,25 @@ module QickTop (
   assign axis_cdcsync_v1_1_s1_axis_tready = axis_cdcsync_v1_1_1_s1_axis_tready;
   assign axis_cdcsync_v1_1_s2_axis_tready = axis_cdcsync_v1_1_1_s2_axis_tready;
   assign axis_cdcsync_v1_1_m0_axis_tvalid = axis_cdcsync_v1_1_1_m0_axis_tvalid;
+  always @(*) begin
+    axis_cdcsync_v1_1_1_m0_axis_tready = axis_cdcsync_v1_1_m0_axis_tready;
+    axis_cdcsync_v1_1_1_m0_axis_tready = sg_translator_3_1_s_axis_tready;
+  end
+
   assign axis_cdcsync_v1_1_m0_axis_tdata = axis_cdcsync_v1_1_1_m0_axis_tdata;
   assign axis_cdcsync_v1_1_m1_axis_tvalid = axis_cdcsync_v1_1_1_m1_axis_tvalid;
+  always @(*) begin
+    axis_cdcsync_v1_1_1_m1_axis_tready = axis_cdcsync_v1_1_m1_axis_tready;
+    axis_cdcsync_v1_1_1_m1_axis_tready = sg_translator_4_1_s_axis_tready;
+  end
+
   assign axis_cdcsync_v1_1_m1_axis_tdata = axis_cdcsync_v1_1_1_m1_axis_tdata;
   assign axis_cdcsync_v1_1_m2_axis_tvalid = axis_cdcsync_v1_1_1_m2_axis_tvalid;
+  always @(*) begin
+    axis_cdcsync_v1_1_1_m2_axis_tready = axis_cdcsync_v1_1_m2_axis_tready;
+    axis_cdcsync_v1_1_1_m2_axis_tready = sg_translator_5_1_s_axis_tready;
+  end
+
   assign axis_cdcsync_v1_1_m2_axis_tdata = axis_cdcsync_v1_1_1_m2_axis_tdata;
   assign axis_sg_mux8_v1_0_s_axi_awready = axis_sg_mux8_v1_0_1_s_axi_awready;
   assign axis_sg_mux8_v1_0_s_axi_wready = axis_sg_mux8_v1_0_1_s_axi_wready;
@@ -2445,7 +2543,17 @@ module QickTop (
   assign axis_sg_mux8_v1_0_s_axi_rvalid = axis_sg_mux8_v1_0_1_s_axi_rvalid;
   assign axis_sg_mux8_v1_0_s_axi_rdata = axis_sg_mux8_v1_0_1_s_axi_rdata;
   assign axis_sg_mux8_v1_0_s_axi_rresp = axis_sg_mux8_v1_0_1_s_axi_rresp;
+  always @(*) begin
+    axis_sg_mux8_v1_0_1_s_axis_tvalid = axis_sg_mux8_v1_0_s_axis_tvalid;
+    axis_sg_mux8_v1_0_1_s_axis_tvalid = m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_m2sPipe_valid;
+  end
+
   assign axis_sg_mux8_v1_0_s_axis_tready = axis_sg_mux8_v1_0_1_s_axis_tready;
+  always @(*) begin
+    axis_sg_mux8_v1_0_1_s_axis_tdata = axis_sg_mux8_v1_0_s_axis_tdata;
+    axis_sg_mux8_v1_0_1_s_axis_tdata = m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_m2sPipe_payload_data;
+  end
+
   assign axis_sg_mux8_v1_0_m_axis_tvalid = axis_sg_mux8_v1_0_1_m_axis_tvalid;
   assign axis_sg_mux8_v1_0_m_axis_tdata = axis_sg_mux8_v1_0_1_m_axis_tdata;
   assign axis_sg_mixmux8_v1_0_s_axi_awready = axis_sg_mixmux8_v1_0_1_s_axi_awready;
@@ -2456,7 +2564,17 @@ module QickTop (
   assign axis_sg_mixmux8_v1_0_s_axi_rvalid = axis_sg_mixmux8_v1_0_1_s_axi_rvalid;
   assign axis_sg_mixmux8_v1_0_s_axi_rdata = axis_sg_mixmux8_v1_0_1_s_axi_rdata;
   assign axis_sg_mixmux8_v1_0_s_axi_rresp = axis_sg_mixmux8_v1_0_1_s_axi_rresp;
+  always @(*) begin
+    axis_sg_mixmux8_v1_0_1_s_axis_tvalid = axis_sg_mixmux8_v1_0_s_axis_tvalid;
+    axis_sg_mixmux8_v1_0_1_s_axis_tvalid = sg_translator_5_1_m_mux4_axis_tvalid;
+  end
+
   assign axis_sg_mixmux8_v1_0_s_axis_tready = axis_sg_mixmux8_v1_0_1_s_axis_tready;
+  always @(*) begin
+    axis_sg_mixmux8_v1_0_1_s_axis_tdata = axis_sg_mixmux8_v1_0_s_axis_tdata;
+    axis_sg_mixmux8_v1_0_1_s_axis_tdata = sg_translator_5_1_m_mux4_axis_tdata;
+  end
+
   assign axis_sg_mixmux8_v1_0_m_axis_tvalid = axis_sg_mixmux8_v1_0_1_m_axis_tvalid;
   assign axis_sg_mixmux8_v1_0_m_axis_tdata = axis_sg_mixmux8_v1_0_1_m_axis_tdata;
   assign axis_sg_int4_v2_0_s_axi_awready = axis_sg_int4_v2_0_1_s_axi_awready;
@@ -2468,7 +2586,17 @@ module QickTop (
   assign axis_sg_int4_v2_0_s_axi_rdata = axis_sg_int4_v2_0_1_s_axi_rdata;
   assign axis_sg_int4_v2_0_s_axi_rresp = axis_sg_int4_v2_0_1_s_axi_rresp;
   assign axis_sg_int4_v2_0_s0_axis_tready = axis_sg_int4_v2_0_1_s0_axis_tready;
+  always @(*) begin
+    axis_sg_int4_v2_0_1_s1_axis_tvalid = axis_sg_int4_v2_0_s1_axis_tvalid;
+    axis_sg_int4_v2_0_1_s1_axis_tvalid = sg_translator_3_1_m_gen_v6_axis_tvalid;
+  end
+
   assign axis_sg_int4_v2_0_s1_axis_tready = axis_sg_int4_v2_0_1_s1_axis_tready;
+  always @(*) begin
+    axis_sg_int4_v2_0_1_s1_axis_tdata = axis_sg_int4_v2_0_s1_axis_tdata;
+    axis_sg_int4_v2_0_1_s1_axis_tdata = sg_translator_3_1_m_gen_v6_axis_tdata;
+  end
+
   assign axis_sg_int4_v2_0_m_axis_tvalid = axis_sg_int4_v2_0_1_m_axis_tvalid;
   assign axis_sg_int4_v2_0_m_axis_tdata = axis_sg_int4_v2_0_1_m_axis_tdata;
   assign axis_sg_int4_v2_1_s_axi_awready = axis_sg_int4_v2_1_1_s_axi_awready;
@@ -2480,7 +2608,17 @@ module QickTop (
   assign axis_sg_int4_v2_1_s_axi_rdata = axis_sg_int4_v2_1_1_s_axi_rdata;
   assign axis_sg_int4_v2_1_s_axi_rresp = axis_sg_int4_v2_1_1_s_axi_rresp;
   assign axis_sg_int4_v2_1_s0_axis_tready = axis_sg_int4_v2_1_1_s0_axis_tready;
+  always @(*) begin
+    axis_sg_int4_v2_1_1_s1_axis_tvalid = axis_sg_int4_v2_1_s1_axis_tvalid;
+    axis_sg_int4_v2_1_1_s1_axis_tvalid = sg_translator_4_1_m_gen_v6_axis_tvalid;
+  end
+
   assign axis_sg_int4_v2_1_s1_axis_tready = axis_sg_int4_v2_1_1_s1_axis_tready;
+  always @(*) begin
+    axis_sg_int4_v2_1_1_s1_axis_tdata = axis_sg_int4_v2_1_s1_axis_tdata;
+    axis_sg_int4_v2_1_1_s1_axis_tdata = sg_translator_4_1_m_gen_v6_axis_tdata;
+  end
+
   assign axis_sg_int4_v2_1_m_axis_tvalid = axis_sg_int4_v2_1_1_m_axis_tvalid;
   assign axis_sg_int4_v2_1_m_axis_tdata = axis_sg_int4_v2_1_1_m_axis_tdata;
   assign axis_resampler_2x1_v1_0_s_axis_tready = axis_resampler_2x1_v1_0_1_s_axis_tready;
@@ -2495,278 +2633,357 @@ module QickTop (
   assign axis_register_slice_2_s_axis_tready = axis_register_slice_2_1_s_axis_tready;
   assign axis_register_slice_2_m_axis_tvalid = axis_register_slice_2_1_m_axis_tvalid;
   assign axis_register_slice_2_m_axis_tdata = axis_register_slice_2_1_m_axis_tdata;
-  assign sg_translator_0_s_axis_tready = sg_translator_0_1_s_axis_tready;
-  assign sg_translator_0_m_gen_v6_axis_tvalid = sg_translator_0_1_m_gen_v6_axis_tvalid;
-  assign sg_translator_0_m_gen_v6_axis_tdata = sg_translator_0_1_m_gen_v6_axis_tdata;
-  assign sg_translator_1_s_axis_tready = sg_translator_1_1_s_axis_tready;
-  assign sg_translator_1_m_mux4_axis_tvalid = sg_translator_1_1_m_mux4_axis_tvalid;
-  assign sg_translator_1_m_mux4_axis_tdata = sg_translator_1_1_m_mux4_axis_tdata;
-  assign sg_translator_2_s_axis_tready = sg_translator_2_1_s_axis_tready;
-  assign sg_translator_2_m_gen_v6_axis_tvalid = sg_translator_2_1_m_gen_v6_axis_tvalid;
-  assign sg_translator_2_m_gen_v6_axis_tdata = sg_translator_2_1_m_gen_v6_axis_tdata;
-  assign sg_translator_3_s_axis_tready = sg_translator_3_1_s_axis_tready;
-  assign sg_translator_3_m_gen_v6_axis_tvalid = sg_translator_3_1_m_gen_v6_axis_tvalid;
-  assign sg_translator_3_m_gen_v6_axis_tdata = sg_translator_3_1_m_gen_v6_axis_tdata;
-  assign sg_translator_4_s_axis_tready = sg_translator_4_1_s_axis_tready;
-  assign sg_translator_4_m_gen_v6_axis_tvalid = sg_translator_4_1_m_gen_v6_axis_tvalid;
-  assign sg_translator_4_m_gen_v6_axis_tdata = sg_translator_4_1_m_gen_v6_axis_tdata;
-  assign sg_translator_5_s_axis_tready = sg_translator_5_1_s_axis_tready;
-  assign sg_translator_5_m_mux4_axis_tvalid = sg_translator_5_1_m_mux4_axis_tvalid;
-  assign sg_translator_5_m_mux4_axis_tdata = sg_translator_5_1_m_mux4_axis_tdata;
-  assign sg_translator_6_s_axis_tready = sg_translator_6_1_s_axis_tready;
-  assign sg_translator_6_m_readout_axis_tvalid = sg_translator_6_1_m_readout_axis_tvalid;
-  assign sg_translator_6_m_readout_axis_tdata = sg_translator_6_1_m_readout_axis_tdata;
-  assign sg_translator_7_s_axis_tready = sg_translator_7_1_s_axis_tready;
-  assign sg_translator_7_m_readout_axis_tvalid = sg_translator_7_1_m_readout_axis_tvalid;
-  assign sg_translator_7_m_readout_axis_tdata = sg_translator_7_1_m_readout_axis_tdata;
+  assign m_gen_v6_axis_s2mPipe_valid = (sg_translator_0_1_m_gen_v6_axis_tvalid || (! m_gen_v6_axis_rValidN));
+  assign m_gen_v6_axis_s2mPipe_payload_data = (m_gen_v6_axis_rValidN ? sg_translator_0_1_m_gen_v6_axis_tdata : m_gen_v6_axis_rData_data);
+  always @(*) begin
+    m_gen_v6_axis_s2mPipe_ready = m_gen_v6_axis_s2mPipe_m2sPipe_ready;
+    if(when_Stream_l477) begin
+      m_gen_v6_axis_s2mPipe_ready = 1'b1;
+    end
+  end
+
+  assign when_Stream_l477 = (! m_gen_v6_axis_s2mPipe_m2sPipe_valid);
+  assign m_gen_v6_axis_s2mPipe_m2sPipe_valid = m_gen_v6_axis_s2mPipe_rValid;
+  assign m_gen_v6_axis_s2mPipe_m2sPipe_payload_data = m_gen_v6_axis_s2mPipe_rData_data;
+  assign m_gen_v6_axis_s2mPipe_m2sPipe_ready = axis_signal_gen_v6_0_1_s1_axis_tready;
+  assign m_mux4_axis_s2mPipe_valid = (sg_translator_1_1_m_mux4_axis_tvalid || (! m_mux4_axis_rValidN));
+  assign m_mux4_axis_s2mPipe_payload_data = (m_mux4_axis_rValidN ? sg_translator_1_1_m_mux4_axis_tdata : m_mux4_axis_rData_data);
+  always @(*) begin
+    m_mux4_axis_s2mPipe_ready = m_mux4_axis_s2mPipe_m2sPipe_ready;
+    if(when_Stream_l477_1) begin
+      m_mux4_axis_s2mPipe_ready = 1'b1;
+    end
+  end
+
+  assign when_Stream_l477_1 = (! m_mux4_axis_s2mPipe_m2sPipe_valid);
+  assign m_mux4_axis_s2mPipe_m2sPipe_valid = m_mux4_axis_s2mPipe_rValid;
+  assign m_mux4_axis_s2mPipe_m2sPipe_payload_data = m_mux4_axis_s2mPipe_rData_data;
+  assign m_mux4_axis_s2mPipe_m2sPipe_ready = m_mux4_axis_s2mPipe_m2sPipe_rValidN;
+  assign m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_valid = (m_mux4_axis_s2mPipe_m2sPipe_valid || (! m_mux4_axis_s2mPipe_m2sPipe_rValidN));
+  assign m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_payload_data = (m_mux4_axis_s2mPipe_m2sPipe_rValidN ? m_mux4_axis_s2mPipe_m2sPipe_payload_data : m_mux4_axis_s2mPipe_m2sPipe_rData_data);
+  always @(*) begin
+    m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_ready = m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_m2sPipe_ready;
+    if(when_Stream_l477_2) begin
+      m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_ready = 1'b1;
+    end
+  end
+
+  assign when_Stream_l477_2 = (! m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_m2sPipe_valid);
+  assign m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_m2sPipe_valid = m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_rValid;
+  assign m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_m2sPipe_payload_data = m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_rData_data;
+  assign m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_m2sPipe_ready = axis_sg_mux8_v1_0_1_s_axis_tready;
+  assign m_gen_v6_axis_s2mPipe_valid_1 = (sg_translator_2_1_m_gen_v6_axis_tvalid || (! m_gen_v6_axis_rValidN_1));
+  assign m_gen_v6_axis_s2mPipe_payload_data_1 = (m_gen_v6_axis_rValidN_1 ? sg_translator_2_1_m_gen_v6_axis_tdata : m_gen_v6_axis_rData_data_1);
+  always @(*) begin
+    m_gen_v6_axis_s2mPipe_ready_1 = m_gen_v6_axis_s2mPipe_m2sPipe_ready_1;
+    if(when_Stream_l477_3) begin
+      m_gen_v6_axis_s2mPipe_ready_1 = 1'b1;
+    end
+  end
+
+  assign when_Stream_l477_3 = (! m_gen_v6_axis_s2mPipe_m2sPipe_valid_1);
+  assign m_gen_v6_axis_s2mPipe_m2sPipe_valid_1 = m_gen_v6_axis_s2mPipe_rValid_1;
+  assign m_gen_v6_axis_s2mPipe_m2sPipe_payload_data_1 = m_gen_v6_axis_s2mPipe_rData_data_1;
+  assign m_gen_v6_axis_s2mPipe_m2sPipe_ready_1 = axis_signal_gen_v6_1_1_s1_axis_tready;
+  assign m_axis_2_toStream_valid = axis_tmux_v1_0_1_m2_axis_tvalid;
+  assign m_axis_2_toStream_payload = axis_tmux_v1_0_1_m2_axis_tdata;
+  assign m_axis_2_toStream_ready = m_axis_2_toStream_queue_io_push_ready;
+  assign m_readout_axis_s2mPipe_valid = (sg_translator_7_1_m_readout_axis_tvalid || (! m_readout_axis_rValidN));
+  assign m_readout_axis_s2mPipe_payload_data = (m_readout_axis_rValidN ? sg_translator_7_1_m_readout_axis_tdata : m_readout_axis_rData_data);
+  always @(*) begin
+    m_readout_axis_s2mPipe_ready = m_readout_axis_s2mPipe_m2sPipe_ready;
+    if(when_Stream_l477_4) begin
+      m_readout_axis_s2mPipe_ready = 1'b1;
+    end
+  end
+
+  assign when_Stream_l477_4 = (! m_readout_axis_s2mPipe_m2sPipe_valid);
+  assign m_readout_axis_s2mPipe_m2sPipe_valid = m_readout_axis_s2mPipe_rValid;
+  assign m_readout_axis_s2mPipe_m2sPipe_payload_data = m_readout_axis_s2mPipe_rData_data;
+  assign m_readout_axis_s2mPipe_m2sPipe_ready = axis_readout_v3_0_1_s0_axis_tready;
+  always @(posedge clk_dac2 or posedge rst_dac2) begin
+    if(rst_dac2) begin
+      m_gen_v6_axis_rValidN <= 1'b1;
+      m_gen_v6_axis_s2mPipe_rValid <= 1'b0;
+      m_mux4_axis_rValidN <= 1'b1;
+      m_mux4_axis_s2mPipe_rValid <= 1'b0;
+      m_mux4_axis_s2mPipe_m2sPipe_rValidN <= 1'b1;
+      m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_rValid <= 1'b0;
+      m_gen_v6_axis_rValidN_1 <= 1'b1;
+      m_gen_v6_axis_s2mPipe_rValid_1 <= 1'b0;
+      m_readout_axis_rValidN <= 1'b1;
+      m_readout_axis_s2mPipe_rValid <= 1'b0;
+    end else begin
+      if(sg_translator_0_1_m_gen_v6_axis_tvalid) begin
+        m_gen_v6_axis_rValidN <= 1'b0;
+      end
+      if(m_gen_v6_axis_s2mPipe_ready) begin
+        m_gen_v6_axis_rValidN <= 1'b1;
+      end
+      if(m_gen_v6_axis_s2mPipe_ready) begin
+        m_gen_v6_axis_s2mPipe_rValid <= m_gen_v6_axis_s2mPipe_valid;
+      end
+      if(sg_translator_1_1_m_mux4_axis_tvalid) begin
+        m_mux4_axis_rValidN <= 1'b0;
+      end
+      if(m_mux4_axis_s2mPipe_ready) begin
+        m_mux4_axis_rValidN <= 1'b1;
+      end
+      if(m_mux4_axis_s2mPipe_ready) begin
+        m_mux4_axis_s2mPipe_rValid <= m_mux4_axis_s2mPipe_valid;
+      end
+      if(m_mux4_axis_s2mPipe_m2sPipe_valid) begin
+        m_mux4_axis_s2mPipe_m2sPipe_rValidN <= 1'b0;
+      end
+      if(m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_ready) begin
+        m_mux4_axis_s2mPipe_m2sPipe_rValidN <= 1'b1;
+      end
+      if(m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_ready) begin
+        m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_rValid <= m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_valid;
+      end
+      if(sg_translator_2_1_m_gen_v6_axis_tvalid) begin
+        m_gen_v6_axis_rValidN_1 <= 1'b0;
+      end
+      if(m_gen_v6_axis_s2mPipe_ready_1) begin
+        m_gen_v6_axis_rValidN_1 <= 1'b1;
+      end
+      if(m_gen_v6_axis_s2mPipe_ready_1) begin
+        m_gen_v6_axis_s2mPipe_rValid_1 <= m_gen_v6_axis_s2mPipe_valid_1;
+      end
+      if(sg_translator_7_1_m_readout_axis_tvalid) begin
+        m_readout_axis_rValidN <= 1'b0;
+      end
+      if(m_readout_axis_s2mPipe_ready) begin
+        m_readout_axis_rValidN <= 1'b1;
+      end
+      if(m_readout_axis_s2mPipe_ready) begin
+        m_readout_axis_s2mPipe_rValid <= m_readout_axis_s2mPipe_valid;
+      end
+    end
+  end
+
+  always @(posedge clk_dac2) begin
+    if(m_gen_v6_axis_rValidN) begin
+      m_gen_v6_axis_rData_data <= sg_translator_0_1_m_gen_v6_axis_tdata;
+    end
+    if(m_gen_v6_axis_s2mPipe_ready) begin
+      m_gen_v6_axis_s2mPipe_rData_data <= m_gen_v6_axis_s2mPipe_payload_data;
+    end
+    if(m_mux4_axis_rValidN) begin
+      m_mux4_axis_rData_data <= sg_translator_1_1_m_mux4_axis_tdata;
+    end
+    if(m_mux4_axis_s2mPipe_ready) begin
+      m_mux4_axis_s2mPipe_rData_data <= m_mux4_axis_s2mPipe_payload_data;
+    end
+    if(m_mux4_axis_s2mPipe_m2sPipe_ready) begin
+      m_mux4_axis_s2mPipe_m2sPipe_rData_data <= m_mux4_axis_s2mPipe_m2sPipe_payload_data;
+    end
+    if(m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_ready) begin
+      m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_rData_data <= m_mux4_axis_s2mPipe_m2sPipe_s2mPipe_payload_data;
+    end
+    if(m_gen_v6_axis_rValidN_1) begin
+      m_gen_v6_axis_rData_data_1 <= sg_translator_2_1_m_gen_v6_axis_tdata;
+    end
+    if(m_gen_v6_axis_s2mPipe_ready_1) begin
+      m_gen_v6_axis_s2mPipe_rData_data_1 <= m_gen_v6_axis_s2mPipe_payload_data_1;
+    end
+    if(m_readout_axis_rValidN) begin
+      m_readout_axis_rData_data <= sg_translator_7_1_m_readout_axis_tdata;
+    end
+    if(m_readout_axis_s2mPipe_ready) begin
+      m_readout_axis_s2mPipe_rData_data <= m_readout_axis_s2mPipe_payload_data;
+    end
+  end
+
 
 endmodule
 
-module QickSgTranslator_7 (
-  input  wire          aresetn,
-  input  wire          aclk,
-  input  wire          s_axis_tvalid,
-  output wire          s_axis_tready,
-  input  wire [167:0]  s_axis_tdata,
-  output wire          m_readout_axis_tvalid,
-  input  wire          m_readout_axis_tready,
-  output wire [87:0]   m_readout_axis_tdata
+module StreamFifoCC_7 (
+  input  wire          io_push_valid,
+  output wire          io_push_ready,
+  input  wire [167:0]  io_push_payload,
+  output wire          io_pop_valid,
+  input  wire          io_pop_ready,
+  output wire [167:0]  io_pop_payload,
+  output wire [1:0]    io_pushOccupancy,
+  output wire [1:0]    io_popOccupancy,
+  input  wire          clk_dac2,
+  input  wire          rst_dac2,
+  input  wire          clk_adc2
 );
 
-  wire                sgTranslator_s_axis_tready;
-  wire                sgTranslator_m_readout_axis_tvalid;
-  wire       [87:0]   sgTranslator_m_readout_axis_tdata;
+  reg        [167:0]  ram_spinal_port1;
+  wire       [1:0]    popToPushGray_buffercc_io_dataOut;
+  wire                toplevel_rst_dac2_asyncAssertSyncDeassert_buffercc_io_dataOut;
+  wire       [1:0]    pushToPopGray_buffercc_io_dataOut;
+  wire       [1:0]    _zz_pushCC_pushPtrGray;
+  wire       [0:0]    _zz_ram_port;
+  wire       [1:0]    _zz_popCC_popPtrGray;
+  reg                 _zz_1;
+  wire       [1:0]    popToPushGray;
+  wire       [1:0]    pushToPopGray;
+  reg        [1:0]    pushCC_pushPtr;
+  wire       [1:0]    pushCC_pushPtrPlus;
+  wire                io_push_fire;
+  (* altera_attribute = "-name ADV_NETLIST_OPT_ALLOWED NEVER_ALLOW" *) reg        [1:0]    pushCC_pushPtrGray;
+  wire       [1:0]    pushCC_popPtrGray;
+  wire                pushCC_full;
+  wire                _zz_io_pushOccupancy;
+  wire                toplevel_rst_dac2_asyncAssertSyncDeassert;
+  wire                toplevel_rst_dac2_synchronized;
+  reg        [1:0]    popCC_popPtr;
+  (* keep , syn_keep *) wire       [1:0]    popCC_popPtrPlus /* synthesis syn_keep = 1 */ ;
+  wire       [1:0]    popCC_popPtrGray;
+  wire       [1:0]    popCC_pushPtrGray;
+  wire                popCC_addressGen_valid;
+  reg                 popCC_addressGen_ready;
+  wire       [0:0]    popCC_addressGen_payload;
+  wire                popCC_empty;
+  wire                popCC_addressGen_fire;
+  wire                popCC_readArbitation_valid;
+  wire                popCC_readArbitation_ready;
+  wire       [0:0]    popCC_readArbitation_payload;
+  reg                 popCC_addressGen_rValid;
+  reg        [0:0]    popCC_addressGen_rData;
+  wire                when_Stream_l477;
+  wire                popCC_readPort_cmd_valid;
+  wire       [0:0]    popCC_readPort_cmd_payload;
+  wire       [167:0]  popCC_readPort_rsp;
+  wire                popCC_addressGen_toFlowFire_valid;
+  wire       [0:0]    popCC_addressGen_toFlowFire_payload;
+  wire                popCC_readArbitation_translated_valid;
+  wire                popCC_readArbitation_translated_ready;
+  wire       [167:0]  popCC_readArbitation_translated_payload;
+  wire                popCC_readArbitation_fire;
+  (* altera_attribute = "-name ADV_NETLIST_OPT_ALLOWED NEVER_ALLOW" *) reg        [1:0]    popCC_ptrToPush;
+  reg        [1:0]    popCC_ptrToOccupancy;
+  wire                _zz_io_popOccupancy;
+  reg [167:0] ram [0:1];
 
-  sg_translator_7 sgTranslator (
-    .aresetn               (aresetn                                ), //i
-    .aclk                  (aclk                                   ), //i
-    .s_axis_tvalid         (s_axis_tvalid                          ), //i
-    .s_axis_tready         (sgTranslator_s_axis_tready             ), //o
-    .s_axis_tdata          (s_axis_tdata[167:0]                    ), //i
-    .m_readout_axis_tvalid (sgTranslator_m_readout_axis_tvalid     ), //o
-    .m_readout_axis_tready (m_readout_axis_tready                  ), //i
-    .m_readout_axis_tdata  (sgTranslator_m_readout_axis_tdata[87:0])  //o
+  assign _zz_pushCC_pushPtrGray = (pushCC_pushPtrPlus >>> 1'b1);
+  assign _zz_ram_port = pushCC_pushPtr[0:0];
+  assign _zz_popCC_popPtrGray = (popCC_popPtr >>> 1'b1);
+  always @(posedge clk_dac2) begin
+    if(_zz_1) begin
+      ram[_zz_ram_port] <= io_push_payload;
+    end
+  end
+
+  always @(posedge clk_adc2) begin
+    if(popCC_readPort_cmd_valid) begin
+      ram_spinal_port1 <= ram[popCC_readPort_cmd_payload];
+    end
+  end
+
+  (* keep_hierarchy = "TRUE" *) BufferCC_15 popToPushGray_buffercc (
+    .io_dataIn  (popToPushGray[1:0]                    ), //i
+    .io_dataOut (popToPushGray_buffercc_io_dataOut[1:0]), //o
+    .clk_dac2   (clk_dac2                              ), //i
+    .rst_dac2   (rst_dac2                              )  //i
   );
-  assign s_axis_tready = sgTranslator_s_axis_tready;
-  assign m_readout_axis_tvalid = sgTranslator_m_readout_axis_tvalid;
-  assign m_readout_axis_tdata = sgTranslator_m_readout_axis_tdata;
-
-endmodule
-
-module QickSgTranslator_6 (
-  input  wire          aresetn,
-  input  wire          aclk,
-  input  wire          s_axis_tvalid,
-  output wire          s_axis_tready,
-  input  wire [167:0]  s_axis_tdata,
-  output wire          m_readout_axis_tvalid,
-  input  wire          m_readout_axis_tready,
-  output wire [87:0]   m_readout_axis_tdata
-);
-
-  wire                sgTranslator_s_axis_tready;
-  wire                sgTranslator_m_readout_axis_tvalid;
-  wire       [87:0]   sgTranslator_m_readout_axis_tdata;
-
-  sg_translator_6 sgTranslator (
-    .aresetn               (aresetn                                ), //i
-    .aclk                  (aclk                                   ), //i
-    .s_axis_tvalid         (s_axis_tvalid                          ), //i
-    .s_axis_tready         (sgTranslator_s_axis_tready             ), //o
-    .s_axis_tdata          (s_axis_tdata[167:0]                    ), //i
-    .m_readout_axis_tvalid (sgTranslator_m_readout_axis_tvalid     ), //o
-    .m_readout_axis_tready (m_readout_axis_tready                  ), //i
-    .m_readout_axis_tdata  (sgTranslator_m_readout_axis_tdata[87:0])  //o
+  (* keep_hierarchy = "TRUE" *) BufferCC_16 toplevel_rst_dac2_asyncAssertSyncDeassert_buffercc (
+    .io_dataIn  (toplevel_rst_dac2_asyncAssertSyncDeassert                    ), //i
+    .io_dataOut (toplevel_rst_dac2_asyncAssertSyncDeassert_buffercc_io_dataOut), //o
+    .clk_adc2   (clk_adc2                                                     ), //i
+    .rst_dac2   (rst_dac2                                                     )  //i
   );
-  assign s_axis_tready = sgTranslator_s_axis_tready;
-  assign m_readout_axis_tvalid = sgTranslator_m_readout_axis_tvalid;
-  assign m_readout_axis_tdata = sgTranslator_m_readout_axis_tdata;
-
-endmodule
-
-module QickSgTranslator_5 (
-  input  wire          aresetn,
-  input  wire          aclk,
-  input  wire          s_axis_tvalid,
-  output wire          s_axis_tready,
-  input  wire [167:0]  s_axis_tdata,
-  output wire          m_mux4_axis_tvalid,
-  input  wire          m_mux4_axis_tready,
-  output wire [39:0]   m_mux4_axis_tdata
-);
-
-  wire                sgTranslator_s_axis_tready;
-  wire                sgTranslator_m_mux4_axis_tvalid;
-  wire       [39:0]   sgTranslator_m_mux4_axis_tdata;
-
-  sg_translator_5 sgTranslator (
-    .aresetn            (aresetn                             ), //i
-    .aclk               (aclk                                ), //i
-    .s_axis_tvalid      (s_axis_tvalid                       ), //i
-    .s_axis_tready      (sgTranslator_s_axis_tready          ), //o
-    .s_axis_tdata       (s_axis_tdata[167:0]                 ), //i
-    .m_mux4_axis_tvalid (sgTranslator_m_mux4_axis_tvalid     ), //o
-    .m_mux4_axis_tready (m_mux4_axis_tready                  ), //i
-    .m_mux4_axis_tdata  (sgTranslator_m_mux4_axis_tdata[39:0])  //o
+  (* keep_hierarchy = "TRUE" *) BufferCC_17 pushToPopGray_buffercc (
+    .io_dataIn                      (pushToPopGray[1:0]                    ), //i
+    .io_dataOut                     (pushToPopGray_buffercc_io_dataOut[1:0]), //o
+    .clk_adc2                       (clk_adc2                              ), //i
+    .toplevel_rst_dac2_synchronized (toplevel_rst_dac2_synchronized        )  //i
   );
-  assign s_axis_tready = sgTranslator_s_axis_tready;
-  assign m_mux4_axis_tvalid = sgTranslator_m_mux4_axis_tvalid;
-  assign m_mux4_axis_tdata = sgTranslator_m_mux4_axis_tdata;
+  always @(*) begin
+    _zz_1 = 1'b0;
+    if(io_push_fire) begin
+      _zz_1 = 1'b1;
+    end
+  end
 
-endmodule
+  assign pushCC_pushPtrPlus = (pushCC_pushPtr + 2'b01);
+  assign io_push_fire = (io_push_valid && io_push_ready);
+  assign pushCC_popPtrGray = popToPushGray_buffercc_io_dataOut;
+  assign pushCC_full = ((pushCC_pushPtrGray[1 : 0] == (~ pushCC_popPtrGray[1 : 0])) && 1'b1);
+  assign io_push_ready = (! pushCC_full);
+  assign _zz_io_pushOccupancy = pushCC_popPtrGray[1];
+  assign io_pushOccupancy = (pushCC_pushPtr - {_zz_io_pushOccupancy,(pushCC_popPtrGray[0] ^ _zz_io_pushOccupancy)});
+  assign toplevel_rst_dac2_asyncAssertSyncDeassert = (1'b0 ^ 1'b0);
+  assign toplevel_rst_dac2_synchronized = toplevel_rst_dac2_asyncAssertSyncDeassert_buffercc_io_dataOut;
+  assign popCC_popPtrPlus = (popCC_popPtr + 2'b01);
+  assign popCC_popPtrGray = (_zz_popCC_popPtrGray ^ popCC_popPtr);
+  assign popCC_pushPtrGray = pushToPopGray_buffercc_io_dataOut;
+  assign popCC_empty = (popCC_popPtrGray == popCC_pushPtrGray);
+  assign popCC_addressGen_valid = (! popCC_empty);
+  assign popCC_addressGen_payload = popCC_popPtr[0:0];
+  assign popCC_addressGen_fire = (popCC_addressGen_valid && popCC_addressGen_ready);
+  always @(*) begin
+    popCC_addressGen_ready = popCC_readArbitation_ready;
+    if(when_Stream_l477) begin
+      popCC_addressGen_ready = 1'b1;
+    end
+  end
 
-module QickSgTranslator_4 (
-  input  wire          aresetn,
-  input  wire          aclk,
-  input  wire          s_axis_tvalid,
-  output wire          s_axis_tready,
-  input  wire [167:0]  s_axis_tdata,
-  output wire          m_gen_v6_axis_tvalid,
-  input  wire          m_gen_v6_axis_tready,
-  output wire [159:0]  m_gen_v6_axis_tdata
-);
+  assign when_Stream_l477 = (! popCC_readArbitation_valid);
+  assign popCC_readArbitation_valid = popCC_addressGen_rValid;
+  assign popCC_readArbitation_payload = popCC_addressGen_rData;
+  assign popCC_readPort_rsp = ram_spinal_port1;
+  assign popCC_addressGen_toFlowFire_valid = popCC_addressGen_fire;
+  assign popCC_addressGen_toFlowFire_payload = popCC_addressGen_payload;
+  assign popCC_readPort_cmd_valid = popCC_addressGen_toFlowFire_valid;
+  assign popCC_readPort_cmd_payload = popCC_addressGen_toFlowFire_payload;
+  assign popCC_readArbitation_translated_valid = popCC_readArbitation_valid;
+  assign popCC_readArbitation_ready = popCC_readArbitation_translated_ready;
+  assign popCC_readArbitation_translated_payload = popCC_readPort_rsp;
+  assign io_pop_valid = popCC_readArbitation_translated_valid;
+  assign popCC_readArbitation_translated_ready = io_pop_ready;
+  assign io_pop_payload = popCC_readArbitation_translated_payload;
+  assign popCC_readArbitation_fire = (popCC_readArbitation_valid && popCC_readArbitation_ready);
+  assign _zz_io_popOccupancy = popCC_pushPtrGray[1];
+  assign io_popOccupancy = ({_zz_io_popOccupancy,(popCC_pushPtrGray[0] ^ _zz_io_popOccupancy)} - popCC_ptrToOccupancy);
+  assign pushToPopGray = pushCC_pushPtrGray;
+  assign popToPushGray = popCC_ptrToPush;
+  always @(posedge clk_dac2 or posedge rst_dac2) begin
+    if(rst_dac2) begin
+      pushCC_pushPtr <= 2'b00;
+      pushCC_pushPtrGray <= 2'b00;
+    end else begin
+      if(io_push_fire) begin
+        pushCC_pushPtrGray <= (_zz_pushCC_pushPtrGray ^ pushCC_pushPtrPlus);
+      end
+      if(io_push_fire) begin
+        pushCC_pushPtr <= pushCC_pushPtrPlus;
+      end
+    end
+  end
 
-  wire                sgTranslator_s_axis_tready;
-  wire                sgTranslator_m_gen_v6_axis_tvalid;
-  wire       [159:0]  sgTranslator_m_gen_v6_axis_tdata;
+  always @(posedge clk_adc2 or posedge toplevel_rst_dac2_synchronized) begin
+    if(toplevel_rst_dac2_synchronized) begin
+      popCC_popPtr <= 2'b00;
+      popCC_addressGen_rValid <= 1'b0;
+      popCC_ptrToPush <= 2'b00;
+      popCC_ptrToOccupancy <= 2'b00;
+    end else begin
+      if(popCC_addressGen_fire) begin
+        popCC_popPtr <= popCC_popPtrPlus;
+      end
+      if(popCC_addressGen_ready) begin
+        popCC_addressGen_rValid <= popCC_addressGen_valid;
+      end
+      if(popCC_readArbitation_fire) begin
+        popCC_ptrToPush <= popCC_popPtrGray;
+      end
+      if(popCC_readArbitation_fire) begin
+        popCC_ptrToOccupancy <= popCC_popPtr;
+      end
+    end
+  end
 
-  sg_translator_4 sgTranslator (
-    .aresetn              (aresetn                                ), //i
-    .aclk                 (aclk                                   ), //i
-    .s_axis_tvalid        (s_axis_tvalid                          ), //i
-    .s_axis_tready        (sgTranslator_s_axis_tready             ), //o
-    .s_axis_tdata         (s_axis_tdata[167:0]                    ), //i
-    .m_gen_v6_axis_tvalid (sgTranslator_m_gen_v6_axis_tvalid      ), //o
-    .m_gen_v6_axis_tready (m_gen_v6_axis_tready                   ), //i
-    .m_gen_v6_axis_tdata  (sgTranslator_m_gen_v6_axis_tdata[159:0])  //o
-  );
-  assign s_axis_tready = sgTranslator_s_axis_tready;
-  assign m_gen_v6_axis_tvalid = sgTranslator_m_gen_v6_axis_tvalid;
-  assign m_gen_v6_axis_tdata = sgTranslator_m_gen_v6_axis_tdata;
+  always @(posedge clk_adc2) begin
+    if(popCC_addressGen_ready) begin
+      popCC_addressGen_rData <= popCC_addressGen_payload;
+    end
+  end
 
-endmodule
-
-module QickSgTranslator_3 (
-  input  wire          aresetn,
-  input  wire          aclk,
-  input  wire          s_axis_tvalid,
-  output wire          s_axis_tready,
-  input  wire [167:0]  s_axis_tdata,
-  output wire          m_gen_v6_axis_tvalid,
-  input  wire          m_gen_v6_axis_tready,
-  output wire [159:0]  m_gen_v6_axis_tdata
-);
-
-  wire                sgTranslator_s_axis_tready;
-  wire                sgTranslator_m_gen_v6_axis_tvalid;
-  wire       [159:0]  sgTranslator_m_gen_v6_axis_tdata;
-
-  sg_translator_3 sgTranslator (
-    .aresetn              (aresetn                                ), //i
-    .aclk                 (aclk                                   ), //i
-    .s_axis_tvalid        (s_axis_tvalid                          ), //i
-    .s_axis_tready        (sgTranslator_s_axis_tready             ), //o
-    .s_axis_tdata         (s_axis_tdata[167:0]                    ), //i
-    .m_gen_v6_axis_tvalid (sgTranslator_m_gen_v6_axis_tvalid      ), //o
-    .m_gen_v6_axis_tready (m_gen_v6_axis_tready                   ), //i
-    .m_gen_v6_axis_tdata  (sgTranslator_m_gen_v6_axis_tdata[159:0])  //o
-  );
-  assign s_axis_tready = sgTranslator_s_axis_tready;
-  assign m_gen_v6_axis_tvalid = sgTranslator_m_gen_v6_axis_tvalid;
-  assign m_gen_v6_axis_tdata = sgTranslator_m_gen_v6_axis_tdata;
-
-endmodule
-
-module QickSgTranslator_2 (
-  input  wire          aresetn,
-  input  wire          aclk,
-  input  wire          s_axis_tvalid,
-  output wire          s_axis_tready,
-  input  wire [167:0]  s_axis_tdata,
-  output wire          m_gen_v6_axis_tvalid,
-  input  wire          m_gen_v6_axis_tready,
-  output wire [159:0]  m_gen_v6_axis_tdata
-);
-
-  wire                sgTranslator_s_axis_tready;
-  wire                sgTranslator_m_gen_v6_axis_tvalid;
-  wire       [159:0]  sgTranslator_m_gen_v6_axis_tdata;
-
-  sg_translator_2 sgTranslator (
-    .aresetn              (aresetn                                ), //i
-    .aclk                 (aclk                                   ), //i
-    .s_axis_tvalid        (s_axis_tvalid                          ), //i
-    .s_axis_tready        (sgTranslator_s_axis_tready             ), //o
-    .s_axis_tdata         (s_axis_tdata[167:0]                    ), //i
-    .m_gen_v6_axis_tvalid (sgTranslator_m_gen_v6_axis_tvalid      ), //o
-    .m_gen_v6_axis_tready (m_gen_v6_axis_tready                   ), //i
-    .m_gen_v6_axis_tdata  (sgTranslator_m_gen_v6_axis_tdata[159:0])  //o
-  );
-  assign s_axis_tready = sgTranslator_s_axis_tready;
-  assign m_gen_v6_axis_tvalid = sgTranslator_m_gen_v6_axis_tvalid;
-  assign m_gen_v6_axis_tdata = sgTranslator_m_gen_v6_axis_tdata;
-
-endmodule
-
-module QickSgTranslator_1 (
-  input  wire          aresetn,
-  input  wire          aclk,
-  input  wire          s_axis_tvalid,
-  output wire          s_axis_tready,
-  input  wire [167:0]  s_axis_tdata,
-  output wire          m_mux4_axis_tvalid,
-  input  wire          m_mux4_axis_tready,
-  output wire [39:0]   m_mux4_axis_tdata
-);
-
-  wire                sgTranslator_s_axis_tready;
-  wire                sgTranslator_m_mux4_axis_tvalid;
-  wire       [39:0]   sgTranslator_m_mux4_axis_tdata;
-
-  sg_translator_1 sgTranslator (
-    .aresetn            (aresetn                             ), //i
-    .aclk               (aclk                                ), //i
-    .s_axis_tvalid      (s_axis_tvalid                       ), //i
-    .s_axis_tready      (sgTranslator_s_axis_tready          ), //o
-    .s_axis_tdata       (s_axis_tdata[167:0]                 ), //i
-    .m_mux4_axis_tvalid (sgTranslator_m_mux4_axis_tvalid     ), //o
-    .m_mux4_axis_tready (m_mux4_axis_tready                  ), //i
-    .m_mux4_axis_tdata  (sgTranslator_m_mux4_axis_tdata[39:0])  //o
-  );
-  assign s_axis_tready = sgTranslator_s_axis_tready;
-  assign m_mux4_axis_tvalid = sgTranslator_m_mux4_axis_tvalid;
-  assign m_mux4_axis_tdata = sgTranslator_m_mux4_axis_tdata;
-
-endmodule
-
-module QickSgTranslator (
-  input  wire          aresetn,
-  input  wire          aclk,
-  input  wire          s_axis_tvalid,
-  output wire          s_axis_tready,
-  input  wire [167:0]  s_axis_tdata,
-  output wire          m_gen_v6_axis_tvalid,
-  input  wire          m_gen_v6_axis_tready,
-  output wire [159:0]  m_gen_v6_axis_tdata
-);
-
-  wire                sgTranslator_s_axis_tready;
-  wire                sgTranslator_m_gen_v6_axis_tvalid;
-  wire       [159:0]  sgTranslator_m_gen_v6_axis_tdata;
-
-  sg_translator_0 sgTranslator (
-    .aresetn              (aresetn                                ), //i
-    .aclk                 (aclk                                   ), //i
-    .s_axis_tvalid        (s_axis_tvalid                          ), //i
-    .s_axis_tready        (sgTranslator_s_axis_tready             ), //o
-    .s_axis_tdata         (s_axis_tdata[167:0]                    ), //i
-    .m_gen_v6_axis_tvalid (sgTranslator_m_gen_v6_axis_tvalid      ), //o
-    .m_gen_v6_axis_tready (m_gen_v6_axis_tready                   ), //i
-    .m_gen_v6_axis_tdata  (sgTranslator_m_gen_v6_axis_tdata[159:0])  //o
-  );
-  assign s_axis_tready = sgTranslator_s_axis_tready;
-  assign m_gen_v6_axis_tvalid = sgTranslator_m_gen_v6_axis_tvalid;
-  assign m_gen_v6_axis_tdata = sgTranslator_m_gen_v6_axis_tdata;
 
 endmodule
 
@@ -3211,7 +3428,7 @@ module AxisSgMux8 (
   input  wire          aresetn,
   input  wire          s_axis_tvalid,
   output wire          s_axis_tready,
-  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [31:0]   s_axis_tdata,
+  (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) input  wire [39:0]   s_axis_tdata,
   output wire          m_axis_tvalid,
   input  wire          m_axis_tready,
   (* X_INTERFACE_PARAMETER = "FREQ_HZ 614400000" *) output wire [255:0]  m_axis_tdata
@@ -3255,7 +3472,7 @@ module AxisSgMux8 (
     .aresetn       (aresetn                         ), //i
     .s_axis_tvalid (s_axis_tvalid                   ), //i
     .s_axis_tready (axisSgMux8_1_s_axis_tready      ), //o
-    .s_axis_tdata  (s_axis_tdata[31:0]              ), //i
+    .s_axis_tdata  (s_axis_tdata[39:0]              ), //i
     .m_axis_tvalid (axisSgMux8_1_m_axis_tvalid      ), //o
     .m_axis_tready (m_axis_tready                   ), //i
     .m_axis_tdata  (axisSgMux8_1_m_axis_tdata[255:0])  //o
@@ -5239,6 +5456,78 @@ module AxisAvgBuffer (
   assign m1_axis_tlast = axisAvgBuffer_7_m1_axis_tlast;
   assign m2_axis_tvalid = axisAvgBuffer_7_m2_axis_tvalid;
   assign m2_axis_tdata = axisAvgBuffer_7_m2_axis_tdata;
+
+endmodule
+
+module BufferCC_17 (
+  input  wire [1:0]    io_dataIn,
+  output wire [1:0]    io_dataOut,
+  input  wire          clk_adc2,
+  input  wire          toplevel_rst_dac2_synchronized
+);
+
+  (* async_reg = "true" , altera_attribute = "-name ADV_NETLIST_OPT_ALLOWED NEVER_ALLOW" *) reg        [1:0]    buffers_0;
+  (* async_reg = "true" *) reg        [1:0]    buffers_1;
+
+  assign io_dataOut = buffers_1;
+  always @(posedge clk_adc2 or posedge toplevel_rst_dac2_synchronized) begin
+    if(toplevel_rst_dac2_synchronized) begin
+      buffers_0 <= 2'b00;
+      buffers_1 <= 2'b00;
+    end else begin
+      buffers_0 <= io_dataIn;
+      buffers_1 <= buffers_0;
+    end
+  end
+
+
+endmodule
+
+module BufferCC_16 (
+  input  wire          io_dataIn,
+  output wire          io_dataOut,
+  input  wire          clk_adc2,
+  input  wire          rst_dac2
+);
+
+  (* async_reg = "true" *) reg                 buffers_0;
+  (* async_reg = "true" *) reg                 buffers_1;
+
+  assign io_dataOut = buffers_1;
+  always @(posedge clk_adc2 or posedge rst_dac2) begin
+    if(rst_dac2) begin
+      buffers_0 <= 1'b1;
+      buffers_1 <= 1'b1;
+    end else begin
+      buffers_0 <= io_dataIn;
+      buffers_1 <= buffers_0;
+    end
+  end
+
+
+endmodule
+
+module BufferCC_15 (
+  input  wire [1:0]    io_dataIn,
+  output wire [1:0]    io_dataOut,
+  input  wire          clk_dac2,
+  input  wire          rst_dac2
+);
+
+  (* async_reg = "true" , altera_attribute = "-name ADV_NETLIST_OPT_ALLOWED NEVER_ALLOW" *) reg        [1:0]    buffers_0;
+  (* async_reg = "true" *) reg        [1:0]    buffers_1;
+
+  assign io_dataOut = buffers_1;
+  always @(posedge clk_dac2 or posedge rst_dac2) begin
+    if(rst_dac2) begin
+      buffers_0 <= 2'b00;
+      buffers_1 <= 2'b00;
+    end else begin
+      buffers_0 <= io_dataIn;
+      buffers_1 <= buffers_0;
+    end
+  end
+
 
 endmodule
 

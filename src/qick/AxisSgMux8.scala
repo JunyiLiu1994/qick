@@ -31,7 +31,7 @@ case class AxisSgMux8IO(N_DDS: Int) extends Bundle {
   s_axi_lite.r.ready.setName("s_axi_rready")
   val aclk = in Bool()
   val aresetn = in Bool()
-  val s_axis = slave port Axi4Stream(Axi4StreamConfig(dataWidth = 32 / 8))
+  val s_axis = slave port Axi4Stream(Axi4StreamConfig(dataWidth = 40 / 8))
   s_axis.payload.data.setName("s_axis_tdata")
   s_axis.payload.data.addAttribute("X_INTERFACE_PARAMETER", "FREQ_HZ 614400000")
   s_axis.valid.setName("s_axis_tvalid")
