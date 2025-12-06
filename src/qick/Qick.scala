@@ -466,17 +466,11 @@ case class QickTop() extends Component {
     w.setName("axis_readout_v3_0_" + w.getName())
   }
   val axis_readout_v3_0 = AxisReadoutV3()
+  axis_readout_v3_0.io.allowOverride()
   axis_readout_v3_0.axisReadout.setDefinitionName("axis_readout_v3_0")
   axis_readout_v3_0_io <> axis_readout_v3_0.io
-  removeAssignmentsAll(Seq(
-    axis_readout_v3_0.io.aclk,
-    axis_readout_v3_0.io.aresetn
-  ))
   axis_readout_v3_0.io.aclk := clk_dac2
   axis_readout_v3_0.io.aresetn := rst_dac2
-  setAsDirectionlessAll(Seq(
-    axis_readout_v3_0_io.aclk,
-    axis_readout_v3_0_io.aresetn))
   /* -- axis_dyn_readout_v1_0 -- */
   val axis_dyn_readout_v1_0_io = AxisDynReadoutIO()
   axis_dyn_readout_v1_0_io.setName("")
@@ -506,26 +500,13 @@ case class QickTop() extends Component {
   val axis_signal_gen_v6_0 = AxisSignalGenV6(10)
   axis_signal_gen_v6_0.axisSignalGenV6.setDefinitionName("axis_signal_gen_v6_0")
   axis_signal_gen_v6_0_io <> axis_signal_gen_v6_0.io
-  removeAssignmentsAll(Seq(
-    axis_signal_gen_v6_0.io.s_axi_aclk,
-    axis_signal_gen_v6_0.io.s0_axis_aclk,
-    axis_signal_gen_v6_0.io.aclk,
-    axis_signal_gen_v6_0.io.s_axi_aresetn,
-    axis_signal_gen_v6_0.io.s0_axis_aresetn,
-    axis_signal_gen_v6_0.io.aresetn))
+  axis_signal_gen_v6_0.io.allowOverride()
   axis_signal_gen_v6_0.io.s_axi_aclk := clk_pl
   axis_signal_gen_v6_0.io.s0_axis_aclk := clk_pl
   axis_signal_gen_v6_0.io.aclk := clk_dac2
   axis_signal_gen_v6_0.io.s_axi_aresetn := rst_100
   axis_signal_gen_v6_0.io.s0_axis_aresetn := rst_100
   axis_signal_gen_v6_0.io.aresetn := rst_dac2
-  setAsDirectionlessAll(Seq(
-    axis_signal_gen_v6_0_io.s_axi_aclk,
-    axis_signal_gen_v6_0_io.s0_axis_aclk,
-    axis_signal_gen_v6_0_io.aclk,
-    axis_signal_gen_v6_0_io.s_axi_aresetn,
-    axis_signal_gen_v6_0_io.s0_axis_aresetn,
-    axis_signal_gen_v6_0_io.aresetn))
   /* -- axis_signal_gen_v6_1 -- */
   val axis_signal_gen_v6_1_io = AxisSignalGenV6IO(9)
   axis_signal_gen_v6_1_io.setName("")
@@ -536,6 +517,7 @@ case class QickTop() extends Component {
     w.setName("axis_signal_gen_v6_1_" + w.getName())
   }
   val axis_signal_gen_v6_1 = AxisSignalGenV6(9)
+  axis_signal_gen_v6_1.io.allowOverride()
   axis_signal_gen_v6_1.axisSignalGenV6.setDefinitionName("axis_signal_gen_v6_1")
   axis_signal_gen_v6_1_io <> axis_signal_gen_v6_1.io
   removeAssignmentsAll(Seq(
@@ -610,20 +592,11 @@ case class QickTop() extends Component {
   val axis_sg_mux8_v1_0 = AxisSgMux8(16)
   axis_sg_mux8_v1_0.axisSgMux8.setDefinitionName("axis_sg_mux8_v1_0")
   axis_sg_mux8_v1_0_io <> axis_sg_mux8_v1_0.io
-  removeAssignmentsAll(Seq(
-    axis_sg_mux8_v1_0.io.s_axi_aclk,
-    axis_sg_mux8_v1_0.io.aclk,
-    axis_sg_mux8_v1_0.io.s_axi_aresetn,
-    axis_sg_mux8_v1_0.io.aresetn))
+  axis_sg_mux8_v1_0.io.allowOverride()
   axis_sg_mux8_v1_0.io.s_axi_aclk := clk_pl
   axis_sg_mux8_v1_0.io.aclk := clk_dac2
   axis_sg_mux8_v1_0.io.s_axi_aresetn := rst_100
   axis_sg_mux8_v1_0.io.aresetn := rst_dac2
-  setAsDirectionlessAll(Seq(
-    axis_sg_mux8_v1_0_io.s_axi_aclk,
-    axis_sg_mux8_v1_0_io.aclk,
-    axis_sg_mux8_v1_0_io.s_axi_aresetn,
-    axis_sg_mux8_v1_0_io.aresetn))
   /* -- axis_sg_mixmux8_v1_0 -- */
   val axis_sg_mixmux8_v1_0_io = AxisSgMixMux8IO(4)
   axis_sg_mixmux8_v1_0_io.setName("")
@@ -720,65 +693,36 @@ case class QickTop() extends Component {
   val axis_resampler_2x1_v1_0 = AxisResampler(B = 16, N = 8)
   axis_resampler_2x1_v1_0.axisResampler.setDefinitionName("axis_resampler_2x1_v1_0")
   axis_resampler_2x1_v1_0_io <> axis_resampler_2x1_v1_0.io
-  removeAssignmentsAll(Seq(
-    axis_resampler_2x1_v1_0.io.aclk,
-    axis_resampler_2x1_v1_0.io.aresetn))
+  axis_resampler_2x1_v1_0.io.allowOverride()
   axis_resampler_2x1_v1_0.io.aclk := clk_dac2
   axis_resampler_2x1_v1_0.io.aresetn := rst_dac2
-  setAsDirectionlessAll(Seq(
-    axis_resampler_2x1_v1_0_io.aclk,
-    axis_resampler_2x1_v1_0_io.aresetn))
+  cd_dac2(axis_resampler_2x1_v1_0.io.m_axis >/-> axis_readout_v3_0.io.s1_axis)
   /* -- axis_register_slice_0 -- */
   val axis_register_slice_0_io = AxisRegisterSliceNbIo(B = 256, N = 6)
-  axis_register_slice_0_io.setName("")
   axis_register_slice_0_io.flatten.foreach { w =>
     w.setName("axis_register_slice_0_" + w.getName())
   }
-  val axis_register_slice_0 = AxisRegisterSliceNb(B = 256, N = 6)
-  axis_register_slice_0.axisRegisterSliceNb.setDefinitionName("axis_register_slice_0")
-  axis_register_slice_0_io <> axis_register_slice_0.io
-  removeAssignmentsAll(Seq(
-    axis_register_slice_0.io.aclk,
-    axis_register_slice_0.io.aresetn))
-  axis_register_slice_0.io.aclk := clk_dac2
-  axis_register_slice_0.io.aresetn := rst_dac2
-  setAsDirectionlessAll(Seq(
-    axis_register_slice_0_io.aclk,
-    axis_register_slice_0_io.aresetn))
+  axis_register_slice_0_io.setAsDirectionLess()
+  master(axis_register_slice_0_io.m_axis)
+  cd_dac2(axis_signal_gen_v6_0.io.m_axis.toFlow.delay(6).toStream >> axis_register_slice_0_io.m_axis)
   /* -- axis_register_slice_1 -- */
   val axis_register_slice_1_io = AxisRegisterSliceNbIo(B = 256, N = 6)
   axis_register_slice_1_io.setName("")
   axis_register_slice_1_io.flatten.foreach { w =>
     w.setName("axis_register_slice_1_" + w.getName())
   }
-  val axis_register_slice_1 = AxisRegisterSliceNb(B = 256, N = 6)
-  axis_register_slice_1.axisRegisterSliceNb.setDefinitionName("axis_register_slice_1")
-  axis_register_slice_1_io <> axis_register_slice_1.io
-  removeAssignmentsAll(Seq(
-    axis_register_slice_1.io.aclk,
-    axis_register_slice_1.io.aresetn))
-  axis_register_slice_1.io.aclk := clk_dac2
-  axis_register_slice_1.io.aresetn := rst_dac2
-  setAsDirectionlessAll(Seq(
-    axis_register_slice_1_io.aclk,
-    axis_register_slice_1_io.aresetn))
+  axis_register_slice_1_io.setAsDirectionLess()
+  master(axis_register_slice_1_io.m_axis)
+  cd_dac2(axis_sg_mux8_v1_0.io.m_axis.toFlow.delay(6).toStream >> axis_register_slice_1_io.m_axis)
   /* -- axis_register_slice_2 -- */
   val axis_register_slice_2_io = AxisRegisterSliceNbIo(B = 256, N = 6)
   axis_register_slice_2_io.setName("")
   axis_register_slice_2_io.flatten.foreach { w =>
     w.setName("axis_register_slice_2_" + w.getName())
   }
-  val axis_register_slice_2 = AxisRegisterSliceNb(B = 256, N = 6)
-  axis_register_slice_2.axisRegisterSliceNb.setDefinitionName("axis_register_slice_2")
-  axis_register_slice_2_io <> axis_register_slice_2.io
-  removeAssignmentsAll(Seq(
-    axis_register_slice_2.io.aclk,
-    axis_register_slice_2.io.aresetn))
-  axis_register_slice_2.io.aclk := clk_dac2
-  axis_register_slice_2.io.aresetn := rst_dac2
-  setAsDirectionlessAll(Seq(
-    axis_register_slice_2_io.aclk,
-    axis_register_slice_2_io.aresetn))
+  axis_register_slice_2_io.setAsDirectionLess()
+  master(axis_register_slice_2_io.m_axis)
+  cd_dac2(axis_signal_gen_v6_1.io.m_axis.toFlow.delay(6).toStream >> axis_register_slice_2_io.m_axis)
   /* -- loops -- */
   removeAssignmentsAll(Seq(
     axis_avg_buffer_0.io.trigger,
@@ -874,7 +818,6 @@ case class QickTop() extends Component {
   val sgt7_in = axis_tmux_v1_0.io.m_axis(3)
   sg_translator_7.io.s_axis.payload.data := sgt7_in.payload
   sg_translator_7.io.s_axis.valid := sgt7_in.valid
-  axis_readout_v3_0.io.s0_axis.allowOverride()
   cd_dac2(sg_translator_7.io.m_readout_axis >/-> axis_readout_v3_0.io.s0_axis)
   sg_translator_7.io.aresetn := rst_dac2
   sg_translator_7.io.aclk := clk_dac2
